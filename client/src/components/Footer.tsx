@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" aria-label="Workshop Creative Group — Home">
               <img
-                src="/manus-storage/wscg-logo-hort_3cff86b9.png"
+                src="/images/wscg-logo-hort.png"
                 alt="Workshop Creative Group logo"
                 className="h-10 w-auto mb-4 brightness-0 invert"
                 loading="lazy"

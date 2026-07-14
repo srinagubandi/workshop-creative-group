@@ -66,7 +66,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Workshop Creative Group — Home">
               <img
-                src="/manus-storage/wscg-logo-hort_3cff86b9.png"
+                src="/images/wscg-logo-hort.png"
                 alt="Workshop Creative Group logo"
                 className="h-9 md:h-11 w-auto"
                 loading="eager"
