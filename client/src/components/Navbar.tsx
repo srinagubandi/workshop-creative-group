@@ -1,13 +1,8 @@
 /**
  * Navbar — Sticky top navigation for Workshop Creative Group
  *
- * Features:
- * - Logo on the left
- * - All page links in the center
- * - "Get Your Free Quote Comparison" CTA button on the right
- * - Hamburger menu for mobile screens
- * - Scroll-aware background (transparent → white with shadow)
- * - Active link highlighting based on current route
+ * Always white background with dark text — desktop and mobile.
+ * More padding/gap between logo and nav links.
  */
 
 import { useEffect, useState } from "react";
@@ -28,19 +23,16 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Track scroll position to apply background
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false);
   }, [location]);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -54,17 +46,21 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled || mobileOpen
-            ? "bg-white/98 backdrop-blur-md shadow-sm border-b border-gray-100"
-            : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-shadow duration-300 ${
+          scrolled ? "shadow-md" : "shadow-sm"
         }`}
-        style={{ willChange: "background-color, box-shadow" }}
       >
         <div className="container">
-          <nav className="flex items-center justify-between h-16 md:h-20" aria-label="Main navigation">
-            {/* Logo */}
-            <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Workshop Creative Group — Home">
+          <nav
+            className="flex items-center h-16 md:h-20"
+            aria-label="Main navigation"
+          >
+            {/* ── Logo ── */}
+            <Link
+              href="/"
+              className="flex-shrink-0 flex items-center"
+              aria-label="Workshop Creative Group — Home"
+            >
               <img
                 src="/images/wscg-logo-hort.png"
                 alt="Workshop Creative Group logo"
@@ -73,18 +69,19 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* Desktop nav links */}
-            <ul className="hidden xl:flex items-center gap-1 list-none m-0 p-0">
+            {/* ── Spacer between logo and nav links ── */}
+            <div className="w-10 md:w-14 flex-shrink-0" />
+
+            {/* ── Desktop nav links ── */}
+            <ul className="hidden xl:flex items-center gap-1 list-none m-0 p-0 flex-1">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`nav-link px-3 py-2 rounded-md transition-colors duration-200 text-sm ${
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 whitespace-nowrap ${
                       isActive(link.href)
-                        ? "text-blue-700 font-semibold bg-blue-50"
-                        : scrolled
-                        ? "text-gray-600 hover:text-blue-700 hover:bg-gray-50"
-                        : "text-white/90 hover:text-white hover:bg-white/10"
+                        ? "text-blue-700 bg-blue-50 font-semibold"
+                        : "text-gray-700 hover:text-blue-700 hover:bg-gray-50"
                     }`}
                   >
                     {link.label}
@@ -93,8 +90,8 @@ export default function Navbar() {
               ))}
             </ul>
 
-            {/* Desktop CTA */}
-            <div className="hidden xl:flex items-center">
+            {/* ── Desktop CTA ── */}
+            <div className="hidden xl:flex items-center ml-4 flex-shrink-0">
               <Link
                 href="/request-quote"
                 className="btn-primary text-sm px-5 py-2.5 whitespace-nowrap"
@@ -104,12 +101,11 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile: CTA + Hamburger */}
-            <div className="flex xl:hidden items-center gap-3">
+            {/* ── Mobile: push CTA + hamburger to the right ── */}
+            <div className="flex xl:hidden items-center gap-3 ml-auto">
               <Link
                 href="/request-quote"
-                className="hidden sm:inline-flex btn-primary text-xs px-3 py-2"
-                style={{ fontSize: "0.8125rem" }}
+                className="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-blue-700 text-white font-semibold text-sm hover:bg-blue-800 transition-colors duration-200 whitespace-nowrap"
               >
                 Free Quote
               </Link>
@@ -117,14 +113,9 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label={mobileOpen ? "Close menu" : "Open menu"}
                 aria-expanded={mobileOpen}
-                className={`p-2 rounded-md transition-colors duration-200 ${
-                  scrolled || mobileOpen
-                    ? "text-gray-700 hover:bg-gray-100"
-                    : "text-white hover:bg-white/10"
-                }`}
+                className="p-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
               >
                 <span className="sr-only">{mobileOpen ? "Close menu" : "Open menu"}</span>
-                {/* Hamburger / X icon */}
                 <div className="w-6 h-5 flex flex-col justify-between">
                   <span
                     className={`block h-0.5 bg-current rounded transition-all duration-300 origin-center ${
@@ -147,7 +138,7 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {/* Mobile menu drawer */}
+        {/* ── Mobile menu drawer ── */}
         <div
           className={`xl:hidden overflow-hidden transition-all duration-300 ${
             mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
@@ -161,7 +152,7 @@ export default function Navbar() {
                     href={link.href}
                     className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
                       isActive(link.href)
-                        ? "bg-blue-50 text-blue-700"
+                        ? "bg-blue-50 text-blue-700 font-semibold"
                         : "text-gray-700 hover:bg-gray-50 hover:text-blue-700"
                     }`}
                   >
@@ -182,7 +173,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Overlay for mobile menu */}
+      {/* Mobile overlay */}
       {mobileOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/20 xl:hidden"
