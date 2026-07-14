@@ -1,43 +1,28 @@
-# ─── Stage 1: Build ───────────────────────────────────────────────────────────
-FROM node:22-alpine AS builder
+# ─── Workshop Creative Group — Railway Dockerfile ─────────────────────────────
+# Single-stage build: install all deps, build, then run.
+# We keep devDependencies because the server's Vite integration references them
+# at runtime in production (serveStatic uses vite internals).
+FROM node:22-alpine
 
 WORKDIR /app
 
 # Install pnpm
 RUN npm install -g pnpm@10.4.1
 
-# Copy package files
+# Copy package files first for better layer caching
 COPY package.json pnpm-lock.yaml ./
 COPY patches/ ./patches/
 
-# Install all dependencies (including devDeps needed for build)
+# Install ALL dependencies (including devDeps — vite is needed at runtime)
 RUN pnpm install --frozen-lockfile
 
-# Copy source
+# Copy the full source
 COPY . .
 
-# Build the frontend (Vite) and backend (esbuild)
+# Build frontend (Vite) + backend (esbuild)
 RUN pnpm run build
 
-# ─── Stage 2: Production ──────────────────────────────────────────────────────
-FROM node:22-alpine AS runner
-
-WORKDIR /app
-
-# Install pnpm for production install
-RUN npm install -g pnpm@10.4.1
-
-# Copy package files
-COPY package.json pnpm-lock.yaml ./
-COPY patches/ ./patches/
-
-# Install production dependencies only
-RUN pnpm install --frozen-lockfile --prod
-
-# Copy built artifacts from builder
-COPY --from=builder /app/dist ./dist
-
-# Railway sets PORT env var; default to 8080
+# Railway injects PORT automatically; default to 8080
 ENV NODE_ENV=production
 ENV PORT=8080
 
