@@ -181,6 +181,7 @@ export default function RequestQuote() {
     <PageLayout
       title="Request a Quote | Workshop Creative Group"
       description="Request a quote for large format printing, graphic design, sign printing, commercial printing, or print procurement services."
+      hideQuoteBanner
     >
       {/* Hero */}
       <section className="page-hero" aria-labelledby="quote-hero-heading">
