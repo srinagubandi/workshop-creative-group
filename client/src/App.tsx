@@ -31,6 +31,7 @@ import GraphicDesign from "./pages/GraphicDesign";
 import Home from "./pages/Home";
 import LargeFormat from "./pages/LargeFormat";
 import PrintProcurement from "./pages/PrintProcurement";
+import BlogPost from "./pages/BlogPost";
 import RequestQuote from "./pages/RequestQuote";
 
 function Router() {
@@ -43,6 +44,7 @@ function Router() {
       <Route path="/graphic-design" component={GraphicDesign} />
       <Route path="/print-procurement" component={PrintProcurement} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/request-quote" component={RequestQuote} />
       <Route path="/contact" component={Contact} />
 
