@@ -1,8 +1,8 @@
 /**
  * Footer — Workshop Creative Group
  *
- * Logo: colored icon + white text (no brightness-0 invert filter).
- * Brent's Blog removed from company links.
+ * Uses the white horizontal logo (wscg-logo-white-hort.webp) in the footer.
+ * Accent colors: lime green #7dbe31, blue #1260ae, yellow #efc509
  */
 
 import { Link } from "wouter";
@@ -29,44 +29,37 @@ export default function Footer() {
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          {/* Brand column — colored icon + white text via CSS filter */}
+          {/* Brand column — white horizontal logo */}
           <div className="lg:col-span-1">
             <Link href="/" aria-label="Workshop Creative Group — Home">
-              {/*
-                The horizontal logo has a white background baked in.
-                We use the no-tag PNG (just the W icon) in color,
-                then show the company name as text below it.
-              */}
-              <div className="flex items-center gap-3 mb-4">
-                <img
-                  src="/images/wscg-icon.jpg"
-                  alt="Workshop Creative Group W icon"
-                  className="h-10 w-10 rounded object-cover flex-shrink-0"
-                  loading="lazy"
-                />
-                <div className="leading-tight">
-                  <div className="text-white font-bold text-base tracking-wide">WorkShop</div>
-                  <div className="text-gray-400 text-xs tracking-widest uppercase">Creative Group</div>
-                </div>
-              </div>
+              <img
+                src="/images/wscg-logo-white-hort.webp"
+                alt="Workshop Creative Group logo"
+                className="h-10 w-auto mb-5"
+                loading="lazy"
+              />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-4">
               Large Format Printing • Graphic Design • Print Procurement
             </p>
-            <p className="text-white/40 text-sm">
+            <p className="text-white/35 text-sm">
               Serving Businesses Nationwide
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5"
+                style={{ color: "#7dbe31" }}>
               Services
             </h3>
             <ul className="space-y-3 list-none m-0 p-0">
               {SERVICES_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/50 text-sm hover:text-white transition-colors duration-200">
+                  <Link
+                    href={link.href}
+                    className="text-white/50 text-sm hover:text-white transition-colors duration-200"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -76,13 +69,17 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5"
+                style={{ color: "#1260ae" }}>
               Company
             </h3>
             <ul className="space-y-3 list-none m-0 p-0">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/50 text-sm hover:text-white transition-colors duration-200">
+                  <Link
+                    href={link.href}
+                    className="text-white/50 text-sm hover:text-white transition-colors duration-200"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -92,7 +89,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">
+            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5"
+                style={{ color: "#efc509" }}>
               Get in Touch
             </h3>
             <div className="space-y-3">
@@ -101,7 +99,8 @@ export default function Footer() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                className="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-200"
+                style={{ color: "#7dbe31" }}
               >
                 Contact Us
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
