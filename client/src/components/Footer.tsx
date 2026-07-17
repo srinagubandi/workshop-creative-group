@@ -49,8 +49,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5"
-                style={{ color: "#7dbe31" }}>
+            <h3 className="text-white font-semibold text-xs uppercase tracking-widest mb-5">
               Services
             </h3>
             <ul className="space-y-3 list-none m-0 p-0">
@@ -69,8 +68,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5"
-                style={{ color: "#1260ae" }}>
+            <h3 className="text-white font-semibold text-xs uppercase tracking-widest mb-5">
               Company
             </h3>
             <ul className="space-y-3 list-none m-0 p-0">
@@ -89,8 +87,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5"
-                style={{ color: "#efc509" }}>
+            <h3 className="text-white font-semibold text-xs uppercase tracking-widest mb-5">
               Get in Touch
             </h3>
             <div className="space-y-3">
