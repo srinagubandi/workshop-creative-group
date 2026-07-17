@@ -1,8 +1,8 @@
 /**
  * Footer — Workshop Creative Group
  *
- * Contains: logo, tagline, navigation links, services links,
- * contact info, and a footer CTA.
+ * Logo: colored icon + white text (no brightness-0 invert filter).
+ * Brent's Blog removed from company links.
  */
 
 import { Link } from "wouter";
@@ -17,7 +17,6 @@ const SERVICES_LINKS = [
 const COMPANY_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Brent's Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -26,41 +25,30 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-950 text-white">
-      {/* Footer CTA band */}
-      <div className="border-b border-white/10">
-        <div className="container py-12 md:py-16">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-white mb-2">
-                Need a Quote for Your Next Project?
-              </h2>
-              <p className="text-white/60 text-sm md:text-base">
-                Whether it's large format printing, graphic design, or print procurement — we're ready to help.
-              </p>
-            </div>
-            <Link
-              href="/request-quote"
-              className="btn-primary flex-shrink-0 whitespace-nowrap"
-              style={{ background: "white", color: "#1e3a5f" }}
-            >
-              Get Your Free Quote Comparison
-            </Link>
-          </div>
-        </div>
-      </div>
-
       {/* Main footer content */}
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand column */}
+
+          {/* Brand column — colored icon + white text via CSS filter */}
           <div className="lg:col-span-1">
             <Link href="/" aria-label="Workshop Creative Group — Home">
-              <img
-                src="/images/wscg-logo-hort.png"
-                alt="Workshop Creative Group logo"
-                className="h-10 w-auto mb-4 brightness-0 invert"
-                loading="lazy"
-              />
+              {/*
+                The horizontal logo has a white background baked in.
+                We use the no-tag PNG (just the W icon) in color,
+                then show the company name as text below it.
+              */}
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="/images/wscg-icon.jpg"
+                  alt="Workshop Creative Group W icon"
+                  className="h-10 w-10 rounded object-cover flex-shrink-0"
+                  loading="lazy"
+                />
+                <div className="leading-tight">
+                  <div className="text-white font-bold text-base tracking-wide">WorkShop</div>
+                  <div className="text-gray-400 text-xs tracking-widest uppercase">Creative Group</div>
+                </div>
+              </div>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-4">
               Large Format Printing • Graphic Design • Print Procurement
@@ -78,10 +66,7 @@ export default function Footer() {
             <ul className="space-y-3 list-none m-0 p-0">
               {SERVICES_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/50 text-sm hover:text-white transition-colors duration-200"
-                  >
+                  <Link href={link.href} className="text-white/50 text-sm hover:text-white transition-colors duration-200">
                     {link.label}
                   </Link>
                 </li>
@@ -97,10 +82,7 @@ export default function Footer() {
             <ul className="space-y-3 list-none m-0 p-0">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/50 text-sm hover:text-white transition-colors duration-200"
-                  >
+                  <Link href={link.href} className="text-white/50 text-sm hover:text-white transition-colors duration-200">
                     {link.label}
                   </Link>
                 </li>

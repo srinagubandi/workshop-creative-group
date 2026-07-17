@@ -35,6 +35,7 @@ export default function GraphicDesign() {
     <PageLayout
       title="Graphic Design & Branding Services | Workshop Creative Group"
       description="Professional graphic design, branding, logo design, marketing materials, packaging design, and large format design for businesses."
+      hideQuoteBanner
     >
       {/* Hero */}
       <section className="page-hero" aria-labelledby="gd-hero-heading">

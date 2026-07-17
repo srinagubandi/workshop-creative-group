@@ -37,6 +37,7 @@ export default function PrintProcurement() {
     <PageLayout
       title="Print Procurement & Commercial Printing Solutions | Workshop Creative Group"
       description="Source commercial printing, packaging, labels, promotional products, and specialty print solutions through a nationwide print procurement network."
+      hideQuoteBanner
     >
       {/* Hero */}
       <section className="page-hero" aria-labelledby="pp-hero-heading">

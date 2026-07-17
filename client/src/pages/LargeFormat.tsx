@@ -51,6 +51,7 @@ export default function LargeFormat() {
     <PageLayout
       title="Large Format Printing & Sign Printing | Workshop Creative Group"
       description="Explore large format printing, banner printing, wall graphics, window graphics, trade show displays, retail graphics, and signage solutions."
+      hideQuoteBanner
     >
       {/* Hero */}
       <section className="page-hero" aria-labelledby="lf-hero-heading">

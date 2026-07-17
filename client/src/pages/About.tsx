@@ -19,6 +19,7 @@ export default function About() {
     <PageLayout
       title="About Workshop Creative Group | Print, Design & Branding Experience"
       description="Learn about Workshop Creative Group and more than 20 years of experience in graphic design, print production, branding, and nationwide print solutions."
+      hideQuoteBanner
     >
       {/* Hero */}
       <section className="page-hero" aria-labelledby="about-hero-heading">
@@ -89,7 +90,7 @@ export default function About() {
                   { num: "2006", label: "Founded" },
                   { num: "20+", label: "Years Experience" },
                   { num: "USA", label: "Nationwide" },
-                  { num: "500+", label: "Brands Served" },
+                  { num: "100+", label: "Clients Served" },
                 ].map((stat) => (
                   <div key={stat.label} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm text-center">
                     <div className="text-3xl font-serif font-bold text-blue-700 mb-1">{stat.num}</div>

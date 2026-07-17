@@ -194,7 +194,7 @@ export default function RequestQuote() {
               Let's Compare Quotes and Save You Money
             </h1>
             <p className="text-xl text-white/70 leading-relaxed">
-              Upload a recent print invoice, and we'll show you how much you could save — often up to 30% — for the exact same job.
+              Upload a recent print invoice, and we'll show you how much you could save — often up to 20% — for the exact same job.
             </p>
           </div>
         </div>

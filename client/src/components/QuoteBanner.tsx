@@ -1,32 +1,26 @@
 /**
- * QuoteBanner — Full-width conversion strip shown above the footer on every page.
- * Bold 30% savings message + single CTA button.
+ * QuoteBanner — Full-width conversion strip shown above the footer.
+ * 20% savings message + single CTA button.
  */
 
 import { Link } from "wouter";
 
 export default function QuoteBanner() {
   return (
-    <section
-      className="bg-blue-700 py-12 md:py-16"
-      aria-label="Request a quote"
-    >
+    <section className="bg-blue-700 py-12 md:py-16" aria-label="Request a quote">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-          {/* Message */}
           <div>
             <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-2">
               Stop Overpaying
             </p>
             <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-serif font-bold leading-tight">
-              Save Up to 30% on Your<br className="hidden md:block" /> Current Printing Costs
+              Save Up to 20% on Your<br className="hidden md:block" /> Current Printing Costs
             </h2>
             <p className="text-blue-100 mt-2 text-base md:text-lg">
               Upload your invoice — we'll quote the same job at a better price.
             </p>
           </div>
-
-          {/* CTA */}
           <div className="flex-shrink-0">
             <Link
               href="/request-quote"
