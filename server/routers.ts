@@ -7,14 +7,17 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import {
   createQuoteRequest,
+  createContactSubmission,
   getAllBlogPosts,
   getBlogPostBySlug,
   getFeaturedBlogPost,
 } from "./db";
 import { storagePut } from "./storage";
+import { adminRouter } from "./adminRouter";
 
 export const appRouter = router({
   system: systemRouter,
+  admin: adminRouter,
 
   auth: router({
     me: publicProcedure.query((opts) => opts.ctx.user),
@@ -127,6 +130,36 @@ Description: ${input.description ?? "None"}${fileNote}
           `.trim(),
         });
 
+        return { success: true };
+      }),
+  }),
+
+  /**
+   * Contact form submissions — saves to DB and notifies owner.
+   */
+  contact: router({
+    submit: publicProcedure
+      .input(z.object({
+        name: z.string().min(1),
+        email: z.string().email(),
+        phone: z.string().optional(),
+        message: z.string().min(1),
+      }))
+      .mutation(async ({ input }) => {
+        try {
+          await createContactSubmission({
+            name: input.name,
+            email: input.email,
+            phone: input.phone ?? null,
+            message: input.message,
+          });
+        } catch (err) {
+          console.error("[Contact] Failed to save:", err);
+        }
+        await notifyOwner({
+          title: `New Contact Message from ${input.name}`,
+          content: `Name: ${input.name}\nEmail: ${input.email}\nPhone: ${input.phone ?? "Not provided"}\n\nMessage:\n${input.message}`,
+        });
         return { success: true };
       }),
   }),

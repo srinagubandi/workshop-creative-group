@@ -14,7 +14,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
-  const notifyMutation = trpc.system.notifyOwner.useMutation({
+  const contactMutation = trpc.contact.submit.useMutation({
     onSuccess: () => { setSubmitted(true); setSubmitting(false); },
     onError: () => setSubmitting(false),
   });
@@ -39,9 +39,11 @@ export default function Contact() {
     e.preventDefault();
     if (!validate()) return;
     setSubmitting(true);
-    notifyMutation.mutate({
-      title: `New Contact Message from ${form.name}`,
-      content: `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || "Not provided"}\n\nMessage:\n${form.message}`,
+    contactMutation.mutate({
+      name: form.name,
+      email: form.email,
+      phone: form.phone || undefined,
+      message: form.message,
     });
   };
 
@@ -149,7 +151,7 @@ export default function Contact() {
                     {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
                   </div>
 
-                  {notifyMutation.error && (
+                  {contactMutation.error && (
                     <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
                       Something went wrong. Please try again.
                     </div>

@@ -33,6 +33,7 @@ import LargeFormat from "./pages/LargeFormat";
 import PrintProcurement from "./pages/PrintProcurement";
 import BlogPost from "./pages/BlogPost";
 import Gallery from "./pages/Gallery";
+import Admin from "./pages/Admin";
 import RequestQuote from "./pages/RequestQuote";
 
 function Router() {
@@ -46,6 +47,7 @@ function Router() {
       <Route path="/print-procurement" component={PrintProcurement} />
       <Route path="/blog" component={Blog} />
       <Route path="/gallery" component={Gallery} />
+      <Route path="/admin" component={Admin} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/request-quote" component={RequestQuote} />
       <Route path="/contact" component={Contact} />

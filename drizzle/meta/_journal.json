@@ -15,6 +15,13 @@
       "when": 1783998732345,
       "tag": "0001_sad_malcolm_colcord",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1785277181946,
+      "tag": "0002_thankful_zarek",
+      "breakpoints": true
     }
   ]
 }
