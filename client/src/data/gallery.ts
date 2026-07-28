@@ -28,7 +28,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "AH \u2014 Stage Signs"
   },
   {
-    "src": "/gallery/large-format/AirZero_YardSign_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/AirZero_YardSign_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Air Zero",
@@ -36,7 +36,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Air Zero \u2014 Yard Sign"
   },
   {
-    "src": "/gallery/large-format/AllChildrens_Acrylic_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/AllChildrens_Acrylic_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "All Childrens",
@@ -44,7 +44,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "All Childrens \u2014 Acrylic"
   },
   {
-    "src": "/gallery/large-format/AmericanHeart_6MMFoamcore_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/AmericanHeart_6MMFoamcore_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "American Heart",
@@ -52,7 +52,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "American Heart \u2014 6MM Foamcore"
   },
   {
-    "src": "/gallery/large-format/AmericanHeart_FabricBackdrop_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/AmericanHeart_FabricBackdrop_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "American Heart",
@@ -60,7 +60,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "American Heart \u2014 Fabric Backdrop"
   },
   {
-    "src": "/gallery/large-format/AmericanHeart_FloorGraphics_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/AmericanHeart_FloorGraphics_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "American Heart",
@@ -92,7 +92,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "American Heart \u2014 Heart Ball Banners"
   },
   {
-    "src": "/gallery/large-format/AmericanHeart_HeartWalk_Booth_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/AmericanHeart_HeartWalk_Booth_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "American Heart",
@@ -124,7 +124,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "BBQ \u2014 Sauce Board"
   },
   {
-    "src": "/gallery/large-format/Boulavard_Foamcore_LargeFormat_Printing.png",
+    "src": "/gallery/large-format/Boulavard_Foamcore_LargeFormat_Printing.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Boulavard",
@@ -132,7 +132,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Boulavard \u2014 Foamcore Large Format Printing"
   },
   {
-    "src": "/gallery/large-format/BoydHill_Banner_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/BoydHill_Banner_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Boyd Hill",
@@ -156,7 +156,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Brycomm \u2014 Golf"
   },
   {
-    "src": "/gallery/large-format/Buick_RockerPanel_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/Buick_RockerPanel_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Buick",
@@ -188,7 +188,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Chevy \u2014 Braves Booth"
   },
   {
-    "src": "/gallery/large-format/Chevy_Rays_Arch_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/Chevy_Rays_Arch_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Chevy",
@@ -196,7 +196,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Chevy \u2014 Rays Arch"
   },
   {
-    "src": "/gallery/large-format/Chevy_Rays_Banner_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/Chevy_Rays_Banner_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Chevy",
@@ -204,7 +204,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Chevy \u2014 Rays Banner"
   },
   {
-    "src": "/gallery/large-format/Chevy_TrussTower_Banners_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/Chevy_TrussTower_Banners_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Chevy",
@@ -212,7 +212,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Chevy \u2014 Truss Tower Banners"
   },
   {
-    "src": "/gallery/large-format/Dali_Giclee_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/Dali_Giclee_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Dali",
@@ -220,7 +220,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Dali \u2014 Giclee"
   },
   {
-    "src": "/gallery/large-format/DragonBoat_Giclee_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/DragonBoat_Giclee_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Dragon Boat",
@@ -228,7 +228,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Dragon Boat \u2014 Giclee"
   },
   {
-    "src": "/gallery/large-format/FloridaCreditUnion_WindowCling_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/FloridaCreditUnion_WindowCling_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Florida Credit Union",
@@ -236,7 +236,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Florida Credit Union \u2014 Window Cling"
   },
   {
-    "src": "/gallery/large-format/Ford_Aframe_Bucs_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/Ford_Aframe_Bucs_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Ford",
@@ -244,7 +244,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Ford \u2014 Aframe Bucs"
   },
   {
-    "src": "/gallery/large-format/Ford_CarTopper_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/Ford_CarTopper_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Ford",
@@ -252,7 +252,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Ford \u2014 Car Topper"
   },
   {
-    "src": "/gallery/large-format/Ford_Foamcore_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/Ford_Foamcore_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Ford",
@@ -260,7 +260,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Ford \u2014 Foamcore"
   },
   {
-    "src": "/gallery/large-format/Ford_Lightning_Aframe_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/Ford_Lightning_Aframe_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Ford",
@@ -268,7 +268,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Ford \u2014 Lightning Aframe"
   },
   {
-    "src": "/gallery/large-format/Ford_SS_Booth_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/Ford_SS_Booth_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Ford",
@@ -284,7 +284,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Ford \u2014 South FL Fair Booth"
   },
   {
-    "src": "/gallery/large-format/Ford_TVDisplay_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/Ford_TVDisplay_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Ford",
@@ -292,7 +292,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Ford \u2014 TV Display"
   },
   {
-    "src": "/gallery/large-format/Ford_Tradeshow_Banner_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/Ford_Tradeshow_Banner_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Ford",
@@ -308,7 +308,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "GA Foods \u2014 Handout Styrene"
   },
   {
-    "src": "/gallery/large-format/GAFoods_StepandRepeatbanner_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/GAFoods_StepandRepeatbanner_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "GA Foods",
@@ -316,7 +316,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "GA Foods \u2014 Stepand Repeatbanner"
   },
   {
-    "src": "/gallery/large-format/GMCFootball__Banner_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/GMCFootball__Banner_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "GMC Football",
@@ -332,7 +332,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "GMC \u2014 A Frame"
   },
   {
-    "src": "/gallery/large-format/GMC_FabricBackdrop_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/GMC_FabricBackdrop_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "GMC",
@@ -340,7 +340,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "GMC \u2014 Fabric Backdrop"
   },
   {
-    "src": "/gallery/large-format/GeographicSolutions_UltraBoard_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/GeographicSolutions_UltraBoard_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Geographic Solutions",
@@ -348,7 +348,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Geographic Solutions \u2014 Ultra Board"
   },
   {
-    "src": "/gallery/large-format/GreenWorks_TVSet_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/GreenWorks_TVSet_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Green Works",
@@ -364,7 +364,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "HOH5K \u2014 Banner"
   },
   {
-    "src": "/gallery/large-format/HOH5K_MemorialSign_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/HOH5K_MemorialSign_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "HOH5K",
@@ -372,7 +372,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "HOH5K \u2014 Memorial Sign"
   },
   {
-    "src": "/gallery/large-format/HonorHealth_WindowGraphic_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/HonorHealth_WindowGraphic_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Honor Health",
@@ -380,7 +380,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Honor Health \u2014 Window Graphic"
   },
   {
-    "src": "/gallery/large-format/JamesHardie_Banner_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/JamesHardie_Banner_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "James Hardie",
@@ -388,7 +388,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "James Hardie \u2014 Banner"
   },
   {
-    "src": "/gallery/large-format/KGHealth_ACMSigns_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/KGHealth_ACMSigns_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "KG Health",
@@ -396,7 +396,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "KG Health \u2014 ACM Signs"
   },
   {
-    "src": "/gallery/large-format/LilDiva_Canvas_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/LilDiva_Canvas_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Lil Diva",
@@ -404,7 +404,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Lil Diva \u2014 Canvas"
   },
   {
-    "src": "/gallery/large-format/LilDiva_Desk_Sign_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/LilDiva_Desk_Sign_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Lil Diva",
@@ -420,7 +420,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Maximo Marina \u2014 ACM Sign"
   },
   {
-    "src": "/gallery/large-format/MaximoMarina_Banners_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/MaximoMarina_Banners_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Maximo Marina",
@@ -428,7 +428,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Maximo Marina \u2014 Banners"
   },
   {
-    "src": "/gallery/large-format/Optimart_Acrylic_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/Optimart_Acrylic_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Optimart",
@@ -436,7 +436,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Optimart \u2014 Acrylic"
   },
   {
-    "src": "/gallery/large-format/Optimart_Signs_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/Optimart_Signs_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Optimart",
@@ -452,7 +452,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Pellon \u2014 Floor Graphic"
   },
   {
-    "src": "/gallery/large-format/Pellon_Pillow_Insert_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/Pellon_Pillow_Insert_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Pellon",
@@ -492,7 +492,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "STEM \u2014 Photo Props"
   },
   {
-    "src": "/gallery/large-format/STIHL_Banner_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/STIHL_Banner_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "STIHL",
@@ -500,7 +500,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "STIHL \u2014 Banner"
   },
   {
-    "src": "/gallery/large-format/ScienceDiet_FoamCore_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/ScienceDiet_FoamCore_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Science Diet",
@@ -508,7 +508,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Science Diet \u2014 Foam Core"
   },
   {
-    "src": "/gallery/large-format/Scytl_Sign_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/Scytl_Sign_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Scytl",
@@ -548,7 +548,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Sun Meadow \u2014 Acrylic Box"
   },
   {
-    "src": "/gallery/large-format/SunMeadow_RetractableBanners_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/SunMeadow_RetractableBanners_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Sun Meadow",
@@ -556,7 +556,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Sun Meadow \u2014 Retractable Banners"
   },
   {
-    "src": "/gallery/large-format/TampaPostal_Sign_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/TampaPostal_Sign_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Tampa Postal",
@@ -564,7 +564,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Tampa Postal \u2014 Sign"
   },
   {
-    "src": "/gallery/large-format/TourLinks_FabricBackdrop_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/TourLinks_FabricBackdrop_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Tour Links",
@@ -580,7 +580,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Tourdes Trees \u2014 Banner"
   },
   {
-    "src": "/gallery/large-format/TreeFund_Booth_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/TreeFund_Booth_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Tree Fund",
@@ -588,7 +588,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Tree Fund \u2014 Booth"
   },
   {
-    "src": "/gallery/large-format/TreeFund_Coroplast_LargeFormatPrinting.JPG",
+    "src": "/gallery/large-format/TreeFund_Coroplast_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Tree Fund",
@@ -604,7 +604,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Tree Fund \u2014 Kids Sign"
   },
   {
-    "src": "/gallery/large-format/WTA_Poster_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/WTA_Poster_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "WTA",
@@ -612,7 +612,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "WTA \u2014 Poster"
   },
   {
-    "src": "/gallery/large-format/WomensTennis_Foamcore_LargeFormatPrinting.png",
+    "src": "/gallery/large-format/WomensTennis_Foamcore_LargeFormatPrinting.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "Womens Tennis",
@@ -620,7 +620,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Womens Tennis \u2014 Foamcore"
   },
   {
-    "src": "/gallery/large-format/homegoods_pillow_Decorative_20x20.png",
+    "src": "/gallery/large-format/homegoods_pillow_Decorative_20x20.jpg",
     "category": "large-format",
     "categoryLabel": "Large Format Printing",
     "client": "homegoods",
@@ -684,7 +684,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Chevy \u2014 Banners Fair"
   },
   {
-    "src": "/gallery/graphic-design/Chevy_GraphicDesign_1.png",
+    "src": "/gallery/graphic-design/Chevy_GraphicDesign_1.jpg",
     "category": "graphic-design",
     "categoryLabel": "Graphic Design",
     "client": "Chevy",
@@ -692,7 +692,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Chevy \u2014 Graphic Design 1"
   },
   {
-    "src": "/gallery/graphic-design/Chevy_GraphicDesign_2.png",
+    "src": "/gallery/graphic-design/Chevy_GraphicDesign_2.jpg",
     "category": "graphic-design",
     "categoryLabel": "Graphic Design",
     "client": "Chevy",
@@ -876,7 +876,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "UPS \u2014 Poster"
   },
   {
-    "src": "/gallery/branding/1776Wear_Logo_GraphicDesign.png",
+    "src": "/gallery/branding/1776Wear_Logo_GraphicDesign.jpg",
     "category": "branding",
     "categoryLabel": "Branding",
     "client": "1776Wear",
@@ -924,7 +924,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Father Wayne \u2014 Logo"
   },
   {
-    "src": "/gallery/branding/GreenScene_Logo_Branding.png",
+    "src": "/gallery/branding/GreenScene_Logo_Branding.jpg",
     "category": "branding",
     "categoryLabel": "Branding",
     "client": "Green Scene",
@@ -956,7 +956,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Skyway Marina District \u2014 Logo"
   },
   {
-    "src": "/gallery/branding/SoapDiva_Logo_Final.png",
+    "src": "/gallery/branding/SoapDiva_Logo_Final.jpg",
     "category": "branding",
     "categoryLabel": "Branding",
     "client": "Soap Diva",
@@ -964,7 +964,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Soap Diva \u2014 Logo Final"
   },
   {
-    "src": "/gallery/branding/TampaBayLawnLogo_Branding.png",
+    "src": "/gallery/branding/TampaBayLawnLogo_Branding.jpg",
     "category": "branding",
     "categoryLabel": "Branding",
     "client": "Tampa Bay Lawn Logo",
@@ -980,7 +980,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Tor Des Trees \u2014 Logos"
   },
   {
-    "src": "/gallery/branding/UARF_Logo_Final.png",
+    "src": "/gallery/branding/UARF_Logo_Final.jpg",
     "category": "branding",
     "categoryLabel": "Branding",
     "client": "UARF",
@@ -996,7 +996,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "AHA \u2014 Client Logos"
   },
   {
-    "src": "/gallery/logos/All_Childrens_logo.png",
+    "src": "/gallery/logos/All_Childrens_logo.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "All",
@@ -1004,7 +1004,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "All \u2014 Childrens logo"
   },
   {
-    "src": "/gallery/logos/BHNP_logo_green_box.JPG",
+    "src": "/gallery/logos/BHNP_logo_green_box.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "BHNP",
@@ -1012,7 +1012,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "BHNP \u2014 logo green box"
   },
   {
-    "src": "/gallery/logos/BUICK_GMC_Logo.png",
+    "src": "/gallery/logos/BUICK_GMC_Logo.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "BUICK",
@@ -1044,7 +1044,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Chevy \u2014 Client Logos"
   },
   {
-    "src": "/gallery/logos/Dali_Logo.png",
+    "src": "/gallery/logos/Dali_Logo.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "Dali",
@@ -1052,7 +1052,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Dali \u2014 Client Logos"
   },
   {
-    "src": "/gallery/logos/Ford_Logo_Clear.png",
+    "src": "/gallery/logos/Ford_Logo_Clear.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "Ford",
@@ -1060,7 +1060,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Ford \u2014 Logo Clear"
   },
   {
-    "src": "/gallery/logos/GAF-logo_1500x630.png",
+    "src": "/gallery/logos/GAF-logo_1500x630.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "GAF-logo",
@@ -1092,7 +1092,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Mi LB \u2014 Logo in Office Colors"
   },
   {
-    "src": "/gallery/logos/Oldsmar_Cares_Logo_RGB.png",
+    "src": "/gallery/logos/Oldsmar_Cares_Logo_RGB.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "Oldsmar",
@@ -1100,7 +1100,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Oldsmar \u2014 Cares Logo RGB"
   },
   {
-    "src": "/gallery/logos/POVAT_[Full_Color].png",
+    "src": "/gallery/logos/POVAT_[Full_Color].jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "POVAT",
@@ -1116,7 +1116,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "Patriot \u2014 Fund"
   },
   {
-    "src": "/gallery/logos/SOMF_Offical.png",
+    "src": "/gallery/logos/SOMF_Offical.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "SOMF",
@@ -1124,7 +1124,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "SOMF \u2014 Offical"
   },
   {
-    "src": "/gallery/logos/STL_TDT_logo_2017.png",
+    "src": "/gallery/logos/STL_TDT_logo_2017.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "STL",
@@ -1148,7 +1148,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "WTA \u2014 Client Logos"
   },
   {
-    "src": "/gallery/logos/air-zero_logo-color.png",
+    "src": "/gallery/logos/air-zero_logo-color.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "air-zero",
@@ -1156,7 +1156,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "air-zero \u2014 logo-color"
   },
   {
-    "src": "/gallery/logos/moffitt_2c_rgb_logo.jpeg",
+    "src": "/gallery/logos/moffitt_2c_rgb_logo.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "moffitt",
@@ -1164,7 +1164,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "moffitt \u2014 2c rgb logo"
   },
   {
-    "src": "/gallery/logos/upscaled-2x-RADFORD_1_LINE_LOGO_.png",
+    "src": "/gallery/logos/upscaled-2x-RADFORD_1_LINE_LOGO_.jpg",
     "category": "logos",
     "categoryLabel": "Client Logos",
     "client": "upscaled-2x-RADFORD",
