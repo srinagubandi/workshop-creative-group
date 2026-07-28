@@ -139,8 +139,6 @@ export async function createBlogPost(data: InsertBlogPost) {
 export async function createAdminSession(token: string, expiresAt: Date) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
-  // Clean up expired sessions first
-  await db.delete(adminSessions).where(eq(adminSessions.token, ""));
   return db.insert(adminSessions).values({ token, expiresAt });
 }
 
