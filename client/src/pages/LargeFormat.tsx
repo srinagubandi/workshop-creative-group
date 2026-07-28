@@ -92,7 +92,7 @@ export default function LargeFormat() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {FEATURES.map((f) => (
               <div key={f.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                <div className="w-10 h-10 rounded-lg bg-blue-700 text-white flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg text-white flex items-center justify-center flex-shrink-0" style={{ background: "#1260ae" }}>
                   {f.icon}
                 </div>
                 <div>
@@ -147,7 +147,7 @@ export default function LargeFormat() {
             <p className="text-white/70 mb-8">
               Upload your current invoice and see how much you can save on your next large format print project.
             </p>
-            <Link href="/request-quote" className="btn-primary text-base px-8 py-4" style={{ background: "white", color: "#1e3a5f" }}>
+            <Link href="/request-quote" className="btn-primary text-base px-8 py-4" style={{ background: "white", color: "#1260ae" }}>
               Request a Quote
             </Link>
           </div>

@@ -73,7 +73,7 @@ export default function About() {
                 <ul className="space-y-4 list-none m-0 p-0">
                   {VALUES.map((value) => (
                     <li key={value} className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-blue-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: '#1260ae' }}>
                         <svg className="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
@@ -93,7 +93,7 @@ export default function About() {
                   { num: "100+", label: "Clients Served" },
                 ].map((stat) => (
                   <div key={stat.label} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm text-center">
-                    <div className="text-3xl font-serif font-bold text-blue-700 mb-1">{stat.num}</div>
+                    <div className="text-3xl font-serif font-bold mb-1" style={{ color: '#1260ae' }}>{stat.num}</div>
                     <div className="text-sm text-gray-500 font-medium">{stat.label}</div>
                   </div>
                 ))}

@@ -89,7 +89,7 @@ export default function PrintProcurement() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {PROCUREMENT_BENEFITS.map((b) => (
               <div key={b.label} className="trust-badge bg-gray-50 border-gray-100">
-                <div className="text-4xl font-serif font-bold text-blue-700">{b.stat}</div>
+                <div className="text-4xl font-serif font-bold" style={{ color: "#1260ae" }}>{b.stat}</div>
                 <h3 className="font-semibold text-gray-900">{b.label}</h3>
                 <p className="text-gray-500 text-sm text-center leading-relaxed">{b.desc}</p>
               </div>
@@ -127,7 +127,7 @@ export default function PrintProcurement() {
             <p className="text-white/70 mb-8">
               Upload your current invoice and let us show you how much you can save through smarter procurement.
             </p>
-            <Link href="/request-quote" className="btn-primary text-base px-8 py-4" style={{ background: "white", color: "#1e3a5f" }}>
+            <Link href="/request-quote" className="btn-primary text-base px-8 py-4" style={{ background: "white", color: "#1260ae" }}>
               Request a Procurement Review
             </Link>
           </div>

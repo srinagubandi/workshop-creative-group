@@ -16,6 +16,7 @@ const NAV_LINKS = [
   { label: "Graphic Design", href: "/graphic-design" },
   { label: "Print Procurement", href: "/print-procurement" },
   // Brent's Blog hidden for now — page still accessible at /blog
+  { label: "Our Work", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 
