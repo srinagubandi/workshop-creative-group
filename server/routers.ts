@@ -108,14 +108,15 @@ export const appRouter = router({
           });
         }
 
-        // Notify the owner
+        // Notify the owner — non-fatal, quote is already saved to DB
         const fileNote = invoiceFileName
           ? `\nInvoice File: ${invoiceFileName}`
           : "\nNo invoice file uploaded.";
 
-        await notifyOwner({
-          title: `New Quote Request from ${input.companyName}`,
-          content: `
+        try {
+          await notifyOwner({
+            title: `New Quote Request from ${input.companyName}`,
+            content: `
 New quote request received!
 
 Company: ${input.companyName}
@@ -127,8 +128,12 @@ Quantity: ${input.quantity ?? "Not specified"}
 Size/Specs: ${input.sizeSpecs ?? "Not specified"}
 Deadline: ${input.deadline ?? "Not specified"}
 Description: ${input.description ?? "None"}${fileNote}
-          `.trim(),
-        });
+            `.trim(),
+          });
+        } catch (notifyErr) {
+          // Notification failure is non-fatal — quote is already saved
+          console.warn("[Quote] Owner notification failed (non-fatal):", notifyErr);
+        }
 
         return { success: true };
       }),
@@ -156,10 +161,14 @@ Description: ${input.description ?? "None"}${fileNote}
         } catch (err) {
           console.error("[Contact] Failed to save:", err);
         }
-        await notifyOwner({
-          title: `New Contact Message from ${input.name}`,
-          content: `Name: ${input.name}\nEmail: ${input.email}\nPhone: ${input.phone ?? "Not provided"}\n\nMessage:\n${input.message}`,
-        });
+        try {
+          await notifyOwner({
+            title: `New Contact Message from ${input.name}`,
+            content: `Name: ${input.name}\nEmail: ${input.email}\nPhone: ${input.phone ?? "Not provided"}\n\nMessage:\n${input.message}`,
+          });
+        } catch (notifyErr) {
+          console.warn("[Contact] Owner notification failed (non-fatal):", notifyErr);
+        }
         return { success: true };
       }),
   }),
