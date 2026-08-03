@@ -1,6 +1,6 @@
 /**
  * Email notifications via Resend.
- * All alerts go to ALERT_EMAIL (bgardner06@gmail.com).
+ * All alerts go to ALERT_EMAIL (brent@workshopcreativegroup.com).
  * Uses onboarding@resend.dev as the from address (Resend test domain — works immediately).
  */
 
