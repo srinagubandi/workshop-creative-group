@@ -7,7 +7,7 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY || "");
-const ALERT_EMAIL = process.env.ALERT_EMAIL || "bgardner06@gmail.com";
+const ALERT_EMAIL = process.env.ALERT_EMAIL || "brent@workshopcreativegroup.com";
 const FROM = "Workshop Creative Group <brent@workshopcreativegroup.com>";
 
 // ── Send a quote request notification ────────────────────────────────────────
