@@ -14,6 +14,7 @@ import {
 } from "./db";
 import { storagePut } from "./storage";
 import { adminRouter } from "./adminRouter";
+import { sendQuoteAlert, sendContactAlert } from "./email";
 
 export const appRouter = router({
   system: systemRouter,
@@ -135,6 +136,21 @@ Description: ${input.description ?? "None"}${fileNote}
           console.warn("[Quote] Owner notification failed (non-fatal):", notifyErr);
         }
 
+        // Send Resend email alert (non-fatal)
+        sendQuoteAlert({
+          companyName: input.companyName,
+          contactName: input.contactName,
+          email: input.email,
+          phone: input.phone,
+          projectType: input.projectType,
+          quantity: input.quantity,
+          sizeSpecs: input.sizeSpecs,
+          deadline: input.deadline,
+          description: input.description,
+          invoiceFileName: invoiceFileName,
+          invoiceFileUrl: invoiceFileUrl,
+        }).catch((e) => console.warn("[Quote] Resend alert failed:", e));
+
         return { success: true };
       }),
   }),
@@ -169,6 +185,15 @@ Description: ${input.description ?? "None"}${fileNote}
         } catch (notifyErr) {
           console.warn("[Contact] Owner notification failed (non-fatal):", notifyErr);
         }
+
+        // Send Resend email alert (non-fatal)
+        sendContactAlert({
+          name: input.name,
+          email: input.email,
+          phone: input.phone,
+          message: input.message,
+        }).catch((e) => console.warn("[Contact] Resend alert failed:", e));
+
         return { success: true };
       }),
   }),

@@ -187,6 +187,15 @@ export const adminRouter = router({
       }
     }),
 
+  // ── Send test email ──
+  sendTestEmail: publicProcedure
+    .input(z.object({ token: z.string() }))
+    .mutation(async ({ input }) => {
+      await requireAdmin(input.token);
+      const { sendTestEmail } = await import("./email");
+      return sendTestEmail();
+    }),
+
   // ── Stats summary ──
   stats: publicProcedure
     .input(z.object({ token: z.string() }))
