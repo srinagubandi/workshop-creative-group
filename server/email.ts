@@ -6,9 +6,13 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY || "");
 const ALERT_EMAIL = process.env.ALERT_EMAIL || "brent@workshopcreativegroup.com";
 const FROM = "Workshop Creative Group <brent@workshopcreativegroup.com>";
+
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  return apiKey ? new Resend(apiKey) : null;
+}
 
 // ── Send a quote request notification ────────────────────────────────────────
 
@@ -29,6 +33,8 @@ export async function sendQuoteAlert(data: {
     console.warn("[Email] RESEND_API_KEY not set — skipping quote alert");
     return;
   }
+  const resend = getResendClient();
+  if (!resend) return;
 
   const hasInvoice = !!data.invoiceFileName;
 
@@ -93,6 +99,8 @@ export async function sendContactAlert(data: {
     console.warn("[Email] RESEND_API_KEY not set — skipping contact alert");
     return;
   }
+  const resend = getResendClient();
+  if (!resend) return;
 
   const html = `
     <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;">
@@ -141,6 +149,8 @@ export async function sendTestEmail() {
   if (!process.env.RESEND_API_KEY) {
     return { success: false, error: "RESEND_API_KEY not set" };
   }
+  const resend = getResendClient();
+  if (!resend) return { success: false, error: "RESEND_API_KEY not set" };
 
   const { data, error } = await resend.emails.send({
     from: FROM,
@@ -171,4 +181,35 @@ export async function sendTestEmail() {
     return { success: false, error };
   }
   return { success: true, id: data?.id };
+}
+
+// ── Send owner documentation ───────────────────────────────────────────────────
+export async function sendAdminDocumentationEmail() {
+  if (!process.env.RESEND_API_KEY) return { success: false, error: "RESEND_API_KEY not set" };
+  const resend = getResendClient();
+  if (!resend) return { success: false, error: "RESEND_API_KEY not set" };
+  const html = `
+    <div style="font-family:Arial,sans-serif;max-width:720px;margin:0 auto;padding:20px;color:#111827;">
+      <div style="background:#1260ae;padding:22px 26px;border-radius:10px 10px 0 0;">
+        <h1 style="color:#fff;margin:0;font-size:22px;">Website Update: Media System & Content Review</h1>
+        <p style="color:rgba(255,255,255,.8);margin:6px 0 0;font-size:14px;">Workshop Creative Group</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-top:none;padding:26px;border-radius:0 0 10px 10px;background:#fff;line-height:1.55;">
+        <h2 style="font-size:18px;margin:0 0 8px;">New Admin Media System</h2>
+        <p style="margin:0 0 12px;">The Media Library now manages website images and videos. New uploads stay unpublished until you publish them. You can upload JPG, PNG, and WebP images up to 20 MB (maximum 6,000 px on either side) and MP4/WebM videos up to 250 MB.</p>
+        <ul style="padding-left:20px;margin:0 0 20px;"><li>Rotate or crop images before upload; then add title, caption, and accessibility alt text.</li><li>Set page, category, client, and project fields, then publish or keep as draft.</li><li>Replace items while retaining placement; reorder entries; archive rather than delete; and restore archived items later.</li><li>Use the Database Backups tab for on-demand private Railway bucket backups.</li></ul>
+        <p style="margin:0 0 22px;"><a href="https://web-production-d7aa.up.railway.app/admin" style="display:inline-block;background:#7dbe31;color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:700;">Open Admin Dashboard</a></p>
+        <h2 style="font-size:18px;margin:0 0 8px;">Visible Copy Recommendations — Review Only</h2>
+        <p style="margin:0 0 12px;">No visible website copy was changed. The following recommendations are ready for page-by-page review:</p>
+        <ol style="padding-left:20px;margin:0 0 18px;"><li><strong>Home:</strong> Add a plain-language definition of the nationwide print-brokerage model and a scope note for the “up to 20%” savings statement.</li><li><strong>About:</strong> Add a short “How we work” explanation covering supplier matching, specifications, quality oversight, and delivery coordination.</li><li><strong>Service pages:</strong> Clarify common large-format applications, graphic-design deliverables, and transparent like-for-like procurement comparisons.</li><li><strong>Quote page:</strong> Explain the information that produces a stronger quote comparison and reassure visitors that invoices are not public.</li><li><strong>Contact and Gallery:</strong> Clarify form uses, add a gallery introduction, and review priority captions and labels for consistency.</li><li><strong>Blog:</strong> If reintroduced into navigation, publish practical articles that answer one verified business-print question at a time.</li></ol>
+        <p style="margin:0;color:#4b5563;font-size:13px;">The metadata-only update is already in place: each public page has a unique title, description, canonical URL, social metadata, accurate structured data, sitemap entry, and crawl policy. Please reply with any visible-copy items you approve, revise, or decline.</p>
+      </div>
+    </div>`;
+  const { data, error } = await resend.emails.send({
+    from: FROM,
+    to: [ALERT_EMAIL],
+    subject: "Workshop Creative Group — Media Guide & Copy Recommendations",
+    html,
+  });
+  return error ? { success: false, error } : { success: true, id: data?.id };
 }

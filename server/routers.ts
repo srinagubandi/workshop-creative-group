@@ -1,9 +1,5 @@
-import { COOKIE_NAME } from "@shared/const";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
-import { getSessionCookieOptions } from "./_core/cookies";
-import { notifyOwner } from "./_core/notification";
-import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import {
   createQuoteRequest,
@@ -11,23 +7,15 @@ import {
   getAllBlogPosts,
   getBlogPostBySlug,
   getFeaturedBlogPost,
+  getPublishedGalleryMedia,
+  getPublishedSiteAsset,
 } from "./db";
 import { storagePut } from "./storage";
 import { adminRouter } from "./adminRouter";
 import { sendQuoteAlert, sendContactAlert } from "./email";
 
 export const appRouter = router({
-  system: systemRouter,
   admin: adminRouter,
-
-  auth: router({
-    me: publicProcedure.query((opts) => opts.ctx.user),
-    logout: publicProcedure.mutation(({ ctx }) => {
-      const cookieOptions = getSessionCookieOptions(ctx.req);
-      ctx.res.clearCookie(COOKIE_NAME, { ...cookieOptions, maxAge: -1 });
-      return { success: true } as const;
-    }),
-  }),
 
   /**
    * Quote request submission.
@@ -109,33 +97,6 @@ export const appRouter = router({
           });
         }
 
-        // Notify the owner — non-fatal, quote is already saved to DB
-        const fileNote = invoiceFileName
-          ? `\nInvoice File: ${invoiceFileName}`
-          : "\nNo invoice file uploaded.";
-
-        try {
-          await notifyOwner({
-            title: `New Quote Request from ${input.companyName}`,
-            content: `
-New quote request received!
-
-Company: ${input.companyName}
-Contact: ${input.contactName}
-Email: ${input.email}
-Phone: ${input.phone ?? "Not provided"}
-Project Type: ${input.projectType ?? "Not specified"}
-Quantity: ${input.quantity ?? "Not specified"}
-Size/Specs: ${input.sizeSpecs ?? "Not specified"}
-Deadline: ${input.deadline ?? "Not specified"}
-Description: ${input.description ?? "None"}${fileNote}
-            `.trim(),
-          });
-        } catch (notifyErr) {
-          // Notification failure is non-fatal — quote is already saved
-          console.warn("[Quote] Owner notification failed (non-fatal):", notifyErr);
-        }
-
         // Send Resend email alert (non-fatal)
         sendQuoteAlert({
           companyName: input.companyName,
@@ -177,15 +138,6 @@ Description: ${input.description ?? "None"}${fileNote}
         } catch (err) {
           console.error("[Contact] Failed to save:", err);
         }
-        try {
-          await notifyOwner({
-            title: `New Contact Message from ${input.name}`,
-            content: `Name: ${input.name}\nEmail: ${input.email}\nPhone: ${input.phone ?? "Not provided"}\n\nMessage:\n${input.message}`,
-          });
-        } catch (notifyErr) {
-          console.warn("[Contact] Owner notification failed (non-fatal):", notifyErr);
-        }
-
         // Send Resend email alert (non-fatal)
         sendContactAlert({
           name: input.name,
@@ -212,6 +164,39 @@ Description: ${input.description ?? "None"}${fileNote}
       .input(z.object({ slug: z.string() }))
       .query(async ({ input }) => {
         return getBlogPostBySlug(input.slug);
+      }),
+  }),
+
+  media: router({
+    siteAsset: publicProcedure
+      .input(z.object({ slotKey: z.string().min(1).max(128) }))
+      .query(async ({ input }) => {
+        const record = await getPublishedSiteAsset(input.slotKey);
+        if (!record) return null;
+        return { id: record.asset.id, src: `/media/${record.asset.id}`, alt: record.asset.altText || record.asset.title || "Workshop Creative Group" };
+      }),
+    gallery: publicProcedure
+      .input(z.object({ category: z.string().optional() }).optional())
+      .query(async ({ input }) => {
+        const records = await getPublishedGalleryMedia(input?.category);
+        const categoryLabels: Record<string, string> = {
+          "large-format": "Large Format Printing",
+          "graphic-design": "Graphic Design",
+          branding: "Branding",
+          logos: "Client Logos",
+        };
+        return records.map(({ asset, placement }) => ({
+          id: asset.id,
+          src: `/media/${asset.id}`,
+          mediaType: asset.mediaType,
+          category: placement.category ?? "uncategorized",
+          categoryLabel: categoryLabels[placement.category ?? ""] ?? "Our Work",
+          client: placement.client ?? asset.title ?? "Workshop Creative Group",
+          project: placement.project ?? asset.caption ?? "Print project",
+          alt: asset.altText || asset.title || placement.project || "Workshop Creative Group project",
+          caption: asset.caption,
+          sortOrder: placement.sortOrder,
+        }));
       }),
   }),
 });

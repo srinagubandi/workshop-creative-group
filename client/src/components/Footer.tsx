@@ -6,6 +6,7 @@
  */
 
 import { Link } from "wouter";
+import { ManagedSiteImage } from "@/components/ManagedSiteImage";
 
 const SERVICES_LINKS = [
   { label: "Large Format Printing", href: "/large-format-printing" },
@@ -33,12 +34,7 @@ export default function Footer() {
           {/* Brand column — white horizontal logo */}
           <div className="lg:col-span-1">
             <Link href="/" aria-label="Workshop Creative Group — Home">
-              <img
-                src="/images/wscg-logo-white-hort.webp"
-                alt="Workshop Creative Group logo"
-                className="h-10 w-auto mb-5"
-                loading="lazy"
-              />
+              <ManagedSiteImage slotKey="logo-footer-white" fallbackSrc="/images/wscg-logo-white-hort.webp" alt="Workshop Creative Group logo" className="h-10 w-auto mb-5" />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-4">
               Large Format Printing • Graphic Design • Print Procurement

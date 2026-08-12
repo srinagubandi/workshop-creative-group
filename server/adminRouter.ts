@@ -23,15 +23,22 @@ import {
   getAllContactSubmissions,
   getAllQuoteRequests,
   getAdminSession,
+  getMediaAsset,
   getRecentBackups,
+  listMediaAssets,
+  listMediaPlacements,
   logDbBackup,
+  reorderMediaPlacements,
+  saveMediaPlacement,
+  setMediaStatus,
+  updateMediaAsset,
+  updateMediaPlacement,
   updateContactStatus,
   updateQuoteStatus,
 } from "./db";
 import { publicProcedure, router } from "./_core/trpc";
-import { storagePut } from "./storage";
-import { getDb } from "./db";
-import { quoteRequests, contactSubmissions, users, blogPosts } from "../drizzle/schema";
+import { storageGetSignedUrl } from "./storage";
+import { runDatabaseBackup } from "./backup";
 
 // ── Admin password — stored as env var, fallback for dev ──────────────────────
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "Workshop2026!";
@@ -43,47 +50,6 @@ async function requireAdmin(token: string | undefined) {
   const session = await getAdminSession(token);
   if (!session) throw new TRPCError({ code: "UNAUTHORIZED", message: "Invalid or expired session" });
   return session;
-}
-
-// ── DB dump helper ────────────────────────────────────────────────────────────
-async function dumpDatabase(): Promise<{ sql: string; sizeBytes: number }> {
-  const db = await getDb();
-  if (!db) throw new Error("Database not available");
-
-  const tables = ["users", "quote_requests", "contact_submissions", "blog_posts", "db_backups"];
-  let sql = `-- Workshop Creative Group Database Backup\n-- Generated: ${new Date().toISOString()}\n-- Tables: ${tables.join(", ")}\n\nSET FOREIGN_KEY_CHECKS=0;\n\n`;
-
-  for (const table of tables) {
-    try {
-      // Get rows using raw query
-      const rows = await (db as any).execute(`SELECT * FROM \`${table}\``);
-      const data = Array.isArray(rows) ? rows[0] : rows;
-      if (!Array.isArray(data) || data.length === 0) {
-        sql += `-- Table: ${table} (empty)\n\n`;
-        continue;
-      }
-
-      sql += `-- Table: ${table} (${data.length} rows)\n`;
-      sql += `TRUNCATE TABLE \`${table}\`;\n`;
-
-      for (const row of data) {
-        const cols = Object.keys(row).map(k => `\`${k}\``).join(", ");
-        const vals = Object.values(row).map(v => {
-          if (v === null || v === undefined) return "NULL";
-          if (v instanceof Date) return `'${v.toISOString().slice(0, 19).replace("T", " ")}'`;
-          if (typeof v === "number") return String(v);
-          return `'${String(v).replace(/'/g, "\\'")}'`;
-        }).join(", ");
-        sql += `INSERT INTO \`${table}\` (${cols}) VALUES (${vals});\n`;
-      }
-      sql += "\n";
-    } catch (err) {
-      sql += `-- Error dumping ${table}: ${err}\n\n`;
-    }
-  }
-
-  sql += "SET FOREIGN_KEY_CHECKS=1;\n";
-  return { sql, sizeBytes: Buffer.byteLength(sql, "utf8") };
 }
 
 // ── Router ────────────────────────────────────────────────────────────────────
@@ -171,21 +137,92 @@ export const adminRouter = router({
     .input(z.object({ token: z.string() }))
     .mutation(async ({ input }) => {
       await requireAdmin(input.token);
-      const timestamp = new Date().toISOString().slice(0, 19).replace(/[T:]/g, "-");
-      const filename = `wscg-backup-${timestamp}.sql`;
-
       try {
-        const { sql, sizeBytes } = await dumpDatabase();
-        const buffer = Buffer.from(sql, "utf8");
-        const { key, url } = await storagePut(`backups/${filename}`, buffer, "text/plain");
-
-        await logDbBackup({ filename, fileKey: key, fileUrl: url, sizeBytes, status: "success" });
-        return { success: true, filename, sizeBytes, url };
+        return await runDatabaseBackup("manual");
       } catch (err: any) {
-        await logDbBackup({ filename, status: "failed", errorMessage: String(err?.message || err) });
         throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: `Backup failed: ${err?.message}` });
       }
     }),
+
+  // ── Managed media ──
+  mediaAssets: publicProcedure
+    .input(z.object({ token: z.string(), status: z.enum(["draft", "published", "archived"]).optional() }))
+    .query(async ({ input }) => {
+      await requireAdmin(input.token);
+      const [assets, placements] = await Promise.all([listMediaAssets(input.status), listMediaPlacements()]);
+      return assets.map(asset => ({ ...asset, placements: placements.filter(placement => placement.mediaId === asset.id) }));
+    }),
+
+  updateMedia: publicProcedure
+    .input(z.object({
+      token: z.string(), id: z.number().int().positive(), title: z.string().trim().max(255).optional(),
+      caption: z.string().trim().max(2000).optional(), altText: z.string().trim().max(512).optional(),
+    }))
+    .mutation(async ({ input }) => {
+      await requireAdmin(input.token);
+      const { token, id, ...data } = input;
+      return updateMediaAsset(id, data);
+    }),
+
+  addMediaPlacement: publicProcedure
+    .input(z.object({
+      token: z.string(), mediaId: z.number().int().positive(), pageKey: z.string().trim().min(1).max(128),
+      slotKey: z.string().trim().max(128).optional(), category: z.string().trim().max(128).optional(),
+      client: z.string().trim().max(255).optional(), project: z.string().trim().max(255).optional(),
+      sortOrder: z.number().int().min(0).optional(),
+    }))
+    .mutation(async ({ input }) => {
+      await requireAdmin(input.token);
+      const { token, ...placement } = input;
+      return saveMediaPlacement({ ...placement, isActive: 1, sortOrder: placement.sortOrder ?? 0 });
+    }),
+
+  updateMediaPlacement: publicProcedure
+    .input(z.object({
+      token: z.string(), id: z.number().int().positive(), pageKey: z.string().trim().min(1).max(128).optional(),
+      slotKey: z.string().trim().max(128).nullable().optional(), category: z.string().trim().max(128).nullable().optional(),
+      client: z.string().trim().max(255).nullable().optional(), project: z.string().trim().max(255).nullable().optional(),
+      sortOrder: z.number().int().min(0).optional(), isActive: z.number().int().min(0).max(1).optional(),
+    }))
+    .mutation(async ({ input }) => {
+      await requireAdmin(input.token);
+      const { token, id, ...data } = input;
+      return updateMediaPlacement(id, data);
+    }),
+
+  publishMedia: publicProcedure.input(z.object({ token: z.string(), id: z.number().int().positive() }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); return setMediaStatus(input.id, "published"); }),
+  unpublishMedia: publicProcedure.input(z.object({ token: z.string(), id: z.number().int().positive() }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); return setMediaStatus(input.id, "draft"); }),
+  archiveMedia: publicProcedure.input(z.object({ token: z.string(), id: z.number().int().positive() }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); return setMediaStatus(input.id, "archived"); }),
+  restoreMedia: publicProcedure.input(z.object({ token: z.string(), id: z.number().int().positive() }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); return setMediaStatus(input.id, "published"); }),
+
+  replaceMedia: publicProcedure
+    .input(z.object({ token: z.string(), targetId: z.number().int().positive(), replacementId: z.number().int().positive() }))
+    .mutation(async ({ input }) => {
+      await requireAdmin(input.token);
+      const [target, replacement] = await Promise.all([getMediaAsset(input.targetId), getMediaAsset(input.replacementId)]);
+      if (!target || !replacement) throw new TRPCError({ code: "NOT_FOUND", message: "Media asset not found" });
+      if (replacement.status !== "draft") throw new TRPCError({ code: "BAD_REQUEST", message: "Replacement media must still be unpublished" });
+      const history = target.transformJson ? JSON.parse(target.transformJson) : {};
+      const updated = await updateMediaAsset(target.id, {
+        storageKey: replacement.storageKey, originalKey: replacement.originalKey || replacement.storageKey, mimeType: replacement.mimeType,
+        sizeBytes: replacement.sizeBytes, width: replacement.width, height: replacement.height,
+        transformJson: JSON.stringify({ ...history, replacedAt: new Date().toISOString(), priorStorageKey: target.storageKey, priorOriginalKey: target.originalKey }),
+      });
+      await setMediaStatus(replacement.id, "archived");
+      return updated;
+    }),
+
+  reorderMedia: publicProcedure
+    .input(z.object({ token: z.string(), placementIds: z.array(z.number().int().positive()).min(1).max(500) }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); await reorderMediaPlacements(input.placementIds); return { success: true }; }),
+
+  privateFileUrl: publicProcedure
+    .input(z.object({ token: z.string(), key: z.string().min(1).max(512) }))
+    .query(async ({ input }) => { await requireAdmin(input.token); return { url: await storageGetSignedUrl(input.key, 300) }; }),
 
   // ── Send test email ──
   sendTestEmail: publicProcedure
@@ -194,6 +231,14 @@ export const adminRouter = router({
       await requireAdmin(input.token);
       const { sendTestEmail } = await import("./email");
       return sendTestEmail();
+    }),
+
+  sendDocumentationEmail: publicProcedure
+    .input(z.object({ token: z.string() }))
+    .mutation(async ({ input }) => {
+      await requireAdmin(input.token);
+      const { sendAdminDocumentationEmail } = await import("./email");
+      return sendAdminDocumentationEmail();
     }),
 
   // ── Stats summary ──
