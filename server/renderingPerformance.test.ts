@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getBlogPresentation, MANAGED_SITE_ASSET_QUERY_OPTIONS, PUBLIC_PAGE_IMPORTERS } from "@/lib/renderingPerformance";
+import { getBlogPresentation, MANAGED_SITE_ASSET_QUERY_OPTIONS, MANAGED_SITE_IMAGE_DEFAULTS, NAVIGATION_LOGO_IMAGE_OPTIONS, PUBLIC_PAGE_IMPORTERS } from "@/lib/renderingPerformance";
 
 describe("rendering performance safeguards", () => {
   it("keeps each public page behind an independent lazy importer", () => {
@@ -15,6 +15,11 @@ describe("rendering performance safeguards", () => {
       gcTime: 86_400_000,
       refetchOnWindowFocus: false,
     });
+  });
+
+  it("keeps shared images lazy by default while prioritizing the navigation logo", () => {
+    expect(MANAGED_SITE_IMAGE_DEFAULTS).toEqual({ loading: "lazy", fetchPriority: "auto" });
+    expect(NAVIGATION_LOGO_IMAGE_OPTIONS).toEqual({ loading: "eager", fetchPriority: "high" });
   });
 
   it("derives the featured blog post from the single list query", () => {

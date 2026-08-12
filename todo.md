@@ -70,5 +70,5 @@
 - [x] Run and document ten optimization-and-verification passes across the public pages, keeping a concise current performance context
 - [x] Add or update automated tests for performance-related utility and rendering changes, then push verified changes to GitHub and Railway
 - [x] Correct and verify immutable cache headers for fingerprinted production JavaScript and CSS assets identified during live performance passes
-- [ ] Re-run ten live public-route verification passes after deployment until every page returns HTTP 200 in every pass, then record the clean result
-- [ ] Add automated coverage for rendering-side performance safeguards: lazy public routes, single blog-list query behavior, and shared image loading priority/caching
+- [x] Re-run ten live public-route verification passes after deployment until every page returns HTTP 200 in every pass, then record the clean result
+- [x] Add automated coverage for rendering-side performance safeguards: lazy public routes, single blog-list query behavior, and shared image loading priority/caching

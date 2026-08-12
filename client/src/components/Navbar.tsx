@@ -9,6 +9,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { ManagedSiteImage } from "@/components/ManagedSiteImage";
+import { NAVIGATION_LOGO_IMAGE_OPTIONS } from "@/lib/renderingPerformance";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -58,7 +59,7 @@ export default function Navbar() {
 
             {/* ── Logo ── */}
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Workshop Creative Group — Home">
-              <ManagedSiteImage slotKey="logo-horizontal" fallbackSrc="/images/wscg-logo-hort.png" alt="Workshop Creative Group logo" className="h-9 md:h-11 w-auto" loading="eager" fetchPriority="high" />
+              <ManagedSiteImage slotKey="logo-horizontal" fallbackSrc="/images/wscg-logo-hort.png" alt="Workshop Creative Group logo" className="h-9 md:h-11 w-auto" {...NAVIGATION_LOGO_IMAGE_OPTIONS} />
             </Link>
 
             {/* ── Spacer ── */}

@@ -22,6 +22,16 @@ export const MANAGED_SITE_ASSET_QUERY_OPTIONS = {
   refetchOnWindowFocus: false,
 } as const;
 
+export const MANAGED_SITE_IMAGE_DEFAULTS = {
+  loading: "lazy",
+  fetchPriority: "auto",
+} as const;
+
+export const NAVIGATION_LOGO_IMAGE_OPTIONS = {
+  loading: "eager",
+  fetchPriority: "high",
+} as const;
+
 export interface BlogPresentationItem {
   id: number;
   featured: number;
