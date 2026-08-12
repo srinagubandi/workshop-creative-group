@@ -110,6 +110,7 @@ export const mediaAssets = mysqlTable("media_assets", {
   caption: text("caption"),
   altText: varchar("altText", { length: 512 }),
   transformJson: text("transformJson"),
+  thumbnailMediaId: int("thumbnailMediaId"),
   publishedAt: timestamp("publishedAt"),
   archivedAt: timestamp("archivedAt"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
@@ -117,6 +118,24 @@ export const mediaAssets = mysqlTable("media_assets", {
 });
 export type MediaAsset = typeof mediaAssets.$inferSelect;
 export type InsertMediaAsset = typeof mediaAssets.$inferInsert;
+
+/** Genuine, owner-approved customer feedback only. */
+export const testimonials = mysqlTable("testimonials", {
+  id: int("id").autoincrement().primaryKey(),
+  status: mysqlEnum("status", ["draft", "published", "archived"]).default("draft").notNull(),
+  quote: text("quote").notNull(),
+  authorName: varchar("authorName", { length: 255 }).notNull(),
+  authorTitle: varchar("authorTitle", { length: 255 }),
+  company: varchar("company", { length: 255 }),
+  mediaId: int("mediaId"),
+  sortOrder: int("sortOrder").default(0).notNull(),
+  publishedAt: timestamp("publishedAt"),
+  archivedAt: timestamp("archivedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+export type Testimonial = typeof testimonials.$inferSelect;
+export type InsertTestimonial = typeof testimonials.$inferInsert;
 
 /**
  * A media asset can be placed in a gallery category, a specific page/slot, or both.

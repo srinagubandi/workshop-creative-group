@@ -9,10 +9,12 @@ import {
   getFeaturedBlogPost,
   getPublishedGalleryMedia,
   getPublishedSiteAsset,
+  getPublishedTestimonials,
 } from "./db";
 import { storagePut } from "./storage";
 import { adminRouter } from "./adminRouter";
 import { sendQuoteAlert, sendContactAlert } from "./email";
+import { getPublicThumbnailSource } from "../shared/thumbnailPresentation";
 
 export const appRouter = router({
   admin: adminRouter,
@@ -188,6 +190,7 @@ export const appRouter = router({
         return records.map(({ asset, placement }) => ({
           id: asset.id,
           src: `/media/${asset.id}`,
+          thumbnailSrc: getPublicThumbnailSource(asset.thumbnailMediaId),
           mediaType: asset.mediaType,
           category: placement.category ?? "uncategorized",
           categoryLabel: categoryLabels[placement.category ?? ""] ?? "Our Work",
@@ -198,6 +201,16 @@ export const appRouter = router({
           sortOrder: placement.sortOrder,
         }));
       }),
+  }),
+  testimonials: router({
+    list: publicProcedure.query(async () => {
+      const records = await getPublishedTestimonials();
+      return records.map(({ testimonial, media }) => ({
+        ...testimonial,
+        mediaSrc: media ? `/media/${media.id}` : null,
+        mediaAlt: media?.altText || media?.title || testimonial.company || testimonial.authorName,
+      }));
+    }),
   }),
 });
 

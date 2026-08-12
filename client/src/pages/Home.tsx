@@ -4,6 +4,7 @@
  */
 
 import PageLayout from "@/components/PageLayout";
+import { TestimonialSection } from "@/components/TestimonialSection";
 import { Link } from "wouter";
 
 // ─── Service Cards ────────────────────────────────────────────────────────────
@@ -255,6 +256,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TestimonialSection />
 
       {/* ── Why Choose Us ── */}
       <section className="section-py bg-gray-50" aria-labelledby="why-heading">

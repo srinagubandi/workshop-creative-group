@@ -33,6 +33,14 @@ Use **Move up** and **Move down** to adjust the order within a portfolio categor
 
 Use the **Archived** tab and choose **Restore** to return an archived asset to its existing placement and order.
 
+## Set or Replace a Thumbnail
+
+Every media item has a **Thumbnail / poster** selector in the Media Library. Images use the source image by default. Videos show their first available source frame until you choose an image poster. Select an active image from the Media Library to use a replacement thumbnail, or reset to **Use source image** / **Use first frame from video source** at any time. Archiving preserves thumbnail choices for recovery.
+
+## Manage Genuine Testimonials
+
+Open **Admin Dashboard → Testimonials** to add only real, approved customer feedback. Enter the approved quote, name, title, and company. You may optionally select an existing Media Library logo or photo. New entries begin as **drafts** and remain private until you select **Publish**. Use **Edit** to correct approved information and **Move up** / **Move down** to control the public Home-page order. Archive instead of delete; restored testimonials return to draft for approval.
+
 ## Shared Website Images and Icons
 
 The Media Library includes a **brand and system** group for the header logo, footer logo, touch icons, favicons, and other shared visual assets. These use stable managed slots, so a replacement can update the corresponding web placement without changing code.

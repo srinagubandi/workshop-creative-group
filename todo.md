@@ -74,12 +74,17 @@
 - [x] Add automated coverage for rendering-side performance safeguards: lazy public routes, single blog-list query behavior, and shared image loading priority/caching
 
 ## Managed Thumbnails and Testimonials
-- [ ] Create a recoverable pre-change checkpoint and update CURRENT_CONTEXT.md with the approved managed-thumbnail and genuine-testimonial requirements
-- [ ] Add non-destructive thumbnail relationships to every media asset: source-media default, selectable Media Library replacement, and video-thumbnail support
-- [ ] Add database models, safe migrations, and protected admin procedures for testimonials with optional Media Library logo/photo, ordering, draft/publish/unpublish, archive, and restore states
-- [ ] Seed the owner-provided Ian Readman/Radford Motor Company LLC testimonial verbatim as a draft for review, without fabricating any other feedback
-- [ ] Build Media Library thumbnail selection, preview, replacement, reset-to-source, and archive-safe behavior for all images and videos
-- [ ] Build an admin testimonial manager with genuine-content guidance, optional Media Library image selection, publication controls, ordering, archive, and restore actions
-- [ ] Add a responsive Home-page testimonial section that is hidden without published testimonials and automatically adapts from a featured single testimonial to a multi-testimonial layout
+- [x] Create a recoverable pre-change checkpoint and update CURRENT_CONTEXT.md with the approved managed-thumbnail and genuine-testimonial requirements
+- [x] Add non-destructive thumbnail relationships to every media asset: source-media default, selectable Media Library replacement, and video-thumbnail support
+- [x] Add database models, safe migrations, and protected admin procedures for testimonials with optional Media Library logo/photo, ordering, draft/publish/unpublish, archive, and restore states
+- [x] Seed the owner-provided Ian Readman/Radford Motor Company LLC testimonial verbatim as published on the Home page, without fabricating any other feedback
+- [x] Build Media Library thumbnail selection, preview, replacement, reset-to-source, and archive-safe behavior for all images and videos
+- [x] Build an admin testimonial manager with genuine-content guidance, optional Media Library image selection, publication controls, ordering, archive, and restore actions
+- [x] Add a responsive Home-page testimonial section that is hidden without published testimonials and automatically adapts from a featured single testimonial to a multi-testimonial layout
+- [x] Add complete existing-testimonial editing and move up/down ordering controls, then verify the Home-page order updates correctly
+- [x] Add and verify explicit default video poster behavior with Media Library replacement and reset-to-source controls
+- [ ] Verify testimonial reordering end to end in the admin and confirm the Home-page public order updates, then record the result
+- [ ] Verify actual managed-video source-frame preview, replacement poster selection, reset-to-source, and public gallery behavior without affecting existing published media
+- [ ] Add automated regression coverage for testimonial reorder output and video thumbnail fallback/reset behavior
 - [ ] Add Vitest coverage and local/live verification for thumbnail selection, testimonial lifecycle behavior, optional media selection, responsive public rendering, and preservation of the current visual design
 - [ ] Push verified changes to a rollback branch and GitHub main, deploy to Railway, and update the admin user guidance and living context

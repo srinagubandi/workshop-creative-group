@@ -10,6 +10,7 @@ import { runStartupMigrations } from "../migrations";
 import { registerMediaRoutes } from "../mediaRoutes";
 import { seedLegacyMedia } from "../legacyMediaSeed";
 import { registerSeoRoutes } from "../seo";
+import { seedOwnerTestimonial } from "../testimonialSeed";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -34,6 +35,7 @@ async function startServer() {
   // Run startup migrations (CREATE TABLE IF NOT EXISTS) — safe on every boot
   await runStartupMigrations();
   await seedLegacyMedia();
+  await seedOwnerTestimonial();
 
   const app = express();
   const server = createServer(app);

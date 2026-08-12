@@ -19,6 +19,12 @@ const mocks = vi.hoisted(() => ({
   updateMediaPlacement: vi.fn(),
   updateContactStatus: vi.fn(),
   updateQuoteStatus: vi.fn(),
+  setMediaThumbnail: vi.fn(),
+  listTestimonials: vi.fn(),
+  createTestimonial: vi.fn(),
+  updateTestimonial: vi.fn(),
+  setTestimonialStatus: vi.fn(),
+  reorderTestimonials: vi.fn(),
   storageGetSignedUrl: vi.fn(),
   runDatabaseBackup: vi.fn(),
   sendAdminDocumentationEmail: vi.fn(),
@@ -43,6 +49,12 @@ vi.mock("./db", () => ({
   updateMediaPlacement: mocks.updateMediaPlacement,
   updateContactStatus: mocks.updateContactStatus,
   updateQuoteStatus: mocks.updateQuoteStatus,
+  setMediaThumbnail: mocks.setMediaThumbnail,
+  listTestimonials: mocks.listTestimonials,
+  createTestimonial: mocks.createTestimonial,
+  updateTestimonial: mocks.updateTestimonial,
+  setTestimonialStatus: mocks.setTestimonialStatus,
+  reorderTestimonials: mocks.reorderTestimonials,
 }));
 vi.mock("./storage", () => ({ storageGetSignedUrl: mocks.storageGetSignedUrl }));
 vi.mock("./backup", () => ({ runDatabaseBackup: mocks.runDatabaseBackup }));
@@ -127,5 +139,27 @@ describe("admin managed-media and backup safeguards", () => {
     await expect(caller().updateMedia({ token, id: 1, altText: "x".repeat(513) })).rejects.toBeTruthy();
     expect(mocks.setMediaStatus).not.toHaveBeenCalled();
     expect(mocks.updateMediaAsset).not.toHaveBeenCalled();
+  });
+
+  it("allows a thumbnail to be reset to source media or replaced with an active Media Library image", async () => {
+    await caller().setMediaThumbnail({ token, id: 41, thumbnailMediaId: null });
+    await caller().setMediaThumbnail({ token, id: 41, thumbnailMediaId: 92 });
+    expect(mocks.setMediaThumbnail).toHaveBeenNthCalledWith(1, 41, null);
+    expect(mocks.setMediaThumbnail).toHaveBeenNthCalledWith(2, 41, 92);
+  });
+
+  it("creates testimonial submissions as drafts and keeps publication and archive actions authenticated", async () => {
+    mocks.createTestimonial.mockResolvedValue({ id: 9, status: "draft" });
+    await caller().createTestimonial({ token, quote: "A genuine, approved customer testimonial that exceeds the minimum length.", authorName: "Approved Customer", company: "Customer Company", mediaId: null });
+    await caller().publishTestimonial({ token, id: 9 });
+    await caller().archiveTestimonial({ token, id: 9 });
+    expect(mocks.createTestimonial).toHaveBeenCalledWith(expect.objectContaining({ status: "draft", mediaId: null }));
+    expect(mocks.setTestimonialStatus).toHaveBeenNthCalledWith(1, 9, "published");
+    expect(mocks.setTestimonialStatus).toHaveBeenNthCalledWith(2, 9, "archived");
+  });
+
+  it("persists the testimonial order supplied by the administrator without generating testimonial content", async () => {
+    await caller().reorderTestimonials({ token, ids: [40, 18, 7] });
+    expect(mocks.reorderTestimonials).toHaveBeenCalledWith([40, 18, 7]);
   });
 });

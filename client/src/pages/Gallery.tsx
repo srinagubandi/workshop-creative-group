@@ -19,7 +19,7 @@ import { GALLERY_CATEGORIES, GALLERY_ITEMS, type GalleryItem } from "@/data/gall
 import { trpc } from "@/lib/trpc";
 import { useCallback, useEffect, useState } from "react";
 
-type ManagedGalleryItem = GalleryItem & { id?: number; mediaType?: "image" | "video" };
+type ManagedGalleryItem = GalleryItem & { id?: number; mediaType?: "image" | "video"; thumbnailSrc?: string | null };
 
 // ─── Lightbox ────────────────────────────────────────────────────────────────
 
@@ -118,9 +118,7 @@ function GalleryCard({ item, onClick }: { item: ManagedGalleryItem; onClick: () 
       {/* Image */}
       <div className="aspect-[4/3] overflow-hidden bg-gray-100">
         {item.mediaType === "video" ? (
-          <div className="w-full h-full bg-slate-900 flex items-center justify-center text-white">
-            <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
-          </div>
+          item.thumbnailSrc ? <img src={item.thumbnailSrc} alt={item.alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-full object-cover" /> : <video src={item.src} muted playsInline preload="metadata" className="w-full h-full object-cover" aria-label={`${item.alt} video preview`} />
         ) : !error ? (
           <img
             src={item.src}

@@ -7,12 +7,14 @@ import {
   dbBackups,
   mediaAssets,
   mediaPlacements,
+  testimonials,
   InsertMediaAsset,
   InsertMediaPlacement,
   InsertBlogPost,
   InsertContactSubmission,
   InsertQuoteRequest,
   InsertUser,
+  InsertTestimonial,
   quoteRequests,
   users,
 } from "../drizzle/schema";
@@ -220,12 +222,20 @@ export async function listMediaAssets(status?: "draft" | "published" | "archived
 
 export async function updateMediaAsset(
   id: number,
-  data: Partial<Pick<InsertMediaAsset, "title" | "caption" | "altText" | "storageKey" | "originalKey" | "mimeType" | "sizeBytes" | "width" | "height" | "transformJson">>,
+  data: Partial<Pick<InsertMediaAsset, "title" | "caption" | "altText" | "storageKey" | "originalKey" | "mimeType" | "sizeBytes" | "width" | "height" | "transformJson" | "thumbnailMediaId">>,
 ) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   await db.update(mediaAssets).set(data).where(eq(mediaAssets.id, id));
   return getMediaAsset(id);
+}
+
+export async function setMediaThumbnail(id: number, thumbnailMediaId: number | null) {
+  if (thumbnailMediaId) {
+    const thumbnail = await getMediaAsset(thumbnailMediaId);
+    if (!thumbnail || thumbnail.mediaType !== "image" || thumbnail.status === "archived") throw new Error("Thumbnail must be an active image asset");
+  }
+  return updateMediaAsset(id, { thumbnailMediaId });
 }
 
 export async function setMediaStatus(id: number, status: "draft" | "published" | "archived") {
@@ -301,4 +311,46 @@ export async function getPublishedSiteAsset(slotKey: string) {
     .where(and(eq(mediaAssets.status, "published"), eq(mediaPlacements.pageKey, "site-assets"), eq(mediaPlacements.slotKey, slotKey), eq(mediaPlacements.isActive, 1)))
     .limit(1);
   return rows[0] ?? null;
+}
+
+// ─── Testimonials — genuine owner-approved customer feedback only ─────────────
+export async function createTestimonial(data: InsertTestimonial) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(testimonials).values(data);
+  const id = Number((result as any)[0]?.insertId ?? (result as any).insertId);
+  return getTestimonial(id);
+}
+
+export async function getTestimonial(id: number) {
+  const db = await getDb(); if (!db) return null;
+  const rows = await db.select().from(testimonials).where(eq(testimonials.id, id)).limit(1);
+  return rows[0] ?? null;
+}
+
+export async function listTestimonials(status?: "draft" | "published" | "archived") {
+  const db = await getDb(); if (!db) return [];
+  return status ? db.select().from(testimonials).where(eq(testimonials.status, status)).orderBy(asc(testimonials.sortOrder), desc(testimonials.updatedAt)) : db.select().from(testimonials).orderBy(asc(testimonials.sortOrder), desc(testimonials.updatedAt));
+}
+
+export async function updateTestimonial(id: number, data: Partial<Pick<InsertTestimonial, "quote" | "authorName" | "authorTitle" | "company" | "mediaId" | "sortOrder">>) {
+  const db = await getDb(); if (!db) throw new Error("Database not available");
+  await db.update(testimonials).set(data).where(eq(testimonials.id, id)); return getTestimonial(id);
+}
+
+export async function setTestimonialStatus(id: number, status: "draft" | "published" | "archived") {
+  const db = await getDb(); if (!db) throw new Error("Database not available");
+  const now = new Date();
+  await db.update(testimonials).set({ status, publishedAt: status === "published" ? now : undefined, archivedAt: status === "archived" ? now : null }).where(eq(testimonials.id, id));
+  return getTestimonial(id);
+}
+
+export async function reorderTestimonials(ids: number[]) {
+  const db = await getDb(); if (!db) throw new Error("Database not available");
+  await Promise.all(ids.map((id, sortOrder) => db.update(testimonials).set({ sortOrder }).where(eq(testimonials.id, id))));
+}
+
+export async function getPublishedTestimonials() {
+  const db = await getDb(); if (!db) return [];
+  return db.select({ testimonial: testimonials, media: mediaAssets }).from(testimonials).leftJoin(mediaAssets, eq(testimonials.mediaId, mediaAssets.id)).where(eq(testimonials.status, "published")).orderBy(asc(testimonials.sortOrder), asc(testimonials.id));
 }

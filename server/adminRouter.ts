@@ -24,15 +24,22 @@ import {
   getAllQuoteRequests,
   getAdminSession,
   getMediaAsset,
+  getTestimonial,
   getRecentBackups,
   listMediaAssets,
   listMediaPlacements,
+  listTestimonials,
   logDbBackup,
   reorderMediaPlacements,
+  reorderTestimonials,
   saveMediaPlacement,
   setMediaStatus,
+  setMediaThumbnail,
+  setTestimonialStatus,
   updateMediaAsset,
   updateMediaPlacement,
+  updateTestimonial,
+  createTestimonial,
   updateContactStatus,
   updateQuoteStatus,
 } from "./db";
@@ -219,6 +226,25 @@ export const adminRouter = router({
   reorderMedia: publicProcedure
     .input(z.object({ token: z.string(), placementIds: z.array(z.number().int().positive()).min(1).max(500) }))
     .mutation(async ({ input }) => { await requireAdmin(input.token); await reorderMediaPlacements(input.placementIds); return { success: true }; }),
+
+  setMediaThumbnail: publicProcedure
+    .input(z.object({ token: z.string(), id: z.number().int().positive(), thumbnailMediaId: z.number().int().positive().nullable() }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); return setMediaThumbnail(input.id, input.thumbnailMediaId); }),
+
+  testimonials: publicProcedure
+    .input(z.object({ token: z.string(), status: z.enum(["draft", "published", "archived"]).optional() }))
+    .query(async ({ input }) => { await requireAdmin(input.token); return listTestimonials(input.status); }),
+  createTestimonial: publicProcedure
+    .input(z.object({ token: z.string(), quote: z.string().trim().min(20).max(10000), authorName: z.string().trim().min(2).max(255), authorTitle: z.string().trim().max(255).optional(), company: z.string().trim().max(255).optional(), mediaId: z.number().int().positive().nullable().optional() }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); const { token, ...data } = input; return createTestimonial({ ...data, status: "draft", sortOrder: 0, authorTitle: data.authorTitle ?? null, company: data.company ?? null, mediaId: data.mediaId ?? null, publishedAt: null, archivedAt: null }); }),
+  updateTestimonial: publicProcedure
+    .input(z.object({ token: z.string(), id: z.number().int().positive(), quote: z.string().trim().min(20).max(10000).optional(), authorName: z.string().trim().min(2).max(255).optional(), authorTitle: z.string().trim().max(255).nullable().optional(), company: z.string().trim().max(255).nullable().optional(), mediaId: z.number().int().positive().nullable().optional(), sortOrder: z.number().int().min(0).optional() }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); const { token, id, ...data } = input; return updateTestimonial(id, data); }),
+  publishTestimonial: publicProcedure.input(z.object({ token: z.string(), id: z.number().int().positive() })).mutation(async ({ input }) => { await requireAdmin(input.token); return setTestimonialStatus(input.id, "published"); }),
+  unpublishTestimonial: publicProcedure.input(z.object({ token: z.string(), id: z.number().int().positive() })).mutation(async ({ input }) => { await requireAdmin(input.token); return setTestimonialStatus(input.id, "draft"); }),
+  archiveTestimonial: publicProcedure.input(z.object({ token: z.string(), id: z.number().int().positive() })).mutation(async ({ input }) => { await requireAdmin(input.token); return setTestimonialStatus(input.id, "archived"); }),
+  restoreTestimonial: publicProcedure.input(z.object({ token: z.string(), id: z.number().int().positive() })).mutation(async ({ input }) => { await requireAdmin(input.token); return setTestimonialStatus(input.id, "draft"); }),
+  reorderTestimonials: publicProcedure.input(z.object({ token: z.string(), ids: z.array(z.number().int().positive()).min(1) })).mutation(async ({ input }) => { await requireAdmin(input.token); await reorderTestimonials(input.ids); return { success: true }; }),
 
   privateFileUrl: publicProcedure
     .input(z.object({ token: z.string(), key: z.string().min(1).max(512) }))
