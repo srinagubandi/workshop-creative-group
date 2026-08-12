@@ -5,6 +5,7 @@
 
 import PageLayout from "@/components/PageLayout";
 import { trpc } from "@/lib/trpc";
+import { getBlogPresentation } from "@/lib/renderingPerformance";
 import { Link } from "wouter";
 
 // Placeholder blog posts shown when no posts exist in the database yet
@@ -35,9 +36,7 @@ function formatDate(date: Date | string) {
 export default function Blog() {
   const { data: posts, isLoading } = trpc.blog.list.useQuery();
 
-  const displayPosts = posts && posts.length > 0 ? posts : PLACEHOLDER_POSTS;
-  const featuredPost = displayPosts.find((p) => p.featured === 1) ?? null;
-  const otherPosts = displayPosts.filter((p) => p.id !== featuredPost?.id);
+  const { displayPosts, featuredPost, otherPosts } = getBlogPresentation(posts, PLACEHOLDER_POSTS);
 
   return (
     <PageLayout

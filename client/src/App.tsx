@@ -23,18 +23,19 @@ import { lazy, Suspense } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { PUBLIC_PAGE_IMPORTERS } from "./lib/renderingPerformance";
 
-const About = lazy(() => import("./pages/About"));
-const Blog = lazy(() => import("./pages/Blog"));
-const Contact = lazy(() => import("./pages/Contact"));
-const GraphicDesign = lazy(() => import("./pages/GraphicDesign"));
-const Home = lazy(() => import("./pages/Home"));
-const LargeFormat = lazy(() => import("./pages/LargeFormat"));
-const PrintProcurement = lazy(() => import("./pages/PrintProcurement"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
-const Gallery = lazy(() => import("./pages/Gallery"));
-const Admin = lazy(() => import("./pages/Admin"));
-const RequestQuote = lazy(() => import("./pages/RequestQuote"));
+const About = lazy(PUBLIC_PAGE_IMPORTERS.about);
+const Blog = lazy(PUBLIC_PAGE_IMPORTERS.blog);
+const Contact = lazy(PUBLIC_PAGE_IMPORTERS.contact);
+const GraphicDesign = lazy(PUBLIC_PAGE_IMPORTERS.graphicDesign);
+const Home = lazy(PUBLIC_PAGE_IMPORTERS.home);
+const LargeFormat = lazy(PUBLIC_PAGE_IMPORTERS.largeFormat);
+const PrintProcurement = lazy(PUBLIC_PAGE_IMPORTERS.printProcurement);
+const BlogPost = lazy(PUBLIC_PAGE_IMPORTERS.blogPost);
+const Gallery = lazy(PUBLIC_PAGE_IMPORTERS.gallery);
+const Admin = lazy(PUBLIC_PAGE_IMPORTERS.admin);
+const RequestQuote = lazy(PUBLIC_PAGE_IMPORTERS.requestQuote);
 
 function Router() {
   return (

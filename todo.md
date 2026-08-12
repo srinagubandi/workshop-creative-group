@@ -67,6 +67,8 @@
 - [x] Audit and remove duplicate loading work, redundant rendering, avoidable requests, and unused client-side code without changing site design or copy
 - [x] Optimize visual assets, font delivery, script loading, route bundling, and rendering priority while preserving existing page visuals
 - [x] Reduce and verify non-critical font transfer while preserving the existing Playfair Display and Inter visual typography
-- [ ] Run and document ten optimization-and-verification passes across the public pages, keeping a concise current performance context
-- [ ] Add or update automated tests for performance-related utility and rendering changes, then push verified changes to GitHub and Railway
-- [ ] Correct and verify immutable cache headers for fingerprinted production JavaScript and CSS assets identified during live performance passes
+- [x] Run and document ten optimization-and-verification passes across the public pages, keeping a concise current performance context
+- [x] Add or update automated tests for performance-related utility and rendering changes, then push verified changes to GitHub and Railway
+- [x] Correct and verify immutable cache headers for fingerprinted production JavaScript and CSS assets identified during live performance passes
+- [ ] Re-run ten live public-route verification passes after deployment until every page returns HTTP 200 in every pass, then record the clean result
+- [ ] Add automated coverage for rendering-side performance safeguards: lazy public routes, single blog-list query behavior, and shared image loading priority/caching
