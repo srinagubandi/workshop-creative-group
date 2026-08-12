@@ -10,12 +10,13 @@
  */
 
 import { trpc } from "@/lib/trpc";
+import { MediaManager } from "@/components/MediaManager";
 import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "wscg_admin_token";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
-type Tab = "quotes" | "contacts" | "backups";
+type Tab = "quotes" | "contacts" | "backups" | "media" | "help";
 
 // ─── Login Screen ─────────────────────────────────────────────────────────────
 function LoginScreen({ onLogin }: { onLogin: (token: string) => void }) {
@@ -125,6 +126,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
   const updateQuote = trpc.admin.updateQuote.useMutation({ onSuccess: () => quotesQ.refetch() });
   const updateContact = trpc.admin.updateContact.useMutation({ onSuccess: () => contactsQ.refetch() });
   const runBackup = trpc.admin.runBackup.useMutation({ onSuccess: () => backupsQ.refetch() });
+  const sendDocumentation = trpc.admin.sendDocumentationEmail.useMutation();
   const logoutMutation = trpc.admin.logout.useMutation({ onSuccess: onLogout });
 
   const stats = statsQ.data;
@@ -169,7 +171,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
 
         {/* Tabs */}
         <div className="flex gap-2 mb-6 border-b border-gray-800 pb-4">
-          {(["quotes", "contacts", "backups"] as Tab[]).map((t) => (
+          {(["quotes", "contacts", "media", "backups", "help"] as Tab[]).map((t) => (
             <button
               key={t}
               onClick={() => setTab(t)}
@@ -180,7 +182,8 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
             >
               {t === "quotes" ? `Quote Requests (${stats?.totalQuotes ?? 0})` :
                t === "contacts" ? `Contact Messages (${stats?.totalContacts ?? 0})` :
-               "Database Backups"}
+               t === "media" ? "Media Library" :
+               t === "backups" ? "Database Backups" : "Help"}
             </button>
           ))}
         </div>
@@ -240,9 +243,9 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
                       </div>
                     )}
 
-                    {q.invoiceFileUrl && (
+                    {q.invoiceFileKey && (
                       <a
-                        href={q.invoiceFileUrl}
+                        href={`/api/storage/${encodeURIComponent(q.invoiceFileKey)}?token=${encodeURIComponent(token)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-lg border border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 transition-colors duration-200"
@@ -315,13 +318,16 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
           </div>
         )}
 
+        {/* ── Media Tab ── */}
+        {tab === "media" && <MediaManager token={token} />}
+
         {/* ── Backups Tab ── */}
         {tab === "backups" && (
           <div>
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h2 className="text-white font-semibold text-lg">Database Backups</h2>
-                <p className="text-gray-500 text-sm mt-1">Daily automatic backups run at 2:00 AM UTC. You can also trigger a manual backup anytime.</p>
+                <p className="text-gray-500 text-sm mt-1">Backups are created on demand and stored privately in the Railway bucket. Use the manual backup action whenever you need a new recovery point.</p>
               </div>
               <button
                 onClick={() => runBackup.mutate({ token })}
@@ -370,8 +376,8 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
                         <td className="px-5 py-3"><StatusBadge status={b.status} /></td>
                         <td className="px-5 py-3 text-gray-400 text-xs">{formatDate(b.createdAt)}</td>
                         <td className="px-5 py-3">
-                          {b.fileUrl ? (
-                            <a href={b.fileUrl} target="_blank" rel="noopener noreferrer"
+                          {b.fileKey ? (
+                            <a href={`/api/storage/${encodeURIComponent(b.fileKey)}?token=${encodeURIComponent(token)}`} target="_blank" rel="noopener noreferrer"
                                className="text-blue-400 hover:text-blue-300 text-xs font-medium transition-colors">
                               Download
                             </a>
@@ -387,6 +393,33 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
             )}
           </div>
         )}
+
+        {/* ── Help Tab ── */}
+        {tab === "help" && (
+          <div className="max-w-4xl space-y-5">
+            <div>
+              <h2 className="text-white font-semibold text-lg">Media Library Guide</h2>
+              <p className="text-gray-400 text-sm mt-1">Use these steps to update website media while keeping every archived item recoverable.</p>
+            </div>
+            <div className="bg-blue-950/40 border border-blue-800 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div><h3 className="text-white font-semibold text-sm">Email this guide and the copy recommendations</h3><p className="text-blue-200/70 text-xs mt-1">Sends a review-only content list and this operating guide to brent@workshopcreativegroup.com.</p></div>
+              <button onClick={() => sendDocumentation.mutate({ token })} disabled={sendDocumentation.isPending} className="px-4 py-2 rounded-lg text-sm font-semibold text-white disabled:opacity-50" style={{ background: "#1260ae" }}>{sendDocumentation.isPending ? "Sending…" : sendDocumentation.isSuccess ? "Sent" : "Email Guide"}</button>
+            </div>
+            {[
+              ["1. Upload", "Choose Upload image or video. Images must be JPG, PNG, or WebP under 20 MB and no larger than 6,000 px on either side. Videos must be MP4 or WebM under 250 MB. The admin explains why any unsuitable file is rejected."],
+              ["2. Prepare and describe", "For images, rotate or crop-zoom before uploading. Then add a title, useful alt text, and an optional caption. Accurate alt text supports accessibility and search visibility."],
+              ["3. Place and publish", "Set the page, category, client, and project. New uploads are drafts, so they are not public until you choose Publish. Save placement before publishing a new asset."],
+              ["4. Replace safely", "Use Replace on an existing item to keep its public placement and order. The earlier version remains recoverable rather than being deleted."],
+              ["5. Reorder or archive", "Move items up or down within a section to alter display order. Archive removes an item from the public site while preserving it. Restore returns it to the existing placement and order."],
+              ["6. Backups", "The Database Backups tab records backup activity. The private Railway archive holds the recoverable database, invoice, source, and media backup records. Keep admin credentials and private download links confidential."],
+            ].map(([title, body]) => (
+              <div key={title} className="bg-gray-900 border border-gray-800 rounded-xl p-5">
+                <h3 className="text-white font-semibold text-sm">{title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mt-2">{body}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -396,6 +429,13 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
 export default function Admin() {
   const [token, setToken] = useState<string | null>(null);
   const [checking, setChecking] = useState(true);
+
+  useEffect(() => {
+    document.title = "Admin Dashboard | Workshop Creative Group";
+    let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    if (!robots) { robots = document.createElement("meta"); robots.name = "robots"; document.head.appendChild(robots); }
+    robots.content = "noindex,nofollow,noarchive";
+  }, []);
 
   const meQuery = trpc.admin.me.useQuery(
     { token: token ?? undefined },

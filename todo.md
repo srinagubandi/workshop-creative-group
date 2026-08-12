@@ -34,3 +34,26 @@
 - [x] Push to new GitHub repo (workshop-creative-group)
 - [x] Configure Railway deployment (Dockerfile)
 - [x] Deploy to Railway and get live URL — https://web-production-d7aa.up.railway.app
+
+## Admin Media, Metadata, and Documentation Expansion
+- [x] Create a complete pre-change backup of the Railway database, media assets, and deployed source state; retain a recoverable record and email confirmation to brent@workshopcreativegroup.com
+- [x] Store a verified pre-change source snapshot and complete public-media inventory in the private Railway backup bucket
+- [x] Verify the backup confirmation email delivery and retain its Resend message identifier in the backup record
+- [x] Add and maintain CURRENT_CONTEXT.md with architecture, Railway/GitHub deployment state, content rules, media-management decisions, metadata strategy, and change history
+- [x] Replace public-site Manus media dependencies with Railway-backed persistent media storage and safe media-serving routes
+- [x] [Superseded by owner decision] Replace the existing platform-specific daily backup scheduler with a Railway-native 2:00 AM UTC cron service that exits after completion
+- [ ] Disable the existing legacy scheduled-backup job at final cutover; retain only the Railway-backed manual backup action in the admin dashboard
+- [x] Add database models and migrations for images, videos, page placements, categories, SEO metadata, publish state, archive state, ordering, captions, and accessibility text
+- [x] Build password-protected admin media management for all website images and videos, including upload, replacement in place, type/size/dimension validation, previews, and pre-publication warnings
+- [x] Build image crop and rotation controls with preview and preserve original assets for recovery
+- [x] Add per-page placement, gallery category assignment, publish/unpublish workflow, archive, restore, archive search, and explicit ordering controls
+- [x] Implement and verify visible crop/rotation controls with preview and non-destructive original preservation for edited assets
+- [x] Add and verify searchable archive controls so archived assets can be located and restored efficiently
+- [x] Enforce supported media formats and file-size limits: common web images plus MP4/WebM video, with clear client and server validation feedback
+- [x] Add editable media title, caption, alt text, and metadata fields to support accessibility, SEO, AEO, and GEO
+- [x] Add permanent admin Help guidance for the media workflow
+- [x] Apply metadata-only nationwide SEO, AEO, and GEO updates: canonical URLs, robots/sitemap, route titles/descriptions, social metadata, and valid structured data
+- [x] Produce a page-by-page, review-only visible-copy recommendation list without changing on-page copy
+- [ ] Email brent@workshopcreativegroup.com the backup confirmation, copy-recommendation review, and new-admin user guide
+- [ ] Add Vitest coverage and production verification for uploads, media lifecycle, metadata behavior, archive recovery, email delivery, and database backup safeguards
+- [ ] Create a deployment branch, push verified work to GitHub, manually deploy to Railway, and verify the live application

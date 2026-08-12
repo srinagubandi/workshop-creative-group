@@ -16,12 +16,15 @@
 
 import PageLayout from "@/components/PageLayout";
 import { GALLERY_CATEGORIES, GALLERY_ITEMS, type GalleryItem } from "@/data/gallery";
+import { trpc } from "@/lib/trpc";
 import { useCallback, useEffect, useState } from "react";
+
+type ManagedGalleryItem = GalleryItem & { id?: number; mediaType?: "image" | "video" };
 
 // ─── Lightbox ────────────────────────────────────────────────────────────────
 
 function Lightbox({ item, onClose, onPrev, onNext }: {
-  item: GalleryItem;
+  item: ManagedGalleryItem;
   onClose: () => void;
   onPrev: () => void;
   onNext: () => void;
@@ -64,12 +67,11 @@ function Lightbox({ item, onClose, onPrev, onNext }: {
         className="relative max-w-5xl max-h-[85vh] flex flex-col items-center gap-4"
         onClick={(e) => e.stopPropagation()}
       >
-        <img
-          src={item.src}
-          alt={item.alt}
-          className="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl"
-          loading="eager"
-        />
+        {item.mediaType === "video" ? (
+          <video src={item.src} controls className="max-w-full max-h-[75vh] rounded-xl shadow-2xl" aria-label={item.alt} />
+        ) : (
+          <img src={item.src} alt={item.alt} className="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl" loading="eager" />
+        )}
         <div className="text-center">
           <p className="text-white font-semibold text-base">{item.client}</p>
           <p className="text-white/60 text-sm">{item.project} · {item.categoryLabel}</p>
@@ -103,7 +105,7 @@ function Lightbox({ item, onClose, onPrev, onNext }: {
 
 // ─── Gallery Card ─────────────────────────────────────────────────────────────
 
-function GalleryCard({ item, onClick }: { item: GalleryItem; onClick: () => void }) {
+function GalleryCard({ item, onClick }: { item: ManagedGalleryItem; onClick: () => void }) {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
 
@@ -115,7 +117,11 @@ function GalleryCard({ item, onClick }: { item: GalleryItem; onClick: () => void
     >
       {/* Image */}
       <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-        {!error ? (
+        {item.mediaType === "video" ? (
+          <div className="w-full h-full bg-slate-900 flex items-center justify-center text-white">
+            <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+          </div>
+        ) : !error ? (
           <img
             src={item.src}
             alt={item.alt}
@@ -167,10 +173,12 @@ function GalleryCard({ item, onClick }: { item: GalleryItem; onClick: () => void
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const managedGallery = trpc.media.gallery.useQuery();
+  const galleryItems: ManagedGalleryItem[] = managedGallery.data?.length ? managedGallery.data : GALLERY_ITEMS;
 
   const filtered = activeCategory === "all"
-    ? GALLERY_ITEMS
-    : GALLERY_ITEMS.filter((item) => item.category === activeCategory);
+    ? galleryItems
+    : galleryItems.filter((item) => item.category === activeCategory);
 
   const openLightbox = useCallback((index: number) => setLightboxIndex(index), []);
   const closeLightbox = useCallback(() => setLightboxIndex(null), []);
@@ -206,8 +214,8 @@ export default function Gallery() {
           <div className="flex flex-wrap gap-2 mb-10 justify-center">
             {GALLERY_CATEGORIES.map((cat) => {
               const count = cat.key === "all"
-                ? GALLERY_ITEMS.length
-                : GALLERY_ITEMS.filter((i) => i.category === cat.key).length;
+                ? galleryItems.length
+                : galleryItems.filter((i) => i.category === cat.key).length;
               return (
                 <button
                   key={cat.key}

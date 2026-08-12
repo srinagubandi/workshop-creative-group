@@ -1,62 +1,17 @@
-import { describe, expect, it } from "vitest";
-import { appRouter } from "./routers";
-import { COOKIE_NAME } from "../shared/const";
-import type { TrpcContext } from "./_core/context";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
-type CookieCall = {
-  name: string;
-  options: Record<string, unknown>;
-};
+const mocks = vi.hoisted(() => ({ deleteAdminSession: vi.fn() }));
+vi.mock("./db", () => ({ deleteAdminSession: mocks.deleteAdminSession }));
 
-type AuthenticatedUser = NonNullable<TrpcContext["user"]>;
+import { adminRouter } from "./adminRouter";
 
-function createAuthContext(): { ctx: TrpcContext; clearedCookies: CookieCall[] } {
-  const clearedCookies: CookieCall[] = [];
+describe("admin.logout", () => {
+  beforeEach(() => mocks.deleteAdminSession.mockReset());
 
-  const user: AuthenticatedUser = {
-    id: 1,
-    openId: "sample-user",
-    email: "sample@example.com",
-    name: "Sample User",
-    loginMethod: "manus",
-    role: "user",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    lastSignedIn: new Date(),
-  };
-
-  const ctx: TrpcContext = {
-    user,
-    req: {
-      protocol: "https",
-      headers: {},
-    } as TrpcContext["req"],
-    res: {
-      clearCookie: (name: string, options: Record<string, unknown>) => {
-        clearedCookies.push({ name, options });
-      },
-    } as TrpcContext["res"],
-  };
-
-  return { ctx, clearedCookies };
-}
-
-describe("auth.logout", () => {
-  it("clears the session cookie and reports success", async () => {
-    const { ctx, clearedCookies } = createAuthContext();
-    const caller = appRouter.createCaller(ctx);
-
-    const result = await caller.auth.logout();
-
+  it("invalidates the custom administrator session and reports success", async () => {
+    const caller = adminRouter.createCaller({} as any);
+    const result = await caller.logout({ token: "secure-session-token" });
     expect(result).toEqual({ success: true });
-    expect(clearedCookies).toHaveLength(1);
-    expect(clearedCookies[0]?.name).toBe(COOKIE_NAME);
-    expect(clearedCookies[0]?.options).toMatchObject({
-      maxAge: -1,
-      secure: true,
-      sameSite: "none",
-      httpOnly: true,
-      path: "/",
-    });
+    expect(mocks.deleteAdminSession).toHaveBeenCalledWith("secure-session-token");
   });
 });

@@ -1,10 +1,14 @@
-import { desc, eq } from "drizzle-orm";
+import { and, asc, desc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import {
   adminSessions,
   blogPosts,
   contactSubmissions,
   dbBackups,
+  mediaAssets,
+  mediaPlacements,
+  InsertMediaAsset,
+  InsertMediaPlacement,
   InsertBlogPost,
   InsertContactSubmission,
   InsertQuoteRequest,
@@ -180,4 +184,121 @@ export async function getRecentBackups(limit = 30) {
   const db = await getDb();
   if (!db) return [];
   return db.select().from(dbBackups).orderBy(desc(dbBackups.createdAt)).limit(limit);
+}
+
+// ─── Managed media helpers ────────────────────────────────────────────────────
+
+export async function createMediaAsset(data: InsertMediaAsset) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(mediaAssets).values(data);
+  const insertId = Number((result as any)[0]?.insertId ?? (result as any).insertId);
+  return getMediaAsset(insertId);
+}
+
+export async function getMediaAsset(id: number) {
+  const db = await getDb();
+  if (!db) return null;
+  const rows = await db.select().from(mediaAssets).where(eq(mediaAssets.id, id)).limit(1);
+  return rows[0] ?? null;
+}
+
+export async function getMediaAssetByStorageKey(storageKey: string) {
+  const db = await getDb();
+  if (!db) return null;
+  const rows = await db.select().from(mediaAssets).where(eq(mediaAssets.storageKey, storageKey)).limit(1);
+  return rows[0] ?? null;
+}
+
+export async function listMediaAssets(status?: "draft" | "published" | "archived") {
+  const db = await getDb();
+  if (!db) return [];
+  return status
+    ? db.select().from(mediaAssets).where(eq(mediaAssets.status, status)).orderBy(desc(mediaAssets.updatedAt))
+    : db.select().from(mediaAssets).orderBy(desc(mediaAssets.updatedAt));
+}
+
+export async function updateMediaAsset(
+  id: number,
+  data: Partial<Pick<InsertMediaAsset, "title" | "caption" | "altText" | "storageKey" | "originalKey" | "mimeType" | "sizeBytes" | "width" | "height" | "transformJson">>,
+) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(mediaAssets).set(data).where(eq(mediaAssets.id, id));
+  return getMediaAsset(id);
+}
+
+export async function setMediaStatus(id: number, status: "draft" | "published" | "archived") {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const now = new Date();
+  await db.update(mediaAssets).set({
+    status,
+    publishedAt: status === "published" ? now : undefined,
+    archivedAt: status === "archived" ? now : null,
+  }).where(eq(mediaAssets.id, id));
+  return getMediaAsset(id);
+}
+
+export async function listMediaPlacements(mediaId?: number) {
+  const db = await getDb();
+  if (!db) return [];
+  return mediaId === undefined
+    ? db.select().from(mediaPlacements).orderBy(asc(mediaPlacements.pageKey), asc(mediaPlacements.sortOrder))
+    : db.select().from(mediaPlacements).where(eq(mediaPlacements.mediaId, mediaId)).orderBy(asc(mediaPlacements.sortOrder));
+}
+
+export async function saveMediaPlacement(data: InsertMediaPlacement) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(mediaPlacements).values(data);
+  const insertId = Number((result as any)[0]?.insertId ?? (result as any).insertId);
+  const rows = await db.select().from(mediaPlacements).where(eq(mediaPlacements.id, insertId)).limit(1);
+  return rows[0] ?? null;
+}
+
+export async function updateMediaPlacement(
+  id: number,
+  data: Partial<Pick<InsertMediaPlacement, "pageKey" | "slotKey" | "category" | "client" | "project" | "sortOrder" | "isActive">>,
+) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(mediaPlacements).set(data).where(eq(mediaPlacements.id, id));
+  const rows = await db.select().from(mediaPlacements).where(eq(mediaPlacements.id, id)).limit(1);
+  return rows[0] ?? null;
+}
+
+export async function reorderMediaPlacements(placementIds: number[]) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await Promise.all(placementIds.map((id, sortOrder) => db.update(mediaPlacements).set({ sortOrder }).where(eq(mediaPlacements.id, id))));
+}
+
+export async function getPublishedGalleryMedia(category?: string) {
+  const db = await getDb();
+  if (!db) return [];
+  const conditions = [
+    eq(mediaAssets.status, "published"),
+    eq(mediaPlacements.pageKey, "gallery"),
+    eq(mediaPlacements.isActive, 1),
+  ];
+  if (category && category !== "all") conditions.push(eq(mediaPlacements.category, category));
+  return db
+    .select({ asset: mediaAssets, placement: mediaPlacements })
+    .from(mediaPlacements)
+    .innerJoin(mediaAssets, eq(mediaPlacements.mediaId, mediaAssets.id))
+    .where(and(...conditions))
+    .orderBy(asc(mediaPlacements.sortOrder), asc(mediaPlacements.id));
+}
+
+export async function getPublishedSiteAsset(slotKey: string) {
+  const db = await getDb();
+  if (!db) return null;
+  const rows = await db
+    .select({ asset: mediaAssets, placement: mediaPlacements })
+    .from(mediaPlacements)
+    .innerJoin(mediaAssets, eq(mediaPlacements.mediaId, mediaAssets.id))
+    .where(and(eq(mediaAssets.status, "published"), eq(mediaPlacements.pageKey, "site-assets"), eq(mediaPlacements.slotKey, slotKey), eq(mediaPlacements.isActive, 1)))
+    .limit(1);
+  return rows[0] ?? null;
 }
