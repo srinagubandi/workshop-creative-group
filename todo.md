@@ -88,3 +88,5 @@
 - [ ] Add automated regression coverage for testimonial reorder output and video thumbnail fallback/reset behavior
 - [ ] Add Vitest coverage and local/live verification for thumbnail selection, testimonial lifecycle behavior, optional media selection, responsive public rendering, and preservation of the current visual design
 - [ ] Push verified changes to a rollback branch and GitHub main, deploy to Railway, and update the admin user guidance and living context
+- [ ] Apply and verify the missing additive `thumbnailMediaId` column on Railway MySQL through a temporary protected connection, then remove the connection and redeploy
+- [ ] Replace the unsupported conditional column-add statement with a version-compatible additive startup migration, redeploy, and verify Railway applies the column before media seeding

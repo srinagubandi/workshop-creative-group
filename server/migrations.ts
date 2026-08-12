@@ -100,7 +100,6 @@ const MIGRATIONS = [
     \`updatedAt\` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT \`media_assets_id\` PRIMARY KEY(\`id\`)
   )`,
-  `ALTER TABLE \`media_assets\` ADD COLUMN IF NOT EXISTS \`thumbnailMediaId\` int`,
   `CREATE TABLE IF NOT EXISTS \`testimonials\` (
     \`id\` int AUTO_INCREMENT NOT NULL,
     \`status\` enum('draft','published','archived') NOT NULL DEFAULT 'draft',
@@ -175,5 +174,17 @@ export async function runStartupMigrations(): Promise<void> {
     }
   }
 
-  console.log(`[Migrations] Startup migrations complete (${created}/${MIGRATIONS.length} tables ensured)`);
+  // Railway's MySQL version does not support ADD COLUMN IF NOT EXISTS. Run the
+  // additive statement directly and treat an existing column as the intended
+  // idempotent outcome; no records are changed or removed.
+  try {
+    await (db as any).execute("ALTER TABLE `media_assets` ADD COLUMN `thumbnailMediaId` int NULL");
+    created++;
+  } catch (err: any) {
+    if (err?.cause?.code !== "ER_DUP_FIELDNAME" && err?.code !== "ER_DUP_FIELDNAME") {
+      console.warn("[Migrations] Thumbnail column warning:", err?.message?.slice(0, 120));
+    }
+  }
+
+  console.log(`[Migrations] Startup migrations complete (${created}/${MIGRATIONS.length + 1} tables ensured)`);
 }
