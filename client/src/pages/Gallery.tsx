@@ -126,6 +126,8 @@ function GalleryCard({ item, onClick }: { item: ManagedGalleryItem; onClick: () 
             src={item.src}
             alt={item.alt}
             loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             onLoad={() => setLoaded(true)}
             onError={() => setError(true)}
             className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${

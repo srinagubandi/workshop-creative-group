@@ -59,13 +59,24 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  app.use(express.static(distPath, {
+    index: false,
+    setHeaders(res, filePath) {
+      const normalizedPath = filePath.replace(/\\/g, "/");
+      if (/\/assets\/.*\.[a-z0-9]{8,}\.(js|css)$/i.test(normalizedPath)) {
+        res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+      } else if (/\/(gallery|images)\//i.test(normalizedPath)) {
+        res.setHeader("Cache-Control", "public, max-age=604800, stale-while-revalidate=86400");
+      }
+    },
+  }));
 
   // fall through to index.html if the file doesn't exist
   app.use("*", async (req, res, next) => {
     try {
       const indexFile = path.resolve(distPath, "index.html");
       const template = await fs.promises.readFile(indexFile, "utf-8");
+      res.setHeader("Cache-Control", "no-cache, max-age=0, must-revalidate");
       res.status(200).type("html").send(injectSeoMetadata(template, req.path));
     } catch (error) {
       next(error);

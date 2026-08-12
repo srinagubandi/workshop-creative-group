@@ -34,10 +34,9 @@ function formatDate(date: Date | string) {
 
 export default function Blog() {
   const { data: posts, isLoading } = trpc.blog.list.useQuery();
-  const { data: featured } = trpc.blog.featured.useQuery();
 
   const displayPosts = posts && posts.length > 0 ? posts : PLACEHOLDER_POSTS;
-  const featuredPost = featured || (displayPosts.find((p) => p.featured === 1) ?? null);
+  const featuredPost = displayPosts.find((p) => p.featured === 1) ?? null;
   const otherPosts = displayPosts.filter((p) => p.id !== featuredPost?.id);
 
   return (

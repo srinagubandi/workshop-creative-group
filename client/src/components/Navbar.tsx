@@ -58,7 +58,7 @@ export default function Navbar() {
 
             {/* ── Logo ── */}
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Workshop Creative Group — Home">
-              <ManagedSiteImage slotKey="logo-horizontal" fallbackSrc="/images/wscg-logo-hort.png" alt="Workshop Creative Group logo" className="h-9 md:h-11 w-auto" />
+              <ManagedSiteImage slotKey="logo-horizontal" fallbackSrc="/images/wscg-logo-hort.png" alt="Workshop Creative Group logo" className="h-9 md:h-11 w-auto" loading="eager" fetchPriority="high" />
             </Link>
 
             {/* ── Spacer ── */}

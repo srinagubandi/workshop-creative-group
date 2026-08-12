@@ -60,3 +60,12 @@
 - [x] Document production confirmation for the guide/copy-recommendation email delivery
 - [x] Add focused Vitest coverage for `/api/admin/media/upload` validation failures and successful edited-image uploads with private original preservation
 - [x] Create a deployment branch, push verified work to GitHub, trigger the connected Railway production deployment, and verify the live application
+
+## Visual-Preserving Performance Optimization
+- [x] Establish repeatable baseline measurements for every public route, including first-response, first-content, and user-visible completion signals
+- [x] Define and document page-load budgets that preserve the existing website appearance while targeting the fastest practical user-visible experience
+- [x] Audit and remove duplicate loading work, redundant rendering, avoidable requests, and unused client-side code without changing site design or copy
+- [x] Optimize visual assets, font delivery, script loading, route bundling, and rendering priority while preserving existing page visuals
+- [x] Reduce and verify non-critical font transfer while preserving the existing Playfair Display and Inter visual typography
+- [ ] Run and document ten optimization-and-verification passes across the public pages, keeping a concise current performance context
+- [ ] Add or update automated tests for performance-related utility and rendering changes, then push verified changes to GitHub and Railway

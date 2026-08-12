@@ -19,43 +19,42 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
+import { lazy, Suspense } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
-// Page imports
-import About from "./pages/About";
-import Blog from "./pages/Blog";
-import Contact from "./pages/Contact";
-import GraphicDesign from "./pages/GraphicDesign";
-import Home from "./pages/Home";
-import LargeFormat from "./pages/LargeFormat";
-import PrintProcurement from "./pages/PrintProcurement";
-import BlogPost from "./pages/BlogPost";
-import Gallery from "./pages/Gallery";
-import Admin from "./pages/Admin";
-import RequestQuote from "./pages/RequestQuote";
+const About = lazy(() => import("./pages/About"));
+const Blog = lazy(() => import("./pages/Blog"));
+const Contact = lazy(() => import("./pages/Contact"));
+const GraphicDesign = lazy(() => import("./pages/GraphicDesign"));
+const Home = lazy(() => import("./pages/Home"));
+const LargeFormat = lazy(() => import("./pages/LargeFormat"));
+const PrintProcurement = lazy(() => import("./pages/PrintProcurement"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const Admin = lazy(() => import("./pages/Admin"));
+const RequestQuote = lazy(() => import("./pages/RequestQuote"));
 
 function Router() {
   return (
-    <Switch>
-      {/* Main pages */}
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/large-format-printing" component={LargeFormat} />
-      <Route path="/graphic-design" component={GraphicDesign} />
-      <Route path="/print-procurement" component={PrintProcurement} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/gallery" component={Gallery} />
-      <Route path="/admin" component={Admin} />
-      <Route path="/blog/:slug" component={BlogPost} />
-      <Route path="/request-quote" component={RequestQuote} />
-      <Route path="/contact" component={Contact} />
-
-      {/* 404 */}
-      <Route path="/404" component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={<div className="min-h-screen bg-white" aria-busy="true" />}>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/large-format-printing" component={LargeFormat} />
+        <Route path="/graphic-design" component={GraphicDesign} />
+        <Route path="/print-procurement" component={PrintProcurement} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/gallery" component={Gallery} />
+        <Route path="/admin" component={Admin} />
+        <Route path="/blog/:slug" component={BlogPost} />
+        <Route path="/request-quote" component={RequestQuote} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/404" component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
 

@@ -17,10 +17,11 @@
     <meta name="msapplication-TileColor" content="#1e3a5f" />
     <meta name="theme-color" content="#1e3a5f" />
 
-    <!-- Google Fonts: Playfair Display + Inter -->
+    <!-- Google Fonts: request only weights used in public site typography; load without blocking first render. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" /></noscript>
 
     <!-- SEO_DYNAMIC_METADATA -->
   </head>
