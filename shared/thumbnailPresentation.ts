@@ -8,3 +8,7 @@ export function getPublicThumbnailSource(thumbnailMediaId: number | null | undef
 export function getThumbnailResetLabel(mediaType: ThumbnailMediaType): string {
   return mediaType === "video" ? "Use first frame from video source" : "Use source image";
 }
+
+export function getGalleryPreviewKind(mediaType: ThumbnailMediaType, thumbnailSrc: string | null | undefined): "image" | "video-source-frame" {
+  return mediaType === "video" && !thumbnailSrc ? "video-source-frame" : "image";
+}

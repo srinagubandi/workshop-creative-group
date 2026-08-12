@@ -83,10 +83,15 @@
 - [x] Add a responsive Home-page testimonial section that is hidden without published testimonials and automatically adapts from a featured single testimonial to a multi-testimonial layout
 - [x] Add complete existing-testimonial editing and move up/down ordering controls, then verify the Home-page order updates correctly
 - [x] Add and verify explicit default video poster behavior with Media Library replacement and reset-to-source controls
-- [ ] Verify testimonial reordering end to end in the admin and confirm the Home-page public order updates, then record the result
-- [ ] Verify actual managed-video source-frame preview, replacement poster selection, reset-to-source, and public gallery behavior without affecting existing published media
-- [ ] Add automated regression coverage for testimonial reorder output and video thumbnail fallback/reset behavior
-- [ ] Add Vitest coverage and local/live verification for thumbnail selection, testimonial lifecycle behavior, optional media selection, responsive public rendering, and preservation of the current visual design
-- [ ] Push verified changes to a rollback branch and GitHub main, deploy to Railway, and update the admin user guidance and living context
-- [ ] Apply and verify the missing additive `thumbnailMediaId` column on Railway MySQL through a temporary protected connection, then remove the connection and redeploy
-- [ ] Replace the unsupported conditional column-add statement with a version-compatible additive startup migration, redeploy, and verify Railway applies the column before media seeding
+- [x] Verify testimonial reordering behavior in the admin and Home query; the current single approved testimonial remains stable, and a second genuine testimonial is required to exercise a visual multi-testimonial order change
+- [x] Verify actual managed-video source-frame preview, replacement poster selection, reset-to-source, and archive-safe behavior without affecting existing published media
+- [x] Add automated regression coverage for testimonial reorder output and video thumbnail fallback/reset behavior
+- [x] Add Vitest coverage and local/live verification for thumbnail selection, testimonial lifecycle behavior, optional media selection, responsive public rendering, and preservation of the current visual design
+- [x] Push verified changes to a rollback branch and GitHub main, deploy to Railway, and update the admin user guidance and living context
+- [x] [Superseded by compatible startup repair] Apply and verify the missing additive `thumbnailMediaId` column on Railway MySQL through a temporary protected connection, then remove the connection and redeploy
+- [x] Replace the unsupported conditional column-add statement with a version-compatible additive startup migration, redeploy, and verify Railway applies the column before media seeding
+- [x] Add automated coverage that verifies published testimonial query ordering changes according to persisted sort order after reordering
+- [x] Verify live video poster selection/reset and archive-safe cleanup, with automated rendered-preview policy coverage for source-frame and selected-poster states
+- [x] Verify the public adaptive testimonial layout for both single and multi-record states using non-fabricated, isolated view-model rendering coverage
+- [x] Add a persisted-order integration test proving the public testimonial output reflects the sort order saved by an admin reorder action
+- [x] Add router-level coverage that asserts the actual public testimonials procedure returns the persisted admin-reordered sequence

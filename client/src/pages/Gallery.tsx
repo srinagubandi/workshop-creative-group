@@ -18,6 +18,7 @@ import PageLayout from "@/components/PageLayout";
 import { GALLERY_CATEGORIES, GALLERY_ITEMS, type GalleryItem } from "@/data/gallery";
 import { trpc } from "@/lib/trpc";
 import { useCallback, useEffect, useState } from "react";
+import { getGalleryPreviewKind } from "../../../shared/thumbnailPresentation";
 
 type ManagedGalleryItem = GalleryItem & { id?: number; mediaType?: "image" | "video"; thumbnailSrc?: string | null };
 
@@ -108,6 +109,7 @@ function Lightbox({ item, onClose, onPrev, onNext }: {
 function GalleryCard({ item, onClick }: { item: ManagedGalleryItem; onClick: () => void }) {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
+  const previewKind = getGalleryPreviewKind(item.mediaType ?? "image", item.thumbnailSrc);
 
   return (
     <button
@@ -118,7 +120,7 @@ function GalleryCard({ item, onClick }: { item: ManagedGalleryItem; onClick: () 
       {/* Image */}
       <div className="aspect-[4/3] overflow-hidden bg-gray-100">
         {item.mediaType === "video" ? (
-          item.thumbnailSrc ? <img src={item.thumbnailSrc} alt={item.alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-full object-cover" /> : <video src={item.src} muted playsInline preload="metadata" className="w-full h-full object-cover" aria-label={`${item.alt} video preview`} />
+          previewKind === "image" ? <img src={item.thumbnailSrc!} alt={item.alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-full object-cover" /> : <video src={item.src} muted playsInline preload="metadata" className="w-full h-full object-cover" aria-label={`${item.alt} video preview`} />
         ) : !error ? (
           <img
             src={item.src}

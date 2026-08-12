@@ -19,6 +19,7 @@ import {
   users,
 } from "../drizzle/schema";
 import { ENV } from "./_core/env";
+import { getTestimonialSortUpdates } from "../shared/testimonialPresentation";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -347,7 +348,7 @@ export async function setTestimonialStatus(id: number, status: "draft" | "publis
 
 export async function reorderTestimonials(ids: number[]) {
   const db = await getDb(); if (!db) throw new Error("Database not available");
-  await Promise.all(ids.map((id, sortOrder) => db.update(testimonials).set({ sortOrder }).where(eq(testimonials.id, id))));
+  await Promise.all(getTestimonialSortUpdates(ids).map(({ id, sortOrder }) => db.update(testimonials).set({ sortOrder }).where(eq(testimonials.id, id))));
 }
 
 export async function getPublishedTestimonials() {

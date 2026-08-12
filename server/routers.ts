@@ -15,6 +15,7 @@ import { storagePut } from "./storage";
 import { adminRouter } from "./adminRouter";
 import { sendQuoteAlert, sendContactAlert } from "./email";
 import { getPublicThumbnailSource } from "../shared/thumbnailPresentation";
+import { orderTestimonials } from "../shared/testimonialPresentation";
 
 export const appRouter = router({
   admin: adminRouter,
@@ -205,11 +206,11 @@ export const appRouter = router({
   testimonials: router({
     list: publicProcedure.query(async () => {
       const records = await getPublishedTestimonials();
-      return records.map(({ testimonial, media }) => ({
+      return orderTestimonials(records.map(({ testimonial, media }) => ({
         ...testimonial,
         mediaSrc: media ? `/media/${media.id}` : null,
         mediaAlt: media?.altText || media?.title || testimonial.company || testimonial.authorName,
-      }));
+      })));
     }),
   }),
 });
