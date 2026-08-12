@@ -105,6 +105,7 @@ Brent must receive emails at `brent@workshopcreativegroup.com` for: the initial 
 | 2026-08-12 | Expanded automated verification now passes 12 tests across four suites, including admin media archive/restore, safe replacement history, manual-backup success/failure, documentation-email authorization, metadata, storage-key, and admin logout coverage. Type-check and production build also pass. |
 | 2026-08-12 | The live Help action confirmed successful delivery of the requested guide and copy-recommendation email to `brent@workshopcreativegroup.com`. The email is a review-only document delivery; no visible site copy was changed. |
 | 2026-08-12 | Added direct Express route coverage for `/api/admin/media/upload`: unsupported file rejection, server-side 20 MB rejection, 6,000 px dimension rejection, and successful edited-image draft creation with a distinct private original object. Fixed stream-error handling so rejected uploads return controlled errors rather than leaving a rejected stream promise. Final local validation: 16 tests across five suites, TypeScript check, and production build all pass. |
+| 2026-08-12 | Pushed final commit `e18d3a4` to GitHub `main`; Railway’s connected deployment completed. A fresh live `/admin` reload confirms the password-protected dashboard, quote records, protected invoice link, Media Library, manual backup status, and Help navigation remain operational. |
 
 ## Metadata-only SEO, AEO, and GEO Strategy
 
