@@ -72,3 +72,14 @@
 - [x] Correct and verify immutable cache headers for fingerprinted production JavaScript and CSS assets identified during live performance passes
 - [x] Re-run ten live public-route verification passes after deployment until every page returns HTTP 200 in every pass, then record the clean result
 - [x] Add automated coverage for rendering-side performance safeguards: lazy public routes, single blog-list query behavior, and shared image loading priority/caching
+
+## Managed Thumbnails and Testimonials
+- [ ] Create a recoverable pre-change checkpoint and update CURRENT_CONTEXT.md with the approved managed-thumbnail and genuine-testimonial requirements
+- [ ] Add non-destructive thumbnail relationships to every media asset: source-media default, selectable Media Library replacement, and video-thumbnail support
+- [ ] Add database models, safe migrations, and protected admin procedures for testimonials with optional Media Library logo/photo, ordering, draft/publish/unpublish, archive, and restore states
+- [ ] Seed the owner-provided Ian Readman/Radford Motor Company LLC testimonial verbatim as a draft for review, without fabricating any other feedback
+- [ ] Build Media Library thumbnail selection, preview, replacement, reset-to-source, and archive-safe behavior for all images and videos
+- [ ] Build an admin testimonial manager with genuine-content guidance, optional Media Library image selection, publication controls, ordering, archive, and restore actions
+- [ ] Add a responsive Home-page testimonial section that is hidden without published testimonials and automatically adapts from a featured single testimonial to a multi-testimonial layout
+- [ ] Add Vitest coverage and local/live verification for thumbnail selection, testimonial lifecycle behavior, optional media selection, responsive public rendering, and preservation of the current visual design
+- [ ] Push verified changes to a rollback branch and GitHub main, deploy to Railway, and update the admin user guidance and living context
