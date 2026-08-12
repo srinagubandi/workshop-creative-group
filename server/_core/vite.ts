@@ -6,6 +6,7 @@ import path from "path";
 import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
 import { injectSeoMetadata } from "../seo";
+import { getStaticCacheControl } from "@shared/performance";
 
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
@@ -62,12 +63,8 @@ export function serveStatic(app: Express) {
   app.use(express.static(distPath, {
     index: false,
     setHeaders(res, filePath) {
-      const normalizedPath = filePath.replace(/\\/g, "/");
-      if (/\/assets\/.*\.[a-z0-9]{8,}\.(js|css)$/i.test(normalizedPath)) {
-        res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
-      } else if (/\/(gallery|images)\//i.test(normalizedPath)) {
-        res.setHeader("Cache-Control", "public, max-age=604800, stale-while-revalidate=86400");
-      }
+      const cacheControl = getStaticCacheControl(filePath);
+      if (cacheControl) res.setHeader("Cache-Control", cacheControl);
     },
   }));
 

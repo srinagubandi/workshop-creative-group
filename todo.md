@@ -69,3 +69,4 @@
 - [x] Reduce and verify non-critical font transfer while preserving the existing Playfair Display and Inter visual typography
 - [ ] Run and document ten optimization-and-verification passes across the public pages, keeping a concise current performance context
 - [ ] Add or update automated tests for performance-related utility and rendering changes, then push verified changes to GitHub and Railway
+- [ ] Correct and verify immutable cache headers for fingerprinted production JavaScript and CSS assets identified during live performance passes
