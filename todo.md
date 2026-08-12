@@ -42,7 +42,7 @@
 - [x] Add and maintain CURRENT_CONTEXT.md with architecture, Railway/GitHub deployment state, content rules, media-management decisions, metadata strategy, and change history
 - [x] Replace public-site Manus media dependencies with Railway-backed persistent media storage and safe media-serving routes
 - [x] [Superseded by owner decision] Replace the existing platform-specific daily backup scheduler with a Railway-native 2:00 AM UTC cron service that exits after completion
-- [ ] Disable the existing legacy scheduled-backup job at final cutover; retain only the Railway-backed manual backup action in the admin dashboard
+- [x] Disable the existing legacy scheduled-backup job at final cutover; retain only the Railway-backed manual backup action in the admin dashboard
 - [x] Add database models and migrations for images, videos, page placements, categories, SEO metadata, publish state, archive state, ordering, captions, and accessibility text
 - [x] Build password-protected admin media management for all website images and videos, including upload, replacement in place, type/size/dimension validation, previews, and pre-publication warnings
 - [x] Build image crop and rotation controls with preview and preserve original assets for recovery
@@ -54,6 +54,9 @@
 - [x] Add permanent admin Help guidance for the media workflow
 - [x] Apply metadata-only nationwide SEO, AEO, and GEO updates: canonical URLs, robots/sitemap, route titles/descriptions, social metadata, and valid structured data
 - [x] Produce a page-by-page, review-only visible-copy recommendation list without changing on-page copy
-- [ ] Email brent@workshopcreativegroup.com the backup confirmation, copy-recommendation review, and new-admin user guide
-- [ ] Add Vitest coverage and production verification for uploads, media lifecycle, metadata behavior, archive recovery, email delivery, and database backup safeguards
-- [ ] Create a deployment branch, push verified work to GitHub, manually deploy to Railway, and verify the live application
+- [x] Email brent@workshopcreativegroup.com the backup confirmation, copy-recommendation review, and new-admin user guide
+- [x] Add Vitest coverage for admin media upload validation, replacement, archive/restore lifecycle flows, manual backup success/failure behavior, and documentation-email delivery behavior
+- [x] Verify the live archive/restore and upload workflows with a clearly labeled non-public test asset, then retain the audit trail in the archive
+- [x] Document production confirmation for the guide/copy-recommendation email delivery
+- [x] Add focused Vitest coverage for `/api/admin/media/upload` validation failures and successful edited-image uploads with private original preservation
+- [x] Create a deployment branch, push verified work to GitHub, trigger the connected Railway production deployment, and verify the live application

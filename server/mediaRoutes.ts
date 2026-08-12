@@ -181,8 +181,17 @@ export function registerMediaRoutes(app: Express) {
       });
 
       file.on("limit", () => validator.destroy(new Error("Video exceeds the 250 MB limit.")));
+      validator.on("error", (err) => {
+        uploadError = err instanceof Error ? err : new Error(String(err));
+        file.unpipe(validator);
+        file.resume();
+      });
       file.pipe(validator);
-      const promise = storagePutStream({ key, stream: validator, contentType: mimeType }).then(() => undefined);
+      const promise = storagePutStream({ key, stream: validator, contentType: mimeType })
+        .then(() => undefined)
+        .catch((err: unknown) => {
+          uploadError = err instanceof Error ? err : new Error(String(err));
+        });
       if (isOriginal) originalUploadPromise = promise;
       else uploadPromise = promise;
     });
