@@ -173,14 +173,12 @@ function GalleryCard({ item, onClick }: { item: ManagedGalleryItem; onClick: () 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("large-format");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const managedGallery = trpc.media.gallery.useQuery();
   const galleryItems: ManagedGalleryItem[] = managedGallery.data?.length ? managedGallery.data : GALLERY_ITEMS;
 
-  const filtered = activeCategory === "all"
-    ? galleryItems
-    : galleryItems.filter((item) => item.category === activeCategory);
+  const filtered = galleryItems.filter((item) => item.category === activeCategory);
 
   const openLightbox = useCallback((index: number) => setLightboxIndex(index), []);
   const closeLightbox = useCallback(() => setLightboxIndex(null), []);
@@ -215,9 +213,7 @@ export default function Gallery() {
           {/* Filter tabs */}
           <div className="flex flex-wrap gap-2 mb-10 justify-center">
             {GALLERY_CATEGORIES.map((cat) => {
-              const count = cat.key === "all"
-                ? galleryItems.length
-                : galleryItems.filter((i) => i.category === cat.key).length;
+              const count = galleryItems.filter((i) => i.category === cat.key).length;
               return (
                 <button
                   key={cat.key}

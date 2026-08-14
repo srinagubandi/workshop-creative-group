@@ -56,6 +56,27 @@ export function registerMediaRoutes(app: Express) {
     }
   });
 
+  // Authenticated previews let administrators inspect draft Railway-bucket uploads before publication.
+  app.get("/api/admin/media/:id/preview", async (req, res) => {
+    try {
+      const admin = await requireAdminRequest(req);
+      if (!admin) return res.status(401).json({ error: "Admin authentication required" });
+      const id = Number(req.params.id);
+      if (!Number.isInteger(id) || id <= 0) return res.status(404).end();
+      const asset = await getMediaAsset(id);
+      if (!asset) return res.status(404).end();
+      if (asset.legacyPath && !asset.storageKey) return res.redirect(302, asset.legacyPath);
+      if (!asset.storageKey) return res.status(404).end();
+      const object = await storageGetObject(asset.storageKey);
+      res.setHeader("Content-Type", object.ContentType || asset.mimeType);
+      if (object.ContentLength) res.setHeader("Content-Length", String(object.ContentLength));
+      res.setHeader("Cache-Control", "private, no-store");
+      (object.Body as any).pipe(res);
+    } catch (err) {
+      sendStorageError(res as any, err);
+    }
+  });
+
   // Public published media. Legacy assets remain served from Git-backed static paths until migration.
   app.get("/media/:id", async (req, res) => {
     try {

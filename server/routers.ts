@@ -186,6 +186,7 @@ export const appRouter = router({
           "large-format": "Large Format Printing",
           "graphic-design": "Graphic Design",
           branding: "Branding",
+          "print-procurement": "Print Procurement",
           logos: "Client Logos",
         };
         return records.map(({ asset, placement }) => ({

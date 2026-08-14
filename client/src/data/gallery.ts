@@ -1174,9 +1174,9 @@ export const GALLERY_ITEMS: GalleryItem[] = [
 ];
 
 export const GALLERY_CATEGORIES = [
-  { key: "all",           label: "All Work" },
   { key: "large-format",  label: "Large Format Printing" },
   { key: "graphic-design",label: "Graphic Design" },
   { key: "branding",      label: "Branding" },
+  { key: "print-procurement", label: "Print Procurement" },
   { key: "logos",         label: "Client Logos" },
 ];

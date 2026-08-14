@@ -1,4 +1,5 @@
 import express from "express";
+import { Readable } from "node:stream";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 const mocks = vi.hoisted(() => ({
@@ -132,6 +133,33 @@ describe("admin media upload route", () => {
         originalKey: "managed-media/test-2",
         status: "draft",
       }));
+    });
+  });
+});
+
+describe("admin draft media preview route", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    mocks.getAdminSession.mockResolvedValue({ token, expiresAt: new Date(Date.now() + 60_000) });
+    mocks.getMediaAsset.mockResolvedValue({ id: 901, status: "draft", storageKey: "managed-media/drafts/preview.png", legacyPath: null, mimeType: "image/png" });
+    mocks.storageGetObject.mockResolvedValue({ ContentType: "image/png", ContentLength: 4, Body: Readable.from([Buffer.from("test")]) });
+  });
+
+  it("serves a draft asset through the authenticated preview route", async () => {
+    await withServer(async baseUrl => {
+      const response = await fetch(`${baseUrl}/api/admin/media/901/preview?token=${token}`);
+      expect(response.status).toBe(200);
+      expect(response.headers.get("cache-control")).toBe("private, no-store");
+      expect(await response.text()).toBe("test");
+    });
+  });
+
+  it("rejects unauthenticated draft-preview access", async () => {
+    mocks.getAdminSession.mockResolvedValue(null);
+    await withServer(async baseUrl => {
+      const response = await fetch(`${baseUrl}/api/admin/media/901/preview`);
+      expect(response.status).toBe(401);
+      expect(mocks.storageGetObject).not.toHaveBeenCalled();
     });
   });
 });
