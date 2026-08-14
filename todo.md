@@ -97,6 +97,7 @@
 - [x] Add router-level coverage that asserts the actual public testimonials procedure returns the persisted admin-reordered sequence
 
 ## Client Change Review and Admin Reliability Testing
+- [x] Apply a fix-and-retest cycle to every confirmed admin or live-site failure, including targeted local checks, Railway deployment, and post-deploy verification of both surfaces
 - [x] Review WSCGWebChanges8.13.26.docx and record each approved change or defect in CURRENT_CONTEXT.md
 - [x] Reproduce the client-reported admin workflow and image-preview failures against Railway production and diagnose their root causes
 - [x] Reproduce the client-reported admin workflow and image-preview failures against Railway production and diagnose their root causes
@@ -104,8 +105,8 @@
 - [x] Fix draft-asset preview: serve draft assets through a protected admin preview route so newly uploaded images are visible before publication
 - [x] Fix unassigned-upload publication: ensure the Publish button is clearly accessible and the workflow is self-explanatory for newly uploaded assets
 - [x] Remove the All Work tab and add a Print Procurement tab between Branding and Client Logos in the public gallery
-- [ ] Verify all three fixes and the gallery-tab change against the live Railway site before the 25-loop test run
+- [x] Verify all three fixes and the gallery-tab change against the live Railway site before the 25-loop test run
 - [ ] Import the client-approved Print Procurement portfolio images into the new gallery tab once the non-empty source files are supplied or located
 - [ ] Verify on live Railway that All Work is absent and the Print Procurement tab renders correctly with client-approved populated assets after import
-- [ ] Complete 25 client-style verification loops spanning admin login, media management, thumbnail/preview behavior, form submissions, and public Railway pages
-- [ ] Push verified fixes to a rollback branch and GitHub main, deploy to Railway, and record the final live test matrix in CURRENT_CONTEXT.md
+- [x] Complete 25 client-style verification loops spanning admin login, media management, thumbnail/preview behavior, form submissions, and public Railway pages
+- [x] Push verified fixes to a rollback branch and GitHub main, deploy to Railway, and record the final live test matrix in CURRENT_CONTEXT.md
