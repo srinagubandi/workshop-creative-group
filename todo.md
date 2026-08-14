@@ -119,6 +119,7 @@
 - [ ] Verify and record text-field discovery counts for every public route in CURRENT_CONTEXT.md
 - [ ] Implement and verify safe bulk save and bulk reset controls in the protected Text Manager
 - [ ] Run end-to-end save, public live-render, and reset checks for representative visible and accessible fields on every public route, confirming no testimonial, media, or layout regressions
+- [ ] Make the admin-only per-page verification control process safe save/reset checks in bounded batches, preserving the same field coverage without changing approved public text
 - [x] Verify on live Railway that All Work is absent and the Print Procurement tab renders correctly with owner-approved, clearly labeled demo assets
 - [x] Complete 25 client-style verification loops spanning admin login, media management, thumbnail/preview behavior, form submissions, and public Railway pages
 - [x] Push verified fixes to a rollback branch and GitHub main, deploy to Railway, and record the final live test matrix in CURRENT_CONTEXT.md

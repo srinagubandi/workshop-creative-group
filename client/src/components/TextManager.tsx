@@ -38,11 +38,21 @@ export function TextManager({ token }: { token: string }) {
     window.setTimeout(inspect, 500);
   };
   const dirtyFields = fields.filter((field) => (drafts[field.fieldKey] ?? field.value) !== field.value);
+  const BATCH_SIZE = 5;
+  const inBatches = async <T,>(items: T[], operation: (item: T) => Promise<unknown>, onProgress?: (completed: number) => void) => {
+    let completed = 0;
+    for (let start = 0; start < items.length; start += BATCH_SIZE) {
+      const batch = items.slice(start, start + BATCH_SIZE);
+      await Promise.all(batch.map(operation));
+      completed += batch.length;
+      onProgress?.(completed);
+    }
+  };
   const saveAll = async () => {
     if (!dirtyFields.length) return;
     setBulkWorking(true);
     try {
-      for (const field of dirtyFields) await save.mutateAsync({ token, routePath, fieldKey: field.fieldKey, value: drafts[field.fieldKey] ?? field.value });
+      await inBatches(dirtyFields, (field) => save.mutateAsync({ token, routePath, fieldKey: field.fieldKey, value: drafts[field.fieldKey] ?? field.value }));
       await utils.admin.textOverrides.invalidate({ token, routePath });
       refreshPreview();
     } finally { setBulkWorking(false); }
@@ -52,7 +62,7 @@ export function TextManager({ token }: { token: string }) {
     if (!saved.length) return;
     setBulkWorking(true);
     try {
-      for (const field of saved) await reset.mutateAsync({ token, routePath, fieldKey: field.fieldKey });
+      await inBatches(saved, (field) => reset.mutateAsync({ token, routePath, fieldKey: field.fieldKey }));
       setDrafts((current) => ({ ...current, ...Object.fromEntries(saved.map((field) => [field.fieldKey, field.value])) }));
       await utils.admin.textOverrides.invalidate({ token, routePath });
       refreshPreview();
@@ -62,13 +72,10 @@ export function TextManager({ token }: { token: string }) {
     if (!fields.length) return;
     setVerification({ active: true, completed: 0, total: fields.length });
     try {
-      for (let index = 0; index < fields.length; index += 1) {
-        const field = fields[index];
-        const original = field.value;
-        await save.mutateAsync({ token, routePath, fieldKey: field.fieldKey, value: original });
+      await inBatches(fields, async (field) => {
+        await save.mutateAsync({ token, routePath, fieldKey: field.fieldKey, value: field.value });
         await reset.mutateAsync({ token, routePath, fieldKey: field.fieldKey });
-        setVerification({ active: true, completed: index + 1, total: fields.length });
-      }
+      }, (completed) => setVerification({ active: true, completed, total: fields.length }));
       await utils.admin.textOverrides.invalidate({ token, routePath });
       refreshPreview();
       setVerification({ active: false, completed: fields.length, total: fields.length });

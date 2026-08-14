@@ -150,6 +150,8 @@ Further route discovery counts: Our Work detects 528 editable fields, including 
 
 The complete public-route discovery audit is finished: Contact detects 72 editable visible/accessibility fields and Brent’s Blog detects 70. All nine public routes are covered by the Text Manager inventory, totaling 1,212 registered fields before future content additions.
 
+Live Railway verification is underway. The complete Home-page inventory now detects 131 deployed visible/accessibility fields, and the actual protected Text Manager save-and-reset workflow completed **131/131** successfully. The public preview stayed visually intact and approved copy was restored after every check.
+
 ## Metadata-only SEO, AEO, and GEO Strategy
 
 Visible page copy remains unchanged pending Brent’s review. The implementation now gives each indexable public route a concise, distinct title and meta description, canonical URL, Open Graph/Twitter metadata, and crawlable JSON-LD. The public server injects the correct metadata before the single-page application loads, so crawlers receive route-specific HTML rather than a generic shell.
