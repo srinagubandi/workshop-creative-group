@@ -41,6 +41,9 @@ import {
   updateTestimonial,
   createTestimonial,
   updateContactStatus,
+  listSiteTextOverrides,
+  saveSiteTextOverride,
+  deleteSiteTextOverride,
   updateQuoteStatus,
 } from "./db";
 import { publicProcedure, router } from "./_core/trpc";
@@ -249,6 +252,16 @@ export const adminRouter = router({
   privateFileUrl: publicProcedure
     .input(z.object({ token: z.string(), key: z.string().min(1).max(512) }))
     .query(async ({ input }) => { await requireAdmin(input.token); return { url: await storageGetSignedUrl(input.key, 300) }; }),
+
+  textOverrides: publicProcedure
+    .input(z.object({ token: z.string(), routePath: z.string().max(255).optional() }))
+    .query(async ({ input }) => { await requireAdmin(input.token); return listSiteTextOverrides(input.routePath); }),
+  saveTextOverride: publicProcedure
+    .input(z.object({ token: z.string(), routePath: z.string().min(1).max(255), fieldKey: z.string().min(1).max(255), value: z.string().max(10000) }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); return saveSiteTextOverride(input.routePath, input.fieldKey, input.value); }),
+  resetTextOverride: publicProcedure
+    .input(z.object({ token: z.string(), routePath: z.string().min(1).max(255), fieldKey: z.string().min(1).max(255) }))
+    .mutation(async ({ input }) => { await requireAdmin(input.token); await deleteSiteTextOverride(input.routePath, input.fieldKey); return { success: true }; }),
 
   // ── Send test email ──
   sendTestEmail: publicProcedure

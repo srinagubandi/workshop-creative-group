@@ -10,6 +10,7 @@ import {
   getPublishedGalleryMedia,
   getPublishedSiteAsset,
   getPublishedTestimonials,
+  listSiteTextOverrides,
 } from "./db";
 import { storagePut } from "./storage";
 import { adminRouter } from "./adminRouter";
@@ -212,6 +213,11 @@ export const appRouter = router({
         mediaSrc: media ? `/media/${media.id}` : null,
         mediaAlt: media?.altText || media?.title || testimonial.company || testimonial.authorName,
       })));
+    }),
+  }),
+  content: router({
+    overrides: publicProcedure.input(z.object({ routePath: z.string().max(255).optional() }).optional()).query(async ({ input }) => {
+      return listSiteTextOverrides(input?.routePath);
     }),
   }),
 });

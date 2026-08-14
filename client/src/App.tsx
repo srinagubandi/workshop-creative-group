@@ -24,6 +24,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { PUBLIC_PAGE_IMPORTERS } from "./lib/renderingPerformance";
+import { PublicTextOverrides } from "./components/PublicTextOverrides";
 
 const About = lazy(PUBLIC_PAGE_IMPORTERS.about);
 const Blog = lazy(PUBLIC_PAGE_IMPORTERS.blog);
@@ -66,6 +67,7 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
+          <PublicTextOverrides />
           <Router />
         </TooltipProvider>
       </ThemeProvider>

@@ -36,6 +36,13 @@
       "when": 1786567505147,
       "tag": "0004_first_garia",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1786736916970,
+      "tag": "0005_sparkling_hellfire_club",
+      "breakpoints": true
     }
   ]
 }

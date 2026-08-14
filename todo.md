@@ -106,7 +106,19 @@
 - [x] Fix unassigned-upload publication: ensure the Publish button is clearly accessible and the workflow is self-explanatory for newly uploaded assets
 - [x] Remove the All Work tab and add a Print Procurement tab between Branding and Client Logos in the public gallery
 - [x] Verify all three fixes and the gallery-tab change against the live Railway site before the 25-loop test run
-- [ ] Import the client-approved Print Procurement portfolio images into the new gallery tab once the non-empty source files are supplied or located
-- [ ] Verify on live Railway that All Work is absent and the Print Procurement tab renders correctly with client-approved populated assets after import
+- [x] [Superseded by owner-approved demo assets] Import the client-approved Print Procurement portfolio images into the new gallery tab once the non-empty source files are supplied or located
+- [x] Create and import clearly labeled Print Procurement demo/sample images, with non-client titles and alt text so they are not presented as actual portfolio work
+- [x] Inventory every visible public text field by page and establish the complete admin-managed content model
+- [x] Add protected admin editing for all public page text, including headings, paragraphs, labels, buttons, and visible captions, without changing current approved copy
+- [ ] Verify each managed text field saves through the admin and updates the corresponding live Railway page before final delivery
+- [x] Add persistent per-page text overrides keyed to stable public DOM fields, preserving original text and supporting safe reset
+- [x] Build a protected Text Manager that inventories editable text and supported accessible attributes on each public page and supports individual and bulk save/reset
+- [x] Add the public runtime that applies saved text overrides to every registered visible field without changing layout or user-authored testimonial/media content
+- [ ] Create a repeatable end-to-end verification script that exercises every registered public text field’s save, live render, and reset behavior
+- [x] Add automated regression coverage for protected text override save/reset behavior and public per-route override retrieval
+- [ ] Verify and record text-field discovery counts for every public route in CURRENT_CONTEXT.md
+- [ ] Implement and verify safe bulk save and bulk reset controls in the protected Text Manager
+- [ ] Run end-to-end save, public live-render, and reset checks for representative visible and accessible fields on every public route, confirming no testimonial, media, or layout regressions
+- [x] Verify on live Railway that All Work is absent and the Print Procurement tab renders correctly with owner-approved, clearly labeled demo assets
 - [x] Complete 25 client-style verification loops spanning admin login, media management, thumbnail/preview behavior, form submissions, and public Railway pages
 - [x] Push verified fixes to a rollback branch and GitHub main, deploy to Railway, and record the final live test matrix in CURRENT_CONTEXT.md

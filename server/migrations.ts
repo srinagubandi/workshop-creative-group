@@ -147,6 +147,18 @@ const MIGRATIONS = [
     CONSTRAINT \`site_metadata_id\` PRIMARY KEY(\`id\`),
     CONSTRAINT \`site_metadata_routePath_unique\` UNIQUE(\`routePath\`)
   )`,
+  `CREATE TABLE IF NOT EXISTS \`site_text_overrides\` (
+    \`id\` int AUTO_INCREMENT NOT NULL,
+    \`overrideKey\` varchar(512) NOT NULL,
+    \`routePath\` varchar(255) NOT NULL,
+    \`fieldKey\` varchar(255) NOT NULL,
+    \`value\` text NOT NULL,
+    \`createdAt\` timestamp NOT NULL DEFAULT (now()),
+    \`updatedAt\` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT \`site_text_overrides_id\` PRIMARY KEY(\`id\`),
+    CONSTRAINT \`site_text_overrides_key_unique\` UNIQUE(\`overrideKey\`),
+    INDEX \`site_text_overrides_route_idx\` (\`routePath\`)
+  )`,
   `CREATE TABLE IF NOT EXISTS \`admin_sessions\` (
     \`id\` int AUTO_INCREMENT NOT NULL,
     \`token\` varchar(128) NOT NULL,

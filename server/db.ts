@@ -7,6 +7,7 @@ import {
   dbBackups,
   mediaAssets,
   mediaPlacements,
+  siteTextOverrides,
   testimonials,
   InsertMediaAsset,
   InsertMediaPlacement,
@@ -15,6 +16,7 @@ import {
   InsertQuoteRequest,
   InsertUser,
   InsertTestimonial,
+  InsertSiteTextOverride,
   quoteRequests,
   users,
 } from "../drizzle/schema";
@@ -33,6 +35,32 @@ export async function getDb() {
     }
   }
   return _db;
+}
+
+// ─── Public text overrides ────────────────────────────────────────────────────
+
+export async function listSiteTextOverrides(routePath?: string) {
+  const db = await getDb();
+  if (!db) return [];
+  return routePath
+    ? db.select().from(siteTextOverrides).where(eq(siteTextOverrides.routePath, routePath))
+    : db.select().from(siteTextOverrides);
+}
+
+export async function saveSiteTextOverride(routePath: string, fieldKey: string, value: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const overrideKey = `${routePath}:${fieldKey}`;
+  const values: InsertSiteTextOverride = { overrideKey, routePath, fieldKey, value };
+  await db.insert(siteTextOverrides).values(values).onDuplicateKeyUpdate({ set: { value } });
+  const rows = await db.select().from(siteTextOverrides).where(eq(siteTextOverrides.overrideKey, overrideKey)).limit(1);
+  return rows[0] ?? null;
+}
+
+export async function deleteSiteTextOverride(routePath: string, fieldKey: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.delete(siteTextOverrides).where(eq(siteTextOverrides.overrideKey, `${routePath}:${fieldKey}`));
 }
 
 // ─── User helpers ─────────────────────────────────────────────────────────────

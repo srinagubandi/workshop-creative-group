@@ -12,12 +12,13 @@
 import { trpc } from "@/lib/trpc";
 import { MediaManager } from "@/components/MediaManager";
 import { TestimonialManager } from "@/components/TestimonialManager";
+import { TextManager } from "@/components/TextManager";
 import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "wscg_admin_token";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
-type Tab = "quotes" | "contacts" | "backups" | "media" | "testimonials" | "help";
+type Tab = "quotes" | "contacts" | "backups" | "media" | "testimonials" | "content" | "help";
 
 // ─── Login Screen ─────────────────────────────────────────────────────────────
 function LoginScreen({ onLogin }: { onLogin: (token: string) => void }) {
@@ -172,7 +173,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
 
         {/* Tabs */}
         <div className="flex gap-2 mb-6 border-b border-gray-800 pb-4">
-          {(["quotes", "contacts", "media", "testimonials", "backups", "help"] as Tab[]).map((t) => (
+          {(["quotes", "contacts", "media", "testimonials", "content", "backups", "help"] as Tab[]).map((t) => (
             <button
               key={t}
               onClick={() => setTab(t)}
@@ -185,12 +186,14 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
                t === "contacts" ? `Contact Messages (${stats?.totalContacts ?? 0})` :
                t === "media" ? "Media Library" :
                t === "testimonials" ? "Testimonials" :
+               t === "content" ? "Text Manager" :
                t === "backups" ? "Database Backups" : "Help"}
             </button>
           ))}
         </div>
 
         {tab === "testimonials" && <TestimonialManager token={token} />}
+        {tab === "content" && <TextManager token={token} />}
 
         {/* ── Quotes Tab ── */}
         {tab === "quotes" && (

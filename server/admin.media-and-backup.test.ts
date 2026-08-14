@@ -25,6 +25,8 @@ const mocks = vi.hoisted(() => ({
   updateTestimonial: vi.fn(),
   setTestimonialStatus: vi.fn(),
   reorderTestimonials: vi.fn(),
+  saveSiteTextOverride: vi.fn(),
+  deleteSiteTextOverride: vi.fn(),
   storageGetSignedUrl: vi.fn(),
   runDatabaseBackup: vi.fn(),
   sendAdminDocumentationEmail: vi.fn(),
@@ -55,6 +57,8 @@ vi.mock("./db", () => ({
   updateTestimonial: mocks.updateTestimonial,
   setTestimonialStatus: mocks.setTestimonialStatus,
   reorderTestimonials: mocks.reorderTestimonials,
+  saveSiteTextOverride: mocks.saveSiteTextOverride,
+  deleteSiteTextOverride: mocks.deleteSiteTextOverride,
 }));
 vi.mock("./storage", () => ({ storageGetSignedUrl: mocks.storageGetSignedUrl }));
 vi.mock("./backup", () => ({ runDatabaseBackup: mocks.runDatabaseBackup }));
@@ -161,5 +165,13 @@ describe("admin managed-media and backup safeguards", () => {
   it("persists the testimonial order supplied by the administrator without generating testimonial content", async () => {
     await caller().reorderTestimonials({ token, ids: [40, 18, 7] });
     expect(mocks.reorderTestimonials).toHaveBeenCalledWith([40, 18, 7]);
+  });
+
+  it("saves and resets public text overrides only through an authenticated administrator session", async () => {
+    mocks.saveSiteTextOverride.mockResolvedValue({ routePath: "/", fieldKey: "text|main|0", value: "Verified content" });
+    await caller().saveTextOverride({ token, routePath: "/", fieldKey: "text|main|0", value: "Verified content" });
+    await caller().resetTextOverride({ token, routePath: "/", fieldKey: "text|main|0" });
+    expect(mocks.saveSiteTextOverride).toHaveBeenCalledWith("/", "text|main|0", "Verified content");
+    expect(mocks.deleteSiteTextOverride).toHaveBeenCalledWith("/", "text|main|0");
   });
 });

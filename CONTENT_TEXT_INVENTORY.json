@@ -1,0 +1,4064 @@
+{
+  "pages/Home.tsx": [
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "w-7 h-7"
+    },
+    {
+      "kind": "literal",
+      "text": "none"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "round"
+    },
+    {
+      "kind": "literal",
+      "text": "M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3"
+    },
+    {
+      "kind": "literal",
+      "text": "Large Format Printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Custom signage, banners, displays, wall graphics, window graphics, retail graphics, and wide format printing solutions designed to help businesses stand out."
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(18,96,174,0.08)"
+    },
+    {
+      "kind": "literal",
+      "text": "M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
+    },
+    {
+      "kind": "literal",
+      "text": "Graphic Design"
+    },
+    {
+      "kind": "literal",
+      "text": "Professional graphic design and branding services for logos, marketing materials, sales collateral, trade show graphics, packaging, and business communications."
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(125,190,49,0.08)"
+    },
+    {
+      "kind": "literal",
+      "text": "M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
+    },
+    {
+      "kind": "literal",
+      "text": "Print Procurement"
+    },
+    {
+      "kind": "literal",
+      "text": "Access to a trusted national network for commercial printing, packaging, labels, promotional products, apparel, direct mail, and specialty print solutions."
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(239,197,9,0.10)"
+    },
+    {
+      "kind": "literal",
+      "text": "w-6 h-6"
+    },
+    {
+      "kind": "literal",
+      "text": "M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+    },
+    {
+      "kind": "literal",
+      "text": "Save Up to 20%"
+    },
+    {
+      "kind": "literal",
+      "text": "Upload your invoice — same job, better price, no quality compromise."
+    },
+    {
+      "kind": "literal",
+      "text": "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+    },
+    {
+      "kind": "literal",
+      "text": "20+ Years Experience"
+    },
+    {
+      "kind": "literal",
+      "text": "Two decades of print, design, and sourcing expertise across every major industry."
+    },
+    {
+      "kind": "literal",
+      "text": "M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+    },
+    {
+      "kind": "literal",
+      "text": "One Point of Contact"
+    },
+    {
+      "kind": "literal",
+      "text": "From concept through delivery — one partner, zero juggling."
+    },
+    {
+      "kind": "literal",
+      "text": "M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
+    },
+    {
+      "kind": "literal",
+      "text": "Nationwide Network"
+    },
+    {
+      "kind": "literal",
+      "text": "Trusted production partners across the United States, matched to your specs and budget."
+    },
+    {
+      "kind": "literal",
+      "text": "M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+    },
+    {
+      "kind": "literal",
+      "text": "Quality You Can Count On"
+    },
+    {
+      "kind": "literal",
+      "text": "Right substrate, right method, delivered on time every time."
+    },
+    {
+      "kind": "literal",
+      "text": "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+    },
+    {
+      "kind": "literal",
+      "text": "Smarter Sourcing"
+    },
+    {
+      "kind": "literal",
+      "text": "Best production method for your job — not just the easiest one — better results at a lower cost."
+    },
+    {
+      "kind": "literal",
+      "text": "Retail"
+    },
+    {
+      "kind": "literal",
+      "text": "Healthcare"
+    },
+    {
+      "kind": "literal",
+      "text": "Hospitality"
+    },
+    {
+      "kind": "literal",
+      "text": "Manufacturing"
+    },
+    {
+      "kind": "literal",
+      "text": "Real Estate"
+    },
+    {
+      "kind": "literal",
+      "text": "Construction"
+    },
+    {
+      "kind": "literal",
+      "text": "Automotive"
+    },
+    {
+      "kind": "literal",
+      "text": "Education"
+    },
+    {
+      "kind": "literal",
+      "text": "Government"
+    },
+    {
+      "kind": "literal",
+      "text": "Financial Services"
+    },
+    {
+      "kind": "literal",
+      "text": "Events & Trade Shows"
+    },
+    {
+      "kind": "literal",
+      "text": "Marketing Agencies"
+    },
+    {
+      "kind": "literal",
+      "text": "Corporate"
+    },
+    {
+      "kind": "literal",
+      "text": "Nonprofit"
+    },
+    {
+      "kind": "literal",
+      "text": "Save Up to 20% on Large Format Printing & Print Procurement | Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "Stop overpaying for print. Workshop Creative Group provides large format printing, graphic design, and print procurement solutions that save businesses up to 20%. Upload your invoice for a free quote comparison today."
+    },
+    {
+      "kind": "literal",
+      "text": "relative overflow-hidden bg-hero-gradient min-h-screen flex items-center"
+    },
+    {
+      "kind": "literal",
+      "text": "hero-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "absolute inset-0 overflow-hidden pointer-events-none"
+    },
+    {
+      "kind": "literal",
+      "text": "true"
+    },
+    {
+      "kind": "literal",
+      "text": "absolute -top-40 -right-40 w-96 h-96 rounded-full bg-white/5 blur-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "absolute -bottom-40 -left-40 w-96 h-96 rounded-full blur-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "container relative z-10 py-32 md:py-40"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "animate-fade-in-up mb-6"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-white/80 text-xs font-semibold uppercase tracking-widest backdrop-blur-sm"
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(255,255,255,0.10)"
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(255,255,255,0.20)"
+    },
+    {
+      "kind": "literal",
+      "text": "w-2 h-2 rounded-full animate-pulse"
+    },
+    {
+      "kind": "jsx",
+      "text": "Print Savings Specialists Since 2006"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 animate-fade-in-up animate-delay-100"
+    },
+    {
+      "kind": "jsx",
+      "text": "Stop Overpaying"
+    },
+    {
+      "kind": "literal",
+      "text": "hidden sm:block"
+    },
+    {
+      "kind": "jsx",
+      "text": "for Print."
+    },
+    {
+      "kind": "literal",
+      "text": "block mt-1"
+    },
+    {
+      "kind": "jsx",
+      "text": "Save Up to 20% Today."
+    },
+    {
+      "kind": "literal",
+      "text": "text-lg md:text-xl text-white/70 mb-4 max-w-2xl animate-fade-in-up animate-delay-200 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "We help businesses simplify print purchasing and reduce costs without sacrificing quality."
+    },
+    {
+      "kind": "literal",
+      "text": "text-base md:text-lg text-white/60 mb-10 max-w-2xl animate-fade-in-up animate-delay-300 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "Upload your current invoice, and we'll provide a quote for the exact same job at a better price — often saving you up to 20%."
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-400"
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary text-base px-8 py-4"
+    },
+    {
+      "kind": "literal",
+      "text": "w-5 h-5"
+    },
+    {
+      "kind": "literal",
+      "text": "M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Upload Invoice &amp; Get Quote"
+    },
+    {
+      "kind": "literal",
+      "text": "btn-ghost-white text-base px-8 py-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Explore Services"
+    },
+    {
+      "kind": "literal",
+      "text": "mt-12 flex flex-wrap gap-6 animate-fade-in-up animate-delay-500"
+    },
+    {
+      "kind": "literal",
+      "text": "Fortune 500 Brands"
+    },
+    {
+      "kind": "literal",
+      "text": "Nationwide Delivery"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-center gap-2 text-white/50 text-sm"
+    },
+    {
+      "kind": "literal",
+      "text": "w-4 h-4 flex-shrink-0"
+    },
+    {
+      "kind": "literal",
+      "text": "evenodd"
+    },
+    {
+      "kind": "literal",
+      "text": "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    },
+    {
+      "kind": "literal",
+      "text": "absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+    },
+    {
+      "kind": "literal",
+      "text": "w-6 h-6 text-white/30"
+    },
+    {
+      "kind": "literal",
+      "text": "M19 9l-7 7-7-7"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "process-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center mb-12"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label justify-center mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "How It Works"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-gray-900 mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "See Your Savings in Two Simple Steps"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 max-w-xl mx-auto"
+    },
+    {
+      "kind": "jsx",
+      "text": "No guesswork, no commitments. A clear comparison showing exactly how much you can save."
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto stagger-children"
+    },
+    {
+      "kind": "literal",
+      "text": "step-card"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-center gap-4 mb-5"
+    },
+    {
+      "kind": "literal",
+      "text": "w-12 h-12 rounded-xl text-white flex items-center justify-center text-xl font-serif font-bold flex-shrink-0"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl font-serif font-semibold text-gray-900"
+    },
+    {
+      "kind": "jsx",
+      "text": "Upload Your Current Invoice"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "Share a recent invoice for a print job you've completed or are planning. PDF, JPG, or PNG — any format works."
+    },
+    {
+      "kind": "literal",
+      "text": "mt-5 p-4 rounded-lg border"
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(18,96,174,0.06)"
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(18,96,174,0.15)"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-center gap-3 text-sm font-medium"
+    },
+    {
+      "kind": "literal",
+      "text": "w-5 h-5 flex-shrink-0"
+    },
+    {
+      "kind": "jsx",
+      "text": "Accepts PDF, JPG, PNG"
+    },
+    {
+      "kind": "jsx",
+      "text": "Get a Better Quote"
+    },
+    {
+      "kind": "jsx",
+      "text": "We'll review the specs and come back with a quote for the exact same job — often saving you up to 20%."
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(125,190,49,0.06)"
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(125,190,49,0.20)"
+    },
+    {
+      "kind": "literal",
+      "text": "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+    },
+    {
+      "kind": "jsx",
+      "text": "Save up to 20% — same quality"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center mt-10"
+    },
+    {
+      "kind": "jsx",
+      "text": "Start Saving Now"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-gray-50"
+    },
+    {
+      "kind": "literal",
+      "text": "about-preview-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "About Us"
+    },
+    {
+      "kind": "jsx",
+      "text": "Print Experience Backed by Creative Thinking"
+    },
+    {
+      "kind": "literal",
+      "text": "divider"
+    },
+    {
+      "kind": "literal",
+      "text": "prose-wscg"
+    },
+    {
+      "kind": "jsx",
+      "text": "Workshop Creative Group brings over 20 years of experience in graphic design and print production solutions. Businesses turn to Workshop Creative Group to move ideas from concept to completion through strategic design, high-quality printing, and dependable project execution."
+    },
+    {
+      "kind": "jsx",
+      "text": "From automotive and retail campaigns to corporate programs and nonprofit events, the work has supported a wide range of industries and Fortune 500 brands. Whether the project is local or nationwide, simple or complex, the focus remains on quality, consistency, value, and results."
+    },
+    {
+      "kind": "literal",
+      "text": "btn-secondary mt-8 inline-flex"
+    },
+    {
+      "kind": "jsx",
+      "text": "Learn More About Us"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-2 gap-5"
+    },
+    {
+      "kind": "literal",
+      "text": "Years of Experience"
+    },
+    {
+      "kind": "literal",
+      "text": "In print & design"
+    },
+    {
+      "kind": "literal",
+      "text": "Average Savings"
+    },
+    {
+      "kind": "literal",
+      "text": "On printing costs"
+    },
+    {
+      "kind": "literal",
+      "text": "Clients Served"
+    },
+    {
+      "kind": "literal",
+      "text": "Nationwide"
+    },
+    {
+      "kind": "literal",
+      "text": "Point of Contact"
+    },
+    {
+      "kind": "literal",
+      "text": "For every project"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+    },
+    {
+      "kind": "literal",
+      "text": "text-4xl font-serif font-bold mb-1"
+    },
+    {
+      "kind": "literal",
+      "text": "font-semibold text-gray-900 text-sm mb-0.5"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-400 text-xs"
+    },
+    {
+      "kind": "literal",
+      "text": "services-heading"
+    },
+    {
+      "kind": "jsx",
+      "text": "What We Do"
+    },
+    {
+      "kind": "jsx",
+      "text": "Complete Print and Creative Solutions"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 max-w-2xl mx-auto"
+    },
+    {
+      "kind": "jsx",
+      "text": "From large format graphics and branding support to commercial print sourcing — easier, more strategic, more cost-effective."
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children"
+    },
+    {
+      "kind": "literal",
+      "text": "service-card group block"
+    },
+    {
+      "kind": "literal",
+      "text": "w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl font-serif font-semibold text-gray-900 mb-3"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm leading-relaxed mb-5"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-1.5 text-sm font-semibold group-hover:gap-2.5 transition-all duration-200"
+    },
+    {
+      "kind": "jsx",
+      "text": "Learn More"
+    },
+    {
+      "kind": "literal",
+      "text": "w-4 h-4"
+    },
+    {
+      "kind": "literal",
+      "text": "M17 8l4 4m0 0l-4 4m4-4H3"
+    },
+    {
+      "kind": "literal",
+      "text": "why-heading"
+    },
+    {
+      "kind": "jsx",
+      "text": "Why Us"
+    },
+    {
+      "kind": "jsx",
+      "text": "Why Businesses Choose Workshop Creative Group"
+    },
+    {
+      "kind": "jsx",
+      "text": "From competitive pricing to dependable turnaround, here's what sets us apart."
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger-children"
+    },
+    {
+      "kind": "literal",
+      "text": "rounded-2xl p-6 border flex gap-4"
+    },
+    {
+      "kind": "literal",
+      "text": "w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+    },
+    {
+      "kind": "literal",
+      "text": "font-semibold text-gray-900 mb-1.5 text-base"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm leading-relaxed"
+    },
+    {
+      "kind": "literal",
+      "text": "industries-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center mb-10"
+    },
+    {
+      "kind": "jsx",
+      "text": "Industries"
+    },
+    {
+      "kind": "jsx",
+      "text": "Industries We Serve"
+    },
+    {
+      "kind": "jsx",
+      "text": "Workshop Creative Group works with businesses across a wide range of industries, delivering tailored print and design solutions for every environment."
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-wrap justify-center gap-3"
+    },
+    {
+      "kind": "literal",
+      "text": "tag text-sm px-4 py-2"
+    }
+  ],
+  "pages/About.tsx": [
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "Strategic guidance, not just order taking"
+    },
+    {
+      "kind": "literal",
+      "text": "Experience across multiple industries and project types"
+    },
+    {
+      "kind": "literal",
+      "text": "Reliable vendor relationships across the United States"
+    },
+    {
+      "kind": "literal",
+      "text": "Strong focus on timelines, detail, quality, and value"
+    },
+    {
+      "kind": "literal",
+      "text": "Creative and production expertise under one roof"
+    },
+    {
+      "kind": "literal",
+      "text": "About Workshop Creative Group | Print, Design & Branding Experience"
+    },
+    {
+      "kind": "literal",
+      "text": "Learn about Workshop Creative Group and more than 20 years of experience in graphic design, print production, branding, and nationwide print solutions."
+    },
+    {
+      "kind": "literal",
+      "text": "page-hero"
+    },
+    {
+      "kind": "literal",
+      "text": "about-hero-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-semibold uppercase tracking-widest mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "Our Story"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl md:text-5xl lg:text-6xl text-white mb-5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Over 20 Years of Helping Businesses Stand Out"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl text-white/70 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "Graphic design, print production, and sourcing solutions built around quality, service, and smart execution."
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "about-main-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Our Philosophy"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-gray-900 mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Built on Exceptional Quality and Honest Advice"
+    },
+    {
+      "kind": "literal",
+      "text": "divider"
+    },
+    {
+      "kind": "literal",
+      "text": "prose-wscg"
+    },
+    {
+      "kind": "jsx",
+      "text": "Workshop Creative Group was built on a simple philosophy: provide exceptional quality, honest advice, and outstanding customer service."
+    },
+    {
+      "kind": "jsx",
+      "text": "For over two decades, businesses of all sizes have partnered with Workshop Creative Group to create impactful print, branding, and graphic design solutions. From a single banner to a nationwide marketing campaign, the experience behind the company allows each project to be matched with the right solution, not simply the one that is easiest to produce."
+    },
+    {
+      "kind": "jsx",
+      "text": "By combining in-house large format printing with an extensive network of trusted print partners, Workshop Creative Group provides clients with access to a wide range of commercial printing and custom printing solutions through one reliable source. The mission is to simplify the print buying process while delivering exceptional results that help clients grow."
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary mt-8 inline-flex"
+    },
+    {
+      "kind": "jsx",
+      "text": "Request a Quote"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-gray-50 rounded-2xl p-8 border border-gray-100"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-2xl text-gray-900 mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "What Sets Workshop Creative Group Apart"
+    },
+    {
+      "kind": "literal",
+      "text": "space-y-4 list-none m-0 p-0"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-start gap-3"
+    },
+    {
+      "kind": "literal",
+      "text": "w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+    },
+    {
+      "kind": "literal",
+      "text": "w-3.5 h-3.5 text-white"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "evenodd"
+    },
+    {
+      "kind": "literal",
+      "text": "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-700 leading-relaxed"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-2 gap-4 mt-6"
+    },
+    {
+      "kind": "literal",
+      "text": "Founded"
+    },
+    {
+      "kind": "literal",
+      "text": "Years Experience"
+    },
+    {
+      "kind": "literal",
+      "text": "USA"
+    },
+    {
+      "kind": "literal",
+      "text": "Nationwide"
+    },
+    {
+      "kind": "literal",
+      "text": "Clients Served"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-white rounded-xl p-5 border border-gray-100 shadow-sm text-center"
+    },
+    {
+      "kind": "literal",
+      "text": "text-3xl font-serif font-bold mb-1"
+    },
+    {
+      "kind": "literal",
+      "text": "text-sm text-gray-500 font-medium"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-gray-50"
+    },
+    {
+      "kind": "literal",
+      "text": "about-cta-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-2xl mx-auto text-center"
+    },
+    {
+      "kind": "jsx",
+      "text": "Let's Talk About Your Next Project"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 mb-8"
+    },
+    {
+      "kind": "jsx",
+      "text": "Whether the need is large format printing, graphic design, or print procurement — Workshop Creative Group is ready to help."
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary text-base px-8 py-4"
+    }
+  ],
+  "pages/LargeFormat.tsx": [
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "Vinyl banners"
+    },
+    {
+      "kind": "literal",
+      "text": "Banner printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Trade show displays"
+    },
+    {
+      "kind": "literal",
+      "text": "Retractable banner stands"
+    },
+    {
+      "kind": "literal",
+      "text": "Wall murals"
+    },
+    {
+      "kind": "literal",
+      "text": "Wall graphics"
+    },
+    {
+      "kind": "literal",
+      "text": "Window graphics"
+    },
+    {
+      "kind": "literal",
+      "text": "Floor graphics"
+    },
+    {
+      "kind": "literal",
+      "text": "Vehicle graphics"
+    },
+    {
+      "kind": "literal",
+      "text": "Storefront signage"
+    },
+    {
+      "kind": "literal",
+      "text": "Sign printing"
+    },
+    {
+      "kind": "literal",
+      "text": "POP displays"
+    },
+    {
+      "kind": "literal",
+      "text": "Retail displays"
+    },
+    {
+      "kind": "literal",
+      "text": "Event graphics"
+    },
+    {
+      "kind": "literal",
+      "text": "Backlit graphics"
+    },
+    {
+      "kind": "literal",
+      "text": "Mounted prints"
+    },
+    {
+      "kind": "literal",
+      "text": "Foam board signs"
+    },
+    {
+      "kind": "literal",
+      "text": "PVC signs"
+    },
+    {
+      "kind": "literal",
+      "text": "Acrylic signs"
+    },
+    {
+      "kind": "literal",
+      "text": "Aluminum composite panels"
+    },
+    {
+      "kind": "literal",
+      "text": "Wayfinding signage"
+    },
+    {
+      "kind": "literal",
+      "text": "Construction signs"
+    },
+    {
+      "kind": "literal",
+      "text": "Outdoor graphics"
+    },
+    {
+      "kind": "literal",
+      "text": "Custom displays"
+    },
+    {
+      "kind": "literal",
+      "text": "w-6 h-6"
+    },
+    {
+      "kind": "literal",
+      "text": "none"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "round"
+    },
+    {
+      "kind": "literal",
+      "text": "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+    },
+    {
+      "kind": "literal",
+      "text": "Durability First"
+    },
+    {
+      "kind": "literal",
+      "text": "Materials selected for real-world performance — indoor, outdoor, short-term, and long-term applications."
+    },
+    {
+      "kind": "literal",
+      "text": "M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+    },
+    {
+      "kind": "literal",
+      "text": "M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+    },
+    {
+      "kind": "literal",
+      "text": "Brand Consistency"
+    },
+    {
+      "kind": "literal",
+      "text": "Color-accurate output that keeps your brand looking sharp across every format and substrate."
+    },
+    {
+      "kind": "literal",
+      "text": "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+    },
+    {
+      "kind": "literal",
+      "text": "Dependable Turnaround"
+    },
+    {
+      "kind": "literal",
+      "text": "Production timelines you can count on, with rush options available for time-sensitive projects."
+    },
+    {
+      "kind": "literal",
+      "text": "Large Format Printing & Sign Printing | Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "Explore large format printing, banner printing, wall graphics, window graphics, trade show displays, retail graphics, and signage solutions."
+    },
+    {
+      "kind": "literal",
+      "text": "page-hero"
+    },
+    {
+      "kind": "literal",
+      "text": "lf-hero-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-semibold uppercase tracking-widest mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "Large Format Printing"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl md:text-5xl lg:text-6xl text-white mb-5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Large Format Printing That Gets You Noticed"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl text-white/70 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "High-impact graphics, signage, and displays designed to elevate your brand."
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "lf-intro-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl mx-auto text-center"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label justify-center mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "What We Print"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-gray-900 mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Wide Format Solutions for Every Environment"
+    },
+    {
+      "kind": "literal",
+      "text": "divider mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-lg leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "Workshop Creative Group provides large format printing and wide format printing solutions for businesses that need to stand out in retail, event, office, and exterior environments. Every project is produced with a focus on durability, visibility, brand consistency, and real-world performance."
+    },
+    {
+      "kind": "literal",
+      "text": "pb-16 bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 md:grid-cols-3 gap-6"
+    },
+    {
+      "kind": "literal",
+      "text": "flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100"
+    },
+    {
+      "kind": "literal",
+      "text": "w-10 h-10 rounded-lg text-white flex items-center justify-center flex-shrink-0"
+    },
+    {
+      "kind": "literal",
+      "text": "font-semibold text-gray-900 mb-1"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm leading-relaxed"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-gray-50"
+    },
+    {
+      "kind": "literal",
+      "text": "lf-products-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center mb-10"
+    },
+    {
+      "kind": "jsx",
+      "text": "Products"
+    },
+    {
+      "kind": "jsx",
+      "text": "Large Format Printing Products"
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-wrap justify-center gap-3 max-w-4xl mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "tag text-sm px-4 py-2"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "prose-wscg text-center"
+    },
+    {
+      "kind": "jsx",
+      "text": "From one-off event graphics to complete branded environments, Workshop Creative Group helps businesses select the right materials, print methods, and finishing options for the application. The goal is to deliver large format graphics that look sharp, last longer, and represent the business well."
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-hero-gradient"
+    },
+    {
+      "kind": "literal",
+      "text": "lf-cta-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-2xl mx-auto text-center"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-white mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Need Large Format Graphics for Your Business?"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white/70 mb-8"
+    },
+    {
+      "kind": "jsx",
+      "text": "Upload your current invoice and see how much you can save on your next large format print project."
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary text-base px-8 py-4"
+    },
+    {
+      "kind": "literal",
+      "text": "white"
+    },
+    {
+      "kind": "jsx",
+      "text": "Request a Quote"
+    }
+  ],
+  "pages/GraphicDesign.tsx": [
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "Logo design"
+    },
+    {
+      "kind": "literal",
+      "text": "Brand identity"
+    },
+    {
+      "kind": "literal",
+      "text": "Branding support"
+    },
+    {
+      "kind": "literal",
+      "text": "Marketing collateral"
+    },
+    {
+      "kind": "literal",
+      "text": "Brochures"
+    },
+    {
+      "kind": "literal",
+      "text": "Flyers"
+    },
+    {
+      "kind": "literal",
+      "text": "Business cards"
+    },
+    {
+      "kind": "literal",
+      "text": "Sales sheets"
+    },
+    {
+      "kind": "literal",
+      "text": "Catalogs"
+    },
+    {
+      "kind": "literal",
+      "text": "Packaging design"
+    },
+    {
+      "kind": "literal",
+      "text": "Trade show graphics"
+    },
+    {
+      "kind": "literal",
+      "text": "Large format design"
+    },
+    {
+      "kind": "literal",
+      "text": "Strategic, Not Just Aesthetic"
+    },
+    {
+      "kind": "literal",
+      "text": "Design decisions are grounded in communication goals and business outcomes — not just visual preference."
+    },
+    {
+      "kind": "literal",
+      "text": "Print-Ready Production"
+    },
+    {
+      "kind": "literal",
+      "text": "Every file is built for print production — correct color profiles, bleeds, and specs from the start."
+    },
+    {
+      "kind": "literal",
+      "text": "Consistent Brand Voice"
+    },
+    {
+      "kind": "literal",
+      "text": "Cohesive design across all touchpoints builds recognition and trust with your audience."
+    },
+    {
+      "kind": "literal",
+      "text": "Graphic Design & Branding Services | Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "Professional graphic design, branding, logo design, marketing materials, packaging design, and large format design for businesses."
+    },
+    {
+      "kind": "literal",
+      "text": "page-hero"
+    },
+    {
+      "kind": "literal",
+      "text": "gd-hero-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-semibold uppercase tracking-widest mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "Graphic Design"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl md:text-5xl lg:text-6xl text-white mb-5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Graphic Design That Strengthens Your Brand"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl text-white/70 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "Clean, professional creative built for print, marketing, and business growth."
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "gd-intro-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Design Services"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-gray-900 mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Design That Works as Hard as You Do"
+    },
+    {
+      "kind": "literal",
+      "text": "divider"
+    },
+    {
+      "kind": "literal",
+      "text": "prose-wscg"
+    },
+    {
+      "kind": "jsx",
+      "text": "Workshop Creative Group offers graphic design services that help businesses communicate clearly and present themselves professionally across print and branded materials. Whether launching a new company, refreshing an identity, or creating marketing materials, the design approach is strategic, practical, and effective."
+    },
+    {
+      "kind": "jsx",
+      "text": "Good design does more than look polished. It creates consistency, improves communication, and helps customers remember a business. Workshop Creative Group develops branding and graphic design solutions that support real business goals while remaining practical for print production and everyday use."
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary mt-8 inline-flex"
+    },
+    {
+      "kind": "jsx",
+      "text": "Start Your Design Project"
+    },
+    {
+      "kind": "literal",
+      "text": "space-y-5"
+    },
+    {
+      "kind": "literal",
+      "text": "flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100"
+    },
+    {
+      "kind": "literal",
+      "text": "text-3xl flex-shrink-0"
+    },
+    {
+      "kind": "literal",
+      "text": "font-semibold text-gray-900 mb-1"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm leading-relaxed"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-gray-50"
+    },
+    {
+      "kind": "literal",
+      "text": "gd-services-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center mb-10"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label justify-center mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "What We Design"
+    },
+    {
+      "kind": "jsx",
+      "text": "Graphic Design Services"
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-wrap justify-center gap-3 max-w-3xl mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "tag text-sm px-4 py-2"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-hero-gradient"
+    },
+    {
+      "kind": "literal",
+      "text": "gd-cta-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-2xl mx-auto text-center"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-white mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Ready to Elevate Your Brand?"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white/70 mb-8"
+    },
+    {
+      "kind": "jsx",
+      "text": "Let's create design that communicates clearly, looks professional, and supports your business goals."
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary text-base px-8 py-4"
+    },
+    {
+      "kind": "literal",
+      "text": "white"
+    }
+  ],
+  "pages/PrintProcurement.tsx": [
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "Offset printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Digital printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Commercial printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Promotional products"
+    },
+    {
+      "kind": "literal",
+      "text": "Apparel"
+    },
+    {
+      "kind": "literal",
+      "text": "Packaging"
+    },
+    {
+      "kind": "literal",
+      "text": "Labels"
+    },
+    {
+      "kind": "literal",
+      "text": "Folding cartons"
+    },
+    {
+      "kind": "literal",
+      "text": "Direct mail"
+    },
+    {
+      "kind": "literal",
+      "text": "Custom boxes"
+    },
+    {
+      "kind": "literal",
+      "text": "Books"
+    },
+    {
+      "kind": "literal",
+      "text": "Manuals"
+    },
+    {
+      "kind": "literal",
+      "text": "Presentation folders"
+    },
+    {
+      "kind": "literal",
+      "text": "Stickers"
+    },
+    {
+      "kind": "literal",
+      "text": "Decals"
+    },
+    {
+      "kind": "literal",
+      "text": "Specialty printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Custom packaging"
+    },
+    {
+      "kind": "literal",
+      "text": "Fulfillment services"
+    },
+    {
+      "kind": "literal",
+      "text": "Typical Savings"
+    },
+    {
+      "kind": "literal",
+      "text": "By matching each project with the right process and supplier, clients often save 10% to 20% while improving efficiency."
+    },
+    {
+      "kind": "literal",
+      "text": "Point of Contact"
+    },
+    {
+      "kind": "literal",
+      "text": "Instead of juggling multiple contacts and unknown vendors, businesses get one experienced partner."
+    },
+    {
+      "kind": "literal",
+      "text": "USA"
+    },
+    {
+      "kind": "literal",
+      "text": "Nationwide Network"
+    },
+    {
+      "kind": "literal",
+      "text": "Carefully selected manufacturing partners across the United States for every print category."
+    },
+    {
+      "kind": "literal",
+      "text": "Print Procurement & Commercial Printing Solutions | Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "Source commercial printing, packaging, labels, promotional products, and specialty print solutions through a nationwide print procurement network."
+    },
+    {
+      "kind": "literal",
+      "text": "page-hero"
+    },
+    {
+      "kind": "literal",
+      "text": "pp-hero-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-semibold uppercase tracking-widest mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "Print Procurement"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl md:text-5xl lg:text-6xl text-white mb-5"
+    },
+    {
+      "kind": "jsx",
+      "text": "One Source. Unlimited Print Solutions."
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl text-white/70 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "Smart print procurement backed by trusted vendor relationships, better-fit materials, and competitive pricing."
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "pp-intro-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "How It Works"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-gray-900 mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "The Right Vendor for Every Job"
+    },
+    {
+      "kind": "literal",
+      "text": "divider"
+    },
+    {
+      "kind": "literal",
+      "text": "prose-wscg"
+    },
+    {
+      "kind": "jsx",
+      "text": "Not every project belongs on the same press, substrate, or production method. Workshop Creative Group helps businesses source the right vendor, manage the process, and secure competitive pricing without the hassle of coordinating multiple suppliers."
+    },
+    {
+      "kind": "jsx",
+      "text": "In many cases, businesses are overpaying simply because the wrong substrate or production method is being used for the job. A consultative approach helps identify the best fit for performance, appearance, turnaround, and value."
+    },
+    {
+      "kind": "jsx",
+      "text": "Through a national production network, Workshop Creative Group sources commercial printing and specialty products through carefully selected manufacturing partners across the United States. By matching each project with the right process and supplier, clients can often save 10% to 20% while improving efficiency and overall results."
+    },
+    {
+      "kind": "jsx",
+      "text": "Instead of juggling multiple contacts and unknown vendors, businesses get one experienced partner focused on delivering the right solution from start to finish."
+    },
+    {
+      "kind": "literal",
+      "text": "pb-16 bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "trust-badge bg-gray-50 border-gray-100"
+    },
+    {
+      "kind": "literal",
+      "text": "text-4xl font-serif font-bold"
+    },
+    {
+      "kind": "literal",
+      "text": "font-semibold text-gray-900"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm text-center leading-relaxed"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-gray-50"
+    },
+    {
+      "kind": "literal",
+      "text": "pp-products-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center mb-10"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label justify-center mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "What We Source"
+    },
+    {
+      "kind": "jsx",
+      "text": "Products We Source"
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-wrap justify-center gap-3 max-w-4xl mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "tag text-sm px-4 py-2"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-hero-gradient"
+    },
+    {
+      "kind": "literal",
+      "text": "pp-cta-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-2xl mx-auto text-center"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-white mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Need Help Finding the Right Print Solution?"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white/70 mb-8"
+    },
+    {
+      "kind": "jsx",
+      "text": "Upload your current invoice and let us show you how much you can save through smarter procurement."
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary text-base px-8 py-4"
+    },
+    {
+      "kind": "literal",
+      "text": "white"
+    },
+    {
+      "kind": "jsx",
+      "text": "Request a Procurement Review"
+    }
+  ],
+  "pages/RequestQuote.tsx": [
+    {
+      "kind": "literal",
+      "text": "react"
+    },
+    {
+      "kind": "literal",
+      "text": "Large Format Printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Graphic Design"
+    },
+    {
+      "kind": "literal",
+      "text": "Commercial Printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Print Procurement"
+    },
+    {
+      "kind": "literal",
+      "text": "Signage"
+    },
+    {
+      "kind": "literal",
+      "text": "Trade Show Displays"
+    },
+    {
+      "kind": "literal",
+      "text": "Direct Mail"
+    },
+    {
+      "kind": "literal",
+      "text": "Promotional Products"
+    },
+    {
+      "kind": "literal",
+      "text": "Other"
+    },
+    {
+      "kind": "literal",
+      "text": "application/pdf"
+    },
+    {
+      "kind": "literal",
+      "text": "image/jpeg"
+    },
+    {
+      "kind": "literal",
+      "text": "image/png"
+    },
+    {
+      "kind": "literal",
+      "text": "image/jpg"
+    },
+    {
+      "kind": "literal",
+      "text": "Please upload a PDF, JPG, or PNG file."
+    },
+    {
+      "kind": "literal",
+      "text": "File size must be under 20 MB."
+    },
+    {
+      "kind": "literal",
+      "text": "Company name is required"
+    },
+    {
+      "kind": "literal",
+      "text": "Contact name is required"
+    },
+    {
+      "kind": "literal",
+      "text": "Email is required"
+    },
+    {
+      "kind": "literal",
+      "text": "Please enter a valid email"
+    },
+    {
+      "kind": "literal",
+      "text": "Quote Request Submitted | Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "Your quote request has been received. Workshop Creative Group will review your invoice and respond with a competitive quote."
+    },
+    {
+      "kind": "literal",
+      "text": "page-hero"
+    },
+    {
+      "kind": "literal",
+      "text": "success-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-2xl mx-auto text-center"
+    },
+    {
+      "kind": "literal",
+      "text": "w-20 h-20 rounded-full bg-green-500 flex items-center justify-center mx-auto mb-6"
+    },
+    {
+      "kind": "literal",
+      "text": "w-10 h-10 text-white"
+    },
+    {
+      "kind": "literal",
+      "text": "none"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "round"
+    },
+    {
+      "kind": "literal",
+      "text": "M5 13l4 4L19 7"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl md:text-5xl text-white mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Quote Request Received!"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl text-white/70 mb-8"
+    },
+    {
+      "kind": "jsx",
+      "text": "Thank you for reaching out. We've received your request and will review your invoice to prepare a competitive quote. You'll hear from us shortly."
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary text-base px-8 py-4"
+    },
+    {
+      "kind": "literal",
+      "text": "white"
+    },
+    {
+      "kind": "jsx",
+      "text": "Back to Home"
+    },
+    {
+      "kind": "literal",
+      "text": "Request a Quote | Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "Request a quote for large format printing, graphic design, sign printing, commercial printing, or print procurement services."
+    },
+    {
+      "kind": "literal",
+      "text": "quote-hero-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-semibold uppercase tracking-widest mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "Free Quote Comparison"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl md:text-5xl lg:text-6xl text-white mb-5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Let's Compare Quotes and Save You Money"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl text-white/70 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "Upload a recent print invoice, and we'll show you how much you could save — often up to 20% — for the exact same job."
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "form-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "mb-10"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Get Started"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-gray-900 mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Start Your Savings Comparison"
+    },
+    {
+      "kind": "literal",
+      "text": "divider"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "We believe you shouldn't have to overpay for high-quality print and design services. Share the details of your recent or upcoming project by uploading your invoice. We will review the specifications, recommend the best production approach, and provide transparent pricing that beats your current costs."
+    },
+    {
+      "kind": "literal",
+      "text": "space-y-8"
+    },
+    {
+      "kind": "literal",
+      "text": "form-label text-base mb-3 block"
+    },
+    {
+      "kind": "jsx",
+      "text": "Upload Your Current Invoice"
+    },
+    {
+      "kind": "literal",
+      "text": "ml-1 text-blue-700"
+    },
+    {
+      "kind": "literal",
+      "text": "ml-2 text-gray-400 font-normal text-sm"
+    },
+    {
+      "kind": "jsx",
+      "text": "(PDF, JPG, or PNG — up to 20 MB)"
+    },
+    {
+      "kind": "literal",
+      "text": "drag-over"
+    },
+    {
+      "kind": "literal",
+      "text": "button"
+    },
+    {
+      "kind": "literal",
+      "text": "Enter"
+    },
+    {
+      "kind": "literal",
+      "text": "Upload invoice file"
+    },
+    {
+      "kind": "literal",
+      "text": "file"
+    },
+    {
+      "kind": "literal",
+      "text": ".pdf,.jpg,.jpeg,.png"
+    },
+    {
+      "kind": "literal",
+      "text": "sr-only"
+    },
+    {
+      "kind": "literal",
+      "text": "true"
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-col items-center gap-3"
+    },
+    {
+      "kind": "literal",
+      "text": "w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center"
+    },
+    {
+      "kind": "literal",
+      "text": "w-6 h-6 text-green-600"
+    },
+    {
+      "kind": "literal",
+      "text": "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+    },
+    {
+      "kind": "literal",
+      "text": "font-semibold text-gray-900"
+    },
+    {
+      "kind": "literal",
+      "text": "text-sm text-gray-500"
+    },
+    {
+      "kind": "jsx",
+      "text": "KB"
+    },
+    {
+      "kind": "literal",
+      "text": "text-sm text-red-500 hover:text-red-700 font-medium"
+    },
+    {
+      "kind": "jsx",
+      "text": "Remove file"
+    },
+    {
+      "kind": "literal",
+      "text": "w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center"
+    },
+    {
+      "kind": "literal",
+      "text": "w-7 h-7 text-blue-700"
+    },
+    {
+      "kind": "literal",
+      "text": "M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Drop your invoice here, or"
+    },
+    {
+      "kind": "literal",
+      "text": "text-blue-700"
+    },
+    {
+      "kind": "jsx",
+      "text": "browse"
+    },
+    {
+      "kind": "literal",
+      "text": "text-sm text-gray-400 mt-1"
+    },
+    {
+      "kind": "jsx",
+      "text": "PDF, JPG, or PNG accepted"
+    },
+    {
+      "kind": "literal",
+      "text": "text-lg font-serif font-semibold text-gray-900 mb-5 pb-3 border-b border-gray-100"
+    },
+    {
+      "kind": "jsx",
+      "text": "Contact Information"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 sm:grid-cols-2 gap-5"
+    },
+    {
+      "kind": "literal",
+      "text": "companyName"
+    },
+    {
+      "kind": "literal",
+      "text": "form-label"
+    },
+    {
+      "kind": "jsx",
+      "text": "Company Name"
+    },
+    {
+      "kind": "literal",
+      "text": "text"
+    },
+    {
+      "kind": "literal",
+      "text": "Acme Corporation"
+    },
+    {
+      "kind": "literal",
+      "text": "border-red-400"
+    },
+    {
+      "kind": "literal",
+      "text": "companyName-error"
+    },
+    {
+      "kind": "literal",
+      "text": "mt-1 text-sm text-red-500"
+    },
+    {
+      "kind": "literal",
+      "text": "contactName"
+    },
+    {
+      "kind": "jsx",
+      "text": "Contact Name"
+    },
+    {
+      "kind": "literal",
+      "text": "Jane Smith"
+    },
+    {
+      "kind": "literal",
+      "text": "contactName-error"
+    },
+    {
+      "kind": "literal",
+      "text": "email"
+    },
+    {
+      "kind": "jsx",
+      "text": "Email Address"
+    },
+    {
+      "kind": "literal",
+      "text": "jane@company.com"
+    },
+    {
+      "kind": "literal",
+      "text": "email-error"
+    },
+    {
+      "kind": "literal",
+      "text": "phone"
+    },
+    {
+      "kind": "jsx",
+      "text": "Phone Number"
+    },
+    {
+      "kind": "literal",
+      "text": "tel"
+    },
+    {
+      "kind": "literal",
+      "text": "form-input"
+    },
+    {
+      "kind": "jsx",
+      "text": "Project Details"
+    },
+    {
+      "kind": "literal",
+      "text": "ml-2 text-sm font-sans font-normal text-gray-400"
+    },
+    {
+      "kind": "jsx",
+      "text": "(Optional — helps us prepare a more accurate quote)"
+    },
+    {
+      "kind": "literal",
+      "text": "projectType"
+    },
+    {
+      "kind": "jsx",
+      "text": "Project Type"
+    },
+    {
+      "kind": "jsx",
+      "text": "Select a type..."
+    },
+    {
+      "kind": "literal",
+      "text": "quantity"
+    },
+    {
+      "kind": "jsx",
+      "text": "Quantity"
+    },
+    {
+      "kind": "literal",
+      "text": "e.g. 500 pieces"
+    },
+    {
+      "kind": "literal",
+      "text": "sizeSpecs"
+    },
+    {
+      "kind": "jsx",
+      "text": "Size / Specs"
+    },
+    {
+      "kind": "literal",
+      "text": "e.g. 24 x 36, full color"
+    },
+    {
+      "kind": "literal",
+      "text": "deadline"
+    },
+    {
+      "kind": "jsx",
+      "text": "Deadline"
+    },
+    {
+      "kind": "literal",
+      "text": "e.g. August 15, 2026"
+    },
+    {
+      "kind": "literal",
+      "text": "mt-5"
+    },
+    {
+      "kind": "literal",
+      "text": "description"
+    },
+    {
+      "kind": "jsx",
+      "text": "Project Description / Additional Notes"
+    },
+    {
+      "kind": "literal",
+      "text": "Tell us about your project — materials, substrates, finishing, special requirements, or anything else that helps us prepare an accurate quote..."
+    },
+    {
+      "kind": "literal",
+      "text": "form-input resize-y"
+    },
+    {
+      "kind": "literal",
+      "text": "mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm"
+    },
+    {
+      "kind": "literal",
+      "text": "Something went wrong. Please try again."
+    },
+    {
+      "kind": "literal",
+      "text": "submit"
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary w-full text-base py-4 disabled:opacity-60 disabled:cursor-not-allowed"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-center justify-center gap-2"
+    },
+    {
+      "kind": "literal",
+      "text": "w-5 h-5 animate-spin"
+    },
+    {
+      "kind": "literal",
+      "text": "opacity-25"
+    },
+    {
+      "kind": "literal",
+      "text": "opacity-75"
+    },
+    {
+      "kind": "literal",
+      "text": "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+    },
+    {
+      "kind": "jsx",
+      "text": "Submitting..."
+    },
+    {
+      "kind": "literal",
+      "text": "Get My Quote Comparison"
+    },
+    {
+      "kind": "literal",
+      "text": "mt-4 text-center text-sm text-gray-400"
+    },
+    {
+      "kind": "jsx",
+      "text": "Every project is reviewed by our experts to ensure we match the exact specifications of your invoice while identifying smarter, more cost-effective production methods. Your data is secure and will only be used to provide your quote."
+    }
+  ],
+  "pages/Contact.tsx": [
+    {
+      "kind": "literal",
+      "text": "react"
+    },
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "Name is required"
+    },
+    {
+      "kind": "literal",
+      "text": "Email is required"
+    },
+    {
+      "kind": "literal",
+      "text": "Please enter a valid email"
+    },
+    {
+      "kind": "literal",
+      "text": "Message is required"
+    },
+    {
+      "kind": "literal",
+      "text": "Contact Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "Contact Workshop Creative Group to discuss large format printing, graphic design, print procurement, and custom print solutions."
+    },
+    {
+      "kind": "literal",
+      "text": "page-hero"
+    },
+    {
+      "kind": "literal",
+      "text": "contact-hero-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-semibold uppercase tracking-widest mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "Get in Touch"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl md:text-5xl lg:text-6xl text-white mb-5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Contact Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl text-white/70 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "Let's talk about your next print, design, or sourcing project."
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "contact-form-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "How Can We Help?"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-gray-900 mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "We're Here to Make the Process Easier"
+    },
+    {
+      "kind": "literal",
+      "text": "divider"
+    },
+    {
+      "kind": "literal",
+      "text": "prose-wscg mb-8"
+    },
+    {
+      "kind": "jsx",
+      "text": "Need help with large format printing, graphic design, custom printing, or print procurement? Workshop Creative Group is here to make the process easier. Reach out to discuss project details, timelines, materials, substrates, or production needs."
+    },
+    {
+      "kind": "literal",
+      "text": "space-y-3"
+    },
+    {
+      "kind": "literal",
+      "text": "Large Format Printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Graphic Design"
+    },
+    {
+      "kind": "literal",
+      "text": "Print Procurement"
+    },
+    {
+      "kind": "literal",
+      "text": "Request a Quote"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition-colors duration-200 group"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-700 font-medium text-sm group-hover:text-blue-700 transition-colors duration-200"
+    },
+    {
+      "kind": "literal",
+      "text": "w-4 h-4 text-gray-400 group-hover:text-blue-700 transition-colors duration-200"
+    },
+    {
+      "kind": "literal",
+      "text": "none"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "round"
+    },
+    {
+      "kind": "literal",
+      "text": "M17 8l4 4m0 0l-4 4m4-4H3"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-green-50 border border-green-200 rounded-2xl p-10 text-center"
+    },
+    {
+      "kind": "literal",
+      "text": "w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4"
+    },
+    {
+      "kind": "literal",
+      "text": "w-8 h-8 text-green-600"
+    },
+    {
+      "kind": "literal",
+      "text": "M5 13l4 4L19 7"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl font-serif font-semibold text-gray-900 mb-2"
+    },
+    {
+      "kind": "jsx",
+      "text": "Message Sent!"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm"
+    },
+    {
+      "kind": "jsx",
+      "text": "Thank you for reaching out. We'll be in touch shortly."
+    },
+    {
+      "kind": "literal",
+      "text": "space-y-5"
+    },
+    {
+      "kind": "literal",
+      "text": "name"
+    },
+    {
+      "kind": "literal",
+      "text": "form-label"
+    },
+    {
+      "kind": "jsx",
+      "text": "Name"
+    },
+    {
+      "kind": "literal",
+      "text": "text-blue-700"
+    },
+    {
+      "kind": "literal",
+      "text": "text"
+    },
+    {
+      "kind": "literal",
+      "text": "Jane Smith"
+    },
+    {
+      "kind": "literal",
+      "text": "border-red-400"
+    },
+    {
+      "kind": "literal",
+      "text": "mt-1 text-sm text-red-500"
+    },
+    {
+      "kind": "literal",
+      "text": "email"
+    },
+    {
+      "kind": "jsx",
+      "text": "Email Address"
+    },
+    {
+      "kind": "literal",
+      "text": "jane@company.com"
+    },
+    {
+      "kind": "literal",
+      "text": "phone"
+    },
+    {
+      "kind": "jsx",
+      "text": "Phone Number"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-400 font-normal"
+    },
+    {
+      "kind": "jsx",
+      "text": "(optional)"
+    },
+    {
+      "kind": "literal",
+      "text": "tel"
+    },
+    {
+      "kind": "literal",
+      "text": "form-input"
+    },
+    {
+      "kind": "literal",
+      "text": "message"
+    },
+    {
+      "kind": "jsx",
+      "text": "Message"
+    },
+    {
+      "kind": "literal",
+      "text": "Tell us about your project or question..."
+    },
+    {
+      "kind": "literal",
+      "text": "p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm"
+    },
+    {
+      "kind": "jsx",
+      "text": "Something went wrong. Please try again."
+    },
+    {
+      "kind": "literal",
+      "text": "submit"
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary w-full text-base py-4 disabled:opacity-60 disabled:cursor-not-allowed"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-center justify-center gap-2"
+    },
+    {
+      "kind": "literal",
+      "text": "w-5 h-5 animate-spin"
+    },
+    {
+      "kind": "literal",
+      "text": "opacity-25"
+    },
+    {
+      "kind": "literal",
+      "text": "opacity-75"
+    },
+    {
+      "kind": "literal",
+      "text": "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+    },
+    {
+      "kind": "jsx",
+      "text": "Sending..."
+    },
+    {
+      "kind": "literal",
+      "text": "Send Message"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center text-sm text-gray-400"
+    },
+    {
+      "kind": "jsx",
+      "text": "Or"
+    },
+    {
+      "kind": "literal",
+      "text": "text-blue-700 hover:underline font-medium"
+    },
+    {
+      "kind": "jsx",
+      "text": "upload an invoice for a quote comparison →"
+    }
+  ],
+  "pages/Gallery.tsx": [
+    {
+      "kind": "literal",
+      "text": "react"
+    },
+    {
+      "kind": "literal",
+      "text": "../../../shared/thumbnailPresentation"
+    },
+    {
+      "kind": "literal",
+      "text": "image"
+    },
+    {
+      "kind": "literal",
+      "text": "video"
+    },
+    {
+      "kind": "literal",
+      "text": "Escape"
+    },
+    {
+      "kind": "literal",
+      "text": "ArrowLeft"
+    },
+    {
+      "kind": "literal",
+      "text": "ArrowRight"
+    },
+    {
+      "kind": "literal",
+      "text": "keydown"
+    },
+    {
+      "kind": "literal",
+      "text": "hidden"
+    },
+    {
+      "kind": "literal",
+      "text": "fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+    },
+    {
+      "kind": "literal",
+      "text": "dialog"
+    },
+    {
+      "kind": "literal",
+      "text": "true"
+    },
+    {
+      "kind": "literal",
+      "text": "absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors duration-200 z-10"
+    },
+    {
+      "kind": "literal",
+      "text": "Previous image"
+    },
+    {
+      "kind": "literal",
+      "text": "w-6 h-6"
+    },
+    {
+      "kind": "literal",
+      "text": "none"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "round"
+    },
+    {
+      "kind": "literal",
+      "text": "M15 19l-7-7 7-7"
+    },
+    {
+      "kind": "literal",
+      "text": "relative max-w-5xl max-h-[85vh] flex flex-col items-center gap-4"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-full max-h-[75vh] rounded-xl shadow-2xl"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl"
+    },
+    {
+      "kind": "literal",
+      "text": "eager"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white font-semibold text-base"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white/60 text-sm"
+    },
+    {
+      "kind": "literal",
+      "text": "absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors duration-200 z-10"
+    },
+    {
+      "kind": "literal",
+      "text": "Next image"
+    },
+    {
+      "kind": "literal",
+      "text": "M9 5l7 7-7 7"
+    },
+    {
+      "kind": "literal",
+      "text": "absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors duration-200"
+    },
+    {
+      "kind": "literal",
+      "text": "Close lightbox"
+    },
+    {
+      "kind": "literal",
+      "text": "w-5 h-5"
+    },
+    {
+      "kind": "literal",
+      "text": "M6 18L18 6M6 6l12 12"
+    },
+    {
+      "kind": "literal",
+      "text": "group relative overflow-hidden rounded-xl bg-gray-100 border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-left w-full"
+    },
+    {
+      "kind": "literal",
+      "text": "aspect-[4/3] overflow-hidden bg-gray-100"
+    },
+    {
+      "kind": "literal",
+      "text": "lazy"
+    },
+    {
+      "kind": "literal",
+      "text": "async"
+    },
+    {
+      "kind": "literal",
+      "text": "low"
+    },
+    {
+      "kind": "literal",
+      "text": "w-full h-full object-cover"
+    },
+    {
+      "kind": "literal",
+      "text": "metadata"
+    },
+    {
+      "kind": "literal",
+      "text": "opacity-100"
+    },
+    {
+      "kind": "literal",
+      "text": "opacity-0"
+    },
+    {
+      "kind": "literal",
+      "text": "w-full h-full flex items-center justify-center bg-gray-100"
+    },
+    {
+      "kind": "literal",
+      "text": "w-10 h-10 text-gray-300"
+    },
+    {
+      "kind": "literal",
+      "text": "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+    },
+    {
+      "kind": "literal",
+      "text": "absolute inset-0 bg-gray-100 animate-pulse"
+    },
+    {
+      "kind": "literal",
+      "text": "absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white font-semibold text-sm leading-tight"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white/75 text-xs mt-0.5"
+    },
+    {
+      "kind": "literal",
+      "text": "ml-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"
+    },
+    {
+      "kind": "literal",
+      "text": "w-4 h-4 text-white"
+    },
+    {
+      "kind": "literal",
+      "text": "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+    },
+    {
+      "kind": "literal",
+      "text": "p-3 border-t border-gray-100"
+    },
+    {
+      "kind": "literal",
+      "text": "font-semibold text-gray-900 text-xs truncate"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-xs truncate"
+    },
+    {
+      "kind": "literal",
+      "text": "large-format"
+    },
+    {
+      "kind": "literal",
+      "text": "Our Work | Portfolio Gallery | Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "Browse Workshop Creative Group's portfolio of large format printing, graphic design, branding, and print procurement work for clients nationwide."
+    },
+    {
+      "kind": "literal",
+      "text": "page-hero"
+    },
+    {
+      "kind": "literal",
+      "text": "gallery-hero-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-semibold uppercase tracking-widest mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "Portfolio"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl md:text-5xl lg:text-6xl text-white mb-5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Our Work"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl text-white/70 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "A selection of large format printing, graphic design, branding, and print procurement projects delivered for clients nationwide."
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "gallery-grid-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-wrap gap-2 mb-10 justify-center"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white shadow-md"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-gray-100 text-gray-600 hover:bg-gray-200"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-white/20 text-white"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-gray-200 text-gray-500"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center text-sm text-gray-400 mb-8"
+    },
+    {
+      "kind": "jsx",
+      "text": "Showing"
+    },
+    {
+      "kind": "jsx",
+      "text": "project"
+    },
+    {
+      "kind": "literal",
+      "text": "sr-only"
+    },
+    {
+      "kind": "jsx",
+      "text": "Portfolio gallery"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+    }
+  ],
+  "pages/Blog.tsx": [
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "featured"
+    },
+    {
+      "kind": "literal",
+      "text": "Featured Story: The Relationships That Shaped the Journey"
+    },
+    {
+      "kind": "literal",
+      "text": "A closer look at one of the people, experiences, or lessons that helped shape the journey behind Workshop Creative Group."
+    },
+    {
+      "kind": "literal",
+      "text": "en-US"
+    },
+    {
+      "kind": "literal",
+      "text": "numeric"
+    },
+    {
+      "kind": "literal",
+      "text": "long"
+    },
+    {
+      "kind": "literal",
+      "text": "Brent's Blog | Stories, Lessons & Business Relationships | Workshop Creative Group"
+    },
+    {
+      "kind": "literal",
+      "text": "Read stories, lessons, and career insights from Brent, featuring the people and experiences that helped shape Workshop Creative Group."
+    },
+    {
+      "kind": "literal",
+      "text": "page-hero"
+    },
+    {
+      "kind": "literal",
+      "text": "blog-hero-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-semibold uppercase tracking-widest mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "Brent's Blog"
+    },
+    {
+      "kind": "literal",
+      "text": "text-display text-4xl md:text-5xl lg:text-6xl text-white mb-5"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl text-white/70 leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "Stories, lessons, and relationships that shaped the journey."
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "blog-intro-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-3xl mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "The Stories"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-gray-900 mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "The People and Experiences Behind the Work"
+    },
+    {
+      "kind": "literal",
+      "text": "divider"
+    },
+    {
+      "kind": "literal",
+      "text": "prose-wscg"
+    },
+    {
+      "kind": "jsx",
+      "text": "Over the years, Brent has had the privilege of working with talented people who played an important role in his career and in the growth of Workshop Creative Group. This blog is where those stories are shared, highlighting the people, experiences, and lessons that shaped the path in print, design, branding, and business."
+    },
+    {
+      "kind": "jsx",
+      "text": "Each article is written to be personal, thoughtful, and relevant. Some stories focus on leadership, some on business relationships, and others on moments that changed the way service, creativity, and long-term growth are viewed. Together, they offer a deeper look at the experience and perspective behind the company."
+    },
+    {
+      "kind": "literal",
+      "text": "mt-8 p-6 bg-gray-50 rounded-2xl border border-gray-100"
+    },
+    {
+      "kind": "literal",
+      "text": "text-lg font-serif font-semibold text-gray-900 mb-2"
+    },
+    {
+      "kind": "jsx",
+      "text": "Read It or Listen"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm leading-relaxed"
+    },
+    {
+      "kind": "jsx",
+      "text": "For readers who prefer audio, select articles can also be available in Brent's voice. This creates another way to experience each story while keeping the full written article available on the page."
+    },
+    {
+      "kind": "literal",
+      "text": "pb-16 bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "featured-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "Featured Story"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-start justify-between gap-4 mb-4"
+    },
+    {
+      "kind": "literal",
+      "text": "tag text-xs"
+    },
+    {
+      "kind": "jsx",
+      "text": "Featured"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-400 text-sm"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-2xl md:text-3xl text-gray-900 mb-3"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-600 leading-relaxed mb-6"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm leading-relaxed mb-6"
+    },
+    {
+      "kind": "jsx",
+      "text": "A closer look at one of the people, experiences, or lessons that helped shape the journey behind Workshop Creative Group."
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-col sm:flex-row gap-3"
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary text-sm px-6 py-3"
+    },
+    {
+      "kind": "jsx",
+      "text": "Read the Full Story"
+    },
+    {
+      "kind": "literal",
+      "text": "btn-secondary text-sm px-6 py-3 flex items-center gap-2"
+    },
+    {
+      "kind": "literal",
+      "text": "w-4 h-4"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "M8 5v14l11-7z"
+    },
+    {
+      "kind": "jsx",
+      "text": "Listen to This Article"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-gray-50"
+    },
+    {
+      "kind": "literal",
+      "text": "articles-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-2xl md:text-3xl text-gray-900 mb-8"
+    },
+    {
+      "kind": "jsx",
+      "text": "Explore the Stories Behind the Work"
+    },
+    {
+      "kind": "literal",
+      "text": "space-y-4"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-white rounded-2xl p-6 border border-gray-100 animate-pulse"
+    },
+    {
+      "kind": "literal",
+      "text": "h-4 bg-gray-200 rounded w-1/4 mb-3"
+    },
+    {
+      "kind": "literal",
+      "text": "h-6 bg-gray-200 rounded w-3/4 mb-2"
+    },
+    {
+      "kind": "literal",
+      "text": "h-4 bg-gray-200 rounded w-full"
+    },
+    {
+      "kind": "literal",
+      "text": "space-y-5"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-white rounded-2xl p-6 border border-gray-100 card-lift"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-center justify-between gap-4 mb-3"
+    },
+    {
+      "kind": "literal",
+      "text": "tag text-xs flex items-center gap-1"
+    },
+    {
+      "kind": "literal",
+      "text": "w-3 h-3"
+    },
+    {
+      "kind": "jsx",
+      "text": "Audio available"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xl font-serif font-semibold text-gray-900 mb-2"
+    },
+    {
+      "kind": "literal",
+      "text": "hover:text-blue-700 transition-colors duration-200"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm leading-relaxed mb-4"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700 hover:gap-2.5 transition-all duration-200"
+    },
+    {
+      "kind": "literal",
+      "text": "none"
+    },
+    {
+      "kind": "literal",
+      "text": "round"
+    },
+    {
+      "kind": "literal",
+      "text": "M17 8l4 4m0 0l-4 4m4-4H3"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-white rounded-2xl p-10 border border-gray-100 text-center"
+    },
+    {
+      "kind": "literal",
+      "text": "w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-4"
+    },
+    {
+      "kind": "literal",
+      "text": "w-8 h-8 text-blue-700"
+    },
+    {
+      "kind": "literal",
+      "text": "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+    },
+    {
+      "kind": "jsx",
+      "text": "Stories Coming Soon"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 text-sm"
+    },
+    {
+      "kind": "jsx",
+      "text": "Brent's stories, lessons, and career insights will be published here. Check back soon."
+    },
+    {
+      "kind": "literal",
+      "text": "blog-cta-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-2xl mx-auto text-center"
+    },
+    {
+      "kind": "jsx",
+      "text": "Ready to Work Together?"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-500 mb-8"
+    },
+    {
+      "kind": "jsx",
+      "text": "Whether the need is large format printing, graphic design, or print procurement — Workshop Creative Group is ready to help."
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary text-base px-8 py-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Request a Quote"
+    }
+  ],
+  "components/Navbar.tsx": [
+    {
+      "kind": "literal",
+      "text": "react"
+    },
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "Home"
+    },
+    {
+      "kind": "literal",
+      "text": "About"
+    },
+    {
+      "kind": "literal",
+      "text": "Large Format Printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Graphic Design"
+    },
+    {
+      "kind": "literal",
+      "text": "Print Procurement"
+    },
+    {
+      "kind": "literal",
+      "text": "Our Work"
+    },
+    {
+      "kind": "literal",
+      "text": "Contact"
+    },
+    {
+      "kind": "literal",
+      "text": "scroll"
+    },
+    {
+      "kind": "literal",
+      "text": "hidden"
+    },
+    {
+      "kind": "literal",
+      "text": "shadow-md"
+    },
+    {
+      "kind": "literal",
+      "text": "shadow-sm"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "flex items-center h-16 md:h-20"
+    },
+    {
+      "kind": "literal",
+      "text": "Main navigation"
+    },
+    {
+      "kind": "literal",
+      "text": "flex-shrink-0 flex items-center"
+    },
+    {
+      "kind": "literal",
+      "text": "Workshop Creative Group — Home"
+    },
+    {
+      "kind": "literal",
+      "text": "logo-horizontal"
+    },
+    {
+      "kind": "literal",
+      "text": "Workshop Creative Group logo"
+    },
+    {
+      "kind": "literal",
+      "text": "h-9 md:h-11 w-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "w-10 md:w-14 flex-shrink-0"
+    },
+    {
+      "kind": "literal",
+      "text": "hidden xl:flex items-center gap-1 list-none m-0 p-0 flex-1"
+    },
+    {
+      "kind": "literal",
+      "text": "text-blue-700 bg-blue-50 font-semibold"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-700 hover:text-blue-700 hover:bg-gray-50"
+    },
+    {
+      "kind": "literal",
+      "text": "hidden xl:flex items-center ml-4 flex-shrink-0"
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary text-sm px-5 py-2.5 whitespace-nowrap"
+    },
+    {
+      "kind": "literal",
+      "text": "0.875rem"
+    },
+    {
+      "kind": "jsx",
+      "text": "Get Your Free Quote Comparison"
+    },
+    {
+      "kind": "literal",
+      "text": "flex xl:hidden items-center gap-2 ml-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-blue-700 text-white font-semibold text-sm hover:bg-blue-800 transition-colors duration-200 whitespace-nowrap"
+    },
+    {
+      "kind": "jsx",
+      "text": "Free Quote"
+    },
+    {
+      "kind": "literal",
+      "text": "Close menu"
+    },
+    {
+      "kind": "literal",
+      "text": "Open menu"
+    },
+    {
+      "kind": "literal",
+      "text": "p-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+    },
+    {
+      "kind": "literal",
+      "text": "sr-only"
+    },
+    {
+      "kind": "literal",
+      "text": "w-6 h-5 flex flex-col justify-between"
+    },
+    {
+      "kind": "literal",
+      "text": "rotate-45 translate-y-2.5"
+    },
+    {
+      "kind": "literal",
+      "text": "opacity-0 scale-x-0"
+    },
+    {
+      "kind": "literal",
+      "text": "-rotate-45 -translate-y-2"
+    },
+    {
+      "kind": "literal",
+      "text": "max-h-screen opacity-100"
+    },
+    {
+      "kind": "literal",
+      "text": "max-h-0 opacity-0"
+    },
+    {
+      "kind": "literal",
+      "text": "container py-4"
+    },
+    {
+      "kind": "literal",
+      "text": "list-none m-0 p-0 space-y-1"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-blue-50 text-blue-700 font-semibold"
+    },
+    {
+      "kind": "literal",
+      "text": "text-gray-700 hover:bg-gray-50 hover:text-blue-700"
+    },
+    {
+      "kind": "literal",
+      "text": "mt-4 pt-4 border-t border-gray-100"
+    },
+    {
+      "kind": "literal",
+      "text": "btn-primary w-full justify-center"
+    },
+    {
+      "kind": "literal",
+      "text": "fixed inset-0 z-40 bg-black/20 xl:hidden"
+    },
+    {
+      "kind": "literal",
+      "text": "true"
+    }
+  ],
+  "components/Footer.tsx": [
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "Large Format Printing"
+    },
+    {
+      "kind": "literal",
+      "text": "Graphic Design"
+    },
+    {
+      "kind": "literal",
+      "text": "Print Procurement"
+    },
+    {
+      "kind": "literal",
+      "text": "Request a Quote"
+    },
+    {
+      "kind": "literal",
+      "text": "Home"
+    },
+    {
+      "kind": "literal",
+      "text": "About"
+    },
+    {
+      "kind": "literal",
+      "text": "Our Work"
+    },
+    {
+      "kind": "literal",
+      "text": "Contact"
+    },
+    {
+      "kind": "literal",
+      "text": "bg-gray-950 text-white"
+    },
+    {
+      "kind": "literal",
+      "text": "container py-12 md:py-16"
+    },
+    {
+      "kind": "literal",
+      "text": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
+    },
+    {
+      "kind": "literal",
+      "text": "lg:col-span-1"
+    },
+    {
+      "kind": "literal",
+      "text": "Workshop Creative Group — Home"
+    },
+    {
+      "kind": "literal",
+      "text": "logo-footer-white"
+    },
+    {
+      "kind": "literal",
+      "text": "Workshop Creative Group logo"
+    },
+    {
+      "kind": "literal",
+      "text": "h-10 w-auto mb-5"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white/50 text-sm leading-relaxed mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Large Format Printing • Graphic Design • Print Procurement"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white/35 text-sm"
+    },
+    {
+      "kind": "jsx",
+      "text": "Serving Businesses Nationwide"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white font-semibold text-xs uppercase tracking-widest mb-5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Services"
+    },
+    {
+      "kind": "literal",
+      "text": "space-y-3 list-none m-0 p-0"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white/50 text-sm hover:text-white transition-colors duration-200"
+    },
+    {
+      "kind": "jsx",
+      "text": "Company"
+    },
+    {
+      "kind": "jsx",
+      "text": "Get in Touch"
+    },
+    {
+      "kind": "literal",
+      "text": "space-y-3"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white/50 text-sm"
+    },
+    {
+      "kind": "jsx",
+      "text": "Have a project in mind? We'd love to hear about it."
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-200"
+    },
+    {
+      "kind": "jsx",
+      "text": "Contact Us"
+    },
+    {
+      "kind": "literal",
+      "text": "w-4 h-4"
+    },
+    {
+      "kind": "literal",
+      "text": "none"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "round"
+    },
+    {
+      "kind": "literal",
+      "text": "M17 8l4 4m0 0l-4 4m4-4H3"
+    },
+    {
+      "kind": "literal",
+      "text": "border-t border-white/10"
+    },
+    {
+      "kind": "literal",
+      "text": "container py-6"
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-col sm:flex-row items-center justify-between gap-3 text-white/30 text-xs"
+    },
+    {
+      "kind": "jsx",
+      "text": "Workshop Creative Group. All rights reserved."
+    }
+  ],
+  "components/QuoteBanner.tsx": [
+    {
+      "kind": "literal",
+      "text": "wouter"
+    },
+    {
+      "kind": "literal",
+      "text": "py-12 md:py-16"
+    },
+    {
+      "kind": "literal",
+      "text": "Request a quote"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left"
+    },
+    {
+      "kind": "literal",
+      "text": "text-xs font-bold uppercase tracking-widest mb-2"
+    },
+    {
+      "kind": "jsx",
+      "text": "Stop Overpaying"
+    },
+    {
+      "kind": "literal",
+      "text": "text-white text-2xl md:text-3xl lg:text-4xl font-serif font-bold leading-tight"
+    },
+    {
+      "kind": "jsx",
+      "text": "Save Up to 20% on Your"
+    },
+    {
+      "kind": "literal",
+      "text": "hidden md:block"
+    },
+    {
+      "kind": "jsx",
+      "text": "Current Printing Costs"
+    },
+    {
+      "kind": "literal",
+      "text": "mt-2 text-base md:text-lg"
+    },
+    {
+      "kind": "literal",
+      "text": "rgba(255,255,255,0.75)"
+    },
+    {
+      "kind": "jsx",
+      "text": "Upload your invoice — we'll quote the same job at a better price."
+    },
+    {
+      "kind": "literal",
+      "text": "flex-shrink-0"
+    },
+    {
+      "kind": "literal",
+      "text": "inline-flex items-center gap-2 px-8 py-4 bg-white font-bold text-base rounded-xl shadow-lg transition-colors duration-200 active:scale-95 whitespace-nowrap"
+    },
+    {
+      "kind": "literal",
+      "text": "w-5 h-5"
+    },
+    {
+      "kind": "literal",
+      "text": "none"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "round"
+    },
+    {
+      "kind": "literal",
+      "text": "M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+    },
+    {
+      "kind": "jsx",
+      "text": "Get Your Free Quote Comparison"
+    }
+  ],
+  "components/TestimonialSection.tsx": [
+    {
+      "kind": "literal",
+      "text": "../../../shared/testimonialPresentation"
+    },
+    {
+      "kind": "literal",
+      "text": "section-py bg-white"
+    },
+    {
+      "kind": "literal",
+      "text": "testimonial-heading"
+    },
+    {
+      "kind": "literal",
+      "text": "container"
+    },
+    {
+      "kind": "literal",
+      "text": "text-center mb-12"
+    },
+    {
+      "kind": "literal",
+      "text": "section-label justify-center mb-4"
+    },
+    {
+      "kind": "jsx",
+      "text": "Client Perspective"
+    },
+    {
+      "kind": "literal",
+      "text": "text-heading text-3xl md:text-4xl text-gray-900"
+    },
+    {
+      "kind": "jsx",
+      "text": "Trusted for Quality, Service, and Value"
+    },
+    {
+      "kind": "literal",
+      "text": "single"
+    },
+    {
+      "kind": "literal",
+      "text": "max-w-4xl mx-auto"
+    },
+    {
+      "kind": "literal",
+      "text": "grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+    },
+    {
+      "kind": "literal",
+      "text": "rounded-2xl border border-gray-100 bg-gray-50 p-7 md:p-9 shadow-sm flex flex-col"
+    },
+    {
+      "kind": "literal",
+      "text": "w-9 h-9 mb-5"
+    },
+    {
+      "kind": "literal",
+      "text": "currentColor"
+    },
+    {
+      "kind": "literal",
+      "text": "true"
+    },
+    {
+      "kind": "literal",
+      "text": "M9.8 7C5.5 9.1 3.5 12.8 3.5 18.1c0 4.1 2.4 6.9 5.9 6.9 3.4 0 5.8-2.5 5.8-5.8 0-3.2-2.1-5.3-5-5.3-.6 0-1.2.1-1.8.3.6-1.8 2-3.2 4.3-4.1L9.8 7Zm13.3 0c-4.3 2.1-6.3 5.8-6.3 11.1 0 4.1 2.4 6.9 5.9 6.9 3.4 0 5.8-2.5 5.8-5.8 0-3.2-2.1-5.3-5-5.3-.6 0-1.2.1-1.8.3.6-1.8 2-3.2 4.3-4.1L23.1 7Z"
+    },
+    {
+      "kind": "literal",
+      "text": "font-serif text-xl md:text-2xl leading-relaxed text-gray-800"
+    },
+    {
+      "kind": "literal",
+      "text": "mt-7 pt-5 border-t border-gray-200 flex items-center gap-4"
+    },
+    {
+      "kind": "literal",
+      "text": "h-12 w-12 rounded-xl object-cover bg-white border border-gray-200"
+    },
+    {
+      "kind": "literal",
+      "text": "lazy"
+    },
+    {
+      "kind": "literal",
+      "text": "h-12 w-12 rounded-xl flex items-center justify-center font-serif font-bold text-lg text-white"
+    },
+    {
+      "kind": "literal",
+      "text": "font-semibold text-gray-900"
+    },
+    {
+      "kind": "literal",
+      "text": "text-sm text-gray-500"
+    },
+    {
+      "kind": "literal",
+      "text": "text-sm font-medium"
+    }
+  ]
+}

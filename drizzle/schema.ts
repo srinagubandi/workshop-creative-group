@@ -175,6 +175,19 @@ export const siteMetadata = mysqlTable("site_metadata", {
 export type SiteMetadata = typeof siteMetadata.$inferSelect;
 export type InsertSiteMetadata = typeof siteMetadata.$inferInsert;
 
+/** Individual public-text overrides, keyed by stable route and DOM field identity. */
+export const siteTextOverrides = mysqlTable("site_text_overrides", {
+  id: int("id").autoincrement().primaryKey(),
+  overrideKey: varchar("overrideKey", { length: 512 }).notNull().unique(),
+  routePath: varchar("routePath", { length: 255 }).notNull(),
+  fieldKey: varchar("fieldKey", { length: 255 }).notNull(),
+  value: text("value").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+export type SiteTextOverride = typeof siteTextOverrides.$inferSelect;
+export type InsertSiteTextOverride = typeof siteTextOverrides.$inferInsert;
+
 /**
  * Admin sessions — simple password-based auth for the /admin dashboard.
  */

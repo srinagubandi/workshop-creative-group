@@ -41,6 +41,10 @@ Every media item has a **Thumbnail / poster** selector in the Media Library. Ima
 
 Open **Admin Dashboard → Testimonials** to add only real, approved customer feedback. Enter the approved quote, name, title, and company. You may optionally select an existing Media Library logo or photo. New entries begin as **drafts** and remain private until you select **Publish**. Use **Edit** to correct approved information and **Move up** / **Move down** to control the public Home-page order. Archive instead of delete; restored testimonials return to draft for approval.
 
+## Edit Public Website Text
+
+Open **Admin Dashboard → Text Manager**. Select a public page to load its existing text inventory and same-origin live preview. Every visible text node and supported accessibility attribute is available as an individual field. Edit a field and select **Save to live site**, then confirm the preview. Use **Reset source copy** to remove an override and restore approved text. The Text Manager controls public website copy only; genuine testimonials and media records remain in their dedicated admin sections.
+
 ## Shared Website Images and Icons
 
 The Media Library includes a **brand and system** group for the header logo, footer logo, touch icons, favicons, and other shared visual assets. These use stable managed slots, so a replacement can update the corresponding web placement without changing code.
