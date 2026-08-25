@@ -159,3 +159,8 @@ Visible page copy remains unchanged pending Brent’s review. The implementation
 The strategy follows Google’s guidance to use a descriptive title for each page and avoid repeated boilerplate or keyword stuffing, and to use specific page-level descriptions rather than one repeated description. [Google title guidance](https://developers.google.com/search/docs/appearance/title-link) [Google snippet guidance](https://developers.google.com/search/docs/appearance/snippet) Organization JSON-LD is deliberately limited to the home page and only includes site-supported facts; service markup is used only for the relevant service routes. [Google Organization guidance](https://developers.google.com/search/docs/appearance/structured-data/organization)
 
 For answer-engine and generative-engine visibility, the site uses clean canonical URLs, an XML sitemap, open crawl access for public content, semantic page titles, accessible managed-media alt text, and accurate structured data. Bing states that these SEO fundamentals also support eligibility for Copilot grounding and citations, while inaccurate structured data and manipulative language are harmful. [Bing Webmaster Guidelines](https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a)
+
+
+## Change-Control Record — 2026-08-25
+
+`current.md` is now the canonical concise status record and `CHANGELOG.md` is the canonical version-history record. Every future change must use a new versioned branch, update both files, complete the documented local validation, and receive Railway deployment verification before it is considered complete. This file remains the detailed historical and architectural context.
