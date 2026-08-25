@@ -85,6 +85,9 @@ export default function Contact() {
                 <p>
                   Need help with large format printing, graphic design, custom printing, or print procurement? Workshop Creative Group is here to make the process easier. Reach out to discuss project details, timelines, materials, substrates, or production needs.
                 </p>
+                <p>
+                  If you need help using this website or encounter an accessibility barrier, please review our <Link href="/accessibility" className="text-blue-700 underline underline-offset-2 font-medium">Accessibility Statement</Link> or use this form to tell us how we can assist you.
+                </p>
               </div>
 
               {/* Quick links */}
@@ -112,7 +115,7 @@ export default function Contact() {
             {/* Right: form */}
             <div>
               {submitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-2xl p-10 text-center">
+                <div className="bg-green-50 border border-green-200 rounded-2xl p-10 text-center" role="status" aria-live="polite">
                   <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -124,17 +127,17 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="space-y-5">
                   <div>
-                    <label htmlFor="name" className="form-label">Name <span className="text-blue-700">*</span></label>
-                    <input id="name" name="name" type="text" value={form.name} onChange={handleChange}
-                      placeholder="Jane Smith" className={`form-input ${errors.name ? "border-red-400" : ""}`} />
-                    {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
+                    <label htmlFor="name" className="form-label">Name <span className="text-blue-700" aria-hidden="true">*</span><span className="sr-only">required</span></label>
+                    <input id="name" name="name" type="text" value={form.name} onChange={handleChange} required
+                      placeholder="Jane Smith" className={`form-input ${errors.name ? "border-red-400" : ""}`} aria-invalid={Boolean(errors.name)} aria-describedby={errors.name ? "name-error" : undefined} />
+                    {errors.name && <p id="name-error" role="alert" className="mt-1 text-sm text-red-700 font-medium">{errors.name}</p>}
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="form-label">Email Address <span className="text-blue-700">*</span></label>
-                    <input id="email" name="email" type="email" value={form.email} onChange={handleChange}
-                      placeholder="jane@company.com" className={`form-input ${errors.email ? "border-red-400" : ""}`} />
-                    {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
+                    <label htmlFor="email" className="form-label">Email Address <span className="text-blue-700" aria-hidden="true">*</span><span className="sr-only">required</span></label>
+                    <input id="email" name="email" type="email" value={form.email} onChange={handleChange} required
+                      placeholder="jane@company.com" className={`form-input ${errors.email ? "border-red-400" : ""}`} aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? "email-error" : undefined} />
+                    {errors.email && <p id="email-error" role="alert" className="mt-1 text-sm text-red-700 font-medium">{errors.email}</p>}
                   </div>
 
                   <div>
@@ -144,15 +147,15 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="form-label">Message <span className="text-blue-700">*</span></label>
-                    <textarea id="message" name="message" value={form.message} onChange={handleChange} rows={5}
+                    <label htmlFor="message" className="form-label">Message <span className="text-blue-700" aria-hidden="true">*</span><span className="sr-only">required</span></label>
+                    <textarea id="message" name="message" value={form.message} onChange={handleChange} required rows={5}
                       placeholder="Tell us about your project or question..."
-                      className={`form-input resize-y ${errors.message ? "border-red-400" : ""}`} />
-                    {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
+                      className={`form-input resize-y ${errors.message ? "border-red-400" : ""}`} aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? "message-error" : undefined} />
+                    {errors.message && <p id="message-error" role="alert" className="mt-1 text-sm text-red-700 font-medium">{errors.message}</p>}
                   </div>
 
                   {contactMutation.error && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                    <div role="alert" className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
                       Something went wrong. Please try again.
                     </div>
                   )}
@@ -170,7 +173,7 @@ export default function Contact() {
                     ) : "Send Message"}
                   </button>
 
-                  <p className="text-center text-sm text-gray-400">
+                  <p className="text-center text-sm text-gray-600">
                     Or <Link href="/request-quote" className="text-blue-700 hover:underline font-medium">upload an invoice for a quote comparison →</Link>
                   </p>
                 </form>

@@ -36,6 +36,8 @@ interface FormState {
   description: string;
 }
 
+type FormErrors = Partial<FormState> & { invoiceFile?: string };
+
 const INITIAL_FORM: FormState = {
   companyName: "",
   contactName: "",
@@ -52,7 +54,7 @@ export default function RequestQuote() {
   const [form, setForm] = useState<FormState>(INITIAL_FORM);
   const [file, setFile] = useState<File | null>(null);
   const [dragOver, setDragOver] = useState(false);
-  const [errors, setErrors] = useState<Partial<FormState>>({});
+  const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -75,14 +77,15 @@ export default function RequestQuote() {
   const handleFile = (f: File) => {
     const allowed = ["application/pdf", "image/jpeg", "image/png", "image/jpg"];
     if (!allowed.includes(f.type)) {
-      alert("Please upload a PDF, JPG, or PNG file.");
+      setErrors((prev) => ({ ...prev, invoiceFile: "Please upload a PDF, JPG, or PNG file." }));
       return;
     }
     if (f.size > 20 * 1024 * 1024) {
-      alert("File size must be under 20 MB.");
+      setErrors((prev) => ({ ...prev, invoiceFile: "File size must be under 20 MB." }));
       return;
     }
     setFile(f);
+    setErrors((prev) => ({ ...prev, invoiceFile: undefined }));
   };
 
   const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -90,14 +93,14 @@ export default function RequestQuote() {
     if (f) handleFile(f);
   };
 
-  const handleDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+  const handleDrop = useCallback((e: React.DragEvent<HTMLLabelElement>) => {
     e.preventDefault();
     setDragOver(false);
     const f = e.dataTransfer.files?.[0];
     if (f) handleFile(f);
   }, []);
 
-  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+  const handleDragOver = (e: React.DragEvent<HTMLLabelElement>) => {
     e.preventDefault();
     setDragOver(true);
   };
@@ -106,7 +109,8 @@ export default function RequestQuote() {
 
   // ── Validation ──
   const validate = (): boolean => {
-    const newErrors: Partial<FormState> = {};
+    const newErrors: FormErrors = {};
+    if (!file) newErrors.invoiceFile = "Please upload your current invoice before requesting a quote.";
     if (!form.companyName.trim()) newErrors.companyName = "Company name is required";
     if (!form.contactName.trim()) newErrors.contactName = "Contact name is required";
     if (!form.email.trim()) newErrors.email = "Email is required";
@@ -216,70 +220,50 @@ export default function RequestQuote() {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} noValidate className="space-y-8">
+            <form onSubmit={handleSubmit} noValidate className="space-y-8" aria-labelledby="form-heading">
               {/* ── Invoice Upload ── */}
               <div>
-                <label className="form-label text-base mb-3 block">
-                  Upload Your Current Invoice
-                  <span className="ml-1 text-blue-700">*</span>
-                  <span className="ml-2 text-gray-400 font-normal text-sm">(PDF, JPG, or PNG — up to 20 MB)</span>
+                <label htmlFor="invoiceFile" className="form-label text-base mb-3 block">
+                  Upload Your Current Invoice <span className="text-blue-700" aria-hidden="true">*</span><span className="sr-only">required</span>
                 </label>
-
-                <div
-                  className={`upload-zone ${dragOver ? "drag-over" : ""}`}
+                <p id="invoice-file-hint" className="text-sm text-gray-600 mb-3">PDF, JPG, or PNG — up to 20 MB.</p>
+                <input
+                  ref={fileInputRef}
+                  id="invoiceFile"
+                  name="invoiceFile"
+                  type="file"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  onChange={handleFileInput}
+                  required
+                  className="sr-only"
+                  aria-describedby={errors.invoiceFile ? "invoice-file-hint invoice-file-error" : "invoice-file-hint"}
+                  aria-invalid={Boolean(errors.invoiceFile)}
+                />
+                <label
+                  htmlFor="invoiceFile"
+                  className={`upload-zone block cursor-pointer ${dragOver ? "drag-over" : ""}`}
                   onDrop={handleDrop}
                   onDragOver={handleDragOver}
                   onDragLeave={handleDragLeave}
-                  onClick={() => fileInputRef.current?.click()}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => e.key === "Enter" && fileInputRef.current?.click()}
-                  aria-label="Upload invoice file"
                 >
-                  <input
-                    ref={fileInputRef}
-                    type="file"
-                    accept=".pdf,.jpg,.jpeg,.png"
-                    onChange={handleFileInput}
-                    className="sr-only"
-                    aria-hidden="true"
-                  />
-
                   {file ? (
                     <div className="flex flex-col items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
-                        <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                      <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center" aria-hidden="true">
+                        <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">{file.name}</p>
-                        <p className="text-sm text-gray-500">{(file.size / 1024).toFixed(0)} KB</p>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={(e) => { e.stopPropagation(); setFile(null); if (fileInputRef.current) fileInputRef.current.value = ""; }}
-                        className="text-sm text-red-500 hover:text-red-700 font-medium"
-                      >
-                        Remove file
-                      </button>
+                      <div><p className="font-semibold text-gray-900">{file.name}</p><p className="text-sm text-gray-600">{(file.size / 1024).toFixed(0)} KB selected</p></div>
                     </div>
                   ) : (
                     <div className="flex flex-col items-center gap-3">
-                      <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center">
-                        <svg className="w-7 h-7 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
-                        </svg>
+                      <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center" aria-hidden="true">
+                        <svg className="w-7 h-7 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" /></svg>
                       </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">
-                          Drop your invoice here, or <span className="text-blue-700">browse</span>
-                        </p>
-                        <p className="text-sm text-gray-400 mt-1">PDF, JPG, or PNG accepted</p>
-                      </div>
+                      <div><p className="font-semibold text-gray-900">Drop your invoice here, or browse to select it.</p><p className="text-sm text-gray-600 mt-1">PDF, JPG, or PNG accepted</p></div>
                     </div>
                   )}
-                </div>
+                </label>
+                {file && <button type="button" onClick={() => { setFile(null); if (fileInputRef.current) fileInputRef.current.value = ""; }} className="mt-3 text-sm text-red-700 hover:text-red-900 font-semibold underline underline-offset-2">Remove selected file</button>}
+                {errors.invoiceFile && <p id="invoice-file-error" role="alert" className="mt-2 text-sm text-red-700 font-medium">{errors.invoiceFile}</p>}
               </div>
 
               {/* ── Contact Info ── */}
@@ -296,14 +280,16 @@ export default function RequestQuote() {
                       id="companyName"
                       name="companyName"
                       type="text"
+                      required
                       value={form.companyName}
                       onChange={handleChange}
                       placeholder="Acme Corporation"
                       className={`form-input ${errors.companyName ? "border-red-400" : ""}`}
                       aria-describedby={errors.companyName ? "companyName-error" : undefined}
+                      aria-invalid={Boolean(errors.companyName)}
                     />
                     {errors.companyName && (
-                      <p id="companyName-error" className="mt-1 text-sm text-red-500">{errors.companyName}</p>
+                      <p id="companyName-error" role="alert" className="mt-1 text-sm text-red-700 font-medium">{errors.companyName}</p>
                     )}
                   </div>
 
@@ -315,14 +301,16 @@ export default function RequestQuote() {
                       id="contactName"
                       name="contactName"
                       type="text"
+                      required
                       value={form.contactName}
                       onChange={handleChange}
                       placeholder="Jane Smith"
                       className={`form-input ${errors.contactName ? "border-red-400" : ""}`}
                       aria-describedby={errors.contactName ? "contactName-error" : undefined}
+                      aria-invalid={Boolean(errors.contactName)}
                     />
                     {errors.contactName && (
-                      <p id="contactName-error" className="mt-1 text-sm text-red-500">{errors.contactName}</p>
+                      <p id="contactName-error" role="alert" className="mt-1 text-sm text-red-700 font-medium">{errors.contactName}</p>
                     )}
                   </div>
 
@@ -334,14 +322,16 @@ export default function RequestQuote() {
                       id="email"
                       name="email"
                       type="email"
+                      required
                       value={form.email}
                       onChange={handleChange}
                       placeholder="jane@company.com"
                       className={`form-input ${errors.email ? "border-red-400" : ""}`}
                       aria-describedby={errors.email ? "email-error" : undefined}
+                      aria-invalid={Boolean(errors.email)}
                     />
                     {errors.email && (
-                      <p id="email-error" className="mt-1 text-sm text-red-500">{errors.email}</p>
+                      <p id="email-error" role="alert" className="mt-1 text-sm text-red-700 font-medium">{errors.email}</p>
                     )}
                   </div>
 
@@ -444,7 +434,7 @@ export default function RequestQuote() {
               {/* ── Submit ── */}
               <div>
                 {submitMutation.error && (
-                  <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                  <div role="alert" className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
                     {submitMutation.error.message || "Something went wrong. Please try again."}
                   </div>
                 )}

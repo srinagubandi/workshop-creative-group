@@ -164,3 +164,10 @@ For answer-engine and generative-engine visibility, the site uses clean canonica
 ## Change-Control Record — 2026-08-25
 
 `current.md` is now the canonical concise status record and `CHANGELOG.md` is the canonical version-history record. Every future change must use a new versioned branch, update both files, complete the documented local validation, and receive Railway deployment verification before it is considered complete. This file remains the detailed historical and architectural context.
+
+
+## v1.1.0 Accessibility, Policy, and Supplied-Content Release — 2026-08-25
+
+The local release candidate on `feature/v1.1.0-accessibility-policy-20260825` adds the Accessibility Statement, Privacy Policy, Terms and Conditions, footer policy links, accessibility-support contact path, supplied home-page service icons, browser-title update, testimonial presentation adjustments, and keyboard/form/focus/motion remediation. Source and database backups were verified before implementation. The documented 20-pass review and 10-test validation evidence are in `ACCESSIBILITY_VALIDATION.md`; the current release/deployment gate is in `current.md`; user-visible release notes are in `CHANGELOG.md`.
+
+The release is locally validated but not yet published to GitHub or deployed to Railway. The existing Railway endpoint rendered a 404 view for `/accessibility` before publication. Once the versioned Git branch is published and Railway deploys the commit, verify rendered content—not only HTTP status—for `/`, `/accessibility`, `/privacy`, `/terms`, `/contact`, and `/request-quote`.

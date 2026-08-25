@@ -22,6 +22,12 @@ const COMPANY_LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
+const POLICY_LINKS = [
+  { label: "Accessibility", href: "/accessibility" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms & Conditions", href: "/terms" },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -36,17 +42,17 @@ export default function Footer() {
             <Link href="/" aria-label="Workshop Creative Group — Home">
               <ManagedSiteImage slotKey="logo-footer-white" fallbackSrc="/images/wscg-logo-white-hort.webp" alt="Workshop Creative Group logo" className="h-10 w-auto mb-5" />
             </Link>
-            <p className="text-white/50 text-sm leading-relaxed mb-4">
+            <p className="text-white/85 text-sm leading-relaxed mb-4">
               Large Format Printing • Graphic Design • Print Procurement
             </p>
-            <p className="text-white/35 text-sm">
+            <p className="text-white/80 text-sm">
               Serving Businesses Nationwide
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold text-xs uppercase tracking-widest mb-5">
+            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5" style={{ color: "#efc509" }}>
               Services
             </h3>
             <ul className="space-y-3 list-none m-0 p-0">
@@ -54,7 +60,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/50 text-sm hover:text-white transition-colors duration-200"
+                    className="inline-flex min-h-6 items-center text-white/85 text-sm hover:text-white transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -65,7 +71,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-semibold text-xs uppercase tracking-widest mb-5">
+            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5" style={{ color: "#efc509" }}>
               Company
             </h3>
             <ul className="space-y-3 list-none m-0 p-0">
@@ -73,7 +79,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/50 text-sm hover:text-white transition-colors duration-200"
+                    className="inline-flex min-h-6 items-center text-white/85 text-sm hover:text-white transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -84,16 +90,16 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold text-xs uppercase tracking-widest mb-5">
+            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5" style={{ color: "#efc509" }}>
               Get in Touch
             </h3>
             <div className="space-y-3">
-              <p className="text-white/50 text-sm">
+              <p className="text-white/85 text-sm">
                 Have a project in mind? We'd love to hear about it.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-200"
+                className="inline-flex min-h-6 items-center gap-2 text-sm font-semibold transition-colors duration-200"
                 style={{ color: "#7dbe31" }}
               >
                 Contact Us
@@ -106,10 +112,26 @@ export default function Footer() {
         </div>
       </div>
 
+      <div className="border-t border-white/10">
+        <div className="container py-5">
+          <nav aria-label="Legal and accessibility links">
+            <ul className="flex flex-wrap gap-x-6 gap-y-3 list-none m-0 p-0">
+              {POLICY_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="inline-flex min-h-6 items-center text-white text-sm font-medium underline underline-offset-4 decoration-white/50 hover:decoration-white">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-white/30 text-xs">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-white/80 text-xs">
             <p>© {year} Workshop Creative Group. All rights reserved.</p>
             <p>Large Format Printing • Graphic Design • Print Procurement</p>
           </div>

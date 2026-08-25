@@ -61,8 +61,9 @@ export default function PageLayout({
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <a className="skip-link" href="#main-content">Skip to main content</a>
       <Navbar />
-      <main className="flex-1" id="main-content">
+      <main className="flex-1" id="main-content" tabIndex={-1}>
         {children}
       </main>
       {!hideQuoteBanner && <QuoteBanner />}

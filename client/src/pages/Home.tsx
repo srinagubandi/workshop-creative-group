@@ -10,11 +10,7 @@ import { Link } from "wouter";
 // ─── Service Cards ────────────────────────────────────────────────────────────
 const SERVICES = [
   {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3" />
-      </svg>
-    ),
+    iconSrc: "/images/service-large-format.png",
     title: "Large Format Printing",
     copy: "Custom signage, banners, displays, wall graphics, window graphics, retail graphics, and wide format printing solutions designed to help businesses stand out.",
     href: "/large-format-printing",
@@ -23,11 +19,7 @@ const SERVICES = [
     learnColor: "#1260ae",
   },
   {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-      </svg>
-    ),
+    iconSrc: "/images/service-graphic-design.png",
     title: "Graphic Design",
     copy: "Professional graphic design and branding services for logos, marketing materials, sales collateral, trade show graphics, packaging, and business communications.",
     href: "/graphic-design",
@@ -36,11 +28,7 @@ const SERVICES = [
     learnColor: "#7dbe31",
   },
   {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
-      </svg>
-    ),
+    iconSrc: "/images/service-print-procurement.png",
     title: "Print Procurement",
     copy: "Access to a trusted national network for commercial printing, packaging, labels, promotional products, apparel, direct mail, and specialty print solutions.",
     href: "/print-procurement",
@@ -240,9 +228,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
             {SERVICES.map((service) => (
               <Link key={service.href} href={service.href} className="service-card group block">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                     style={{ background: service.bg, color: service.color }}>
-                  {service.icon}
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105" style={{ background: service.bg }}>
+                  <img src={service.iconSrc} alt="" aria-hidden="true" className="w-12 h-12 object-contain" loading="lazy" />
                 </div>
                 <h3 className="text-xl font-serif font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-5">{service.copy}</p>
