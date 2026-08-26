@@ -6,7 +6,7 @@
  * Phone number removed per client request.
  */
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { ManagedSiteImage } from "@/components/ManagedSiteImage";
 import { NAVIGATION_LOGO_IMAGE_OPTIONS } from "@/lib/renderingPerformance";
@@ -26,6 +26,7 @@ export default function Navbar() {
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -39,8 +40,23 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && mobileOpen) {
+        setMobileOpen(false);
+        requestAnimationFrame(() => menuButtonRef.current?.focus());
+      }
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleEscape);
+    };
   }, [mobileOpen]);
+
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    requestAnimationFrame(() => menuButtonRef.current?.focus());
+  };
 
   const isActive = (href: string) => {
     if (href === "/") return location === "/";
@@ -76,6 +92,7 @@ export default function Navbar() {
                         ? "text-blue-700 bg-blue-50 font-semibold"
                         : "text-gray-700 hover:text-blue-700 hover:bg-gray-50"
                     }`}
+                    aria-current={isActive(link.href) ? "page" : undefined}
                   >
                     {link.label}
                   </Link>
@@ -103,9 +120,11 @@ export default function Navbar() {
                 Free Quote
               </Link>
               <button
+                ref={menuButtonRef}
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label={mobileOpen ? "Close menu" : "Open menu"}
                 aria-expanded={mobileOpen}
+                aria-controls="mobile-navigation"
                 className="p-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
               >
                 <span className="sr-only">{mobileOpen ? "Close menu" : "Open menu"}</span>
@@ -120,7 +139,7 @@ export default function Navbar() {
         </div>
 
         {/* ── Mobile drawer ── */}
-        <div className={`xl:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"} bg-white border-t border-gray-100`}>
+        <div id="mobile-navigation" className="xl:hidden bg-white border-t border-gray-100" hidden={!mobileOpen}>
           <div className="container py-4">
             <ul className="list-none m-0 p-0 space-y-1">
               {NAV_LINKS.map((link) => (
@@ -132,6 +151,7 @@ export default function Navbar() {
                         ? "bg-blue-50 text-blue-700 font-semibold"
                         : "text-gray-700 hover:bg-gray-50 hover:text-blue-700"
                     }`}
+                    aria-current={isActive(link.href) ? "page" : undefined}
                   >
                     {link.label}
                   </Link>
@@ -148,7 +168,7 @@ export default function Navbar() {
       </header>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 bg-black/20 xl:hidden" onClick={() => setMobileOpen(false)} aria-hidden="true" />
+        <div className="fixed inset-0 z-40 bg-black/20 xl:hidden" onClick={closeMobileMenu} aria-hidden="true" />
       )}
     </>
   );

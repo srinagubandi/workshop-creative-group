@@ -7,7 +7,7 @@ const template = `<!doctype html><html><head><title>Fallback</title><meta name="
 describe("nationwide route metadata", () => {
   it("provides unique, descriptive metadata for every public priority route", () => {
     const values = Object.values(ROUTE_METADATA);
-    expect(values).toHaveLength(9);
+    expect(values).toHaveLength(12);
     expect(new Set(values.map(value => value.title)).size).toBe(values.length);
     expect(values.every(value => value.description.length > 80)).toBe(true);
     expect(getRouteMetadata("/missing")).toEqual(ROUTE_METADATA["/"]);

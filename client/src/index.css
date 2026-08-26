@@ -122,11 +122,29 @@
   img { max-width: 100%; height: auto; }
 
   :focus-visible {
-    outline: 2px solid #1260ae;
-    outline-offset: 2px;
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
     border-radius: var(--radius-sm);
   }
+
+  #main-content { scroll-margin-top: 6rem; }
 }
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  transform: translateY(-160%);
+  background: #ffffff;
+  color: #0b3d75;
+  border: 2px solid #005fcc;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-lg);
+}
+.skip-link:focus { transform: translateY(0); }
 
 /* ── Container ── */
 .container {
@@ -313,6 +331,11 @@
   border-color: #1260ae;
   background-color: rgba(18, 96, 174, 0.04);
 }
+input#invoiceFile:focus-visible + .upload-zone {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+  border-color: #005fcc;
+}
 
 /* ── Nav link ── */
 .nav-link {
@@ -401,8 +424,10 @@
 .stagger-children > *:nth-child(6) { animation-delay: 400ms; }
 
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }

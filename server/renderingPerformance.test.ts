@@ -4,7 +4,7 @@ import { getBlogPresentation, MANAGED_SITE_ASSET_QUERY_OPTIONS, MANAGED_SITE_IMA
 describe("rendering performance safeguards", () => {
   it("keeps each public page behind an independent lazy importer", () => {
     expect(Object.keys(PUBLIC_PAGE_IMPORTERS).sort()).toEqual([
-      "about", "admin", "blog", "blogPost", "contact", "gallery", "graphicDesign", "home", "largeFormat", "printProcurement", "requestQuote",
+      "about", "accessibility", "admin", "blog", "blogPost", "contact", "gallery", "graphicDesign", "home", "largeFormat", "printProcurement", "privacy", "requestQuote", "terms",
     ]);
     expect(PUBLIC_PAGE_IMPORTERS.gallery).not.toBe(PUBLIC_PAGE_IMPORTERS.home);
   });

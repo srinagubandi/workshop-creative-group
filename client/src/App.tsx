@@ -27,16 +27,19 @@ import { PUBLIC_PAGE_IMPORTERS } from "./lib/renderingPerformance";
 import { PublicTextOverrides } from "./components/PublicTextOverrides";
 
 const About = lazy(PUBLIC_PAGE_IMPORTERS.about);
+const Accessibility = lazy(PUBLIC_PAGE_IMPORTERS.accessibility);
 const Blog = lazy(PUBLIC_PAGE_IMPORTERS.blog);
 const Contact = lazy(PUBLIC_PAGE_IMPORTERS.contact);
 const GraphicDesign = lazy(PUBLIC_PAGE_IMPORTERS.graphicDesign);
 const Home = lazy(PUBLIC_PAGE_IMPORTERS.home);
 const LargeFormat = lazy(PUBLIC_PAGE_IMPORTERS.largeFormat);
 const PrintProcurement = lazy(PUBLIC_PAGE_IMPORTERS.printProcurement);
+const Privacy = lazy(PUBLIC_PAGE_IMPORTERS.privacy);
 const BlogPost = lazy(PUBLIC_PAGE_IMPORTERS.blogPost);
 const Gallery = lazy(PUBLIC_PAGE_IMPORTERS.gallery);
 const Admin = lazy(PUBLIC_PAGE_IMPORTERS.admin);
 const RequestQuote = lazy(PUBLIC_PAGE_IMPORTERS.requestQuote);
+const Terms = lazy(PUBLIC_PAGE_IMPORTERS.terms);
 
 function Router() {
   return (
@@ -44,6 +47,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/accessibility" component={Accessibility} />
         <Route path="/large-format-printing" component={LargeFormat} />
         <Route path="/graphic-design" component={GraphicDesign} />
         <Route path="/print-procurement" component={PrintProcurement} />
@@ -53,6 +57,8 @@ function Router() {
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/request-quote" component={RequestQuote} />
         <Route path="/contact" component={Contact} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/terms" component={Terms} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
