@@ -4,6 +4,7 @@
  */
 
 import PageLayout from "@/components/PageLayout";
+import { PublishedMediaStrip } from "@/components/PublishedMediaStrip";
 import { Link } from "wouter";
 
 const DESIGN_SERVICES = [
@@ -16,17 +17,17 @@ const DESIGN_BENEFITS = [
   {
     title: "Strategic, Not Just Aesthetic",
     desc: "Design decisions are grounded in communication goals and business outcomes — not just visual preference.",
-    icon: "🎯",
+    iconSrc: "/images/service-large-format.png",
   },
   {
     title: "Print-Ready Production",
     desc: "Every file is built for print production — correct color profiles, bleeds, and specs from the start.",
-    icon: "🖨️",
+    iconSrc: "/images/service-graphic-design.png",
   },
   {
     title: "Consistent Brand Voice",
     desc: "Cohesive design across all touchpoints builds recognition and trust with your audience.",
-    icon: "✨",
+    iconSrc: "/images/service-print-procurement-826.png",
   },
 ];
 
@@ -81,7 +82,9 @@ export default function GraphicDesign() {
             <div className="space-y-5">
               {DESIGN_BENEFITS.map((b) => (
                 <div key={b.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                  <div className="text-3xl flex-shrink-0">{b.icon}</div>
+                  <div className="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                    <img src={b.iconSrc} alt="" aria-hidden="true" className="w-9 h-9 object-contain" loading="lazy" />
+                  </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">{b.title}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{b.desc}</p>
@@ -92,6 +95,14 @@ export default function GraphicDesign() {
           </div>
         </div>
       </section>
+
+      <PublishedMediaStrip
+        category="graphic-design"
+        eyebrow="Selected Work"
+        heading="Graphic Design Work Built for Business"
+        description="A selection of published design portfolio work, presented as a static visual reference rather than an automatic carousel."
+        limit={3}
+      />
 
       {/* Services list */}
       <section className="section-py bg-gray-50" aria-labelledby="gd-services-heading">

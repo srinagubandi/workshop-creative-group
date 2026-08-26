@@ -4,6 +4,7 @@
  */
 
 import PageLayout from "@/components/PageLayout";
+import { PublishedMediaStrip } from "@/components/PublishedMediaStrip";
 import { Link } from "wouter";
 
 const PRODUCTS = [
@@ -85,6 +86,14 @@ export default function LargeFormat() {
           </div>
         </div>
       </section>
+
+      <PublishedMediaStrip
+        category="large-format"
+        eyebrow="Selected Work"
+        heading="Large Format Work in Real Environments"
+        description="A selection of published portfolio work showing the range of large-format applications Workshop Creative Group produces."
+        limit={3}
+      />
 
       {/* Features */}
       <section className="pb-16 bg-white">

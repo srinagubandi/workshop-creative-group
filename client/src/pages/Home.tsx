@@ -4,6 +4,7 @@
  */
 
 import PageLayout from "@/components/PageLayout";
+import { PublishedMediaStrip } from "@/components/PublishedMediaStrip";
 import { TestimonialSection } from "@/components/TestimonialSection";
 import { Link } from "wouter";
 
@@ -243,6 +244,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <PublishedMediaStrip
+        category="logos"
+        eyebrow="Portfolio Logos"
+        heading="A Static Selection of Published Client Logo Work"
+        description="A small, non-animated selection of logo assets already published in the Workshop Creative Group portfolio."
+        limit={6}
+        variant="logos"
+      />
 
       <TestimonialSection />
 
