@@ -2,6 +2,20 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.2.1] — 2026-08-26
+
+### Added
+
+- Added `V120_POSTDEPLOY_VALIDATION.md` as the durable record of the v1.2.0 Railway rollout and 10-test post-deployment validation suite.
+- Finalized `current.md` with the merged pull request, successful Railway deployment status, fresh backup evidence, route checks, automated scan results, and remaining limitations.
+
+### Verified
+
+- Published `feature/v1.2.0-accessibility-content-20260826` at commit `1b71259fb57f20c8f4f204b8fa2800f4eeea8d30`.
+- Created and cleanly merged [pull request #4](https://github.com/srinagubandi/workshop-creative-group/pull/4) into `main`, producing commit `a7e3ee7e5a3c79999d2c3928a72178c1048c93c2`.
+- Railway’s GitHub deployment status reported **success** for the v1.2.0 merge commit.
+- The 10-test post-deployment suite passed: Home and Accessibility Statement content, three live axe-core scans with 0 violations, Contact and Request Quote checks without submitting data, keyboard skip navigation, footer policy links, and public-route smoke tests.
+
 ## [1.2.0] — 2026-08-26
 
 ### Added
@@ -27,12 +41,12 @@ All notable changes to this project are recorded in this file. The project follo
 - `pnpm build` completed successfully.
 - Local axe-core scans of `/`, `/accessibility`, and `/request-quote` reported **0 WCAG 2.0/2.1/2.2 A/AA violations** after remediation. Color-contrast incomplete results remain manual-review items.
 
-### Pending
+### Remaining Follow-up
 
-- Publish the feature branch, merge the reviewed v1.2.0 release to `main`, verify Railway’s healthy deployment, and complete the required 10-test post-deployment validation suite.
 - Obtain approved client-logo assets or an approved static graphic before adding the requested client-logo treatment.
 - Obtain approved imagery before adding imagery to Large Format, Graphic Design, or Print Procurement service pages.
 - Obtain approved shortened testimonial copy before editing customer quotations.
+- Perform a real small-screen device/browser test and targeted assistive-technology review, and monitor the reported slow full-file transfer of the 626,522-byte supplied icon from the sandbox environment.
 
 ## [1.1.2] — 2026-08-26
 
@@ -113,7 +127,8 @@ All notable changes to this project are recorded in this file. The project follo
 - `pnpm run build` completed successfully.
 - Public Railway smoke testing returned HTTP 200 for Home, About, Large Format Printing, Graphic Design, Print Procurement, Request a Quote, Contact, and Blog. Gallery redirected from `/gallery` to `/gallery/`, which returned HTTP 200.
 
-[1.2.0]: https://github.com/srinagubandi/workshop-creative-group/compare/a386325d74a5f31462747736ca41975a072a0c72...HEAD
+[1.2.1]: https://github.com/srinagubandi/workshop-creative-group/compare/a7e3ee7e5a3c79999d2c3928a72178c1048c93c2...HEAD
+[1.2.0]: https://github.com/srinagubandi/workshop-creative-group/compare/a386325d74a5f31462747736ca41975a072a0c72...a7e3ee7e5a3c79999d2c3928a72178c1048c93c2
 [1.1.2]: https://github.com/srinagubandi/workshop-creative-group/compare/839ffcb990ac327e94595ed53ad7c08f1ec90b93...HEAD
 [1.1.1]: https://github.com/srinagubandi/workshop-creative-group/compare/04f38e4d80a62d4aa5ea54958cc6dd07eacaa025...839ffcb990ac327e94595ed53ad7c08f1ec90b93
 [1.1.0]: https://github.com/srinagubandi/workshop-creative-group/compare/8885b5c...04f38e4d80a62d4aa5ea54958cc6dd07eacaa025
