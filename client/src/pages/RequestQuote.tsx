@@ -223,9 +223,9 @@ export default function RequestQuote() {
             <form onSubmit={handleSubmit} noValidate className="space-y-8" aria-labelledby="form-heading">
               {/* ── Invoice Upload ── */}
               <div>
-                <label htmlFor="invoiceFile" className="form-label text-base mb-3 block">
+                <p id="invoice-file-label" className="form-label text-base mb-3">
                   Upload Your Current Invoice <span className="text-blue-700" aria-hidden="true">*</span><span className="sr-only">required</span>
-                </label>
+                </p>
                 <p id="invoice-file-hint" className="text-sm text-gray-600 mb-3">PDF, JPG, or PNG — up to 20 MB.</p>
                 <input
                   ref={fileInputRef}
@@ -236,6 +236,7 @@ export default function RequestQuote() {
                   onChange={handleFileInput}
                   required
                   className="sr-only"
+                  aria-labelledby="invoice-file-label"
                   aria-describedby={errors.invoiceFile ? "invoice-file-hint invoice-file-error" : "invoice-file-hint"}
                   aria-invalid={Boolean(errors.invoiceFile)}
                 />
@@ -356,7 +357,7 @@ export default function RequestQuote() {
               <div>
                 <h3 className="text-lg font-serif font-semibold text-gray-900 mb-5 pb-3 border-b border-gray-100">
                   Project Details
-                  <span className="ml-2 text-sm font-sans font-normal text-gray-400">(Optional — helps us prepare a more accurate quote)</span>
+                  <span className="public-helper-text ml-2 text-sm font-sans font-normal">(Optional — helps us prepare a more accurate quote)</span>
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
@@ -457,7 +458,7 @@ export default function RequestQuote() {
                   )}
                 </button>
 
-                <p className="mt-4 text-center text-sm text-gray-400">
+                <p className="public-helper-text mt-4 text-center text-sm">
                   Every project is reviewed by our experts to ensure we match the exact specifications of your invoice while identifying smarter, more cost-effective production methods. Your data is secure and will only be used to provide your quote.
                 </p>
               </div>

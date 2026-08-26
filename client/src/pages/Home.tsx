@@ -25,16 +25,16 @@ const SERVICES = [
     href: "/graphic-design",
     color: "#7dbe31",
     bg: "rgba(125,190,49,0.08)",
-    learnColor: "#7dbe31",
+    learnColor: "#497c16",
   },
   {
-    iconSrc: "/images/service-print-procurement.png",
+    iconSrc: "/images/service-print-procurement-826.png",
     title: "Print Procurement",
     copy: "Access to a trusted national network for commercial printing, packaging, labels, promotional products, apparel, direct mail, and specialty print solutions.",
     href: "/print-procurement",
     color: "#efc509",
     bg: "rgba(239,197,9,0.10)",
-    learnColor: "#c9a500",
+    learnColor: "#806700",
   },
 ];
 
@@ -167,12 +167,12 @@ export default function Home() {
             </div>
             <div className="step-card">
               <div className="flex items-center gap-4 mb-5">
-                <div className="w-12 h-12 rounded-xl text-white flex items-center justify-center text-xl font-serif font-bold flex-shrink-0" style={{ background: "#7dbe31" }}>2</div>
+                <div className="w-12 h-12 rounded-xl text-white flex items-center justify-center text-xl font-serif font-bold flex-shrink-0" style={{ background: "#497c16" }}>2</div>
                 <h3 className="text-xl font-serif font-semibold text-gray-900">Get a Better Quote</h3>
               </div>
               <p className="text-gray-500 leading-relaxed">We'll review the specs and come back with a quote for the exact same job — often saving you up to 20%.</p>
               <div className="mt-5 p-4 rounded-lg border" style={{ background: "rgba(125,190,49,0.06)", borderColor: "rgba(125,190,49,0.20)" }}>
-                <div className="flex items-center gap-3 text-sm font-medium" style={{ color: "#5a9a1f" }}>
+                <div className="flex items-center gap-3 text-sm font-medium" style={{ color: "#497c16" }}>
                   <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                   Save up to 20% — same quality
                 </div>
@@ -202,14 +202,14 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-5">
               {[
                 { num: "20+", label: "Years of Experience", sub: "In print & design", color: "#1260ae" },
-                { num: "20%", label: "Average Savings", sub: "On printing costs", color: "#7dbe31" },
-                { num: "100+", label: "Clients Served", sub: "Nationwide", color: "#efc509" },
+                { num: "20%", label: "Average Savings", sub: "On printing costs", color: "#497c16" },
+                { num: "100+", label: "Clients Served", sub: "Nationwide", color: "#7a6100" },
                 { num: "1", label: "Point of Contact", sub: "For every project", color: "#1260ae" },
               ].map((stat) => (
                 <div key={stat.label} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                   <div className="text-4xl font-serif font-bold mb-1" style={{ color: stat.color }}>{stat.num}</div>
                   <div className="font-semibold text-gray-900 text-sm mb-0.5">{stat.label}</div>
-                  <div className="text-gray-400 text-xs">{stat.sub}</div>
+                  <div className="public-helper-text text-xs">{stat.sub}</div>
                 </div>
               ))}
             </div>
@@ -264,7 +264,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1.5 text-base">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="why-description text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}

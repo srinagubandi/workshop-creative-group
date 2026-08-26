@@ -2,6 +2,38 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.2.0] — 2026-08-26
+
+### Added
+
+- Added the supplied August 26 Print Procurement service-card icon as `service-print-procurement-826.png`.
+- Added `V120_UPDATE_ASSESSMENT.md` to document the supplied update package, implementation decisions, and deferred requests.
+- Added the v1.2.0 fresh-backup record and 10-test post-deployment validation plan to `current.md`.
+
+### Changed
+
+- Replaced the Home-page Print Procurement service-card icon with the supplied asset while preserving decorative-image semantics.
+- Updated the Accessibility Statement language to explain the WCAG 2.2 AA target, ongoing automated and manual review, assistance path, and non-certification scope.
+- Remediated the serious automated color-contrast failures reported on the live v1.1.x site: primary actions, helper text, value-card descriptions, yellow statistics, Print Procurement links, the quote-banner supporting text, and footer copy now use accessible treatments for their rendered backgrounds.
+- Increased the visual emphasis of the footer service summary while maintaining explicit readable footer colors.
+- Refined the Request Quote invoice control so its programmatic name and descriptive hint are separate from the clickable drop zone.
+
+### Verified Locally
+
+- Fresh source archive and Git-history bundle were created and checksummed before implementation from `a386325d74a5f31462747736ca41975a072a0c72`.
+- Fresh Railway manual database backup `wscg-manual-backup-2026-08-26-20-03-53.sql` was recorded and verified before implementation.
+- `pnpm check` completed successfully.
+- `pnpm test` completed successfully with **36 tests across 10 files passing**.
+- `pnpm build` completed successfully.
+- Local axe-core scans of `/`, `/accessibility`, and `/request-quote` reported **0 WCAG 2.0/2.1/2.2 A/AA violations** after remediation. Color-contrast incomplete results remain manual-review items.
+
+### Pending
+
+- Publish the feature branch, merge the reviewed v1.2.0 release to `main`, verify Railway’s healthy deployment, and complete the required 10-test post-deployment validation suite.
+- Obtain approved client-logo assets or an approved static graphic before adding the requested client-logo treatment.
+- Obtain approved imagery before adding imagery to Large Format, Graphic Design, or Print Procurement service pages.
+- Obtain approved shortened testimonial copy before editing customer quotations.
+
 ## [1.1.2] — 2026-08-26
 
 ### Changed
@@ -81,6 +113,7 @@ All notable changes to this project are recorded in this file. The project follo
 - `pnpm run build` completed successfully.
 - Public Railway smoke testing returned HTTP 200 for Home, About, Large Format Printing, Graphic Design, Print Procurement, Request a Quote, Contact, and Blog. Gallery redirected from `/gallery` to `/gallery/`, which returned HTTP 200.
 
+[1.2.0]: https://github.com/srinagubandi/workshop-creative-group/compare/a386325d74a5f31462747736ca41975a072a0c72...HEAD
 [1.1.2]: https://github.com/srinagubandi/workshop-creative-group/compare/839ffcb990ac327e94595ed53ad7c08f1ec90b93...HEAD
 [1.1.1]: https://github.com/srinagubandi/workshop-creative-group/compare/04f38e4d80a62d4aa5ea54958cc6dd07eacaa025...839ffcb990ac327e94595ed53ad7c08f1ec90b93
 [1.1.0]: https://github.com/srinagubandi/workshop-creative-group/compare/8885b5c...04f38e4d80a62d4aa5ea54958cc6dd07eacaa025

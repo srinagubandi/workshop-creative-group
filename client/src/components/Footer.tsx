@@ -42,10 +42,10 @@ export default function Footer() {
             <Link href="/" aria-label="Workshop Creative Group — Home">
               <ManagedSiteImage slotKey="logo-footer-white" fallbackSrc="/images/wscg-logo-white-hort.webp" alt="Workshop Creative Group logo" className="h-10 w-auto mb-5" />
             </Link>
-            <p className="text-white/85 text-sm leading-relaxed mb-4">
+            <p className="footer-copy text-base font-semibold leading-relaxed mb-4">
               Large Format Printing • Graphic Design • Print Procurement
             </p>
-            <p className="text-white/80 text-sm">
+            <p className="footer-copy text-sm font-medium">
               Serving Businesses Nationwide
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function Footer() {
               Get in Touch
             </h3>
             <div className="space-y-3">
-              <p className="text-white/85 text-sm">
+              <p className="footer-copy text-sm">
                 Have a project in mind? We'd love to hear about it.
               </p>
               <Link
@@ -131,9 +131,9 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-white/80 text-xs">
-            <p>© {year} Workshop Creative Group. All rights reserved.</p>
-            <p>Large Format Printing • Graphic Design • Print Procurement</p>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <p className="footer-bottom-copy">© {year} Workshop Creative Group. All rights reserved.</p>
+            <p className="footer-bottom-copy">Large Format Printing • Graphic Design • Print Procurement</p>
           </div>
         </div>
       </div>

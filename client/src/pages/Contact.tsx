@@ -141,7 +141,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="form-label">Phone Number <span className="text-gray-400 font-normal">(optional)</span></label>
+                    <label htmlFor="phone" className="form-label">Phone Number <span className="public-helper-text font-normal">(optional)</span></label>
                     <input id="phone" name="phone" type="tel" value={form.phone} onChange={handleChange}
                       placeholder="(555) 000-0000" className="form-input" />
                   </div>
