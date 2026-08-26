@@ -7,13 +7,14 @@
 | Field | Current value |
 |---|---|
 | Application release | `v1.1.0` — deployed and verified |
-| Documentation record | `v1.1.1` — deployment evidence update in progress |
+| Documentation record | `v1.1.1` — merged and deployed |
 | Application feature branch | `feature/v1.1.0-accessibility-policy-20260825` |
 | Application feature commit | `4b26c2b29a382c3d8213ecd975fae00b828f78dc` |
 | Pull request | [#1](https://github.com/srinagubandi/workshop-creative-group/pull/1), merged |
-| Merged main commit | `04f38e4d80a62d4aa5ea54958cc6dd07eacaa025` |
-| Current documentation branch | `docs/v1.1.1-deployment-evidence-20260826` |
-| Railway web deployment | `6b3adfb2-173a-48f7-aba8-f63042d94829` — `SUCCESS` |
+| Application merge commit | `04f38e4d80a62d4aa5ea54958cc6dd07eacaa025` |
+| Current production main commit | `839ffcb990ac327e94595ed53ad7c08f1ec90b93` |
+| Railway application deployment | `6b3adfb2-173a-48f7-aba8-f63042d94829` — `SUCCESS` |
+| Railway documentation-record deployment | `969a7ad8-138a-443e-b841-6bd0287ce7ef` — `SUCCESS` |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
@@ -45,7 +46,8 @@ The release also adds a keyboard skip link, stronger visible focus treatment, re
 | 20-pass accessibility review | Passed with remediation | Three issues found and fixed: native required semantics, footer target size, and hidden mobile-drawer ARIA reference. See `ACCESSIBILITY_VALIDATION.md`. |
 | 10-test validation suite | Passed with documented limitation | Application, rendered DOM, form errors, keyboard skip navigation, focus, reduced motion, ARIA references, and route/asset checks passed. Small-screen hardware/browser testing remains recommended. |
 | GitHub publication and review | Passed | Feature branch published and [pull request #1](https://github.com/srinagubandi/workshop-creative-group/pull/1) merged cleanly. |
-| Railway build and health | Passed | Railway web deployment `6b3adfb2-173a-48f7-aba8-f63042d94829` reported `SUCCESS` for merged main commit `04f38e4d80a62d4aa5ea54958cc6dd07eacaa025`. |
+| Railway application build and health | Passed | Railway web deployment `6b3adfb2-173a-48f7-aba8-f63042d94829` reported `SUCCESS` for application merge commit `04f38e4d80a62d4aa5ea54958cc6dd07eacaa025`. |
+| Railway documentation-record rollout | Passed | Railway web deployment `969a7ad8-138a-443e-b841-6bd0287ce7ef` reported `SUCCESS` for final recorded main commit `839ffcb990ac327e94595ed53ad7c08f1ec90b93`. |
 | Live rendered routes | Passed | `/accessibility`, `/privacy`, `/terms`, `/contact`, and `/request-quote` each rendered the intended production content and footer policy links. See `RAILWAY_DEPLOYMENT_VERIFICATION.md`. |
 | Live keyboard check | Passed | On `/request-quote`, the first Tab revealed the skip link; activation focused `#main-content` with a 96px fixed-header-safe scroll margin. No data was submitted. |
 | Exact Docker build | Pending | Docker CLI is unavailable locally, so the Railway Dockerfile has not been exercised in this environment. The locked dependency install, type check, automated tests, production build, and live Railway rollout passed. |
