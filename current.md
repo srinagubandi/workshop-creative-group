@@ -6,54 +6,60 @@
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.2.0` — deployed and verified |
-| Application feature branch | `feature/v1.2.0-accessibility-content-20260826` |
-| Application feature commit | `1b71259fb57f20c8f4f204b8fa2800f4eeea8d30` |
-| Pull request | [#4](https://github.com/srinagubandi/workshop-creative-group/pull/4), merged |
-| Application merge commit | `a7e3ee7e5a3c79999d2c3928a72178c1048c93c2` |
-| Latest verified application deployment | Railway GitHub status reported **success** for merge commit `a7e3ee7e5a3c79999d2c3928a72178c1048c93c2` |
-| Deployment-evidence record | `v1.2.1` — this branch records the verified v1.2.0 production evidence |
+| Release candidate | `v1.3.0` — validated locally; pending publication and Railway deployment |
+| Feature branch | `feature/v1.3.0-remaining-package-layouts-20260826` |
+| Base commit | `1703b96554b03536034b99696a8fd42aec3e3104` |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
+| Publication and Railway deployment | Pending; no v1.3.0 production claim has been made |
 
 ## Fresh Pre-change Backup Record — August 26, 2026
 
 | Backup | Result | Evidence |
 |---|---|---|
-| Source archive and Git-history bundle | Verified | Checksummed snapshot of `a386325d74a5f31462747736ca41975a072a0c72` created before v1.2.0 implementation. |
-| Railway database backup | Verified | Fresh manual backup `wscg-manual-backup-2026-08-26-20-03-53.sql` confirmed through the protected backup inventory; reported size: 247,656 bytes. |
+| Source archive and Git-history bundle | Verified | Checksummed snapshot of `1703b96554b03536034b99696a8fd42aec3e3104` created before v1.3.0 implementation. |
+| Railway database backup | Verified | Fresh manual backup `wscg-manual-backup-2026-08-26-20-34-56.sql` confirmed through the protected backup inventory; reported size: 248,102 bytes. |
 
 No source, database credential, Railway token, GitHub token, or other secret is recorded in this repository.
 
-## v1.2.0 Deployed Scope
+## v1.3.0 Candidate Scope
 
-The deployed release replaces the Home-page **Print Procurement** service-card icon with the asset supplied in the August 26 package. It improves footer emphasis while preserving explicit high-contrast footer copy colors and updates the public Accessibility Statement to describe the WCAG 2.2 AA target, ongoing review practices, and the accessibility-support path without claiming guaranteed conformance or legal certification.
+The candidate completes the remaining August update-package requests using supplied assets and existing published portfolio media only. It adds a static Home-page client-logo section using six published logo assets, adds static selected-work visual panels to the Large Format and Graphic Design service pages, and adds a labeled Print Procurement visual panel using the supplied August 26 procurement icon.
 
-It remediates the serious color-contrast violations found during the earlier live audit. Primary actions now use an accessible dark-green action treatment; pale helper text, promotional supporting text, value-card descriptions, yellow statistics, and Print Procurement links were adjusted for their rendered backgrounds. The Contact and Request Quote optional/helper text follows the same readable treatment. The quote invoice field also uses a separate programmatic name and hint to avoid the prior multiple-label manual-review item.
+The candidate also updates the Graphic Design benefit cards to use the approved service-icon set instead of emoji marks. Testimonials remain non-autoplay and user-controlled; long quotes now render as shorter previews by default with an accessible **Read full perspective** disclosure that preserves the complete approved quotation instead of rewriting customer statements without approved replacement copy.
 
-The detailed supplied-package assessment and non-implemented requests are in `V120_UPDATE_ASSESSMENT.md`. The 10-test production record is in `V120_POSTDEPLOY_VALIDATION.md`.
+The detailed package-completion matrix is recorded in `V130_PACKAGE_COMPLETION.md`. Local validation evidence is recorded in `V130_LOCAL_VALIDATION.md`.
 
-## Validation and Production Evidence
+## Candidate Validation Evidence
 
 | Check | Result | Scope and limitation |
 |---|---|---|
 | Type check | Passed | `pnpm check` completed without errors. |
 | Automated tests | Passed | `pnpm test` completed with **36 tests across 10 files passing**. |
 | Production build | Passed | `pnpm build` completed and emitted the Railway build artifacts. |
-| Local axe-core — Home, Accessibility, Request Quote | Passed | Each WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations** after remediation. |
-| Railway deployment health | Passed | Railway’s GitHub deployment status progressed from pending to **success** for the v1.2.0 merge commit. |
-| Live axe-core — Home | Passed | **0 violations**, 1 color-contrast manual-review item, 28 passed rule results. |
-| Live axe-core — Accessibility Statement | Passed | **0 violations**, 1 color-contrast manual-review item, 22 passed rule results. |
-| Live axe-core — Request Quote | Passed | **0 violations**, 1 color-contrast manual-review item, 26 passed rule results; no file was uploaded or form submitted. |
-| Live axe-core — Contact | Passed | **0 violations**, 1 color-contrast manual-review item, 25 passed rule results; the form was not submitted. |
-| Live keyboard navigation | Passed | On `/contact`, the first Tab revealed the skip link and Enter moved to `#main-content`. |
-| Live footer policy links | Passed | Accessibility, Privacy Policy, and Terms links were visible and reachable. |
-| Live route smoke test | Passed with transfer note | Updated public routes returned HTTP 200. The supplied icon endpoint returned HTTP 200, but the sandbox’s capped 10-second full-file transfer did not finish; monitor asset-transfer speed separately. |
+| Home rendered review | Passed | The static published-logo grid rendered with no automatic movement. |
+| Large Format rendered review | Passed | Three published large-format portfolio assets rendered in a static selected-work panel. |
+| Graphic Design rendered review | Passed | Service icons replaced emoji marks, and three published design-work assets rendered in a static selected-work panel. |
+| Print Procurement rendered review | Passed | The supplied procurement illustration rendered in a labeled static visual panel. |
+| Local axe-core scans | Passed | Home, Large Format, Graphic Design, and Print Procurement each reported **0 WCAG 2.0/2.1/2.2 A/AA violations**. Color-contrast incomplete items remain manual-review items. |
+
+## Required Post-deployment Checks
+
+| Check | Purpose |
+|---|---|
+| Railway deployment health | Confirm Railway reports success for the merged v1.3.0 main commit. |
+| Home route | Confirm the static logo section and testimonial disclosure controls render live. |
+| Large Format route | Confirm the published large-format selected-work panel renders live. |
+| Graphic Design route | Confirm service icons and selected design-work panel render live. |
+| Print Procurement route | Confirm the supplied visual panel renders live. |
+| Live axe-core scans | Run WCAG A/AA scans on the updated routes and record violations or manual-review items. |
+| Keyboard check | Confirm skip-link and disclosure controls remain keyboard reachable. |
+| Footer and policy links | Confirm Accessibility, Privacy Policy, and Terms links remain visible and reachable. |
 
 ## Ongoing Controls and Limitations
 
-Accessibility is an ongoing engineering and content practice, not a one-time legal certification. Re-run the 10-test suite whenever navigation, forms, colors, third-party embeds, policy language, content templates, or client-side behavior change. Monitor the accessibility-support channel and respond to reported barriers promptly.
+Accessibility is an ongoing engineering and content practice, not a one-time legal certification. Re-run the validation suite whenever navigation, forms, colors, third-party embeds, policy language, content templates, or client-side behavior change. Monitor the accessibility-support channel and respond to reported barriers promptly.
 
 Automated testing cannot identify every barrier. The reported axe-core color-contrast `incomplete` items require visual/manual review and are not axe violations. A real small-screen device/browser pass, assistive-technology testing with intended user groups, and a Dockerfile build in a Docker-capable environment remain recommended.
 

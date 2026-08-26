@@ -2,6 +2,35 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.3.0] — 2026-08-26
+
+### Added
+
+- Added `PublishedMediaStrip`, a static, accessible presentation of approved published portfolio media.
+- Added `V130_PACKAGE_COMPLETION.md` and `V130_LOCAL_VALIDATION.md` as the package-completion and local-validation records.
+- Added a static Home-page client-logo section using six existing published portfolio logo assets.
+- Added static selected-work media panels to the Large Format and Graphic Design service pages, using existing published portfolio work.
+- Added a labeled static Print Procurement visual panel using the supplied August 26 service illustration.
+
+### Changed
+
+- Corrected the Graphic Design benefit cards so the approved service-icon set replaces the prior emoji treatment.
+- Changed long testimonial presentation to a shorter default preview with a keyboard-accessible **Read full perspective** control; full approved quotation text remains available and testimonials do not auto-advance.
+- Updated `current.md` with the v1.3.0 fresh source and database backups, package-completion scope, local validation results, and Railway publication gate.
+
+### Verified Locally
+
+- Fresh source archive and Git-history bundle were created and checksummed from `1703b96554b03536034b99696a8fd42aec3e3104` before implementation.
+- Fresh Railway manual database backup `wscg-manual-backup-2026-08-26-20-34-56.sql` was recorded and verified before implementation.
+- `pnpm check` completed successfully.
+- `pnpm test` completed successfully with **36 tests across 10 files passing**.
+- `pnpm build` completed successfully.
+- Rendered Home, Large Format, Graphic Design, and Print Procurement reviews passed; the corresponding axe-core WCAG 2.0/2.1/2.2 A/AA scans reported **0 violations**. Color-contrast incomplete results remain manual-review items.
+
+### Pending
+
+- Publish the feature branch, merge the reviewed v1.3.0 release to `main`, verify Railway deployment health, and complete the recorded post-deployment route, keyboard, and axe-core checks.
+
 ## [1.2.1] — 2026-08-26
 
 ### Added
@@ -43,9 +72,6 @@ All notable changes to this project are recorded in this file. The project follo
 
 ### Remaining Follow-up
 
-- Obtain approved client-logo assets or an approved static graphic before adding the requested client-logo treatment.
-- Obtain approved imagery before adding imagery to Large Format, Graphic Design, or Print Procurement service pages.
-- Obtain approved shortened testimonial copy before editing customer quotations.
 - Perform a real small-screen device/browser test and targeted assistive-technology review, and monitor the reported slow full-file transfer of the 626,522-byte supplied icon from the sandbox environment.
 
 ## [1.1.2] — 2026-08-26
@@ -127,6 +153,7 @@ All notable changes to this project are recorded in this file. The project follo
 - `pnpm run build` completed successfully.
 - Public Railway smoke testing returned HTTP 200 for Home, About, Large Format Printing, Graphic Design, Print Procurement, Request a Quote, Contact, and Blog. Gallery redirected from `/gallery` to `/gallery/`, which returned HTTP 200.
 
+[1.3.0]: https://github.com/srinagubandi/workshop-creative-group/compare/1703b96554b03536034b99696a8fd42aec3e3104...HEAD
 [1.2.1]: https://github.com/srinagubandi/workshop-creative-group/compare/a7e3ee7e5a3c79999d2c3928a72178c1048c93c2...HEAD
 [1.2.0]: https://github.com/srinagubandi/workshop-creative-group/compare/a386325d74a5f31462747736ca41975a072a0c72...a7e3ee7e5a3c79999d2c3928a72178c1048c93c2
 [1.1.2]: https://github.com/srinagubandi/workshop-creative-group/compare/839ffcb990ac327e94595ed53ad7c08f1ec90b93...HEAD

@@ -83,6 +83,21 @@ export default function PrintProcurement() {
         </div>
       </section>
 
+      <section className="pb-16 bg-white" aria-labelledby="pp-visual-heading">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] gap-8 items-center max-w-5xl mx-auto rounded-2xl border border-gray-100 bg-gray-50 p-6 md:p-8">
+            <figure className="rounded-xl bg-white border border-gray-200 p-8 flex items-center justify-center min-h-64">
+              <img src="/images/service-print-procurement-826.png" alt="Print procurement service illustration" loading="lazy" className="w-full max-w-64 h-auto object-contain" />
+            </figure>
+            <div>
+              <span className="section-label mb-4">Smarter Sourcing</span>
+              <h2 id="pp-visual-heading" className="text-heading text-3xl text-gray-900 mb-3">A Clear Process for Complex Print Projects</h2>
+              <p className="public-helper-text text-base leading-relaxed">From specifications and sourcing to production coordination and delivery, Workshop Creative Group helps simplify print procurement with one accountable point of contact.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits */}
       <section className="pb-16 bg-white">
         <div className="container">
