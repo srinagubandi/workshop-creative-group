@@ -2,6 +2,25 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.1.1] — 2026-08-26
+
+### Added
+
+- Added `RAILWAY_DEPLOYMENT_VERIFICATION.md` as the durable production evidence record for the v1.1.0 release.
+
+### Verified
+
+- Published `feature/v1.1.0-accessibility-policy-20260825` at commit `4b26c2b29a382c3d8213ecd975fae00b828f78dc`.
+- Created and cleanly merged [pull request #1](https://github.com/srinagubandi/workshop-creative-group/pull/1) into `main`, producing commit `04f38e4d80a62d4aa5ea54958cc6dd07eacaa025`.
+- Railway deployed web deployment `6b3adfb2-173a-48f7-aba8-f63042d94829` with status `SUCCESS`.
+- Rendered production verification passed for `/accessibility`, `/privacy`, `/terms`, `/contact`, and `/request-quote`; live keyboard skip navigation passed on the quote-request page without submitting data.
+
+### Remaining Follow-up
+
+- Have qualified counsel review the Privacy Policy and Terms and Conditions before relying on them as final legal documents.
+- Perform a real small-screen device/browser test for mobile navigation.
+- Run the Dockerfile build in a Docker-capable validation environment when available.
+
 ## [1.1.0] — 2026-08-25
 
 ### Added
@@ -29,14 +48,7 @@ All notable changes to this project are recorded in this file. The project follo
 - `pnpm build` completed successfully.
 - The local production preview returned HTTP 200 for all updated public routes and the three supplied service icons.
 - Twenty documented review passes completed. Three issues identified during review were remediated and retested: missing native required attributes, footer target sizes below the 24px screening threshold, and a hidden mobile-drawer `aria-controls` target.
-
-### Pending
-
-- Publish `feature/v1.1.0-accessibility-policy-20260825` to GitHub and open a reviewable pull request.
-- Deploy the exact published commit to Railway and verify healthy build, runtime logs, and rendered content for `/`, `/accessibility`, `/privacy`, `/terms`, `/contact`, and `/request-quote`.
-- Review Privacy Policy and Terms and Conditions with qualified counsel before relying on them as final legal documents.
-- Run the Dockerfile build in an environment with Docker available; the local environment lacks a Docker CLI, though the equivalent locked dependency install and production build passed.
-- Perform a real small-screen-device/browser pass for the mobile navigation disclosure.
+- The branch was published, reviewed through pull request #1, merged to `main`, deployed by Railway, and confirmed through rendered production route testing. See `RAILWAY_DEPLOYMENT_VERIFICATION.md`.
 
 ## [1.0.1] — 2026-08-25
 
@@ -58,12 +70,6 @@ All notable changes to this project are recorded in this file. The project follo
 - `pnpm run build` completed successfully.
 - Public Railway smoke testing returned HTTP 200 for Home, About, Large Format Printing, Graphic Design, Print Procurement, Request a Quote, Contact, and Blog. Gallery redirected from `/gallery` to `/gallery/`, which returned HTTP 200.
 
-### Pending
-
-- Publish `chore/v1.0.1-change-control-20260825` to GitHub and open the reviewable pull request.
-- Inspect the private Railway project dashboard, environment, deployment history, logs, and variable mappings using an authenticated session.
-- Run the Dockerfile build in an environment with Docker available; the local environment lacks a Docker CLI, though the equivalent locked dependency install and production build passed.
-- Create an explicit deployment record only after the branch is approved and deployed to Railway.
-
-[1.1.0]: https://github.com/srinagubandi/workshop-creative-group/compare/8885b5c...HEAD
+[1.1.1]: https://github.com/srinagubandi/workshop-creative-group/compare/04f38e4d80a62d4aa5ea54958cc6dd07eacaa025...HEAD
+[1.1.0]: https://github.com/srinagubandi/workshop-creative-group/compare/8885b5c...04f38e4d80a62d4aa5ea54958cc6dd07eacaa025
 [1.0.1]: https://github.com/srinagubandi/workshop-creative-group/compare/8885b5c...5267f13

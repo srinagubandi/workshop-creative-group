@@ -171,3 +171,10 @@ For answer-engine and generative-engine visibility, the site uses clean canonica
 The local release candidate on `feature/v1.1.0-accessibility-policy-20260825` adds the Accessibility Statement, Privacy Policy, Terms and Conditions, footer policy links, accessibility-support contact path, supplied home-page service icons, browser-title update, testimonial presentation adjustments, and keyboard/form/focus/motion remediation. Source and database backups were verified before implementation. The documented 20-pass review and 10-test validation evidence are in `ACCESSIBILITY_VALIDATION.md`; the current release/deployment gate is in `current.md`; user-visible release notes are in `CHANGELOG.md`.
 
 The release is locally validated but not yet published to GitHub or deployed to Railway. The existing Railway endpoint rendered a 404 view for `/accessibility` before publication. Once the versioned Git branch is published and Railway deploys the commit, verify rendered content—not only HTTP status—for `/`, `/accessibility`, `/privacy`, `/terms`, `/contact`, and `/request-quote`.
+
+
+## v1.1.0 Publication and Railway Production Verification — 2026-08-26
+
+The v1.1.0 feature branch `feature/v1.1.0-accessibility-policy-20260825` was published at commit `4b26c2b29a382c3d8213ecd975fae00b828f78dc`, reviewed through GitHub pull request #1, and merged to `main` as `04f38e4d80a62d4aa5ea54958cc6dd07eacaa025`. Railway deployed the production `web` service successfully as deployment `6b3adfb2-173a-48f7-aba8-f63042d94829`.
+
+Rendered production checks passed for `/accessibility`, `/privacy`, `/terms`, `/contact`, and `/request-quote`; the live quote-request route’s skip link also moved keyboard focus to `main-content` without transmitting data. Deployment details are recorded in `RAILWAY_DEPLOYMENT_VERIFICATION.md`; current operating status is in `current.md`; user-visible release notes are in `CHANGELOG.md`.
