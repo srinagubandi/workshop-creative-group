@@ -2,6 +2,21 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.3.1] — 2026-08-26
+
+### Added
+
+- Added `V130_POSTDEPLOY_VALIDATION.md` as the durable production record for the completed v1.3.0 package release.
+- Finalized `current.md` with the verified v1.3.0 merge, Railway success status, fresh backup evidence, live package checks, and remaining limitations.
+
+### Verified
+
+- Published `feature/v1.3.0-remaining-package-layouts-20260826` at commit `8197b4a7b7e3e162810d10da873be9579b71044d`.
+- Created and cleanly merged [pull request #6](https://github.com/srinagubandi/workshop-creative-group/pull/6) into `main`, producing commit `cfa49cb80e85e54ef34c46df1d78e437f8892790`.
+- Railway’s GitHub deployment status reported **success** for the v1.3.0 merge commit.
+- Live validation confirmed the static Home logo section, user-controlled testimonial previews, Large Format selected work, corrected Graphic Design icons and portfolio panel, and the supplied Print Procurement visual panel.
+- Live axe-core scans of Home, Graphic Design, and Print Procurement each reported **0 WCAG 2.0/2.1/2.2 A/AA violations**; color-contrast incomplete items remain manual-review items.
+
 ## [1.3.0] — 2026-08-26
 
 ### Added
@@ -27,9 +42,9 @@ All notable changes to this project are recorded in this file. The project follo
 - `pnpm build` completed successfully.
 - Rendered Home, Large Format, Graphic Design, and Print Procurement reviews passed; the corresponding axe-core WCAG 2.0/2.1/2.2 A/AA scans reported **0 violations**. Color-contrast incomplete results remain manual-review items.
 
-### Pending
+### Deployed and Verified
 
-- Publish the feature branch, merge the reviewed v1.3.0 release to `main`, verify Railway deployment health, and complete the recorded post-deployment route, keyboard, and axe-core checks.
+- Published through [pull request #6](https://github.com/srinagubandi/workshop-creative-group/pull/6), merged to `main`, deployed successfully by Railway, and validated through live route, keyboard, static-presentation, and axe-core checks. See `V130_POSTDEPLOY_VALIDATION.md`.
 
 ## [1.2.1] — 2026-08-26
 
@@ -153,7 +168,8 @@ All notable changes to this project are recorded in this file. The project follo
 - `pnpm run build` completed successfully.
 - Public Railway smoke testing returned HTTP 200 for Home, About, Large Format Printing, Graphic Design, Print Procurement, Request a Quote, Contact, and Blog. Gallery redirected from `/gallery` to `/gallery/`, which returned HTTP 200.
 
-[1.3.0]: https://github.com/srinagubandi/workshop-creative-group/compare/1703b96554b03536034b99696a8fd42aec3e3104...HEAD
+[1.3.1]: https://github.com/srinagubandi/workshop-creative-group/compare/cfa49cb80e85e54ef34c46df1d78e437f8892790...HEAD
+[1.3.0]: https://github.com/srinagubandi/workshop-creative-group/compare/1703b96554b03536034b99696a8fd42aec3e3104...cfa49cb80e85e54ef34c46df1d78e437f8892790
 [1.2.1]: https://github.com/srinagubandi/workshop-creative-group/compare/a7e3ee7e5a3c79999d2c3928a72178c1048c93c2...HEAD
 [1.2.0]: https://github.com/srinagubandi/workshop-creative-group/compare/a386325d74a5f31462747736ca41975a072a0c72...a7e3ee7e5a3c79999d2c3928a72178c1048c93c2
 [1.1.2]: https://github.com/srinagubandi/workshop-creative-group/compare/839ffcb990ac327e94595ed53ad7c08f1ec90b93...HEAD
