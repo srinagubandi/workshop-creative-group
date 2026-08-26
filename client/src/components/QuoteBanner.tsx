@@ -16,13 +16,13 @@ export default function QuoteBanner() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
             <p className="text-xs font-bold uppercase tracking-widest mb-2"
-               style={{ color: "#7dbe31" }}>
+               style={{ color: "#d5f3a9" }}>
               Stop Overpaying
             </p>
             <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-serif font-bold leading-tight">
               Save Up to 20% on Your<br className="hidden md:block" /> Current Printing Costs
             </h2>
-            <p className="mt-2 text-base md:text-lg" style={{ color: "rgba(255,255,255,0.75)" }}>
+            <p className="mt-2 text-base md:text-lg" style={{ color: "#e8f1fa" }}>
               Upload your invoice — we'll quote the same job at a better price.
             </p>
           </div>

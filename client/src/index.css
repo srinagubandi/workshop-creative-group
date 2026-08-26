@@ -25,7 +25,9 @@
 
   /* ── Semantic brand colors ── */
   --color-brand-primary:   oklch(0.42 0.17 243);  /* Blue — nav, buttons, banners */
-  --color-brand-accent:    oklch(0.68 0.18 128);  /* Green — hero accent, CTA */
+  --color-brand-accent:    oklch(0.68 0.18 128);  /* Green — decorative accent */
+  --color-brand-action:    #497c16;                /* Accessible green for white action text */
+  --color-brand-action-hover: #3e6912;             /* Accessible hover state for white action text */
   --color-brand-tertiary:  oklch(0.82 0.17 88);   /* Yellow — third accent */
 
   /* ── Neutral palette ── */
@@ -234,8 +236,8 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.875rem 2rem;
-  background-color: #7dbe31;
-  color: white;
+  background-color: var(--color-brand-action);
+  color: #ffffff;
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 0.9375rem;
@@ -246,7 +248,7 @@
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
   box-shadow: var(--shadow-md);
 }
-.btn-primary:hover { background-color: #6aaa27; box-shadow: var(--shadow-lg); }
+.btn-primary:hover { background-color: var(--color-brand-action-hover); box-shadow: var(--shadow-lg); }
 .btn-primary:active { transform: scale(0.97); }
 
 /* ── Secondary button ── */
@@ -336,6 +338,14 @@ input#invoiceFile:focus-visible + .upload-zone {
   outline-offset: 3px;
   border-color: #005fcc;
 }
+
+/* Small helper text on light surfaces must remain readable at normal text sizes. */
+.public-helper-text { color: #4b5563; }
+.why-description { color: #4b5563; }
+
+/* The footer must not inherit the muted body paragraph color. */
+.footer-copy { color: #f1f5f9; }
+.footer-bottom-copy { color: #e5e7eb; }
 
 /* ── Nav link ── */
 .nav-link {
