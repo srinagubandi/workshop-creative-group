@@ -2,6 +2,23 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.4.1] — 2026-08-31
+
+### Added
+
+- Added `V140_POSTDEPLOY_VALIDATION.md` as the durable production record for the v1.4.0 brand, icon, and full-logo-gallery release.
+- Finalized `current.md` with the v1.4.0 merged commit, Railway deployment success, live CSS and asset checks, full-logo disclosure result, keyboard result, and axe-core evidence.
+
+### Verified
+
+- Published `feature/v1.4.0-aug28-brand-icons-logos-20260831` at commit `7e648ce1d4152829a7887593409324fa2a86abf7`.
+- Created and cleanly merged [pull request #8](https://github.com/srinagubandi/workshop-creative-group/pull/8) into `main`, producing commit `5f459e446e584fd685f275d4a6e733d9364e5ebf`.
+- Railway’s GitHub deployment status reported **success** for the v1.4.0 merge commit.
+- All five supplied August 28 icon assets returned HTTP 200 from the live Railway site.
+- The live Home logo control expanded from 6 to 30 published logo figures and updated `aria-expanded` from `false` to `true`; it has no automatic scrolling or animation.
+- Live Home and Graphic Design axe-core WCAG 2.0/2.1/2.2 A/AA scans reported **0 violations**. Color-contrast incomplete items remain manual-review items.
+- Live keyboard testing confirmed the Home skip link moved focus to `#main-content`.
+
 ## [1.4.0] — 2026-08-31
 
 ### Added
@@ -29,9 +46,9 @@ All notable changes to this project are recorded in this file. The project follo
 - Local Home and Graphic Design axe-core WCAG 2.0/2.1/2.2 A/AA scans reported **0 violations**; color-contrast incomplete results remain manual-review items.
 - Local keyboard testing confirmed the first Tab focused the Skip to main content link and activation moved to `#main-content`.
 
-### Pending
+### Deployed and Verified
 
-- Publish the feature branch, merge the reviewed v1.4.0 release to `main`, verify Railway deployment health, and repeat the live CSS, asset, keyboard, logo-disclosure, and axe-core checks.
+- Published through [pull request #8](https://github.com/srinagubandi/workshop-creative-group/pull/8), merged to `main`, deployed successfully by Railway, and validated through live CSS token, supplied-asset, full-logo disclosure, keyboard, and axe-core checks. See `V140_POSTDEPLOY_VALIDATION.md`.
 
 ## [1.3.1] — 2026-08-26
 
