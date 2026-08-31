@@ -2,6 +2,21 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.7.1] — 2026-08-31
+
+### Added
+
+- Added `V170_POSTDEPLOY_VALIDATION.md` as the durable production record for the v1.7.0 matched-green statistic and supplied blue Print Procurement icon release.
+- Finalized `current.md` with the v1.7.0 feature branch, pull request, merge commit, Railway success, live statistic color, icon integrity, and automated accessibility evidence.
+
+### Verified
+
+- Published `feature/v1.7.0-statistic-print-icon-20260831` at `2b0f21ba4c15c2d5610c197ef111e3aa9ea2e7b3`.
+- Created and cleanly merged [pull request #14](https://github.com/srinagubandi/workshop-creative-group/pull/14) into `main`, producing commit `58843f11616c63c5422e3cd8c1549025daac96fe`.
+- Railway GitHub deployment status reported **success** for the v1.7.0 merge commit.
+- Live verification confirmed `100+ Clients Served` renders as `#497C16`, the supplied blue icon returns HTTP 200 with the source SHA-256, and its lazy-loaded Home card decodes at 1024 × 1024 after being brought into view.
+- The live Home axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations** and 28 passed rules. Nine color-contrast incomplete results remain manual-review items.
+
 ## [1.7.0] — 2026-08-31
 
 ### Changed
