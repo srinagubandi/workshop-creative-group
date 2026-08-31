@@ -17,17 +17,17 @@ const DESIGN_BENEFITS = [
   {
     title: "Strategic, Not Just Aesthetic",
     desc: "Design decisions are grounded in communication goals and business outcomes — not just visual preference.",
-    iconSrc: "/images/service-large-format.png",
+    iconSrc: "/images/strategy-design-828.png",
   },
   {
     title: "Print-Ready Production",
     desc: "Every file is built for print production — correct color profiles, bleeds, and specs from the start.",
-    iconSrc: "/images/service-graphic-design.png",
+    iconSrc: "/images/service-large-format-828.png",
   },
   {
     title: "Consistent Brand Voice",
     desc: "Cohesive design across all touchpoints builds recognition and trust with your audience.",
-    iconSrc: "/images/service-print-procurement-826.png",
+    iconSrc: "/images/branding-828.png",
   },
 ];
 

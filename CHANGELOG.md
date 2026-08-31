@@ -2,6 +2,37 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.4.0] — 2026-08-31
+
+### Added
+
+- Added the five supplied August 28 icon assets for Home service cards and Graphic Design benefit cards.
+- Added an accessible, static progressive disclosure to the published Home-page client-logo gallery, allowing all approved currently published logo records to be shown on demand.
+- Added `V140_LOCAL_VALIDATION.md` as the local CSS, application, keyboard, and automated accessibility evidence for this candidate.
+
+### Changed
+
+- Restored the exact original visual brand tokens: lime green `#7dbe31`, cobalt blue `#1260ae`, and yellow `#efc509`.
+- Retained accessible dark-green and dark-gold variants where text or white-text controls require WCAG-conforming contrast.
+- Replaced all three Home service-card icons with the supplied August 28 Large Format, Graphic Design, and Print Procurement assets.
+- Replaced Graphic Design benefit-card icons with the supplied Strategy/Design, Large Format Printing, and Branding assets.
+- Updated the Home client-logo description to accurately describe the static, keyboard-accessible full-gallery experience.
+- Updated `current.md` with fresh source/database backup evidence, release scope, and local validation results.
+
+### Verified Locally
+
+- Created a checksummed source archive and complete Git-history bundle from `248545cea02cc17883685f01975b207c6499f8e8` before implementation.
+- Created and verified fresh Railway manual database backup `wscg-manual-backup-2026-08-31-04-35-16.sql` before implementation.
+- `pnpm check`, `pnpm test`, and `pnpm build` completed successfully; **36 tests across 10 files passed**.
+- All five supplied icon assets returned HTTP 200 from the production-preview server.
+- The Home logo disclosure expanded from 6 to 23 logo figures and updated `aria-expanded` from `false` to `true`.
+- Local Home and Graphic Design axe-core WCAG 2.0/2.1/2.2 A/AA scans reported **0 violations**; color-contrast incomplete results remain manual-review items.
+- Local keyboard testing confirmed the first Tab focused the Skip to main content link and activation moved to `#main-content`.
+
+### Pending
+
+- Publish the feature branch, merge the reviewed v1.4.0 release to `main`, verify Railway deployment health, and repeat the live CSS, asset, keyboard, logo-disclosure, and axe-core checks.
+
 ## [1.3.1] — 2026-08-26
 
 ### Added

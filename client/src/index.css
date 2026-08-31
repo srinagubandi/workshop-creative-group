@@ -16,19 +16,19 @@
 /* ── Design Tokens ── */
 @theme inline {
   /* ── Logo Colors (exact) ── */
-  --color-logo-green:   oklch(0.68 0.18 128);   /* #7dbe31 Lime Green  */
-  --color-logo-blue:    oklch(0.42 0.17 243);   /* #1260ae Cobalt Blue */
-  --color-logo-yellow:  oklch(0.82 0.17 88);    /* #efc509 Yellow      */
+  --color-logo-green:   #7dbe31;                 /* Original Lime Green  */
+  --color-logo-blue:    #1260ae;                 /* Original Cobalt Blue */
+  --color-logo-yellow:  #efc509;                 /* Original Yellow      */
   --color-logo-magenta: oklch(0.42 0.22 335);   /* #A00050 Magenta     */
   --color-logo-red:     oklch(0.48 0.22 25);    /* #DC0014 Red         */
   --color-logo-orange:  oklch(0.72 0.17 55);    /* #F0A028 Orange      */
 
   /* ── Semantic brand colors ── */
-  --color-brand-primary:   oklch(0.42 0.17 243);  /* Blue — nav, buttons, banners */
-  --color-brand-accent:    oklch(0.68 0.18 128);  /* Green — decorative accent */
+  --color-brand-primary:   #1260ae;                /* Original blue — nav, buttons, banners */
+  --color-brand-accent:    #7dbe31;                /* Original green — decorative accent */
   --color-brand-action:    #497c16;                /* Accessible green for white action text */
   --color-brand-action-hover: #3e6912;             /* Accessible hover state for white action text */
-  --color-brand-tertiary:  oklch(0.82 0.17 88);   /* Yellow — third accent */
+  --color-brand-tertiary:  #efc509;                /* Original yellow — third accent */
 
   /* ── Neutral palette ── */
   --color-ink:           oklch(0.13 0.01 240);   /* #1C1C1C near-black */
@@ -43,13 +43,13 @@
   /* ── shadcn/ui semantic tokens ── */
   --color-background:           var(--color-surface);
   --color-foreground:           var(--color-ink);
-  --color-primary:              oklch(0.42 0.17 243);
+  --color-primary:              #1260ae;
   --color-primary-foreground:   oklch(0.99 0 0);
   --color-secondary:            var(--color-surface-2);
   --color-secondary-foreground: var(--color-ink);
   --color-muted:                var(--color-surface-2);
   --color-muted-foreground:     var(--color-ink-muted);
-  --color-accent:               oklch(0.68 0.18 128);
+  --color-accent:               #7dbe31;
   --color-accent-foreground:    oklch(0.99 0 0);
   --color-destructive:          oklch(0.48 0.22 25);
   --color-destructive-foreground: oklch(0.99 0 0);
