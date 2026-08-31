@@ -1,6 +1,6 @@
 /**
  * QuoteBanner — Full-width conversion strip above the footer.
- * Blue background (#1260ae) with white CTA button.
+ * Blue background (#1261ae) with white CTA button.
  */
 
 import { Link } from "wouter";
@@ -8,8 +8,8 @@ import { Link } from "wouter";
 export default function QuoteBanner() {
   return (
     <section
-      className="py-12 md:py-16"
-      style={{ background: "#1260ae" }}
+      className="py-10 md:py-12"
+      style={{ background: "#1261ae" }}
       aria-label="Request a quote"
     >
       <div className="container">
@@ -30,7 +30,7 @@ export default function QuoteBanner() {
             <Link
               href="/request-quote"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white font-bold text-base rounded-xl shadow-lg transition-colors duration-200 active:scale-95 whitespace-nowrap"
-              style={{ color: "#1260ae" }}
+              style={{ color: "#1261ae" }}
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />

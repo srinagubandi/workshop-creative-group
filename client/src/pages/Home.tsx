@@ -1,6 +1,6 @@
 /**
  * Home Page — Workshop Creative Group
- * Color palette: Lime Green #7dbe31 + Blue #1260ae + Yellow #efc509
+ * Color palette: Lime Green #7ebf31 + Blue #1261ae + Yellow #eec509
  */
 
 import PageLayout from "@/components/PageLayout";
@@ -15,16 +15,16 @@ const SERVICES = [
     title: "Large Format Printing",
     copy: "Custom signage, banners, displays, wall graphics, window graphics, retail graphics, and wide format printing solutions designed to help businesses stand out.",
     href: "/large-format-printing",
-    color: "#1260ae",
+    color: "#1261ae",
     bg: "rgba(18,96,174,0.08)",
-    learnColor: "#1260ae",
+    learnColor: "#1261ae",
   },
   {
     iconSrc: "/images/service-graphic-design-home-828.png",
     title: "Graphic Design",
     copy: "Professional graphic design and branding services for logos, marketing materials, sales collateral, trade show graphics, packaging, and business communications.",
     href: "/graphic-design",
-    color: "#7dbe31",
+    color: "#7ebf31",
     bg: "rgba(125,190,49,0.08)",
     learnColor: "#497c16",
   },
@@ -33,7 +33,7 @@ const SERVICES = [
     title: "Print Procurement",
     copy: "Access to a trusted national network for commercial printing, packaging, labels, promotional products, apparel, direct mail, and specialty print solutions.",
     href: "/print-procurement",
-    color: "#efc509",
+    color: "#eec509",
     bg: "rgba(239,197,9,0.10)",
     learnColor: "#806700",
   },
@@ -45,37 +45,37 @@ const WHY_US = [
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
     title: "Save Up to 20%",
     desc: "Upload your invoice — same job, better price, no quality compromise.",
-    color: "#7dbe31",
+    color: "#7ebf31",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>,
     title: "20+ Years Experience",
     desc: "Two decades of print, design, and sourcing expertise across every major industry.",
-    color: "#1260ae",
+    color: "#1261ae",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>,
     title: "One Point of Contact",
     desc: "From concept through delivery — one partner, zero juggling.",
-    color: "#efc509",
+    color: "#eec509",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" /></svg>,
     title: "Nationwide Network",
     desc: "Trusted production partners across the United States, matched to your specs and budget.",
-    color: "#efc509",
+    color: "#eec509",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>,
     title: "Quality You Can Count On",
     desc: "Right substrate, right method, delivered on time every time.",
-    color: "#7dbe31",
+    color: "#7ebf31",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>,
     title: "Smarter Sourcing",
     desc: "Best production method for your job — not just the easiest one — better results at a lower cost.",
-    color: "#1260ae",
+    color: "#1261ae",
   },
 ];
 
@@ -102,13 +102,13 @@ export default function Home() {
             <div className="animate-fade-in-up mb-6">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-white/80 text-xs font-semibold uppercase tracking-widest backdrop-blur-sm"
                     style={{ background: "rgba(255,255,255,0.10)", borderColor: "rgba(255,255,255,0.20)" }}>
-                <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#7dbe31" }} />
+                <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#7ebf31" }} />
                 Print Savings Specialists Since 2006
               </span>
             </div>
             <h1 id="hero-heading" className="text-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 animate-fade-in-up animate-delay-100">
               Stop Overpaying<br className="hidden sm:block" /> for Print.
-              <span className="block mt-1" style={{ color: "#7dbe31" }}>Save Up to 20% Today.</span>
+              <span className="block mt-1" style={{ color: "#7ebf31" }}>Save Up to 20% Today.</span>
             </h1>
             <p className="text-lg md:text-xl text-white/70 mb-4 max-w-2xl animate-fade-in-up animate-delay-200 leading-relaxed">
               We help businesses simplify print purchasing and reduce costs without sacrificing quality.
@@ -128,7 +128,7 @@ export default function Home() {
             <div className="mt-12 flex flex-wrap gap-6 animate-fade-in-up animate-delay-500">
               {["Fortune 500 Brands","Nationwide Delivery","20+ Years Experience"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-white/50 text-sm">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style={{ color: "#7dbe31" }}>
+                  <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style={{ color: "#7ebf31" }}>
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -155,12 +155,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto stagger-children">
             <div className="step-card">
               <div className="flex items-center gap-4 mb-5">
-                <div className="w-12 h-12 rounded-xl text-white flex items-center justify-center text-xl font-serif font-bold flex-shrink-0" style={{ background: "#1260ae" }}>1</div>
+                <div className="w-12 h-12 rounded-xl text-white flex items-center justify-center text-xl font-serif font-bold flex-shrink-0" style={{ background: "#1261ae" }}>1</div>
                 <h3 className="text-xl font-serif font-semibold text-gray-900">Upload Your Current Invoice</h3>
               </div>
               <p className="text-gray-500 leading-relaxed">Share a recent invoice for a print job you've completed or are planning. PDF, JPG, or PNG — any format works.</p>
               <div className="mt-5 p-4 rounded-lg border" style={{ background: "rgba(18,96,174,0.06)", borderColor: "rgba(18,96,174,0.15)" }}>
-                <div className="flex items-center gap-3 text-sm font-medium" style={{ color: "#1260ae" }}>
+                <div className="flex items-center gap-3 text-sm font-medium" style={{ color: "#1261ae" }}>
                   <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" /></svg>
                   Accepts PDF, JPG, PNG
                 </div>
@@ -202,10 +202,10 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-5">
               {[
-                { num: "20+", label: "Years of Experience", sub: "In print & design", color: "#1260ae" },
+                { num: "20+", label: "Years of Experience", sub: "In print & design", color: "#1261ae" },
                 { num: "20%", label: "Average Savings", sub: "On printing costs", color: "#497c16" },
                 { num: "100+", label: "Clients Served", sub: "Nationwide", color: "#7a6100" },
-                { num: "1", label: "Point of Contact", sub: "For every project", color: "#1260ae" },
+                { num: "1", label: "Point of Contact", sub: "For every project", color: "#1261ae" },
               ].map((stat) => (
                 <div key={stat.label} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                   <div className="text-4xl font-serif font-bold mb-1" style={{ color: stat.color }}>{stat.num}</div>

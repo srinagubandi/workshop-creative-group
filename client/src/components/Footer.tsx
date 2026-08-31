@@ -2,7 +2,7 @@
  * Footer — Workshop Creative Group
  *
  * Uses the white horizontal logo (wscg-logo-white-hort.webp) in the footer.
- * Accent colors: lime green #7dbe31, blue #1260ae, yellow #efc509
+ * Accent colors: lime green #7ebf31, blue #1261ae, yellow #eec509
  */
 
 import { Link } from "wouter";
@@ -34,7 +34,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-950 text-white">
       {/* Main footer content */}
-      <div className="container py-12 md:py-16">
+      <div className="container py-10 md:py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Brand column — white horizontal logo */}
@@ -52,7 +52,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5" style={{ color: "#efc509" }}>
+            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5" style={{ color: "#eec509" }}>
               Services
             </h3>
             <ul className="space-y-3 list-none m-0 p-0">
@@ -71,7 +71,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5" style={{ color: "#efc509" }}>
+            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5" style={{ color: "#eec509" }}>
               Company
             </h3>
             <ul className="space-y-3 list-none m-0 p-0">
@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5" style={{ color: "#efc509" }}>
+            <h3 className="font-semibold text-xs uppercase tracking-widest mb-5" style={{ color: "#eec509" }}>
               Get in Touch
             </h3>
             <div className="space-y-3">
@@ -100,7 +100,7 @@ export default function Footer() {
               <Link
                 href="/contact"
                 className="inline-flex min-h-6 items-center gap-2 text-sm font-semibold transition-colors duration-200"
-                style={{ color: "#7dbe31" }}
+                style={{ color: "#7ebf31" }}
               >
                 Contact Us
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

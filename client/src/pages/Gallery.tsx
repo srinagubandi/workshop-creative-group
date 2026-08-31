@@ -223,7 +223,7 @@ export default function Gallery() {
                       ? "text-white shadow-md"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   }`}
-                  style={activeCategory === cat.key ? { background: "#1260ae" } : {}}
+                  style={activeCategory === cat.key ? { background: "#1261ae" } : {}}
                 >
                   {cat.label}
                   <span className={`text-xs px-1.5 py-0.5 rounded-full font-normal ${
