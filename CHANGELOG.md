@@ -2,6 +2,22 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.6.1] — 2026-08-31
+
+### Added
+
+- Added `V160_POSTDEPLOY_VALIDATION.md` as the durable production record for the v1.6.0 client color and section-spacing release.
+- Finalized `current.md` with the v1.6.0 branch, merge commit, Railway deployment success, live color verification, shared-spacing result, and axe-core evidence.
+
+### Verified
+
+- Published `feature/v1.6.0-client-colors-spacing-20260831` at commit `00493861edb8835e875227607bd1678dfa3bfe78`.
+- Created and cleanly merged [pull request #12](https://github.com/srinagubandi/workshop-creative-group/pull/12) into `main`, producing commit `a69b017d30e00239423fee718a08dd3d6f2c3947`.
+- Railway GitHub deployment status reported **success** for the v1.6.0 merge commit.
+- The live site rendered exact `#1261AE` blue, `#7EBF31` green, and `#EEC509` yellow treatments, while white-text actions retained the dedicated accessible green.
+- The first three live shared sections each rendered 88px top/bottom desktop padding, confirming the tightened 5.5rem rhythm.
+- The live Home axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations** and 28 passed rules. Nine color-contrast incomplete results remain manual-review items.
+
 ## [1.6.0] — 2026-08-31
 
 ### Changed
