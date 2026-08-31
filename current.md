@@ -6,16 +6,22 @@
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.6.0` — deployed and verified |
-| Application feature branch | `feature/v1.6.0-client-colors-spacing-20260831` |
-| Application feature commit | `00493861edb8835e875227607bd1678dfa3bfe78` |
-| Pull request | [#12](https://github.com/srinagubandi/workshop-creative-group/pull/12), merged |
-| Application merge commit | `a69b017d30e00239423fee718a08dd3d6f2c3947` |
-| Latest verified application deployment | Railway GitHub deployment status reported **success** for merge commit `a69b017d30e00239423fee718a08dd3d6f2c3947` |
-| Deployment-evidence record | `v1.6.1` — this branch records verified v1.6.0 production evidence |
+| Application release | `v1.7.0` — candidate, locally validated; pending publication and Railway verification |
+| Application feature branch | `feature/v1.7.0-statistic-print-icon-20260831` |
+| Application feature commit | Pending local commit |
+| Pull request | Pending creation |
+| Application merge commit | Pending merge |
+| Latest verified application deployment | Railway GitHub deployment status reported **success** for v1.6.1 documentation merge commit `648157384e1805d736c9cc539f75219782cd8b88` |
+| Deployment-evidence record | Pending v1.7.1 record after Railway validation |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
+
+## v1.7.0 Candidate Scope — Matched Green Statistic and Blue Print Procurement Icon
+
+The v1.7.0 candidate changes the Home-page `100+ Clients Served` statistic from dark yellow `#7A6100` to `#497C16`, matching the existing `20% Average Savings` treatment that the client marked as the desired green. It retains a 5.03:1 contrast ratio on the white card background.
+
+The supplied 1024 × 1024 RGBA blue Print Procurement icon is published as `service-print-procurement-blue-831.png`. It replaces the Home Print Procurement service-card icon and the Print Procurement page visual-panel image so the public treatments are consistent. `V170_LOCAL_VALIDATION.md` records fresh source/database backups, TypeScript, 36 regression tests, production build, source asset checks, rendered visual checks, and Home/Print Procurement axe-core WCAG A/AA scans with 0 violations.
 
 ## v1.6.0 Deployed Scope — Client Brand Hexes and Tighter Section Rhythm
 
