@@ -29,7 +29,7 @@ const SERVICES = [
     learnColor: "#497c16",
   },
   {
-    iconSrc: "/images/service-print-procurement-home-828.png",
+    iconSrc: "/images/service-print-procurement-blue-831.png",
     title: "Print Procurement",
     copy: "Access to a trusted national network for commercial printing, packaging, labels, promotional products, apparel, direct mail, and specialty print solutions.",
     href: "/print-procurement",
@@ -204,7 +204,7 @@ export default function Home() {
               {[
                 { num: "20+", label: "Years of Experience", sub: "In print & design", color: "#1261ae" },
                 { num: "20%", label: "Average Savings", sub: "On printing costs", color: "#497c16" },
-                { num: "100+", label: "Clients Served", sub: "Nationwide", color: "#7a6100" },
+                { num: "100+", label: "Clients Served", sub: "Nationwide", color: "#497c16" },
                 { num: "1", label: "Point of Contact", sub: "For every project", color: "#1261ae" },
               ].map((stat) => (
                 <div key={stat.label} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">

@@ -2,6 +2,20 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.7.0] — 2026-08-31
+
+### Changed
+
+- Updated the Home-page `100+ Clients Served` statistic from dark yellow `#7A6100` to `#497C16`, matching the existing `20% Average Savings` green treatment requested by the client.
+- Added the supplied 1024 × 1024 blue Print Procurement icon as `service-print-procurement-blue-831.png` and applied it to the Home service card and Print Procurement page visual panel.
+
+### Verified Locally
+
+- Created and checksummed a fresh source archive and complete Git-history bundle from `648157384e1805d736c9cc539f75219782cd8b88` before implementation.
+- Created and verified a fresh Railway manual database backup before implementation; reported size 250,350 bytes.
+- Passed TypeScript, production build, and 36 automated regression tests.
+- Passed Home and Print Procurement axe-core WCAG 2.0/2.1/2.2 A/AA scans with 0 violations. The remaining color-contrast checks are axe incomplete/manual-review items.
+
 ## [1.6.1] — 2026-08-31
 
 ### Added
