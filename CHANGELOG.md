@@ -2,6 +2,29 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.5.0] — 2026-08-31
+
+### Changed
+
+- Replaced the horizontally scrolling, stretched testimonial rail with a responsive one-, two-, or three-column intrinsic-height card grid.
+- Moved client identity and professional context to the top of every testimonial card, with a compact circular image or monogram treatment and stronger divider hierarchy.
+- Improved quotation typography with a comfortable reading measure, 1.0625rem body size on larger screens, and visual blue quote marks.
+- Replaced the text-link treatment for expanded testimonials with a 44-pixel-minimum outlined button that has an author-specific accessible name and visible focus ring.
+- Added clear explanatory copy confirming that client perspectives are user-controlled and never rotate or advance automatically.
+- Updated `current.md` with the v1.5.0 candidate scope, fresh source/database backup record, and accessibility safeguards.
+
+### Verified Locally
+
+- Created a checksummed source archive and full Git-history bundle from `3f911f3acedb9bb010809b6e4110b330be7ad312` before implementation.
+- Created and verified fresh Railway manual database backup `wscg-manual-backup-2026-08-31-05-01-03.sql` before implementation; reported size: 248,996 bytes.
+- `pnpm check`, `pnpm test`, and `pnpm build` completed successfully; **36 tests across 10 files passed**.
+- The static Home-page axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations**; remaining color-contrast incomplete results are manual-review items unrelated to the testimonial layout.
+- Source review confirmed semantic `figure`, `figcaption`, `blockquote`, and list structure; user-controlled quote expansion; visible keyboard focus; and no automatic movement.
+
+### Pending
+
+- Publish the feature branch, merge the reviewed v1.5.0 release to `main`, verify the Railway deployment, and perform visual, populated-card, keyboard, and axe-core checks against the live testimonial data.
+
 ## [1.4.1] — 2026-08-31
 
 ### Added
