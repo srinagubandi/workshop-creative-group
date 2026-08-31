@@ -6,13 +6,13 @@
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.5.0` — local candidate; pending publication and Railway deployment |
+| Application release | `v1.5.0` — deployed and verified |
 | Application feature branch | `feature/v1.5.0-testimonial-layout-20260831` |
-| Application feature commit | Pending the final release-record commit on this branch |
-| Pull request | To be created after final local review |
-| Application merge commit | Pending |
-| Latest verified application deployment | Railway GitHub status reported **success** for v1.4.1 documentation commit `3f911f3acedb9bb010809b6e4110b330be7ad312` |
-| Deployment-evidence record | `v1.5.1` — to be created after live validation |
+| Application feature commit | `76cef21f1ee5903d2ca7241c1c373a3c712406f8` |
+| Pull request | [#10](https://github.com/srinagubandi/workshop-creative-group/pull/10), merged |
+| Application merge commit | `d5b2148830540570170dceb7b04b4811b26b050a` |
+| Latest verified application deployment | Railway GitHub status reported **success** for merge commit `d5b2148830540570170dceb7b04b4811b26b050a` |
+| Deployment-evidence record | `v1.5.1` — this branch records verified v1.5.0 production evidence |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
@@ -26,11 +26,11 @@
 
 No source, database credential, Railway token, GitHub token, or other secret is recorded in this repository.
 
-## v1.5.0 Candidate Scope — Accessible Testimonial Visual Redesign
+## v1.5.0 Deployed Scope — Accessible Testimonial Visual Redesign
 
 The testimonial rail is redesigned as a responsive one-, two-, or three-column intrinsic-height grid. This eliminates the excessive stretched-card space visible in the prior presentation and places each client’s name, title, company, and avatar first for stronger information hierarchy. Each quotation is visually distinguished with a blue opening/closing mark, uses an improved reading measure, and retains the approved text verbatim.
 
-Long testimonials continue to use an explicit 44-pixel-minimum **Read full perspective** button. The control has an author-specific accessible name, reports its state with `aria-expanded`, has a visible keyboard-focus indicator, and never advances content automatically. The component retains semantic `figure`, `figcaption`, `blockquote`, and list semantics. Fresh pre-change evidence was created from `3f911f3acedb9bb010809b6e4110b330be7ad312`: a checksummed source archive, complete Git-history bundle, and verified Railway manual database backup `wscg-manual-backup-2026-08-31-05-01-03.sql` (248,996 bytes). `V150_LOCAL_VALIDATION.md` records the candidate checks.
+Long testimonials continue to use an explicit 44-pixel-minimum **Read full perspective** button. The control has an author-specific accessible name, reports its state with `aria-expanded`, has a visible keyboard-focus indicator, and never advances content automatically. The component retains semantic `figure`, `figcaption`, `blockquote`, and list semantics. Fresh pre-change evidence was created from `3f911f3acedb9bb010809b6e4110b330be7ad312`: a checksummed source archive, complete Git-history bundle, and verified Railway manual database backup `wscg-manual-backup-2026-08-31-05-01-03.sql` (248,996 bytes). `V150_LOCAL_VALIDATION.md` records the candidate checks. `V150_POSTDEPLOY_VALIDATION.md` records the completed production validation: the live grid used intrinsic card heights of 551, 551, 423, 519, and 455 pixels; author-first layout was present on all five cards; live keyboard activation expanded the Anita Gambill testimonial successfully; and the live Home axe-core WCAG A/AA scan reported 0 violations, 9 color-contrast manual-review items, and 28 passed rules.
 
 ## v1.4.0 Deployed Scope — August 28 Brand, Icon, and Logo Updates
 
