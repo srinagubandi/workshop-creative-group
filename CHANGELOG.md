@@ -2,6 +2,22 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.5.1] — 2026-08-31
+
+### Added
+
+- Added `V150_POSTDEPLOY_VALIDATION.md` as the durable production record for the v1.5.0 testimonial redesign.
+- Finalized `current.md` with the v1.5.0 merged commit, Railway success, populated-card visual evidence, keyboard interaction, and axe-core findings.
+
+### Verified
+
+- Published `feature/v1.5.0-testimonial-layout-20260831` at commit `76cef21f1ee5903d2ca7241c1c373a3c712406f8`.
+- Created and cleanly merged [pull request #10](https://github.com/srinagubandi/workshop-creative-group/pull/10) into `main`, producing commit `d5b2148830540570170dceb7b04b4811b26b050a`.
+- Railway’s GitHub deployment status reported **success** for the v1.5.0 merge commit.
+- The live populated testimonial section computed as a grid with `align-items: flex-start`; all five cards used author-first structure and variable intrinsic heights rather than the previous stretched rail.
+- Long-quote controls updated their visible copy and `aria-expanded` state on click and keyboard activation, had 44-pixel heights, and retained author-specific accessible names.
+- The live Home axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations**. Color-contrast incomplete results remain manual-review items.
+
 ## [1.5.0] — 2026-08-31
 
 ### Changed
@@ -21,9 +37,9 @@ All notable changes to this project are recorded in this file. The project follo
 - The static Home-page axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations**; remaining color-contrast incomplete results are manual-review items unrelated to the testimonial layout.
 - Source review confirmed semantic `figure`, `figcaption`, `blockquote`, and list structure; user-controlled quote expansion; visible keyboard focus; and no automatic movement.
 
-### Pending
+### Deployed and Verified
 
-- Publish the feature branch, merge the reviewed v1.5.0 release to `main`, verify the Railway deployment, and perform visual, populated-card, keyboard, and axe-core checks against the live testimonial data.
+- Published through [pull request #10](https://github.com/srinagubandi/workshop-creative-group/pull/10), merged to `main`, deployed successfully by Railway, and validated against populated production testimonial data. See `V150_POSTDEPLOY_VALIDATION.md`.
 
 ## [1.4.1] — 2026-08-31
 
