@@ -11,7 +11,7 @@ import { Link } from "wouter";
 // ─── Service Cards ────────────────────────────────────────────────────────────
 const SERVICES = [
   {
-    iconSrc: "/images/service-large-format.png",
+    iconSrc: "/images/service-large-format-828.png",
     title: "Large Format Printing",
     copy: "Custom signage, banners, displays, wall graphics, window graphics, retail graphics, and wide format printing solutions designed to help businesses stand out.",
     href: "/large-format-printing",
@@ -20,7 +20,7 @@ const SERVICES = [
     learnColor: "#1260ae",
   },
   {
-    iconSrc: "/images/service-graphic-design.png",
+    iconSrc: "/images/service-graphic-design-home-828.png",
     title: "Graphic Design",
     copy: "Professional graphic design and branding services for logos, marketing materials, sales collateral, trade show graphics, packaging, and business communications.",
     href: "/graphic-design",
@@ -29,7 +29,7 @@ const SERVICES = [
     learnColor: "#497c16",
   },
   {
-    iconSrc: "/images/service-print-procurement-826.png",
+    iconSrc: "/images/service-print-procurement-home-828.png",
     title: "Print Procurement",
     copy: "Access to a trusted national network for commercial printing, packaging, labels, promotional products, apparel, direct mail, and specialty print solutions.",
     href: "/print-procurement",
@@ -248,10 +248,11 @@ export default function Home() {
       <PublishedMediaStrip
         category="logos"
         eyebrow="Portfolio Logos"
-        heading="A Static Selection of Published Client Logo Work"
-        description="A small, non-animated selection of logo assets already published in the Workshop Creative Group portfolio."
+        heading="Published Client Logo Work"
+        description="Explore approved client logo work in a static, keyboard-accessible gallery. Additional published logos can be shown on demand."
         limit={6}
         variant="logos"
+        expandable
       />
 
       <TestimonialSection />
