@@ -6,22 +6,22 @@
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.6.0` — candidate, locally validated; pending publication and Railway verification |
+| Application release | `v1.6.0` — deployed and verified |
 | Application feature branch | `feature/v1.6.0-client-colors-spacing-20260831` |
-| Application feature commit | Pending local commit |
-| Pull request | Pending creation |
-| Application merge commit | Pending merge |
-| Latest verified application deployment | Railway GitHub status reported **success** for v1.5.0 merge commit `d5b2148830540570170dceb7b04b4811b26b050a` |
-| Deployment-evidence record | Pending v1.6.1 record after Railway validation |
+| Application feature commit | `00493861edb8835e875227607bd1678dfa3bfe78` |
+| Pull request | [#12](https://github.com/srinagubandi/workshop-creative-group/pull/12), merged |
+| Application merge commit | `a69b017d30e00239423fee718a08dd3d6f2c3947` |
+| Latest verified application deployment | Railway GitHub deployment status reported **success** for merge commit `a69b017d30e00239423fee718a08dd3d6f2c3947` |
+| Deployment-evidence record | `v1.6.1` — this branch records verified v1.6.0 production evidence |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
 
-## v1.6.0 Candidate Scope — Client Brand Hexes and Tighter Section Rhythm
+## v1.6.0 Deployed Scope — Client Brand Hexes and Tighter Section Rhythm
 
-The v1.6.0 candidate applies the client-supplied visual brand values throughout the client source: yellow `#EEC509`, green `#7EBF31`, and blue `#1261AE`. It replaces the prior near-match literals in both shared design tokens and component-level styles. The dedicated accessible action green `#497C16` remains for white-text buttons, preventing the lighter visual green from creating a contrast regression.
+The v1.6.0 release applies the client-supplied visual brand values throughout the client source: yellow `#EEC509`, green `#7EBF31`, and blue `#1261AE`. It replaces the prior near-match literals in both shared design tokens and component-level styles. The dedicated accessible action green `#497C16` remains for white-text buttons, preventing the lighter visual green from creating a contrast regression.
 
-The shared `.section-py` rhythm is tightened from 5rem/7rem to 4rem/5.5rem on mobile/desktop. Direct fixed-padding public sections were adjusted in the same direction: media panels, blog feature area, quote banner, page hero, and footer all use reduced vertical padding without changing the intentional Home hero scale. `V160_LOCAL_VALIDATION.md` records verified fresh source/database backups, exact-source-value audits, TypeScript, 36 regression tests, production build, contrast ratios, rendered desktop spacing, keyboard preservation, and a local Home axe-core WCAG A/AA scan with 0 violations.
+The shared `.section-py` rhythm is tightened from 5rem/7rem to 4rem/5.5rem on mobile/desktop. Direct fixed-padding public sections were adjusted in the same direction: media panels, blog feature area, quote banner, page hero, and footer all use reduced vertical padding without changing the intentional Home hero scale. `V160_LOCAL_VALIDATION.md` records verified fresh source/database backups, exact-source-value audits, TypeScript, 36 regression tests, production build, contrast ratios, rendered desktop spacing, keyboard preservation, and a local Home axe-core WCAG A/AA scan with 0 violations. `V160_POSTDEPLOY_VALIDATION.md` records the merged PR #12, Railway success, live exact RGB treatments, 88px shared section padding, retained accessible action treatment, and a live axe-core scan with 0 violations.
 
 ## Fresh Pre-change Backup Record — August 26, 2026
 
