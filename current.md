@@ -6,13 +6,13 @@
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.4.0` — local candidate; pending publication and Railway deployment |
+| Application release | `v1.4.0` — deployed and verified |
 | Application feature branch | `feature/v1.4.0-aug28-brand-icons-logos-20260831` |
-| Application feature commit | Pending the final release-record commit on this branch |
-| Pull request | To be created after final local review |
-| Application merge commit | Pending |
-| Latest verified application deployment | Railway GitHub status reported **success** for v1.3.1 documentation commit `248545cea02cc17883685f01975b207c6499f8e8` |
-| Deployment-evidence record | `v1.4.1` — to be created after live validation |
+| Application feature commit | `7e648ce1d4152829a7887593409324fa2a86abf7` |
+| Pull request | [#8](https://github.com/srinagubandi/workshop-creative-group/pull/8), merged |
+| Application merge commit | `5f459e446e584fd685f275d4a6e733d9364e5ebf` |
+| Latest verified application deployment | Railway GitHub status reported **success** for merge commit `5f459e446e584fd685f275d4a6e733d9364e5ebf` |
+| Deployment-evidence record | `v1.4.1` — this branch records verified v1.4.0 production evidence |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
@@ -26,9 +26,9 @@
 
 No source, database credential, Railway token, GitHub token, or other secret is recorded in this repository.
 
-## v1.4.0 Candidate Scope — August 28 Brand, Icon, and Logo Updates
+## v1.4.0 Deployed Scope — August 28 Brand, Icon, and Logo Updates
 
-The candidate restores the exact original visual brand tokens `#7dbe31` (lime green) and `#efc509` (yellow), while retaining dedicated accessibility-safe darker variants for normal text and white-text controls. It replaces the three Home service icons with the supplied August 28 assets, maps the supplied Strategy/Design, Large Format, and Branding icons to the three Graphic Design benefit cards, and expands the Home logo section into a static, keyboard-operable disclosure that exposes all 23 currently published logo records on demand.
+The candidate restores the exact original visual brand tokens `#7dbe31` (lime green) and `#efc509` (yellow), while retaining dedicated accessibility-safe darker variants for normal text and white-text controls. It replaces the three Home service icons with the supplied August 28 assets, maps the supplied Strategy/Design, Large Format, and Branding icons to the three Graphic Design benefit cards, and expands the Home logo section into a static, keyboard-operable disclosure that exposes all currently published logo records on demand. The live managed-gallery source returned 30 published logo records during post-deployment validation.
 
 Fresh pre-change evidence was created from `248545cea02cc17883685f01975b207c6499f8e8`: a checksummed source archive and complete Git-history bundle, plus verified Railway manual database backup `wscg-manual-backup-2026-08-31-04-35-16.sql` (reported size 248,549 bytes). `V140_LOCAL_VALIDATION.md` records the completed type, regression, build, source-token, asset, keyboard, and axe-core checks.
 
@@ -40,6 +40,9 @@ Fresh pre-change evidence was created from `248545cea02cc17883685f01975b207c6499
 | Local Home axe-core WCAG A/AA scan | Passed; 0 violations, 9 color-contrast manual-review items, 23 passed rules. |
 | Local Graphic Design rendering and axe-core scan | Passed; correct supplied icon mapping, 0 violations, 5 color-contrast manual-review items, 23 passed rules. |
 | Local keyboard skip link | Passed; first Tab focused Skip to main content and activation navigated to `#main-content`. |
+| Live Railway deployment and Home scan | Passed; Railway reported success, Home expanded from 6 to 30 live logo figures, and axe-core reported 0 violations, 9 manual contrast-review items, and 28 passed rules. |
+| Live Graphic Design scan | Passed; all three supplied benefit icons rendered and axe-core reported 0 violations, 5 manual contrast-review items, and 23 passed rules. |
+| Live keyboard skip link and icon assets | Passed; live Home skip link moved to `#main-content`; all five supplied icons returned HTTP 200. |
 
 ## v1.3.0 Deployed Scope
 
