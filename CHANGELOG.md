@@ -2,6 +2,26 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.6.0] — 2026-08-31
+
+### Changed
+
+- Corrected the shared visual brand values to the client-supplied hex codes: yellow `#EEC509`, green `#7EBF31`, and blue `#1261AE`.
+- Replaced all retired component-level client color literals so public and administrative interface treatments use the exact shared palette.
+- Reduced standard section padding from 5rem/7rem to 4rem/5.5rem on mobile/desktop, tightening the shared vertical rhythm by approximately one fifth.
+- Reduced fixed public padding in the quote banner, footer, media panels, featured blog area, page hero, and service-page visual panels while retaining intentional Home hero scale.
+- Retained the darker `#497C16` action-green treatment for white button text, preserving accessible contrast while restoring the requested display green.
+
+### Verified Locally
+
+- Created and checksummed a fresh source archive and complete Git-history bundle from `e387bdd7784864acaf081ad1cfd1bff5df61d149` before implementation.
+- Created and verified a fresh Railway manual database backup at `2026-08-31T18:11:46.000Z`; reported size 249,442 bytes.
+- Confirmed no retired `#1260ae`, `#7dbe31`, or `#efc509` client-source literal remains.
+- Confirmed the exact requested values are present in the shared design system.
+- `pnpm check`, `pnpm test`, and `pnpm build` completed successfully; **36 tests across 10 files passed**.
+- Rendered local Home checks confirmed the client blue and green display treatments, 88px desktop shared-section padding, retained accessible action-green button treatment, visible skip link, and no automatic motion.
+- The local Home axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations**. Nine color-contrast incomplete results remain manual-review items.
+
 ## [1.5.1] — 2026-08-31
 
 ### Added

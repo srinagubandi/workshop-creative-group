@@ -34,7 +34,7 @@ export function PublishedMediaStrip({
   if (!items.length) return null;
 
   return (
-    <section className={isLogoStrip ? "section-py bg-gray-50" : "pb-16 bg-white"} aria-labelledby={`${category}-media-heading`}>
+    <section className={isLogoStrip ? "section-py bg-gray-50" : "pb-12 bg-white"} aria-labelledby={`${category}-media-heading`}>
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-9">
           <span className="section-label justify-center mb-4">{eyebrow}</span>

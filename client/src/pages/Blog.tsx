@@ -93,7 +93,7 @@ export default function Blog() {
 
       {/* Featured Story */}
       {featuredPost && (
-        <section className="pb-16 bg-white" aria-labelledby="featured-heading">
+        <section className="pb-12 bg-white" aria-labelledby="featured-heading">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <span className="section-label mb-6">Featured Story</span>

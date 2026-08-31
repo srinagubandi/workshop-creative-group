@@ -16,19 +16,19 @@
 /* ── Design Tokens ── */
 @theme inline {
   /* ── Logo Colors (exact) ── */
-  --color-logo-green:   #7dbe31;                 /* Original Lime Green  */
-  --color-logo-blue:    #1260ae;                 /* Original Cobalt Blue */
-  --color-logo-yellow:  #efc509;                 /* Original Yellow      */
+  --color-logo-green:   #7ebf31;                 /* Original Lime Green  */
+  --color-logo-blue:    #1261ae;                 /* Original Cobalt Blue */
+  --color-logo-yellow:  #eec509;                 /* Original Yellow      */
   --color-logo-magenta: oklch(0.42 0.22 335);   /* #A00050 Magenta     */
   --color-logo-red:     oklch(0.48 0.22 25);    /* #DC0014 Red         */
   --color-logo-orange:  oklch(0.72 0.17 55);    /* #F0A028 Orange      */
 
   /* ── Semantic brand colors ── */
-  --color-brand-primary:   #1260ae;                /* Original blue — nav, buttons, banners */
-  --color-brand-accent:    #7dbe31;                /* Original green — decorative accent */
+  --color-brand-primary:   #1261ae;                /* Original blue — nav, buttons, banners */
+  --color-brand-accent:    #7ebf31;                /* Original green — decorative accent */
   --color-brand-action:    #497c16;                /* Accessible green for white action text */
   --color-brand-action-hover: #3e6912;             /* Accessible hover state for white action text */
-  --color-brand-tertiary:  #efc509;                /* Original yellow — third accent */
+  --color-brand-tertiary:  #eec509;                /* Original yellow — third accent */
 
   /* ── Neutral palette ── */
   --color-ink:           oklch(0.13 0.01 240);   /* #1C1C1C near-black */
@@ -43,13 +43,13 @@
   /* ── shadcn/ui semantic tokens ── */
   --color-background:           var(--color-surface);
   --color-foreground:           var(--color-ink);
-  --color-primary:              #1260ae;
+  --color-primary:              #1261ae;
   --color-primary-foreground:   oklch(0.99 0 0);
   --color-secondary:            var(--color-surface-2);
   --color-secondary-foreground: var(--color-ink);
   --color-muted:                var(--color-surface-2);
   --color-muted-foreground:     var(--color-ink-muted);
-  --color-accent:               #7dbe31;
+  --color-accent:               #7ebf31;
   --color-accent-foreground:    oklch(0.99 0 0);
   --color-destructive:          oklch(0.48 0.22 25);
   --color-destructive-foreground: oklch(0.99 0 0);
@@ -164,8 +164,8 @@
 .flex { min-width: 0; min-height: 0; }
 
 /* ── Section spacing ── */
-.section-py { padding-top: 5rem; padding-bottom: 5rem; }
-@media (min-width: 768px) { .section-py { padding-top: 7rem; padding-bottom: 7rem; } }
+.section-py { padding-top: 4rem; padding-bottom: 4rem; }
+@media (min-width: 768px) { .section-py { padding-top: 5.5rem; padding-bottom: 5.5rem; } }
 
 /* ── Hero gradient — dark navy ── */
 .bg-hero-gradient {
@@ -186,14 +186,14 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #1260ae;
+  color: #1261ae;
 }
 .section-label::before {
   content: "";
   display: block;
   width: 2rem;
   height: 2px;
-  background-color: #1260ae;
+  background-color: #1261ae;
   flex-shrink: 0;
 }
 
@@ -201,7 +201,7 @@
 .divider {
   width: 3rem;
   height: 3px;
-  background: linear-gradient(90deg, #1260ae, #7dbe31);
+  background: linear-gradient(90deg, #1261ae, #7ebf31);
   border-radius: 2px;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
@@ -213,7 +213,7 @@
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
-  color: #1260ae;
+  color: #1261ae;
 }
 
 /* ── Tag/badge ── */
@@ -269,7 +269,7 @@
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
-.btn-secondary:hover { border-color: #1260ae; color: #1260ae; }
+.btn-secondary:hover { border-color: #1261ae; color: #1261ae; }
 .btn-secondary:active { transform: scale(0.97); }
 
 /* ── Ghost white button (on dark bg) ── */
@@ -307,8 +307,8 @@
 }
 .form-input:focus {
   outline: none;
-  border-color: #1260ae;
-  box-shadow: 0 0 0 3px rgba(18, 96, 174, 0.12);
+  border-color: #1261ae;
+  box-shadow: 0 0 0 3px rgba(18, 97, 174, 0.12);
 }
 .form-input::placeholder { color: var(--color-ink-subtle); }
 .form-label {
@@ -330,8 +330,8 @@
   background-color: var(--color-surface-2);
 }
 .upload-zone:hover, .upload-zone.drag-over {
-  border-color: #1260ae;
-  background-color: rgba(18, 96, 174, 0.04);
+  border-color: #1261ae;
+  background-color: rgba(18, 97, 174, 0.04);
 }
 input#invoiceFile:focus-visible + .upload-zone {
   outline: 3px solid #005fcc;
@@ -355,7 +355,7 @@ input#invoiceFile:focus-visible + .upload-zone {
   transition: color 0.2s ease;
   white-space: nowrap;
 }
-.nav-link:hover, .nav-link.active { color: #1260ae; }
+.nav-link:hover, .nav-link.active { color: #1261ae; }
 
 /* ── Service card ── */
 .service-card {
@@ -396,10 +396,10 @@ input#invoiceFile:focus-visible + .upload-zone {
 /* ── Page hero (inner pages) ── */
 .page-hero {
   background: linear-gradient(135deg, #111827 0%, #1a2535 60%, #1e2d40 100%);
-  padding: 5rem 0 4rem;
+  padding: 4.5rem 0 3.5rem;
   color: white;
 }
-@media (min-width: 768px) { .page-hero { padding: 7rem 0 5rem; } }
+@media (min-width: 768px) { .page-hero { padding: 5.5rem 0 4rem; } }
 
 /* ── Prose ── */
 .prose-wscg p {

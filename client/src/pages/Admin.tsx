@@ -73,7 +73,7 @@ function LoginScreen({ onLogin }: { onLogin: (token: string) => void }) {
             type="submit"
             disabled={loginMutation.isPending || !password}
             className="w-full py-3 rounded-xl font-semibold text-sm text-white transition-colors duration-200 disabled:opacity-50"
-            style={{ background: "#1260ae" }}
+            style={{ background: "#1261ae" }}
           >
             {loginMutation.isPending ? "Signing in..." : "Sign In"}
           </button>
@@ -158,10 +158,10 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
         {/* Stats row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           {[
-            { label: "Total Quotes", value: stats?.totalQuotes ?? "—", sub: `${stats?.newQuotes ?? 0} new`, color: "#7dbe31" },
-            { label: "New Quotes", value: stats?.newQuotes ?? "—", sub: "awaiting review", color: "#1260ae" },
-            { label: "Contact Messages", value: stats?.totalContacts ?? "—", sub: `${stats?.newContacts ?? 0} unread`, color: "#efc509" },
-            { label: "Last Backup", value: stats?.lastBackup ? formatDate(stats.lastBackup).split(",")[0] : "Never", sub: stats?.lastBackup ? formatDate(stats.lastBackup).split(",")[1] : "No backups yet", color: "#7dbe31" },
+            { label: "Total Quotes", value: stats?.totalQuotes ?? "—", sub: `${stats?.newQuotes ?? 0} new`, color: "#7ebf31" },
+            { label: "New Quotes", value: stats?.newQuotes ?? "—", sub: "awaiting review", color: "#1261ae" },
+            { label: "Contact Messages", value: stats?.totalContacts ?? "—", sub: `${stats?.newContacts ?? 0} unread`, color: "#eec509" },
+            { label: "Last Backup", value: stats?.lastBackup ? formatDate(stats.lastBackup).split(",")[0] : "Never", sub: stats?.lastBackup ? formatDate(stats.lastBackup).split(",")[1] : "No backups yet", color: "#7ebf31" },
           ].map((s) => (
             <div key={s.label} className="bg-gray-900 rounded-xl p-5 border border-gray-800">
               <div className="text-3xl font-serif font-bold mb-1" style={{ color: s.color }}>{s.value}</div>
@@ -180,7 +180,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
               className={`px-5 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 ${
                 tab === t ? "text-white" : "text-gray-400 hover:text-white hover:bg-gray-800"
               }`}
-              style={tab === t ? { background: "#1260ae" } : {}}
+              style={tab === t ? { background: "#1261ae" } : {}}
             >
               {t === "quotes" ? `Quote Requests (${stats?.totalQuotes ?? 0})` :
                t === "contacts" ? `Contact Messages (${stats?.totalContacts ?? 0})` :
@@ -313,7 +313,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
                       <a
                         href={`mailto:${c.email}?subject=Re: Your inquiry to Workshop Creative Group`}
                         className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-lg text-white transition-colors duration-200"
-                        style={{ background: "#1260ae" }}
+                        style={{ background: "#1261ae" }}
                       >
                         Reply via Email
                       </a>
@@ -340,7 +340,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
                 onClick={() => runBackup.mutate({ token })}
                 disabled={runBackup.isPending}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-colors duration-200 disabled:opacity-50"
-                style={{ background: "#7dbe31" }}
+                style={{ background: "#7ebf31" }}
               >
                 {runBackup.isPending ? (
                   <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg> Backing up...</>
@@ -410,7 +410,7 @@ function Dashboard({ token, onLogout }: { token: string; onLogout: () => void })
             </div>
             <div className="bg-blue-950/40 border border-blue-800 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div><h3 className="text-white font-semibold text-sm">Email this guide and the copy recommendations</h3><p className="text-blue-200/70 text-xs mt-1">Sends a review-only content list and this operating guide to brent@workshopcreativegroup.com.</p></div>
-              <button onClick={() => sendDocumentation.mutate({ token })} disabled={sendDocumentation.isPending} className="px-4 py-2 rounded-lg text-sm font-semibold text-white disabled:opacity-50" style={{ background: "#1260ae" }}>{sendDocumentation.isPending ? "Sending…" : sendDocumentation.isSuccess ? "Sent" : "Email Guide"}</button>
+              <button onClick={() => sendDocumentation.mutate({ token })} disabled={sendDocumentation.isPending} className="px-4 py-2 rounded-lg text-sm font-semibold text-white disabled:opacity-50" style={{ background: "#1261ae" }}>{sendDocumentation.isPending ? "Sending…" : sendDocumentation.isSuccess ? "Sent" : "Email Guide"}</button>
             </div>
             {[
               ["1. Upload", "Choose Upload image or video. Images must be JPG, PNG, or WebP under 20 MB and no larger than 6,000 px on either side. Videos must be MP4 or WebM under 250 MB. The admin explains why any unsuitable file is rejected."],

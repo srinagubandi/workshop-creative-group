@@ -20,11 +20,11 @@ function TestimonialQuote({
         id={quoteId}
         className="font-serif text-base leading-8 text-gray-800 md:text-[1.0625rem]"
       >
-        <span aria-hidden="true" className="text-2xl leading-none align-top" style={{ color: "#1260ae" }}>
+        <span aria-hidden="true" className="text-2xl leading-none align-top" style={{ color: "#1261ae" }}>
           “
         </span>
         {preview}
-        <span aria-hidden="true" className="text-2xl leading-none align-top" style={{ color: "#1260ae" }}>
+        <span aria-hidden="true" className="text-2xl leading-none align-top" style={{ color: "#1261ae" }}>
           ”
         </span>
       </blockquote>
@@ -81,7 +81,7 @@ export function TestimonialSection() {
                   ) : (
                     <div
                       className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-serif text-lg font-bold text-white"
-                      style={{ background: "#1260ae" }}
+                      style={{ background: "#1261ae" }}
                       aria-hidden="true"
                     >
                       {item.authorName.charAt(0)}
@@ -90,7 +90,7 @@ export function TestimonialSection() {
                   <div className="min-w-0">
                     <div className="font-semibold leading-6 text-gray-900">{item.authorName}</div>
                     {item.authorTitle && <div className="text-sm leading-5 text-gray-600">{item.authorTitle}</div>}
-                    {item.company && <div className="text-sm font-semibold leading-5" style={{ color: "#1260ae" }}>{item.company}</div>}
+                    {item.company && <div className="text-sm font-semibold leading-5" style={{ color: "#1261ae" }}>{item.company}</div>}
                   </div>
                 </figcaption>
                 <TestimonialQuote quote={item.quote} quoteId={quoteId} authorName={item.authorName} />
