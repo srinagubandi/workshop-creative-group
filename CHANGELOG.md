@@ -2,6 +2,23 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.9.0] — 2026-09-01
+
+### Changed
+
+- Aligned the Home-page service-card icon presentation with the Graphic Design benefit-card system.
+- Replaced the previous 64px colored service icon containers with 48px white rounded containers using the shared gray border.
+- Matched the Home service artwork to the Graphic Design page’s 36px decorative icon scale, while retaining the approved blue and green service-specific glyphs.
+- Removed the yellow-tinted Print Procurement icon container for the requested green-and-blue visual consistency.
+
+### Verified Locally
+
+- Created and checksummed a fresh source archive and complete Git-history bundle from `f37466d6da39908beaa3c5d957c21b90cdb65df6` before implementation.
+- Created and verified a fresh Railway manual database backup at `2026-09-01T20:45:57.000Z`; reported size 252,903 bytes.
+- Passed TypeScript, production build, and 36 automated regression tests.
+- Confirmed all three rendered Home service icon containers are 48 × 48px white containers with 36 × 36px decorative imagery, matching the Graphic Design benefit-card pattern.
+- Passed the local Home axe-core WCAG 2.0/2.1/2.2 A/AA scan with 0 violations. Nine color-contrast checks remain axe incomplete/manual-review items.
+
 ## [1.8.3] — 2026-09-01
 
 ### Added
