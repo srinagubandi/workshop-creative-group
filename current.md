@@ -6,16 +6,22 @@
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.7.0` — deployed and verified |
-| Application feature branch | `feature/v1.7.0-statistic-print-icon-20260831` |
-| Application feature commit | `2b0f21ba4c15c2d5610c197ef111e3aa9ea2e7b3` |
-| Pull request | [#14](https://github.com/srinagubandi/workshop-creative-group/pull/14), merged |
-| Application merge commit | `58843f11616c63c5422e3cd8c1549025daac96fe` |
-| Latest verified application deployment | Railway GitHub deployment status reported **success** for v1.7.0 merge commit `58843f11616c63c5422e3cd8c1549025daac96fe` |
-| Deployment-evidence record | `v1.7.1` — this branch records verified v1.7.0 production evidence |
+| Application release | `v1.8.0` — candidate, locally validated; pending publication and Railway verification |
+| Application feature branch | `feature/v1.8.0-green-brand-voice-icon-20260901` |
+| Application feature commit | Pending local commit |
+| Pull request | Pending creation |
+| Application merge commit | Pending merge |
+| Latest verified application deployment | Railway GitHub deployment status reported **success** for v1.7.1 documentation merge commit `b3d28dcca81a9640b0651aa6aab534fc6a1fb33f` |
+| Deployment-evidence record | Pending v1.8.1 record after Railway validation |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
+
+## v1.8.0 Candidate Scope — Green Graphic Design Brand Voice Icon
+
+The v1.8.0 candidate replaces the yellow decorative Brand Voice icon on the Graphic Design page with a green `#7EBF31` CSS mask based on the approved `branding-828.png` silhouette. This preserves the icon’s recognizable shape and consistent card layout without introducing unapproved imagery. The icon remains explicitly decorative with `aria-hidden="true"`; the benefit heading and description remain the accessible content.
+
+Fresh source and Railway database backups were verified before implementation. `V180_LOCAL_VALIDATION.md` records TypeScript, 36 automated regression tests, production build, rendered visual review, and a local Graphic Design axe-core WCAG A/AA scan with 0 violations.
 
 ## v1.7.0 Deployed Scope — Matched Green Statistic and Blue Print Procurement Icon
 
