@@ -2,6 +2,21 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.9.1] — 2026-09-01
+
+### Added
+
+- Added `V190_POSTDEPLOY_VALIDATION.md` as the durable production record for the v1.9.0 Home service-card icon alignment.
+- Finalized `current.md` with the v1.9.0 feature branch, pull request, merge commit, Railway success, verified icon dimensions, image loading, decorative semantics, and live axe-core result.
+
+### Verified
+
+- Published `feature/v1.9.0-home-icon-alignment-20260901` at `9665aafb7f94d81402d233edac62c5b17e35acf1`.
+- Created and cleanly merged [pull request #19](https://github.com/srinagubandi/workshop-creative-group/pull/19) into `main`, producing commit `03414445592e38ad4626ecbdc80ee0e030c1687f`.
+- Railway GitHub deployment status reported **success** for the v1.9.0 merge commit.
+- Live verification confirmed all three Home service cards use white 48px rounded bordered containers, 36px approved glyphs, and retained decorative-image semantics. Deferred images loaded successfully once in view.
+- The live Home axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations** and 28 passed rules. Nine color-contrast incomplete results remain manual-review items.
+
 ## [1.9.0] — 2026-09-01
 
 ### Changed
