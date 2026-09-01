@@ -6,24 +6,24 @@
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.9.2` — candidate, locally validated; pending publication and Railway verification |
+| Application release | `v1.9.2` — deployed and verified |
 | Application feature branch | `feature/v1.9.2-home-icon-link-color-alignment-20260901` |
-| Application feature commit | Pending local commit |
-| Pull request | Pending creation |
-| Application merge commit | Pending merge |
-| Latest verified application deployment | Railway GitHub deployment status reported **success** for v1.9.1 documentation merge commit `0629243806cb44c01ac7d951200c2d5269a160d6` |
-| Deployment-evidence record | Pending v1.9.3 record after Railway validation |
+| Application feature commit | `890ea97629242852641a35377e73025fdf724290` |
+| Pull request | [#21](https://github.com/srinagubandi/workshop-creative-group/pull/21), merged |
+| Application merge commit | `3ae393f91c8e156dde75142d15aa0d85cdba9491` |
+| Latest verified application deployment | Railway GitHub deployment status reported **success** for v1.9.2 merge commit `3ae393f91c8e156dde75142d15aa0d85cdba9491` |
+| Deployment-evidence record | `v1.9.3` — this branch records verified v1.9.2 production evidence |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
 
-## v1.9.2 Candidate Scope — Home Icon-Link Color Alignment and Quote Normalization
+## v1.9.2 Deployed Scope — Home Icon-Link Color Alignment and Quote Normalization
 
-The v1.9.2 candidate aligns every Home service-card Learn More link and arrow to its decorative service icon: blue for Large Format Printing and Print Procurement, plus accessibility-safe dark green for Graphic Design. The Graphic Design source icon is rendered with a scoped dark-green filter so it visually matches its readable `#497C16` Learn More text on the white card.
+The v1.9.2 release aligns every Home service-card Learn More link and arrow to its decorative service icon: blue for Large Format Printing and Print Procurement, plus accessibility-safe dark green for Graphic Design. The Graphic Design source icon is rendered with a scoped dark-green filter so it visually matches its readable `#497C16` Learn More text on the white card.
 
 The testimonial renderer now calls `normalizeTestimonialQuote` before determining quote length, collapsed preview text, or expanded full text. The helper removes only leading/trailing straight or curly double-quote punctuation; the component retains its decorative blue opening and closing quote marks. Internal apostrophes and any quotation punctuation within the testimonial remain untouched.
 
-Fresh source and Railway database backups were verified before this work. `V192_LOCAL_VALIDATION.md` records application checks, 38 regression tests, Home icon-link color mapping, and renderer normalization coverage.
+Fresh source and Railway database backups were verified before this work. `V192_LOCAL_VALIDATION.md` records application checks, 38 regression tests, Home icon-link color mapping, and renderer normalization coverage. `V192_POSTDEPLOY_VALIDATION.md` records PR #21, Railway success, live matched Home colors, all five normalized testimonial text nodes, expanded testimonial behavior, retained decorative blue quote spans, preserved internal punctuation, and a live Home axe-core WCAG A/AA scan with 0 violations.
 
 ## v1.9.0 Deployed Scope — Home Service Icons Aligned with Graphic Design
 
