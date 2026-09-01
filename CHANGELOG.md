@@ -2,6 +2,21 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.8.3] — 2026-09-01
+
+### Added
+
+- Added `V182_POSTDEPLOY_VALIDATION.md` as the durable production record for the v1.8.2 visible-green Brand Voice icon correction.
+- Finalized `current.md` with the v1.8.2 feature branch, pull request, merge commit, Railway success, live image state, visible green rendering, and accessibility evidence.
+
+### Verified
+
+- Published `fix/v1.8.2-visible-green-brand-voice-icon-20260901` at `8464cc38e2d97bed6199240b88e2a5df66de07a0`.
+- Created and cleanly merged [pull request #17](https://github.com/srinagubandi/workshop-creative-group/pull/17) into `main`, producing commit `ca0d3e0e703b7bdf8a0a5bdb5cc7a41dfc6fb011`.
+- Railway GitHub deployment status reported **success** for the v1.8.2 merge commit.
+- Live production verification confirmed the Graphic Design Brand Voice image loads at 1024 × 1024, visibly renders green through the corrected image filter, remains decorative, and preserves the benefit-card layout.
+- The live Graphic Design axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations** and 23 passed rules. Five color-contrast incomplete results remain manual-review items.
+
 ## [1.8.2] — 2026-09-01
 
 ### Fixed
