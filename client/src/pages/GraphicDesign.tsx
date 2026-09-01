@@ -28,6 +28,7 @@ const DESIGN_BENEFITS = [
     title: "Consistent Brand Voice",
     desc: "Cohesive design across all touchpoints builds recognition and trust with your audience.",
     iconSrc: "/images/branding-828.png",
+    useGreenMask: true,
   },
 ];
 
@@ -83,7 +84,11 @@ export default function GraphicDesign() {
               {DESIGN_BENEFITS.map((b) => (
                 <div key={b.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
                   <div className="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
-                    <img src={b.iconSrc} alt="" aria-hidden="true" className="w-9 h-9 object-contain" loading="lazy" />
+                    {b.useGreenMask ? (
+                      <span className="brand-voice-green-icon" aria-hidden="true" />
+                    ) : (
+                      <img src={b.iconSrc} alt="" aria-hidden="true" className="w-9 h-9 object-contain" loading="lazy" />
+                    )}
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">{b.title}</h3>

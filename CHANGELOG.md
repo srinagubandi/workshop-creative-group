@@ -2,6 +2,20 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.8.0] — 2026-09-01
+
+### Changed
+
+- Replaced the yellow decorative icon for the Graphic Design page’s `Consistent Brand Voice` benefit with an approved-silhouette CSS mask rendered in green `#7EBF31`.
+- Retained the existing benefit-card layout and accessible visible heading/description; the decorative mask is excluded from assistive-technology output with `aria-hidden="true"`.
+
+### Verified Locally
+
+- Created and checksummed a fresh source archive and complete Git-history bundle from `b3d28dcca81a9640b0651aa6aab534fc6a1fb33f` before implementation.
+- Created and verified a fresh Railway manual database backup at `2026-09-01T14:37:40.000Z`; reported size 251,028 bytes.
+- Passed TypeScript, production build, and 36 automated regression tests.
+- Passed a local Graphic Design axe-core WCAG 2.0/2.1/2.2 A/AA scan with 0 violations. Five color-contrast checks remain axe incomplete/manual-review items.
+
 ## [1.7.1] — 2026-08-31
 
 ### Added
