@@ -2,6 +2,22 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.9.3] — 2026-09-01
+
+### Added
+
+- Added `V192_POSTDEPLOY_VALIDATION.md` as the durable production record for the v1.9.2 Home color alignment and required testimonial quote normalization.
+- Finalized `current.md` with the v1.9.2 feature branch, pull request, merge commit, Railway success, Home icon-link mapping, live normalized testimonial verification, and accessibility evidence.
+
+### Verified
+
+- Published `feature/v1.9.2-home-icon-link-color-alignment-20260901` at `890ea97629242852641a35377e73025fdf724290`.
+- Created and cleanly merged [pull request #21](https://github.com/srinagubandi/workshop-creative-group/pull/21) into `main`, producing commit `3ae393f91c8e156dde75142d15aa0d85cdba9491`.
+- Railway GitHub deployment status reported **success** for the v1.9.2 merge commit.
+- Live production verification confirmed blue/blue, accessible-green/green, and blue/blue matching of Home service icons and Learn More links.
+- All five production testimonial text nodes begin and end without source double-quote punctuation; the three expandable testimonials also passed expanded-state verification. Each card retains one decorative blue opening mark and one decorative blue closing mark.
+- The live Home axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations** and 28 passed rules. Nine color-contrast incomplete results remain manual-review items.
+
 ## [1.9.2] — 2026-09-01
 
 ### Changed
