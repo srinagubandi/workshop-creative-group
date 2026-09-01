@@ -2,6 +2,21 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.8.2] — 2026-09-01
+
+### Fixed
+
+- Replaced the v1.8.0 CSS-mask implementation after production inspection showed it did not visibly paint the Brand Voice glyph, despite the approved source image loading successfully.
+- Retained `branding-828.png` but changed its green treatment to a reliable standard-image filter: `hue-rotate(38deg) saturate(75%) brightness(93%)`, producing a visible green icon in the requested color family.
+- Preserved the decorative empty `alt` and `aria-hidden="true"` semantics, existing 36px icon footprint, benefit-card hierarchy, and visible benefit copy.
+
+### Verified Locally
+
+- Created and checksummed a fresh source archive and complete Git-history bundle from `a53701d14ef639101d9997a6e2f250b03a9ae580` before corrective implementation.
+- Created and verified a fresh Railway manual database backup at `2026-09-01T14:47:41.000Z`; reported size 251,474 bytes.
+- Passed TypeScript, production build, and 36 automated regression tests.
+- Confirmed the corrected Brand Voice image loads at 1024 × 1024, visibly renders green, remains decorative, and passes a local Graphic Design axe-core WCAG 2.0/2.1/2.2 A/AA scan with 0 violations. Five color-contrast checks remain axe incomplete/manual-review items.
+
 ## [1.8.0] — 2026-09-01
 
 ### Changed

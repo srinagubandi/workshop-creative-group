@@ -213,15 +213,10 @@
   width: 2.25rem;
   height: 2.25rem;
   flex: 0 0 auto;
-  background-color: #7ebf31;
-  mask-image: url("/images/branding-828.png");
-  mask-position: center;
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  -webkit-mask-image: url("/images/branding-828.png");
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
+  object-fit: contain;
+  /* Recolors the approved yellow branding glyph to a close visual match for #7EBF31.
+     Unlike CSS masking, this renders reliably against Railway's production media delivery. */
+  filter: hue-rotate(38deg) saturate(75%) brightness(93%);
 }
 
 /* ── Stat number ── */
