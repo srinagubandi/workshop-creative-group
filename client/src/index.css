@@ -219,6 +219,13 @@
   filter: hue-rotate(38deg) saturate(75%) brightness(93%);
 }
 
+/* ── Home service-card icon/link alignment ── */
+.home-service-icon-green {
+  /* The source asset is lime green. This filter yields the same accessibility-safe
+     dark green used by the adjacent Learn More text on a white card. */
+  filter: brightness(0) saturate(100%) invert(38%) sepia(31%) saturate(1271%) hue-rotate(45deg) brightness(88%) contrast(91%);
+}
+
 /* ── Stat number ── */
 .stat-number {
   font-family: var(--font-serif);

@@ -1,4 +1,5 @@
 import { trpc } from "@/lib/trpc";
+import { normalizeTestimonialQuote } from "@shared/testimonialPresentation";
 import { useState } from "react";
 
 function TestimonialQuote({
@@ -11,8 +12,10 @@ function TestimonialQuote({
   authorName: string;
 }) {
   const [expanded, setExpanded] = useState(false);
-  const canCollapse = quote.length > 320;
-  const preview = canCollapse && !expanded ? `${quote.slice(0, 320).trimEnd()}…` : quote;
+  // Normalize outer quote punctuation before either preview or full text is rendered.
+  const displayQuote = normalizeTestimonialQuote(quote);
+  const canCollapse = displayQuote.length > 320;
+  const preview = canCollapse && !expanded ? `${displayQuote.slice(0, 320).trimEnd()}…` : displayQuote;
 
   return (
     <div className="mt-6">

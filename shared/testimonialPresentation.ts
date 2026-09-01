@@ -13,3 +13,15 @@ export function getTestimonialSortUpdates(ids: number[]) {
 export function getTestimonialLayout(count: number): "single" | "grid" {
   return count === 1 ? "single" : "grid";
 }
+
+/**
+ * Removes only duplicated quotation punctuation that wraps an imported testimonial.
+ * This must run before measuring, truncating, or rendering the quote so the public
+ * component owns one consistent decorative blue quote treatment in every state.
+ */
+export function normalizeTestimonialQuote(quote: string): string {
+  return quote
+    .trim()
+    .replace(/^[\u201c\u201d\"]+\s*/, "")
+    .replace(/\s*[\u201c\u201d\"]+$/, "");
+}

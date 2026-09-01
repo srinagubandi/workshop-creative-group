@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getTestimonialLayout, getTestimonialSortUpdates, orderTestimonials } from "../shared/testimonialPresentation";
+import { getTestimonialLayout, getTestimonialSortUpdates, normalizeTestimonialQuote, orderTestimonials } from "../shared/testimonialPresentation";
 
 describe("testimonial presentation safeguards", () => {
   it("returns public records in persisted sort order after an administrator reorders IDs", () => {
@@ -18,5 +18,15 @@ describe("testimonial presentation safeguards", () => {
     expect(getTestimonialLayout(1)).toBe("single");
     expect(getTestimonialLayout(2)).toBe("grid");
     expect(getTestimonialLayout(4)).toBe("grid");
+  });
+
+  it("removes duplicated outer quotes before public testimonial text is rendered", () => {
+    expect(normalizeTestimonialQuote('““Working with Brent was exceptional.””')).toBe("Working with Brent was exceptional.");
+    expect(normalizeTestimonialQuote('"A reliable partner from start to finish."')).toBe("A reliable partner from start to finish.");
+  });
+
+  it("preserves internal apostrophes and quotation punctuation", () => {
+    expect(normalizeTestimonialQuote('“They said "great work" and we\'ve agreed.”')).toBe("They said \"great work\" and we've agreed.");
+    expect(normalizeTestimonialQuote("We've partnered for years.")).toBe("We've partnered for years.");
   });
 });
