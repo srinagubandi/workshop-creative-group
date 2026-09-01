@@ -6,16 +6,22 @@
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.8.2` — deployed and verified |
-| Application feature branch | `fix/v1.8.2-visible-green-brand-voice-icon-20260901` |
-| Application feature commit | `8464cc38e2d97bed6199240b88e2a5df66de07a0` |
-| Pull request | [#17](https://github.com/srinagubandi/workshop-creative-group/pull/17), merged |
-| Application merge commit | `ca0d3e0e703b7bdf8a0a5bdb5cc7a41dfc6fb011` |
-| Latest verified application deployment | Railway GitHub deployment status reported **success** for v1.8.2 merge commit `ca0d3e0e703b7bdf8a0a5bdb5cc7a41dfc6fb011` |
-| Deployment-evidence record | `v1.8.3` — this branch records verified v1.8.2 production evidence |
+| Application release | `v1.9.0` — candidate, locally validated; pending publication and Railway verification |
+| Application feature branch | `feature/v1.9.0-home-icon-alignment-20260901` |
+| Application feature commit | Pending local commit |
+| Pull request | Pending creation |
+| Application merge commit | Pending merge |
+| Latest verified application deployment | Railway GitHub deployment status reported **success** for v1.8.3 documentation merge commit `f37466d6da39908beaa3c5d957c21b90cdb65df6` |
+| Deployment-evidence record | Pending v1.9.1 record after Railway validation |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
+
+## v1.9.0 Candidate Scope — Home Service Icons Aligned with Graphic Design
+
+The v1.9.0 candidate aligns the Home-page Large Format Printing, Graphic Design, and Print Procurement icon treatments with the established Graphic Design benefit-card system. Each Home card now uses the same white 48px rounded bordered container and 36px decorative service artwork footprint; individual blue and green service glyphs remain distinct so the cards still communicate their service purpose. The yellow-tinted Print Procurement container is removed for the requested green-and-blue visual consistency.
+
+Fresh source and Railway database backups were verified before implementation. `V190_LOCAL_VALIDATION.md` records TypeScript, 36 automated regression tests, production build, rendered dimensions and visual treatment, retained decorative semantics, and a local Home axe-core WCAG A/AA scan with 0 violations.
 
 ## v1.8.2 Deployed Scope — Visible Green Graphic Design Brand Voice Icon
 
