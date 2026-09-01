@@ -12,6 +12,7 @@ import { Link } from "wouter";
 const SERVICES = [
   {
     iconSrc: "/images/service-large-format-828.png",
+    iconTone: "blue",
     title: "Large Format Printing",
     copy: "Custom signage, banners, displays, wall graphics, window graphics, retail graphics, and wide format printing solutions designed to help businesses stand out.",
     href: "/large-format-printing",
@@ -19,6 +20,7 @@ const SERVICES = [
   },
   {
     iconSrc: "/images/service-graphic-design-home-828.png",
+    iconTone: "green",
     title: "Graphic Design",
     copy: "Professional graphic design and branding services for logos, marketing materials, sales collateral, trade show graphics, packaging, and business communications.",
     href: "/graphic-design",
@@ -26,10 +28,11 @@ const SERVICES = [
   },
   {
     iconSrc: "/images/service-print-procurement-blue-831.png",
+    iconTone: "blue",
     title: "Print Procurement",
     copy: "Access to a trusted national network for commercial printing, packaging, labels, promotional products, apparel, direct mail, and specialty print solutions.",
     href: "/print-procurement",
-    learnColor: "#806700",
+    learnColor: "#1261ae",
   },
 ];
 
@@ -224,7 +227,13 @@ export default function Home() {
             {SERVICES.map((service) => (
               <Link key={service.href} href={service.href} className="service-card group block">
                 <div className="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
-                  <img src={service.iconSrc} alt="" aria-hidden="true" className="w-9 h-9 object-contain" loading="lazy" />
+                  <img
+                    src={service.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className={`w-9 h-9 object-contain${service.iconTone === "green" ? " home-service-icon-green" : ""}`}
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className="text-xl font-serif font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-5">{service.copy}</p>

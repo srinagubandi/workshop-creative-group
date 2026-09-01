@@ -2,6 +2,24 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.9.2] — 2026-09-01
+
+### Changed
+
+- Matched every Home service-card Learn More link and arrow to its decorative icon color: blue for Large Format Printing and Print Procurement, and accessible dark green for Graphic Design.
+- Added a scoped Graphic Design icon filter so the decorative green glyph matches the readable `#497C16` Learn More link on white.
+- Added enforced pre-render `normalizeTestimonialQuote` processing before quote length, preview truncation, and expanded full-text rendering.
+- Retained the component’s decorative blue quotation marks while removing only duplicated leading/trailing straight or curly double-quote punctuation from imported testimonial text.
+
+### Verified Locally
+
+- Created and checksummed a fresh source archive and complete Git-history bundle from `0629243806cb44c01ac7d951200c2d5269a160d6` before implementation.
+- Created and verified a fresh Railway manual database backup at `2026-09-01T21:12:48.000Z`; reported size 253,580 bytes.
+- Passed TypeScript, production build, and 38 automated regression tests.
+- Added regression coverage for repeated outer quote marks and for preserving internal apostrophes and internal quotation punctuation.
+- Confirmed Home icon-link pairs render blue/blue, accessible green/green, and blue/blue respectively; all three images retain decorative semantics and load successfully in view.
+- Passed the local Home axe-core WCAG 2.0/2.1/2.2 A/AA scan with 0 violations. Nine color-contrast checks remain axe incomplete/manual-review items.
+
 ## [1.9.1] — 2026-09-01
 
 ### Added
