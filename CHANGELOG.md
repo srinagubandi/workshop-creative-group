@@ -2,6 +2,22 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.10.1] — 2026-10-26
+
+### Added
+
+- Added `V110_POSTDEPLOY_VALIDATION.md` as the durable production record for the v1.10.0 Railway media recovery and footer social-link release.
+- Added `V110_SOURCES.md` to retain the official Railway configuration/deployment source ledger and verified social destinations used for the release.
+- Finalized `current.md` with v1.10.0 feature commit, pull request, merge commit, Railway success, complete live media census, footer-link semantics, keyboard evidence, and live accessibility results.
+
+### Verified
+
+- Created and cleanly merged [pull request #23](https://github.com/srinagubandi/workshop-creative-group/pull/23), producing v1.10.0 main commit `e97a76c9d94ed78c30509b85184582a884856c74`.
+- Railway deployment `19f1f685-0634-4b76-b610-5cbb23fff327` reported **success** for the merged v1.10.0 commit.
+- The public Home route returned HTTP 200; all 130 published managed media routes returned HTTP 200 with expected image or video content, including all 30 Home client logos.
+- Live footer inspection confirmed the labeled Instagram and LinkedIn links use the intended URLs, new-tab safety attributes, readable new-tab notice, visible keyboard focus, and 24px minimum height.
+- The live Home axe-core WCAG 2.0/2.1/2.2 A/AA scan reported **0 violations** and 43 passed rules. The remaining `color-contrast` result is axe incomplete/manual review.
+
 ## [1.10.0] — 2026-10-26
 
 ### Fixed
