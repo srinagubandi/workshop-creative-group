@@ -6,24 +6,26 @@
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.10.0` — candidate: media-storage recovery record and accessible footer social links |
+| Application release | `v1.10.0` — deployed and verified: Railway media recovery and accessible footer social links |
 | Application feature branch | `fix/v1.10.0-media-recovery-social-links-20261026` |
-| Application feature commit | Pending local validation and review |
-| Pull request | Pending |
-| Application base commit | `41dc0b0cdfa8b45af7e2373140be2358810d74b7` |
-| Production storage recovery | Completed before application changes; all 130 published managed media routes return HTTP 200 after Railway bucket-variable refresh |
+| Application feature commit | `099c7835a45a9ef27499e18e989140cdbf8de6e1` |
+| Pull request | [#23](https://github.com/srinagubandi/workshop-creative-group/pull/23), merged |
+| Application merge commit | `e97a76c9d94ed78c30509b85184582a884856c74` |
+| Latest verified application deployment | Railway deployment `19f1f685-0634-4b76-b610-5cbb23fff327` reported **success** for merge commit `e97a76c9d94ed78c30509b85184582a884856c74` |
+| Deployment-evidence record | `v1.10.1` — this branch records verified v1.10.0 production evidence and source ledger |
+| Production storage recovery | Verified before and after the application release; all 130 published managed media routes return HTTP 200 after the Railway bucket-variable refresh |
 | Fresh pre-change database backup | Verified protected export `wscg-manual-backup-2026-10-27-02-32-08.sql` at `2026-10-27T02:32:08.000Z`; 255,508 bytes |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
 
-## v1.10.0 Candidate Scope — Railway Media Recovery and Footer Social Links
+## v1.10.0 Deployed Scope — Railway Media Recovery and Footer Social Links
 
 The production Railway Bucket variable refresh restored all published Work-gallery and Home client-logo media delivery after storage signing failures caused 47 of 130 managed media routes to return HTTP 500. The recovery retains the existing database-approved media catalogue, placement ordering, descriptive alternative text, and publication controls; it does not replace managed content with an unreviewed static catalogue.
 
-The candidate adds a visible **Follow Workshop Creative Group** footer navigation with the supplied Instagram profile and the verified public LinkedIn company page. Both external links use readable text, keyboard-visible focus styling, a minimum 24px target height, `target="_blank"`, `rel="noopener noreferrer"`, and screen-reader notice that they open in a new tab.
+The deployed release adds a visible **Follow Workshop Creative Group** footer navigation with the supplied Instagram profile and the verified public LinkedIn company page. Both external links use readable text, keyboard-visible focus styling, a minimum 24px target height, `target="_blank"`, `rel="noopener noreferrer"`, and screen-reader notice that they open in a new tab.
 
-Before implementation, a checksummed source archive and complete Git-history bundle were created from `41dc0b0cdfa8b45af7e2373140be2358810d74b7`; the protected production database backup `wscg-manual-backup-2026-10-27-02-32-08.sql` was also created and verified with a reported size of 255,508 bytes. `V110_LOCAL_VALIDATION.md` records the completed local release gate: TypeScript, 38 automated regression tests, production build, rendered social-link assertions, keyboard focus/target-size checks, and a Home axe-core WCAG 2.0/2.1/2.2 A/AA scan with 0 violations and 38 passed rules. The color-contrast incomplete result remains a manual-review item.
+Before implementation, a checksummed source archive and complete Git-history bundle were created from `41dc0b0cdfa8b45af7e2373140be2358810d74b7`; the protected production database backup `wscg-manual-backup-2026-10-27-02-32-08.sql` was also created and verified with a reported size of 255,508 bytes. `V110_LOCAL_VALIDATION.md` records the completed local release gate: TypeScript, 38 automated regression tests, production build, rendered social-link assertions, keyboard focus/target-size checks, and a Home axe-core WCAG 2.0/2.1/2.2 A/AA scan with 0 violations and 38 passed rules. `V110_POSTDEPLOY_VALIDATION.md` records the merged PR #23, Railway success, 130/130 successful live managed-media routes, live social-link semantics, visible keyboard focus, and a live Home axe-core scan with 0 violations and 43 passed rules. The color-contrast incomplete result remains a manual-review item.
 
 ## v1.9.2 Deployed Scope — Home Icon-Link Color Alignment and Quote Normalization
 
