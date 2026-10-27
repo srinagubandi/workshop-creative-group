@@ -2,6 +2,31 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.10.0] — 2026-10-26
+
+### Fixed
+
+- Restored production Railway Bucket delivery for the Work gallery and Home client-logo gallery by refreshing the `AWS_DEFAULT_REGION` bucket-variable reference and redeploying the web service.
+- Verified every one of the 130 published managed media routes returns HTTP 200 with image or video content after recovery; the existing database-controlled publication, ordering, and descriptive metadata remain authoritative.
+
+### Added
+
+- Added visible Instagram and LinkedIn links to a labeled **Follow Workshop Creative Group** navigation in the footer brand column.
+- Made each social link an external, new-tab link with `rel="noopener noreferrer"`, visible keyboard focus, readable link text, and screen-reader notice of the new-tab behavior.
+
+### Verified Before Application Changes
+
+- Created and verified a checksummed source archive and complete Git-history bundle from `41dc0b0cdfa8b45af7e2373140be2358810d74b7`.
+- Created and verified fresh protected production database backup `wscg-manual-backup-2026-10-27-02-32-08.sql`; reported size: 255,508 bytes.
+- Confirmed Railway Bucket uses the documented virtual-hosted addressing mode and all 130 published managed media routes are served successfully after the recovery redeploy.
+
+### Verified Locally
+
+- Passed `pnpm check`, `pnpm test`, and `pnpm build`; the regression suite reported 38 passing tests across 10 files.
+- Confirmed the built Home footer renders one labeled social navigation with visible Instagram and LinkedIn links using the intended destination URLs, `target="_blank"`, and `rel="noopener noreferrer"`.
+- Confirmed keyboard focus reaches the Instagram link, matches `:focus-visible`, presents a solid outline, and has a 24px minimum height.
+- Passed a local Home axe-core WCAG 2.0/2.1/2.2 A/AA scan with 0 violations and 38 passed rules. The remaining `color-contrast` result is axe incomplete/manual review.
+
 ## [1.9.3] — 2026-09-01
 
 ### Added

@@ -48,6 +48,33 @@ export default function Footer() {
             <p className="footer-copy text-sm font-medium">
               Serving Businesses Nationwide
             </p>
+            <nav className="mt-5" aria-label="Follow Workshop Creative Group">
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/75">
+                Follow Workshop Creative Group
+              </p>
+              <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 list-none m-0 p-0">
+                <li>
+                  <a
+                    href="https://www.instagram.com/workshopcreativegroup/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-6 items-center text-sm font-semibold text-white/85 underline underline-offset-4 decoration-white/50 transition-colors duration-200 hover:text-white hover:decoration-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  >
+                    Instagram <span className="sr-only">(opens in a new tab)</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/workshop-creative-group"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-6 items-center text-sm font-semibold text-white/85 underline underline-offset-4 decoration-white/50 transition-colors duration-200 hover:text-white hover:decoration-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  >
+                    LinkedIn <span className="sr-only">(opens in a new tab)</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
 
           {/* Services */}
