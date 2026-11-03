@@ -2,6 +2,19 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.12.0] — 2026-11-03
+
+### Changed
+
+- Reformat featured and future Blog listing cards into photo-left/text-right columns at 768px and wider, with a smaller 2:3 photo/text split. Stack cards below 768px for mobile readability.
+- Keep the photo uncropped, the headline immediately beside it, and the date/excerpt/Read Article link in the same text column. Posts without photos do not create a blank column.
+- Full article page, article text, author, publication date, metadata and stored records are unchanged.
+
+### Verified Before Release
+
+- Fresh source/Git bundle and complete 11-table DB backup checksummed before edits; temporary SSH key removed.
+- TypeScript, 58 tests, build, complete local browser/a11y/reflow checks and seven targeted card-geometry cases pass. Desktop/mobile screenshots reviewed; no source diff in the full article renderer or article text. Live Railway layout retest required. See `V1120_LOCAL_VALIDATION.md`.
+
 ## [1.11.2] — 2026-11-03
 
 ### Added — Documentation Evidence Only

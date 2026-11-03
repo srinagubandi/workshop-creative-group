@@ -64,17 +64,21 @@ export default function Blog() {
             ) : (
               <>
                 {featuredPost && (
-                  <article className="bg-white rounded-2xl border border-gray-200 overflow-hidden mb-8" aria-labelledby="featured-article-heading">
+                  <article className={`bg-white rounded-2xl border border-gray-200 overflow-hidden mb-8${featuredPost.coverImageUrl ? " md:grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]" : ""}`} aria-labelledby="featured-article-heading">
                     {featuredPost.coverImageUrl && (
-                      <img
-                        src={featuredPost.coverImageUrl}
-                        alt={featuredPost.coverImageAlt ?? ""}
-                        className="block h-auto w-full object-contain"
-                        loading="eager"
-                        decoding="async"
-                      />
+                      <div className="flex items-center bg-gray-50 p-4 md:p-5">
+                        <img
+                          src={featuredPost.coverImageUrl}
+                          alt={featuredPost.coverImageAlt ?? ""}
+                          width={1024}
+                          height={1024}
+                          className="block h-auto w-full rounded-xl object-contain"
+                          loading="eager"
+                          decoding="async"
+                        />
+                      </div>
                     )}
-                    <div className="p-6 md:p-8">
+                    <div className="min-w-0 self-center p-6 md:p-8">
                       <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                         <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-800">
                           Featured article
@@ -101,17 +105,21 @@ export default function Blog() {
                 {otherPosts.length > 0 && (
                   <div className="space-y-6">
                     {otherPosts.map((post) => (
-                      <article key={post.id} className="bg-white rounded-2xl border border-gray-200 overflow-hidden" aria-labelledby={`article-${post.id}-heading`}>
+                      <article key={post.id} className={`bg-white rounded-2xl border border-gray-200 overflow-hidden${post.coverImageUrl ? " md:grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]" : ""}`} aria-labelledby={`article-${post.id}-heading`}>
                         {post.coverImageUrl && (
-                          <img
-                            src={post.coverImageUrl}
-                            alt={post.coverImageAlt ?? ""}
-                            className="block h-auto w-full object-contain"
-                            loading="lazy"
-                            decoding="async"
-                          />
+                          <div className="flex items-center bg-gray-50 p-4 md:p-5">
+                            <img
+                              src={post.coverImageUrl}
+                              alt={post.coverImageAlt ?? ""}
+                              width={1024}
+                              height={1024}
+                              className="block h-auto w-full rounded-xl object-contain"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
                         )}
-                        <div className="p-6">
+                        <div className="min-w-0 self-center p-6 md:p-8">
                           <time dateTime={new Date(post.publishedAt).toISOString()} className="block text-gray-600 text-sm mb-3">
                             {formatBlogDate(post.publishedAt)}
                           </time>
