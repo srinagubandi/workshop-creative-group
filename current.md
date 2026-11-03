@@ -2,6 +2,12 @@
 
 > **Canonical operational record.** Update this file and `CHANGELOG.md` in the same pull request for every repository, configuration, content, or deployment change. `CURRENT_CONTEXT.md` remains the detailed historical and architectural record.
 
+## v1.12.0 — Two-Column Blog Listing Candidate
+
+The owner explicitly approved listing cards only: photo left and title/excerpt/date/link right at tablet/desktop widths; stacked below 768 CSS px. The full article page, content, byline and publication date remain unchanged. Both featured and future regular listing cards use a 2:3 photo/text grid only when a cover photo exists; photos remain uncropped and no-image posts have no empty column.
+
+Branch `feature/v1.12.0-two-column-blog-20261103` starts from evidence main `6ab59b2e3561f0757285f5d29799aa552d6b0505` (PR #27; Railway documentation deployment `786e7103-4103-46d5-9650-8b711b8aa020` succeeded). Fresh source archive/Git bundle and a new complete consistent 11-table snapshot (266,883 bytes) were checksummed before layout edits. Manifest: `/home/ubuntu/backups/workshop-creative-group-prechange-v1120-20261103T173310Z/MANIFEST.md`; temporary key removed. TypeScript, 58 tests, build, full local keyboard/reflow/axe audit and seven targeted card-layout cases pass. Visual inspection confirms title/photo adjacency and mobile stacking. Local no-photo fallback passes; `BlogPost.tsx` and article source have no diff. Deployment and live layout verification remain pending. See `V1120_LOCAL_VALIDATION.md`.
+
 ## v1.11.1 — Deployed and Verified Blog Release
 
 Branch `fix/v1.11.1-production-blog-validation-20261103` merged in PR #26 at `c7e7a3d6f053795d3af90bb1fb2dc30b8a6623ed`. Railway deployment `427617bd-7ccf-4f9a-a4d1-2f40d3bf5c13` succeeded. It corrects the production wildcard-path metadata and testimonial label-in-name findings. Quote normalization, decorative blue marks, and stored testimonial content remain unchanged.
