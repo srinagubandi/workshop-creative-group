@@ -2,11 +2,11 @@
 
 > **Canonical operational record.** Update this file and `CHANGELOG.md` in the same pull request for every repository, configuration, content, or deployment change. `CURRENT_CONTEXT.md` remains the detailed historical and architectural record.
 
-## v1.12.0 — Two-Column Blog Listing Candidate
+## v1.12.0 — Two-Column Blog Listing Deployed and Verified
 
 The owner explicitly approved listing cards only: photo left and title/excerpt/date/link right at tablet/desktop widths; stacked below 768 CSS px. The full article page, content, byline and publication date remain unchanged. Both featured and future regular listing cards use a 2:3 photo/text grid only when a cover photo exists; photos remain uncropped and no-image posts have no empty column.
 
-Branch `feature/v1.12.0-two-column-blog-20261103` starts from evidence main `6ab59b2e3561f0757285f5d29799aa552d6b0505` (PR #27; Railway documentation deployment `786e7103-4103-46d5-9650-8b711b8aa020` succeeded). Fresh source archive/Git bundle and a new complete consistent 11-table snapshot (266,883 bytes) were checksummed before layout edits. Manifest: `/home/ubuntu/backups/workshop-creative-group-prechange-v1120-20261103T173310Z/MANIFEST.md`; temporary key removed. TypeScript, 58 tests, build, full local keyboard/reflow/axe audit and seven targeted card-layout cases pass. Visual inspection confirms title/photo adjacency and mobile stacking. Local no-photo fallback passes; `BlogPost.tsx` and article source have no diff. Deployment and live layout verification remain pending. See `V1120_LOCAL_VALIDATION.md`.
+Branch `feature/v1.12.0-two-column-blog-20261103` merged in PR #28 at `8cb37bb976dff0fb0a8a62ac4b7ca47f67461d40`. Railway deployment `a07d2dd8-4183-442a-bd4a-52792f7b691d` succeeded. Fresh source archive/Git bundle and a complete consistent 11-table snapshot (266,883 bytes) were checksummed before layout edits; temporary key removed. Manifest: `/home/ubuntu/backups/workshop-creative-group-prechange-v1120-20261103T173310Z/MANIFEST.md`. TypeScript, 58 tests, build, local audit and seven card-layout cases pass. Live geometry passes at 320/375/768/1280/1536px; full keyboard/reflow and five sampled axe audits have 0 violations. All 130 managed media remain healthy; initial metadata/photo/sitemap and unchanged article identity/author/publication/update timestamps pass. See `V112_POSTDEPLOY_VALIDATION.md`. Final documentation evidence is `v1.12.1`; package stays `1.12.0`.
 
 ## v1.11.1 — Deployed and Verified Blog Release
 
@@ -28,15 +28,15 @@ Local gates passed: TypeScript, 54 regression tests, production build, exact sou
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.11.1` — deployed and verified: Blog launch, Air Zero article and production validation corrections |
-| Application feature branch | `fix/v1.11.1-production-blog-validation-20261103` |
-| Application feature commit | `745b8116fda74c7ad321559cb50ff3a5c3184d1a` |
-| Pull request | [#26](https://github.com/srinagubandi/workshop-creative-group/pull/26), merged; initial Blog release [#25](https://github.com/srinagubandi/workshop-creative-group/pull/25) |
-| Application merge commit | `c7e7a3d6f053795d3af90bb1fb2dc30b8a6623ed` |
-| Latest verified application deployment | Railway deployment `427617bd-7ccf-4f9a-a4d1-2f40d3bf5c13` reported **success** for the corrective merge commit |
-| Deployment-evidence record | `v1.11.2` — documentation branch `docs/v1.11.2-blog-production-evidence-20261103` |
+| Application release | `v1.12.0` — deployed and verified: two-column Blog listing; published article retained |
+| Application feature branch | `feature/v1.12.0-two-column-blog-20261103` |
+| Application feature commit | `2aec05dc7f5832110ffcd94395806da9971cd7eb` |
+| Pull request | [#28](https://github.com/srinagubandi/workshop-creative-group/pull/28), merged |
+| Application merge commit | `8cb37bb976dff0fb0a8a62ac4b7ca47f67461d40` |
+| Latest verified application deployment | Railway deployment `a07d2dd8-4183-442a-bd4a-52792f7b691d` reported **success** for the listing merge commit |
+| Deployment-evidence record | `v1.12.1` — documentation branch `docs/v1.12.1-two-column-blog-evidence-20261103` |
 | Production storage recovery | All 130 published managed media routes remain HTTP 200, including 30 Home logos |
-| Fresh pre-change database backup | Complete consistent 11-table SQL snapshot, 266,883 bytes before v1.11.1; checksummed source/archive/Git bundle verified |
+| Fresh pre-change database backup | Complete consistent 11-table SQL snapshot, 266,883 bytes before v1.12.0; source/archive/Git bundle checksummed |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |

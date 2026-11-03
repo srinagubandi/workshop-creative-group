@@ -1,0 +1,897 @@
+{
+  "base": "https://web-production-d7aa.up.railway.app",
+  "checks": [
+    {
+      "name": "Actual database article matches owner source and current publication date",
+      "passed": true,
+      "detail": {
+        "id": 1,
+        "slug": "how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+        "title": "How Air Zero Turns Yard Signs into Neighborhood Marketing",
+        "authorName": "Brent",
+        "publishedAt": "2026-11-03T17:20:26.000Z",
+        "updatedAt": "2026-11-03T17:20:26.000Z"
+      }
+    },
+    {
+      "name": "Listing and individual post agree",
+      "passed": true,
+      "detail": {
+        "id": 1
+      }
+    },
+    {
+      "name": "Initial HTML metadata/canonical https://web-production-d7aa.up.railway.app/blog",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "title": "Blog | Workshop Creative Group",
+        "canonical": "https://www.workshopcreativegroup.com/blog"
+      }
+    },
+    {
+      "name": "Initial HTML metadata/canonical https://web-production-d7aa.up.railway.app/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "title": "How Air Zero Turns Yard Signs into Neighborhood Marketing | Blog | Workshop Creative Group",
+        "canonical": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing"
+      }
+    },
+    {
+      "name": "Initial HTML metadata/canonical https://www.workshopcreativegroup.com/blog",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "title": "Blog | Workshop Creative Group",
+        "canonical": "https://www.workshopcreativegroup.com/blog"
+      }
+    },
+    {
+      "name": "Initial HTML metadata/canonical https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "title": "How Air Zero Turns Yard Signs into Neighborhood Marketing | Blog | Workshop Creative Group",
+        "canonical": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing"
+      }
+    },
+    {
+      "name": "Public article photo integrity",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "bytes": 268478
+      }
+    },
+    {
+      "name": "Blog and article included in sitemap",
+      "passed": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Missing article HTTP 404/noindex",
+      "passed": true,
+      "detail": {
+        "status": 404
+      }
+    },
+    {
+      "name": "All published gallery/Home-logo media healthy",
+      "passed": true,
+      "detail": {
+        "count": 130,
+        "categories": {
+          "large-format": 45,
+          "graphic-design": 25,
+          "branding": 15,
+          "logos": 30,
+          "print-procurement": 15
+        }
+      }
+    }
+  ],
+  "publication": {
+    "id": 1,
+    "slug": "how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+    "title": "How Air Zero Turns Yard Signs into Neighborhood Marketing",
+    "authorName": "Brent",
+    "publishedAt": "2026-11-03T17:20:26.000Z",
+    "updatedAt": "2026-11-03T17:20:26.000Z"
+  },
+  "media": {
+    "count": 130,
+    "categories": {
+      "large-format": 45,
+      "graphic-design": 25,
+      "branding": 15,
+      "logos": 30,
+      "print-procurement": 15
+    },
+    "responses": [
+      {
+        "id": 57,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 78,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 109,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 123,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 199,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 6,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 83,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 186,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 196,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 200,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 29,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 80,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 118,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 145,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 202,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 11,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 85,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 115,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 126,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 204,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "print-procurement"
+      },
+      {
+        "id": 4,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 88,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 120,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 177,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 209,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 25,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 95,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 110,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 192,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 205,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "print-procurement"
+      },
+      {
+        "id": 3,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 98,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 119,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 124,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 212,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 19,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 103,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 112,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 197,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 213,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 10,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 102,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 122,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 191,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 206,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "print-procurement"
+      },
+      {
+        "id": 13,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 108,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 116,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 128,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 207,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 20,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 92,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 111,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 130,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 203,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 26,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 101,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 121,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 143,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 201,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "print-procurement"
+      },
+      {
+        "id": 28,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 89,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 129,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 210,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 215,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 36,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 99,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 117,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 134,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 211,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "print-procurement"
+      },
+      {
+        "id": 68,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 82,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 114,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "branding"
+      },
+      {
+        "id": 131,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 208,
+        "status": 200,
+        "type": "image/png",
+        "category": "print-procurement"
+      },
+      {
+        "id": 22,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 91,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 141,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 21,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 79,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 142,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 35,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 96,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 135,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 43,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 107,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 127,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 18,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 100,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 133,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 63,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 81,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 144,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 44,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 87,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 132,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 66,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 97,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 139,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 47,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 104,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 194,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 38,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 94,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "graphic-design"
+      },
+      {
+        "id": 137,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 56,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 136,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 67,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 195,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 65,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 138,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 32,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 193,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 27,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 125,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "logos"
+      },
+      {
+        "id": 53,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 46,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 45,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 48,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 59,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 69,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 52,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 49,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 54,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 55,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 62,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 75,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 39,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 70,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      },
+      {
+        "id": 73,
+        "status": 200,
+        "type": "image/jpeg",
+        "category": "large-format"
+      }
+    ]
+  },
+  "passed": true
+}
