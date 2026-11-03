@@ -1,0 +1,232 @@
+{
+  "mode": "local",
+  "base": "http://127.0.0.1:4173",
+  "createdAt": "2026-11-03T17:15:27.063Z",
+  "browser": "156.0.8078.4",
+  "checks": [
+    {
+      "name": "Neutral Blog branding without old intro or placeholder",
+      "passed": true
+    },
+    {
+      "name": "One real featured post and full-frame loaded photo",
+      "passed": true,
+      "detail": {
+        "naturalWidth": 1024,
+        "naturalHeight": 1024,
+        "alt": "An Air Zero yard sign reading ‘Just serviced this home’ on a residential lawn beside an Air Zero service van.",
+        "displayWidth": 894,
+        "displayHeight": 894
+      }
+    },
+    {
+      "name": "Keyboard skip link is visible and moves focus to main",
+      "passed": true,
+      "detail": {
+        "text": "Skip to main content",
+        "visible": true,
+        "top": 12
+      }
+    },
+    {
+      "name": "Keyboard article entry; approved headline, byline, current date, eight paragraphs and five list items",
+      "passed": true
+    },
+    {
+      "name": "Client navigation sets article-specific canonical, metadata and schema",
+      "passed": true,
+      "detail": {
+        "title": "How Air Zero Turns Yard Signs into Neighborhood Marketing | Blog | Workshop Creative Group",
+        "canonical": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+        "type": "article",
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "description": "We recently completed another new project for Air Zero that proves sometimes the simplest marketing tools can be the most powerful.",
+            "url": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+            "@type": "BlogPosting",
+            "headline": "How Air Zero Turns Yard Signs into Neighborhood Marketing",
+            "mainEntityOfPage": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+            "author": {
+              "@type": "Person",
+              "name": "Brent"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Workshop Creative Group",
+              "url": "https://www.workshopcreativegroup.com"
+            },
+            "image": "https://www.workshopcreativegroup.com/images/blog/air-zero-yard-sign.webp",
+            "datePublished": "2026-11-03T17:00:00.000Z",
+            "dateModified": "2026-11-03T17:00:00.000Z"
+          }
+        ],
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+      }
+    },
+    {
+      "name": "WCAG A/AA axe-core scans pass on Blog, article, Home and Large Format",
+      "passed": true
+    },
+    {
+      "name": "Blog and article reflow at 320, 375, 768, 1280 and 1536 CSS px",
+      "passed": true
+    },
+    {
+      "name": "Mobile menu exposes Blog, responds to keyboard/Escape, restores focus and closes after selection",
+      "passed": true
+    },
+    {
+      "name": "Article remains readable at enlarged text spacing and mobile width",
+      "passed": true,
+      "detail": {
+        "width": 375,
+        "scrollWidth": 375,
+        "passed": true
+      }
+    },
+    {
+      "name": "Empty Blog data never creates a fake story",
+      "passed": true
+    },
+    {
+      "name": "Future nonfeatured posts remain discoverable",
+      "passed": true
+    },
+    {
+      "name": "Missing article shows a useful return path and noindex",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript runtime errors",
+      "passed": true
+    }
+  ],
+  "scans": [
+    {
+      "route": "/blog",
+      "viewport": "1536x900",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "route": "/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+      "viewport": "1536x900",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "route": "/",
+      "viewport": "1536x900",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 9
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "route": "/large-format-printing",
+      "viewport": "1536x900",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 5
+        }
+      ],
+      "passes": 21
+    },
+    {
+      "route": "/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+      "viewport": "375x700 enlarged spacing",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "passes": 22
+    }
+  ],
+  "reflow": [
+    {
+      "route": "/blog",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "route": "/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+      "width": 320,
+      "scrollWidth": 320,
+      "passed": true
+    },
+    {
+      "route": "/blog",
+      "width": 375,
+      "scrollWidth": 375,
+      "passed": true
+    },
+    {
+      "route": "/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+      "width": 375,
+      "scrollWidth": 375,
+      "passed": true
+    },
+    {
+      "route": "/blog",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "route": "/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+      "width": 768,
+      "scrollWidth": 768,
+      "passed": true
+    },
+    {
+      "route": "/blog",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "passed": true
+    },
+    {
+      "route": "/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "passed": true
+    },
+    {
+      "route": "/blog",
+      "width": 1536,
+      "scrollWidth": 1536,
+      "passed": true
+    },
+    {
+      "route": "/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+      "width": 1536,
+      "scrollWidth": 1536,
+      "passed": true
+    }
+  ],
+  "consoleErrors": [],
+  "passed": true
+}

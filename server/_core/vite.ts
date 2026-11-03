@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
-import { injectSeoMetadata } from "../seo";
+import { injectSeoMetadata, resolvePageMetadata } from "../seo";
 import { getStaticCacheControl } from "@shared/performance";
 
 export async function setupVite(app: Express, server: Server) {
@@ -40,8 +40,10 @@ export async function setupVite(app: Express, server: Server) {
         `src="/src/main.tsx"`,
         `src="/src/main.tsx?v=${nanoid()}"`
       );
-      const page = injectSeoMetadata(await vite.transformIndexHtml(url, template), new URL(url, "http://localhost").pathname);
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+      const pathname = new URL(url, "http://localhost").pathname;
+      const metadata = await resolvePageMetadata(pathname);
+      const page = injectSeoMetadata(await vite.transformIndexHtml(url, template), pathname, metadata);
+      res.status(metadata === null ? 404 : 200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       next(e);
@@ -74,7 +76,8 @@ export function serveStatic(app: Express) {
       const indexFile = path.resolve(distPath, "index.html");
       const template = await fs.promises.readFile(indexFile, "utf-8");
       res.setHeader("Cache-Control", "no-cache, max-age=0, must-revalidate");
-      res.status(200).type("html").send(injectSeoMetadata(template, req.path));
+      const metadata = await resolvePageMetadata(req.path);
+      res.status(metadata === null ? 404 : 200).type("html").send(injectSeoMetadata(template, req.path, metadata));
     } catch (error) {
       next(error);
     }

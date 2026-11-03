@@ -2,6 +2,29 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.11.0] — 2026-11-03
+
+### Added
+
+- Publish the owner-supplied Air Zero yard-sign article with the approved headline, Brent byline, real first-publication timestamp, full-frame optimized photo, and semantic five-item benefit list. Wording is retained without substantive rewrites.
+- Add nullable author and cover-image fields to Blog records through additive, idempotent startup migrations. Unique-slug insertion does not overwrite owner edits or reset publication dates on subsequent deployments.
+- Add article-specific server/client titles, descriptions, canonical/share metadata, truthful BlogPosting data, and published article sitemap entries. Missing article requests receive 404/noindex.
+- Add sixteen regression cases and a durable editorial/source record.
+
+### Changed
+
+- Use **Blog** in all active navigation, page headings, return links, admin route labels, and metadata. Expose Blog in desktop/mobile navigation and the Company footer.
+- Remove the personal Blog introduction, unsupported audio promise, and fake placeholder story; keep only actual published records with useful loading/empty/error states.
+- Prevent navigation crowding with a responsive drawer below 1536px and scrolling on short screens. Close it even when selecting the current page.
+- Correct the existing shared quote CTA overflow at 320 CSS px; explicitly style the article byline for readable foreground contrast.
+
+### Verified Before Release
+
+- Source archive and full Git bundle checksummed from main `feff47db9626f33359672a01468c5bd46be79d5b`; protected database export plus a verified 11-table consistent snapshot created before implementation.
+- TypeScript, 54 regression tests, production build, and source-wording fidelity checks passed. Fixture-based local browser checks passed on five responsive widths, keyboard controls, semantic content, metadata transitions, and enlarged text spacing.
+- Local axe-core 4.14.0 WCAG A/AA scans returned 0 violations across four representative routes and one enlarged-spacing mobile article state. Contrast incomplete results remain manual-review items; no legal or full-site conformance guarantee is made.
+- Candidate only until the GitHub merge and exact Railway deployment are verified. See `V111_LOCAL_VALIDATION.md`.
+
 ## [1.10.1] — 2026-10-26
 
 ### Added

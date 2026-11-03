@@ -2,6 +2,16 @@
 
 > **Canonical operational record.** Update this file and `CHANGELOG.md` in the same pull request for every repository, configuration, content, or deployment change. `CURRENT_CONTEXT.md` remains the detailed historical and architectural record.
 
+## v1.11.0 — Blog Publication Candidate (November 3, 2026)
+
+The candidate branch is `feature/v1.11.0-blog-air-zero-20261103`, based on main `feff47db9626f33359672a01468c5bd46be79d5b`. Production remains on the verified v1.10.0 application until this release is merged and Railway succeeds.
+
+The owner approved **Blog** everywhere, the headline **How Air Zero Turns Yard Signs into Neighborhood Marketing**, **By Brent**, light proofreading only, and the current publication date. The article wording matches the supplied document after only whitespace/bullet normalization. The supplied photo is optimized full-frame, with descriptive alternative text. The public listing removes fake placeholders, the personal introduction, and audio promises. Blog links appear in desktop/mobile navigation and footer. Nullable author/cover-image fields and a unique-slug first-publication seed retain later owner edits and the original real publication timestamp. Server/client article metadata, BlogPosting schema, sitemap inclusion, semantic list rendering, and missing-article 404/noindex handling are included.
+
+Fresh source archive and full Git-history bundle were verified before any implementation. Protected export `wscg-manual-backup-2026-11-03-16-47-41.sql` (255,954 bytes) was supplemented with a consistent all-table snapshot `full-database.sql` (264,516 bytes; 11 tables), because the current admin backup omits testimonials and saved text overrides. Manifest: `/home/ubuntu/backups/workshop-creative-group-prechange-v1110-20261103T164732Z/MANIFEST.md`. Temporary SSH access was explicitly authorized; no public database port was opened.
+
+Local gates passed: TypeScript, 54 regression tests, production build, exact source-wording comparison, full-frame image decoding, keyboard skip/article/mobile-menu operation, ten route/width reflow cases at 320–1536 CSS px, and enlarged mobile text spacing. Axe-core 4.14.0 WCAG 2.0/2.1/2.2 A/AA scans found 0 violations on Blog, article, Home, and Large Format, plus the enlarged-spacing mobile article state. Color-contrast incomplete results remain bounded manual-review items. Manual review corrected the byline foreground, existing 320px quote-button overflow, and same-page mobile-menu dismissal. Local rendering uses public API fixtures, not the production database; deployment tests will verify actual MySQL migrations, first publication, source HTML, and live content. See `V111_LOCAL_VALIDATION.md` and `V111_EDITORIAL_RECORD.md`.
+
 ## Release and Branch Status
 
 | Field | Current value |

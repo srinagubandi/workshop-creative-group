@@ -4,7 +4,7 @@ import { scanEditableText, type EditableTextField } from "@/lib/textOverrides";
 
 const ROUTES = [
   ["/", "Home"], ["/about", "About"], ["/large-format-printing", "Large Format Printing"], ["/graphic-design", "Graphic Design"],
-  ["/print-procurement", "Print Procurement"], ["/gallery", "Our Work"], ["/request-quote", "Request a Quote"], ["/contact", "Contact"], ["/blog", "Brent’s Blog"],
+  ["/print-procurement", "Print Procurement"], ["/gallery", "Our Work"], ["/request-quote", "Request a Quote"], ["/contact", "Contact"], ["/blog", "Blog"],
 ] as const;
 
 export function TextManager({ token }: { token: string }) {

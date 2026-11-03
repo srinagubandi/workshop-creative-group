@@ -11,6 +11,7 @@ import { registerMediaRoutes } from "../mediaRoutes";
 import { seedLegacyMedia } from "../legacyMediaSeed";
 import { registerSeoRoutes } from "../seo";
 import { seedOwnerTestimonial } from "../testimonialSeed";
+import { seedAirZeroArticle } from "../blogSeed";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -36,6 +37,7 @@ async function startServer() {
   await runStartupMigrations();
   await seedLegacyMedia();
   await seedOwnerTestimonial();
+  await seedAirZeroArticle();
 
   const app = express();
   const server = createServer(app);

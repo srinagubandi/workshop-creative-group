@@ -4,8 +4,14 @@ export type RouteMetadata = {
   title: string;
   description: string;
   path: string;
-  pageType: "website" | "about" | "service" | "collection" | "contact";
+  pageType: "website" | "about" | "service" | "collection" | "contact" | "article";
   serviceName?: string;
+  headline?: string;
+  authorName?: string;
+  image?: string;
+  imageAlt?: string;
+  datePublished?: string;
+  dateModified?: string;
 };
 
 export const ROUTE_METADATA: Record<string, RouteMetadata> = {
@@ -20,7 +26,7 @@ export const ROUTE_METADATA: Record<string, RouteMetadata> = {
   "/contact": { path: "/contact", pageType: "contact", title: "Contact Workshop Creative Group | Nationwide Print Brokerage", description: "Contact Workshop Creative Group to discuss large format printing, graphic design, or print procurement for your business anywhere in the United States." },
   "/privacy": { path: "/privacy", pageType: "website", title: "Privacy Policy | Workshop Creative Group", description: "Read the Workshop Creative Group Privacy Policy, including how quote requests, contact submissions, and uploaded files are handled." },
   "/terms": { path: "/terms", pageType: "website", title: "Terms and Conditions | Workshop Creative Group", description: "Read the terms and conditions governing use of the Workshop Creative Group website and service inquiries." },
-  "/blog": { path: "/blog", pageType: "collection", title: "Print Procurement Insights | Workshop Creative Group", description: "Read practical insights from Workshop Creative Group on print sourcing, project planning, graphic design, and business print procurement." },
+  "/blog": { path: "/blog", pageType: "collection", title: "Blog | Workshop Creative Group", description: "Read practical insights and project stories from Workshop Creative Group on print, signage, graphic design, and business marketing." },
 };
 
 export function getRouteMetadata(pathname: string): RouteMetadata {
