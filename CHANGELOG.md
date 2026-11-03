@@ -2,6 +2,15 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.12.1] — 2026-11-03
+
+### Added — Documentation Evidence Only
+
+- Finalized `current.md`, `V112_POSTDEPLOY_VALIDATION.md` and public-only raw layout/browser/HTTP evidence for the v1.12.0 listing release. Package remains `1.12.0`; no website or stored content changes.
+- PR #28 merged at `8cb37bb976dff0fb0a8a62ac4b7ca47f67461d40`; Railway deployment `a07d2dd8-4183-442a-bd4a-52792f7b691d` succeeded.
+- Live card geometry verifies side-by-side at 768/1280/1536px and stacking at 320/375px, without cropping or overflow. Full article source and actual stored identity/author/publication/update timestamps are unchanged.
+- Live initial HTML/canonical/schema/sitemap/photo integrity and all 130 published media routes pass. Keyboard/reflow checks and five sampled WCAG A/AA scans pass with 0 violations; contrast incomplete limitations remain tracked.
+
 ## [1.12.0] — 2026-11-03
 
 ### Changed
