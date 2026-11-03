@@ -1,0 +1,33 @@
+{
+  "createdAt": "2026-11-03T17:29:17.960Z",
+  "controls": [
+    {
+      "id": "testimonial-quote-1",
+      "collapsedLength": 320,
+      "expandedLength": 1176,
+      "visibleLabelNameParity": true,
+      "keyboard": true,
+      "normalizedQuotes": true,
+      "decorativeQuoteSpans": 2
+    },
+    {
+      "id": "testimonial-quote-3",
+      "collapsedLength": 321,
+      "expandedLength": 332,
+      "visibleLabelNameParity": true,
+      "keyboard": true,
+      "normalizedQuotes": true,
+      "decorativeQuoteSpans": 2
+    },
+    {
+      "id": "testimonial-quote-2",
+      "collapsedLength": 320,
+      "expandedLength": 528,
+      "visibleLabelNameParity": true,
+      "keyboard": true,
+      "normalizedQuotes": true,
+      "decorativeQuoteSpans": 2
+    }
+  ],
+  "passed": true
+}

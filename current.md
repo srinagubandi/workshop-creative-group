@@ -2,15 +2,15 @@
 
 > **Canonical operational record.** Update this file and `CHANGELOG.md` in the same pull request for every repository, configuration, content, or deployment change. `CURRENT_CONTEXT.md` remains the detailed historical and architectural record.
 
-## v1.11.1 — Production Validation Correction Candidate
+## v1.11.1 — Deployed and Verified Blog Release
 
-Branch `fix/v1.11.1-production-blog-validation-20261103` corrects two findings from the first production audit: Express's wildcard middleware consumes `req.path`, so initial route HTML must resolve `new URL(req.originalUrl, ...).pathname`; Home testimonial controls must derive their native accessible name from the visible “Read full perspective”/“Show less” plus an author-specific screen-reader suffix. Quote normalization, decorative blue marks, and stored testimonial content remain unchanged.
+Branch `fix/v1.11.1-production-blog-validation-20261103` merged in PR #26 at `c7e7a3d6f053795d3af90bb1fb2dc30b8a6623ed`. Railway deployment `427617bd-7ccf-4f9a-a4d1-2f40d3bf5c13` succeeded. It corrects the production wildcard-path metadata and testimonial label-in-name findings. Quote normalization, decorative blue marks, and stored testimonial content remain unchanged.
 
-Fresh source/Git backups and an all-11-table consistent database snapshot (266,883 bytes, including the published article) were checksummed from merged main `24497270b277d50dfdde087cc9deed014314774b` before corrections. Temporary SSH key removed; existing keys preserved. Manifest: `/home/ubuntu/backups/workshop-creative-group-prechange-v1111-20261103T172205Z/MANIFEST.md`. TypeScript, 58 tests (including actual production Express route/404 tests), build, and complete fixture-based responsive/keyboard/axe checks pass. See `V1111_LOCAL_VALIDATION.md`. Production retest remains required after merge.
+Fresh source/Git backups and an all-11-table consistent database snapshot (266,883 bytes, including the published article) were checksummed from merged main `24497270b277d50dfdde087cc9deed014314774b` before corrections. Both temporary SSH keys were removed; existing keys preserved. Manifest: `/home/ubuntu/backups/workshop-creative-group-prechange-v1111-20261103T172205Z/MANIFEST.md`. TypeScript, 58 tests, build, and local checks pass. Production checks pass on the real data: both origins' initial HTML, article/date/byline/photo, sitemap, missing-article 404/noindex, delayed metadata, 130 media routes, keyboard controls, ten responsive cases and five sampled axe scans with 0 violations. All three long testimonials pass expanded/collapsed label and normalized-quote checks. The first article timestamp remains `2026-11-03T17:20:26.000Z` after redeploy. See `V111_POSTDEPLOY_VALIDATION.md`. Documentation evidence is versioned as `v1.11.2`; application package remains `1.11.1`.
 
 ## v1.11.0 — Initial Blog Publication (November 3, 2026)
 
-Branch `feature/v1.11.0-blog-air-zero-20261103` merged in PR #25 at `24497270b277d50dfdde087cc9deed014314774b`. Railway deployment `4af88994-78ee-44ec-ab55-935bfafee2db` succeeded. Actual article content, photo, byline and November 3 publication date are live, but initial production validation found the metadata and existing testimonial-label issues above; completion is gated on v1.11.1 retest.
+Branch `feature/v1.11.0-blog-air-zero-20261103` merged in PR #25 at `24497270b277d50dfdde087cc9deed014314774b`. Railway deployment `4af88994-78ee-44ec-ab55-935bfafee2db` succeeded. Initial production validation found the metadata and existing testimonial-label issues, subsequently corrected and retested in v1.11.1 above.
 
 The owner approved **Blog** everywhere, the headline **How Air Zero Turns Yard Signs into Neighborhood Marketing**, **By Brent**, light proofreading only, and the current publication date. The article wording matches the supplied document after only whitespace/bullet normalization. The supplied photo is optimized full-frame, with descriptive alternative text. The public listing removes fake placeholders, the personal introduction, and audio promises. Blog links appear in desktop/mobile navigation and footer. Nullable author/cover-image fields and a unique-slug first-publication seed retain later owner edits and the original real publication timestamp. Server/client article metadata, BlogPosting schema, sitemap inclusion, semantic list rendering, and missing-article 404/noindex handling are included.
 
@@ -22,15 +22,15 @@ Local gates passed: TypeScript, 54 regression tests, production build, exact sou
 
 | Field | Current value |
 |---|---|
-| Application release | `v1.10.0` — deployed and verified: Railway media recovery and accessible footer social links |
-| Application feature branch | `fix/v1.10.0-media-recovery-social-links-20261026` |
-| Application feature commit | `099c7835a45a9ef27499e18e989140cdbf8de6e1` |
-| Pull request | [#23](https://github.com/srinagubandi/workshop-creative-group/pull/23), merged |
-| Application merge commit | `e97a76c9d94ed78c30509b85184582a884856c74` |
-| Latest verified application deployment | Railway deployment `19f1f685-0634-4b76-b610-5cbb23fff327` reported **success** for merge commit `e97a76c9d94ed78c30509b85184582a884856c74` |
-| Deployment-evidence record | `v1.10.1` — this branch records verified v1.10.0 production evidence and source ledger |
-| Production storage recovery | Verified before and after the application release; all 130 published managed media routes return HTTP 200 after the Railway bucket-variable refresh |
-| Fresh pre-change database backup | Verified protected export `wscg-manual-backup-2026-10-27-02-32-08.sql` at `2026-10-27T02:32:08.000Z`; 255,508 bytes |
+| Application release | `v1.11.1` — deployed and verified: Blog launch, Air Zero article and production validation corrections |
+| Application feature branch | `fix/v1.11.1-production-blog-validation-20261103` |
+| Application feature commit | `745b8116fda74c7ad321559cb50ff3a5c3184d1a` |
+| Pull request | [#26](https://github.com/srinagubandi/workshop-creative-group/pull/26), merged; initial Blog release [#25](https://github.com/srinagubandi/workshop-creative-group/pull/25) |
+| Application merge commit | `c7e7a3d6f053795d3af90bb1fb2dc30b8a6623ed` |
+| Latest verified application deployment | Railway deployment `427617bd-7ccf-4f9a-a4d1-2f40d3bf5c13` reported **success** for the corrective merge commit |
+| Deployment-evidence record | `v1.11.2` — documentation branch `docs/v1.11.2-blog-production-evidence-20261103` |
+| Production storage recovery | All 130 published managed media routes remain HTTP 200, including 30 Home logos |
+| Fresh pre-change database backup | Complete consistent 11-table SQL snapshot, 266,883 bytes before v1.11.1; checksummed source/archive/Git bundle verified |
 | Source repository | [workshop-creative-group](https://github.com/srinagubandi/workshop-creative-group) |
 | Railway project | [Workshop Creative Group project](https://railway.com/project/77805cde-a24c-4504-af80-ffed1863e74a) |
 | Public Railway endpoint | [web-production-d7aa.up.railway.app](https://web-production-d7aa.up.railway.app/) |
