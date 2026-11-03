@@ -198,5 +198,13 @@ export async function runStartupMigrations(): Promise<void> {
     }
   }
 
+  for (const [column, length] of [["authorName", 255], ["coverImageUrl", 512], ["coverImageAlt", 512]] as const) {
+    try {
+      await (db as any).execute(`ALTER TABLE \`blog_posts\` ADD COLUMN \`${column}\` varchar(${length}) NULL`);
+    } catch (err: any) {
+      if (err?.cause?.code !== "ER_DUP_FIELDNAME" && err?.code !== "ER_DUP_FIELDNAME") throw err;
+    }
+  }
+
   console.log(`[Migrations] Startup migrations complete (${created}/${MIGRATIONS.length + 1} tables ensured)`);
 }

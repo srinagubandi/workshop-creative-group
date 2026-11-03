@@ -10,8 +10,8 @@
  *  /large-format-printing → Large Format Printing
  *  /graphic-design       → Graphic Design
  *  /print-procurement    → Print Procurement
- *  /blog                 → Brent's Blog
- *  /blog/:slug           → Individual blog post (future)
+ *  /blog                 → Blog
+ *  /blog/:slug           → Individual blog post
  *  /request-quote        → Request a Quote (invoice upload)
  *  /contact              → Contact
  */

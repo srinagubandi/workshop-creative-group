@@ -1,0 +1,60 @@
+{
+  "base": "http://127.0.0.1:4173",
+  "mode": "local",
+  "createdAt": "2026-11-03T17:18:00.886Z",
+  "pending": {
+    "title": "How Air Zero Turns Yard Signs into Neighborhood Marketing | Blog | Workshop Creative Group",
+    "canonical": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "description": "We recently completed another new project for Air Zero that proves sometimes the simplest marketing tools can be the most powerful.",
+        "url": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+        "@type": "BlogPosting",
+        "headline": "How Air Zero Turns Yard Signs into Neighborhood Marketing",
+        "mainEntityOfPage": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+        "author": {
+          "@type": "Person",
+          "name": "Brent"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Workshop Creative Group",
+          "url": "https://www.workshopcreativegroup.com"
+        },
+        "image": "https://www.workshopcreativegroup.com/images/blog/air-zero-yard-sign.webp",
+        "datePublished": "2026-11-03T17:00:00.000Z",
+        "dateModified": "2026-11-03T17:00:00.000Z"
+      }
+    ]
+  },
+  "resolved": {
+    "title": "How Air Zero Turns Yard Signs into Neighborhood Marketing | Blog | Workshop Creative Group",
+    "canonical": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "description": "We recently completed another new project for Air Zero that proves sometimes the simplest marketing tools can be the most powerful.",
+        "url": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+        "@type": "BlogPosting",
+        "headline": "How Air Zero Turns Yard Signs into Neighborhood Marketing",
+        "mainEntityOfPage": "https://www.workshopcreativegroup.com/blog/how-air-zero-turns-yard-signs-into-neighborhood-marketing",
+        "author": {
+          "@type": "Person",
+          "name": "Brent"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Workshop Creative Group",
+          "url": "https://www.workshopcreativegroup.com"
+        },
+        "image": "https://www.workshopcreativegroup.com/images/blog/air-zero-yard-sign.webp",
+        "datePublished": "2026-11-03T17:00:00.000Z",
+        "dateModified": "2026-11-03T17:00:00.000Z"
+      }
+    ]
+  },
+  "passed": true
+}
