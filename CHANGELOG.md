@@ -2,6 +2,21 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.11.2] — 2026-11-03
+
+### Added — Documentation Evidence Only
+
+- Finalized `current.md` and `V111_POSTDEPLOY_VALIDATION.md` with merged PRs #25/#26, exact successful Railway deployments, editorial fidelity, publication-date persistence, source/rendered metadata, sitemap, media, keyboard/reflow and live accessibility evidence.
+- Retained public-only raw production audits under `docs/evidence/v1.11.1/`. Application package remains `1.11.1`; no website or database content changes in this evidence release.
+
+### Verified in Production
+
+- Corrective Railway deployment `427617bd-7ccf-4f9a-a4d1-2f40d3bf5c13` succeeded for commit `c7e7a3d6f053795d3af90bb1fb2dc30b8a6623ed`.
+- Blog/article initial HTML on Railway and the canonical `www` origin has correct titles, canonical URLs, representative image and truthful BlogPosting data. Delayed API loading preserves that initial head; missing articles return 404/noindex.
+- Actual article wording, photo integrity, Brent byline and November 3 date pass. Initial timestamp `2026-11-03T17:20:26.000Z` is unchanged after corrective redeploy.
+- All 130 published managed gallery media routes, including 30 Home logos, return HTTP 200 with expected media types.
+- Five sampled live WCAG A/AA scans return 0 violations; ten responsive cases and keyboard controls pass. All three expandable testimonials retain native visible-label names, normalized source quotes and decorative blue marks. Contrast incomplete/manual-review items remain separately documented.
+
 ## [1.11.1] — 2026-11-03
 
 ### Fixed
