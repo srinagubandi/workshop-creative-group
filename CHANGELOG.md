@@ -2,6 +2,19 @@
 
 All notable changes to this project are recorded in this file. The project follows a versioned, branch-first workflow. A release is not considered deployed until its Git branch is published, the change is approved, and the corresponding Railway deployment has been verified.
 
+## [1.11.1] — 2026-11-03
+
+### Fixed
+
+- Resolve initial production HTML metadata from `req.originalUrl` rather than the consumed Express wildcard `req.path`. Blog and article canonical/title/schema and missing-article 404 behavior now use the actual route.
+- Preserve the exact visible label in Home testimonial controls' native accessible names, appending the author as screen-reader text. Quote normalization and decorative blue marks remain unchanged; no testimonial records are rewritten.
+
+### Verified Before Corrective Release
+
+- The initial v1.11.0 PR #25 merge and Railway deployment succeeded, but live HTTP and Home axe validation found the two issues above. Completion was withheld pending correction.
+- Fresh source and full 11-table database backups verified before corrections; temporary SSH key removed after export.
+- TypeScript, 58 regression tests, production build, and full local responsive/keyboard/axe checks pass. Four new tests exercise actual production Express middleware and native testimonial names. See `V1111_LOCAL_VALIDATION.md`.
+
 ## [1.11.0] — 2026-11-03
 
 ### Added
