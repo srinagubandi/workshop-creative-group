@@ -1,8 +1,8 @@
 import { trpc } from "@/lib/trpc";
 import { normalizeTestimonialQuote } from "@shared/testimonialPresentation";
-import { useState } from "react";
+import React, { useState } from "react";
 
-function TestimonialQuote({
+export function TestimonialQuote({
   quote,
   quoteId,
   authorName,
@@ -37,10 +37,10 @@ function TestimonialQuote({
           className="mt-5 inline-flex min-h-11 items-center rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-semibold text-blue-800 shadow-sm transition-colors hover:border-blue-700 hover:bg-blue-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
           aria-expanded={expanded}
           aria-controls={quoteId}
-          aria-label={`${expanded ? "Show less of" : "Read the full"} testimonial from ${authorName}`}
           onClick={() => setExpanded((value) => !value)}
         >
           {expanded ? "Show less" : "Read full perspective"}
+          <span className="sr-only"> from {authorName}</span>
         </button>
       )}
     </div>

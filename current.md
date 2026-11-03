@@ -2,9 +2,15 @@
 
 > **Canonical operational record.** Update this file and `CHANGELOG.md` in the same pull request for every repository, configuration, content, or deployment change. `CURRENT_CONTEXT.md` remains the detailed historical and architectural record.
 
-## v1.11.0 — Blog Publication Candidate (November 3, 2026)
+## v1.11.1 — Production Validation Correction Candidate
 
-The candidate branch is `feature/v1.11.0-blog-air-zero-20261103`, based on main `feff47db9626f33359672a01468c5bd46be79d5b`. Production remains on the verified v1.10.0 application until this release is merged and Railway succeeds.
+Branch `fix/v1.11.1-production-blog-validation-20261103` corrects two findings from the first production audit: Express's wildcard middleware consumes `req.path`, so initial route HTML must resolve `new URL(req.originalUrl, ...).pathname`; Home testimonial controls must derive their native accessible name from the visible “Read full perspective”/“Show less” plus an author-specific screen-reader suffix. Quote normalization, decorative blue marks, and stored testimonial content remain unchanged.
+
+Fresh source/Git backups and an all-11-table consistent database snapshot (266,883 bytes, including the published article) were checksummed from merged main `24497270b277d50dfdde087cc9deed014314774b` before corrections. Temporary SSH key removed; existing keys preserved. Manifest: `/home/ubuntu/backups/workshop-creative-group-prechange-v1111-20261103T172205Z/MANIFEST.md`. TypeScript, 58 tests (including actual production Express route/404 tests), build, and complete fixture-based responsive/keyboard/axe checks pass. See `V1111_LOCAL_VALIDATION.md`. Production retest remains required after merge.
+
+## v1.11.0 — Initial Blog Publication (November 3, 2026)
+
+Branch `feature/v1.11.0-blog-air-zero-20261103` merged in PR #25 at `24497270b277d50dfdde087cc9deed014314774b`. Railway deployment `4af88994-78ee-44ec-ab55-935bfafee2db` succeeded. Actual article content, photo, byline and November 3 publication date are live, but initial production validation found the metadata and existing testimonial-label issues above; completion is gated on v1.11.1 retest.
 
 The owner approved **Blog** everywhere, the headline **How Air Zero Turns Yard Signs into Neighborhood Marketing**, **By Brent**, light proofreading only, and the current publication date. The article wording matches the supplied document after only whitespace/bullet normalization. The supplied photo is optimized full-frame, with descriptive alternative text. The public listing removes fake placeholders, the personal introduction, and audio promises. Blog links appear in desktop/mobile navigation and footer. Nullable author/cover-image fields and a unique-slug first-publication seed retain later owner edits and the original real publication timestamp. Server/client article metadata, BlogPosting schema, sitemap inclusion, semantic list rendering, and missing-article 404/noindex handling are included.
 

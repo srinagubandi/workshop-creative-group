@@ -76,8 +76,11 @@ export function serveStatic(app: Express) {
       const indexFile = path.resolve(distPath, "index.html");
       const template = await fs.promises.readFile(indexFile, "utf-8");
       res.setHeader("Cache-Control", "no-cache, max-age=0, must-revalidate");
-      const metadata = await resolvePageMetadata(req.path);
-      res.status(metadata === null ? 404 : 200).type("html").send(injectSeoMetadata(template, req.path, metadata));
+      // Express consumes req.path inside app.use("*"); originalUrl retains
+      // the actual public route and excludes query strings via URL.pathname.
+      const pathname = new URL(req.originalUrl, "http://localhost").pathname;
+      const metadata = await resolvePageMetadata(pathname);
+      res.status(metadata === null ? 404 : 200).type("html").send(injectSeoMetadata(template, pathname, metadata));
     } catch (error) {
       next(error);
     }
